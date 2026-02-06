@@ -1,0 +1,48 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+    font-family: monospace;
+}
+
+details.micro-accordion {
+    border: 1px solid #aaaaaa;
+    padding: 0.5em 0.5em 0;
+    &.micro-accordion--no-border-top {
+        border-top: unset;
+    }
+    &.micro-accordion--only-border-bottom {
+        border-top: unset;
+        border-left: unset;
+        border-right: unset;
+    }
+    &.micro-accordion--no-border-vertical {
+        border-left: unset;
+        border-right: unset;
+    }
+}
+
+summary.micro-accordion__header {
+    cursor: pointer;
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em 1rem;
+}
+
+details.micro-accordion[open] {
+    padding: 0.5em;
+}
+
+details.micro-accordion[open] summary.micro-accordion__header {
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 0.5em;
+    &.micro-accordion__header--no-border-bottom {
+        border-bottom: unset;
+    }
+}
