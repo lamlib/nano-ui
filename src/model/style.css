@@ -1,0 +1,29 @@
+@import url("../share/style.css");
+
+.nano-model {
+    margin: auto;
+    border: unset;
+    border-radius: var(--radius-base);
+    width: 30rem;
+}
+
+.nano-model::backdrop {
+  background: var(--color-dark);
+  opacity: 0.4;
+}
+
+.nano-model__body {
+    padding: .75rem 1rem;
+}
+
+.nano-model__footer {
+    display: flex;
+    gap: .75rem;
+    padding: .75rem 1rem;
+    align-items: center;
+    justify-content: end;
+    margin-top: 1rem;
+    border-radius: 0 0 var(--radius-base);
+    background-color: var(--color-layer-01);
+}
+

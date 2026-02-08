@@ -1,40 +1,62 @@
-*, ::before, ::after {
-    box-sizing: border-box;
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    display: grid;
-    place-items: center;
-    height: 100dvh;
+    padding: 1.5rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1e293b;
+    background: #f8fafc;
 }
 
-.accordion {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid;
-    padding: 0px 1rem;
+:root {
+    --color-red: #dc2626;
+    --color-orange: #ff6900;
+    --color-yellow: #ffc107;
+    --color-green: #059669;
+    --color-blue: #2563eb;
+    --color-indigo: #4f46e5;
+    --color-violet: #7c3aed;
+
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray: #64748b;
+
+    
+    --color-primary: var(--color-blue);
+    --color-danger: var(--color-red);
+    --color-warning: var(--color-orange);
+    --color-success: var(--color-green);
+    --color-secondary: var(--color-gray);
+    --color-dark: var(--color-black);
+    --color-light: var(--color-white);
+
+    --radius-base: 4px;
 }
 
-details {
-  border: 1px solid #aaaaaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
+table {
+  border-collapse: collapse;
+  border: 1px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  width: 100%;
 }
 
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
-  cursor: pointer;
+td, th {
+  border: 1px solid rgb(190,190,190);
 }
 
-details[open] {
-  padding: 0.5em;
+td {
+  text-align: center;
 }
 
-details[open] summary {
-  border-bottom: 1px solid #aaaaaa;
-  margin-bottom: 0.5em;
+caption {
+  caption-side: bottom;
+  font-style: italic;
 }

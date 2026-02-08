@@ -1,15 +1,4 @@
-*,
-::before,
-::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    padding: 1rem;
-    font-family: monospace;
-}
+@import url("../share/style.css");
 
 details.micro-accordion {
     border: 1px solid #aaaaaa;
