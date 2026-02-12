@@ -1,154 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fii - Accordion</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Accordion – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
-
 <body>
-    <mark>Seperate accordion</mark>
-    <div style="display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1rem;">
-        <details class="micro-accordion">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-py-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Accordion</span></li>
+            </ol>
+        </nav>
+    <h2 class="nano-text-lg nano-font-semibold nano-mb-2">Separate accordion</h2>
+    <div class="nano-flex nano-flex-col nano-gap-0 nano-mb-6">
+        <div class="nano-accordion__item nano-accordion__item--open">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
+        <div class="nano-accordion__item nano-accordion__item--open">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
     </div>
-    <mark>Group accordion</mark>
-    <div style="margin-bottom: 1rem;">
-        <details class="micro-accordion">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--no-border-top">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--no-border-top">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--no-border-top">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
+    <h2 class="nano-text-lg nano-font-semibold nano-mb-2">Group accordion</h2>
+    <div class="nano-mb-4" data-nano-accordion="group">
+        <div class="nano-accordion__item nano-accordion__item--open">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
+            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+        </div>
     </div>
-    <mark>Group accordion (no vertical border)</mark>
-    <div style="margin-bottom: 1rem;">
-        <details class="micro-accordion micro-accordion--no-border-vertical">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--only-border-bottom">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--only-border-bottom">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--only-border-bottom">
-            <summary class="micro-accordion__header" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-    </div>
-    <mark>Group accordion (no vertical border + no header bottom border)</mark>
-    <div style="margin-bottom: 1rem;">
-        <details class="micro-accordion micro-accordion--no-border-vertical">
-            <summary class="micro-accordion__header micro-accordion__header--no-border-bottom" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--only-border-bottom">
-            <summary class="micro-accordion__header micro-accordion__header--no-border-bottom" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--only-border-bottom">
-            <summary class="micro-accordion__header micro-accordion__header--no-border-bottom" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-        <details class="micro-accordion micro-accordion--only-border-bottom">
-            <summary class="micro-accordion__header micro-accordion__header--no-border-bottom" open>
-                Accordion Header
-            </summary>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore
-            nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est
-            repudiandae.
-        </details>
-    </div>
-</body>
 
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-3 nano-mt-8">Snippets</h2>
+        <p class="nano-text-sm nano-text-secondary nano-mb-4">Copy HTML to use in your page.</p>
+        <div class="nano-mb-6" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Single accordion item</button>
+                <div class="nano-accordion__body">
+                    <div class="nano-code-block">
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre">&lt;div class="nano-accordion__item"&gt;
+  &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false"&gt;Title&lt;/button&gt;
+  &lt;div class="nano-accordion__body"&gt;Content here.&lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Group accordion (one open)</button>
+                <div class="nano-accordion__body">
+                    <div class="nano-code-block">
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre">&lt;div data-nano-accordion="group"&gt;
+  &lt;div class="nano-accordion__item nano-accordion__item--open"&gt;
+    &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true"&gt;Item 1&lt;/button&gt;
+    &lt;div class="nano-accordion__body"&gt;Content 1.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="nano-accordion__item"&gt;
+    &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false"&gt;Item 2&lt;/button&gt;
+    &lt;div class="nano-accordion__body"&gt;Content 2.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../dist/nano.min.js"></script>
+</body>
 </html>

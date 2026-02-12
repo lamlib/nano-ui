@@ -4,7 +4,7 @@
     --table-radius: 0.5rem;
 }
 
-.fii-table {
+.nano-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.875rem;
@@ -15,33 +15,33 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
-.fii-table th,
-.fii-table td {
+.nano-table th,
+.nano-table td {
     padding: 0.625rem 0.875rem;
     text-align: left;
     border-bottom: var(--table-border);
 }
 
-.fii-table th {
+.nano-table th {
     font-weight: 600;
     letter-spacing: 0.01em;
     background: var(--color-component-02);
     color: var(--color-foreground);
 }
 
-.fii-table tbody tr {
+.nano-table tbody tr {
     transition: background-color 0.15s ease;
 }
 
-.fii-table tbody tr:hover {
+.nano-table tbody tr:hover {
     background: var(--color-layer-02);
 }
 
-.fii-table tbody tr:last-child td {
+.nano-table tbody tr:last-child td {
     border-bottom: none;
 }
 
-.fii-table caption {
+.nano-table caption {
     padding: 0.75rem 0.875rem;
     font-size: 0.9375rem;
     font-weight: 600;
@@ -51,32 +51,32 @@
 }
 
 /* Striped rows */
-.fii-table.fii-table--striped tbody tr:nth-child(even) {
+.nano-table.nano-table--striped tbody tr:nth-child(even) {
     background: color-mix(in srgb, var(--color-component-02) 40%, transparent);
 }
 
-.fii-table.fii-table--striped tbody tr:nth-child(even):hover {
+.nano-table.nano-table--striped tbody tr:nth-child(even):hover {
     background: var(--color-layer-02);
 }
 
 /* Bordered (full borders) */
-.fii-table.fii-table--bordered th,
-.fii-table.fii-table--bordered td {
+.nano-table.nano-table--bordered th,
+.nano-table.nano-table--bordered td {
     border: var(--table-border);
 }
 
-.fii-table.fii-table--bordered th {
+.nano-table.nano-table--bordered th {
     border-bottom: 2px solid var(--color-component-03);
 }
 
 /* Compact padding */
-.fii-table.fii-table--compact th,
-.fii-table.fii-table--compact td {
+.nano-table.nano-table--compact th,
+.nano-table.nano-table--compact td {
     padding: 0.375rem 0.625rem;
 }
 
 /* Wrapper for horizontal scroll on small screens */
-.fii-table-wrapper {
+.nano-table-wrapper {
     width: 100%;
     overflow-x: auto;
     border-radius: var(--table-radius);

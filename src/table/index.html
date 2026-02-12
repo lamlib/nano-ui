@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table – Fii UI</title>
-    <link rel="stylesheet" href="../share/style.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Table – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
 <body>
-    <div style="max-width: 900px; margin: 0 auto; padding: 1.5rem;">
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-p-6">
         <h1>Table</h1>
-        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.fii-table</code>. Tùy chọn: <code>.fii-table--striped</code>, <code>.fii-table--bordered</code>, <code>.fii-table--compact</code>.</p>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.nano-table</code>. Tùy chọn: <code>.nano-table--striped</code>, <code>.nano-table--bordered</code>, <code>.nano-table--compact</code>.</p>
 
         <h2>Bảng cơ bản</h2>
-        <div class="fii-table-wrapper" style="margin-bottom: 2rem;">
-            <table class="fii-table">
+        <div class="nano-table-wrapper" style="margin-bottom: 2rem;">
+            <table class="nano-table">
                 <caption>Danh sách thành viên</caption>
                 <thead>
                     <tr>
@@ -48,8 +57,8 @@
         </div>
 
         <h2>Striped (sọc)</h2>
-        <div class="fii-table-wrapper" style="margin-bottom: 2rem;">
-            <table class="fii-table fii-table--striped">
+        <div class="nano-table-wrapper" style="margin-bottom: 2rem;">
+            <table class="nano-table nano-table--striped">
                 <thead>
                     <tr>
                         <th scope="col">Sản phẩm</th>
@@ -66,8 +75,8 @@
         </div>
 
         <h2>Bordered + compact</h2>
-        <div class="fii-table-wrapper" style="margin-bottom: 2rem;">
-            <table class="fii-table fii-table--bordered fii-table--compact">
+        <div class="nano-table-wrapper" style="margin-bottom: 2rem;">
+            <table class="nano-table nano-table--bordered nano-table--compact">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -82,5 +91,6 @@
             </table>
         </div>
     </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

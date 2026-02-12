@@ -1,20 +1,20 @@
-/* Position & z-index – prefix fii- */
-.fii-relative { position: relative; }
-.fii-absolute { position: absolute; }
-.fii-fixed { position: fixed; }
-.fii-sticky { position: sticky; top: 0; left: 0; z-index: 1000; }
-.fii-static { position: static; }
+/* Position & z-index – prefix nano- */
+.nano-relative { position: relative; }
+.nano-absolute { position: absolute; }
+.nano-fixed { position: fixed; }
+.nano-sticky { position: sticky; top: 0; left: 0; z-index: 1000; }
+.nano-static { position: static; }
 
-.fii-z-0 { z-index: 0; }
-.fii-z-10 { z-index: 10; }
-.fii-z-20 { z-index: 20; }
-.fii-z-30 { z-index: 30; }
-.fii-z-40 { z-index: 40; }
-.fii-z-50 { z-index: 50; }
-.fii-z-auto { z-index: auto; }
+.nano-z-0 { z-index: 0; }
+.nano-z-10 { z-index: 10; }
+.nano-z-20 { z-index: 20; }
+.nano-z-30 { z-index: 30; }
+.nano-z-40 { z-index: 40; }
+.nano-z-50 { z-index: 50; }
+.nano-z-auto { z-index: auto; }
 
-.fii-inset-0 { inset: 0; }
-.fii-top-0 { top: 0; }
-.fii-right-0 { right: 0; }
-.fii-bottom-0 { bottom: 0; }
-.fii-left-0 { left: 0; }
+.nano-inset-0 { inset: 0; }
+.nano-top-0 { top: 0; }
+.nano-right-0 { right: 0; }
+.nano-bottom-0 { bottom: 0; }
+.nano-left-0 { left: 0; }

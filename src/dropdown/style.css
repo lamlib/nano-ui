@@ -1,10 +1,10 @@
 /* ---------- Dropdown ---------- */
-.fii-dropdown {
+.nano-dropdown {
     position: relative;
     display: inline-flex;
 }
 
-.fii-dropdown__menu {
+.nano-dropdown__menu {
     position: absolute;
     z-index: 50;
     top: 100%;
@@ -22,19 +22,19 @@
     transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
 }
 
-.fii-dropdown--open .fii-dropdown__menu,
-.fii-dropdown:hover .fii-dropdown__menu {
+.nano-dropdown--open .nano-dropdown__menu,
+.nano-dropdown:hover .nano-dropdown__menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.fii-dropdown__menu--right {
+.nano-dropdown__menu--right {
     left: auto;
     right: 0;
 }
 
-.fii-dropdown__item {
+.nano-dropdown__item {
     display: block;
     width: 100%;
     padding: 0.5rem 0.75rem;
@@ -49,16 +49,16 @@
     transition: background-color 0.15s ease;
 }
 
-.fii-dropdown__item:hover {
+.nano-dropdown__item:hover {
     background: var(--color-layer-02);
 }
 
-.fii-dropdown__item--danger:hover {
+.nano-dropdown__item--danger:hover {
     background: color-mix(in srgb, var(--color-danger) 10%, white);
     color: var(--color-danger);
 }
 
-.fii-dropdown__divider {
+.nano-dropdown__divider {
     height: 1px;
     margin: 0.25rem 0;
     background: var(--color-component-02);

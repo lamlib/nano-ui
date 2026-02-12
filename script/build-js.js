@@ -10,7 +10,7 @@ class Builder {
         }
     }
     build() {
-        fs.writeFileSync("./dist/fii.min.js", this.js);
+        fs.writeFileSync("./dist/nano.min.js", this.js);
         console.log("Build JS successful!");
     }
 }
@@ -25,6 +25,7 @@ app.addJSFile("./src/class/main.js");
 app.addJSFile("./src/code/main.js");
 app.addJSFile("./src/form/main.js");
 app.addJSFile("./src/model/main.js");
+app.addJSFile("./src/navbar/main.js");
 app.addJSFile("./src/table/main.js");
 
 app.build();

@@ -3,36 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alert – Fii UI</title>
-    <link rel="stylesheet" href="../share/style.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Alert – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
 <body>
-    <div style="max-width: 32rem; margin: 0 auto; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-p-6 nano-flex nano-flex-col nano-gap-4">
         <h1>Alert</h1>
-        <p style="margin-bottom: 0.5rem; color: var(--color-secondary);">Class <code>.fii-alert</code> + <code>.fii-alert--success</code> | <code>--warning</code> | <code>--danger</code> | <code>--info</code>. Đóng: <code>.fii-alert__close</code>.</p>
+        <p style="margin-bottom: 0.5rem; color: var(--color-secondary);">Class <code>.nano-alert</code> + <code>.nano-alert--success</code> | <code>--warning</code> | <code>--danger</code> | <code>--info</code>. Đóng: <code>.nano-alert__close</code>.</p>
 
-        <div class="fii-alert fii-alert--success">
-            <span class="fii-alert__content">Thao tác đã lưu thành công.</span>
-            <button type="button" class="fii-alert__close" aria-label="Đóng">×</button>
+        <div class="nano-alert nano-alert--success">
+            <span class="nano-alert__content">Thao tác đã lưu thành công.</span>
+            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
         </div>
-        <div class="fii-alert fii-alert--warning">
-            <span class="fii-alert__content">Vui lòng kiểm tra lại thông tin trước khi gửi.</span>
-            <button type="button" class="fii-alert__close" aria-label="Đóng">×</button>
+        <div class="nano-alert nano-alert--warning">
+            <span class="nano-alert__content">Vui lòng kiểm tra lại thông tin trước khi gửi.</span>
+            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
         </div>
-        <div class="fii-alert fii-alert--danger">
-            <span class="fii-alert__content">Đã xảy ra lỗi. Vui lòng thử lại sau.</span>
-            <button type="button" class="fii-alert__close" aria-label="Đóng">×</button>
+        <div class="nano-alert nano-alert--danger">
+            <span class="nano-alert__content">Đã xảy ra lỗi. Vui lòng thử lại sau.</span>
+            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
         </div>
-        <div class="fii-alert fii-alert--info">
-            <span class="fii-alert__content">Hệ thống sẽ bảo trì vào 02:00 – 04:00 ngày mai.</span>
-            <button type="button" class="fii-alert__close" aria-label="Đóng">×</button>
+        <div class="nano-alert nano-alert--info">
+            <span class="nano-alert__content">Hệ thống sẽ bảo trì vào 02:00 – 04:00 ngày mai.</span>
+            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
         </div>
 
         <h2>Không nút đóng</h2>
-        <div class="fii-alert fii-alert--success">
-            <span class="fii-alert__content">Chỉ nội dung, không có nút đóng.</span>
+        <div class="nano-alert nano-alert--success">
+            <span class="nano-alert__content">Chỉ nội dung, không có nút đóng.</span>
         </div>
     </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

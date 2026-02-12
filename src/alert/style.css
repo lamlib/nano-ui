@@ -1,5 +1,5 @@
 /* ---------- Alert ---------- */
-.fii-alert {
+.nano-alert {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
@@ -10,35 +10,35 @@
     border: 1px solid transparent;
 }
 
-.fii-alert--success {
+.nano-alert--success {
     background: color-mix(in srgb, var(--color-success) 12%, white);
     color: color-mix(in srgb, var(--color-success) 40%, black);
     border-color: color-mix(in srgb, var(--color-success) 30%, transparent);
 }
 
-.fii-alert--warning {
+.nano-alert--warning {
     background: color-mix(in srgb, var(--color-warning) 14%, white);
     color: color-mix(in srgb, var(--color-warning) 35%, black);
     border-color: color-mix(in srgb, var(--color-warning) 28%, transparent);
 }
 
-.fii-alert--danger {
+.nano-alert--danger {
     background: color-mix(in srgb, var(--color-danger) 12%, white);
     color: color-mix(in srgb, var(--color-danger) 40%, black);
     border-color: color-mix(in srgb, var(--color-danger) 28%, transparent);
 }
 
-.fii-alert--info {
+.nano-alert--info {
     background: color-mix(in srgb, var(--color-primary) 12%, white);
     color: color-mix(in srgb, var(--color-primary) 40%, black);
     border-color: color-mix(in srgb, var(--color-primary) 28%, transparent);
 }
 
-.fii-alert__content {
+.nano-alert__content {
     flex: 1;
 }
 
-.fii-alert__close {
+.nano-alert__close {
     flex-shrink: 0;
     padding: 0.125rem;
     border: none;
@@ -52,11 +52,11 @@
     transition: opacity 0.15s ease;
 }
 
-.fii-alert__close:hover {
+.nano-alert__close:hover {
     opacity: 1;
 }
 
-.fii-alert__close:focus-visible {
+.nano-alert__close:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px;
 }

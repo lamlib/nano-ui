@@ -1,5 +1,5 @@
 /* ---------- List group ---------- */
-.fii-list-group {
+.nano-list-group {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--color-component-02);
@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-.fii-list-group__item {
+.nano-list-group__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,26 +21,26 @@
     transition: background-color 0.15s ease;
 }
 
-.fii-list-group__item:last-child {
+.nano-list-group__item:last-child {
     border-bottom: none;
 }
 
-.fii-list-group__item:hover {
+.nano-list-group__item:hover {
     background: var(--color-layer-02);
 }
 
-.fii-list-group__item--active {
+.nano-list-group__item--active {
     background: var(--color-layer-02);
     color: var(--color-primary);
     font-weight: 500;
 }
 
-.fii-list-group__item--disabled {
+.nano-list-group__item--disabled {
     opacity: 0.6;
     pointer-events: none;
 }
 
-.fii-list-group__item--danger:hover {
+.nano-list-group__item--danger:hover {
     background: color-mix(in srgb, var(--color-danger) 10%, white);
     color: var(--color-danger);
 }

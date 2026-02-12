@@ -1,8 +1,8 @@
-/* Transition – prefix fii- */
-.fii-transition-none { transition-property: none; }
-.fii-transition { transition-property: color, background-color, border-color, opacity, box-shadow; transition-timing-function: ease; transition-duration: 150ms; }
-.fii-transition-all { transition-property: all; transition-timing-function: ease; transition-duration: 150ms; }
-.fii-duration-75 { transition-duration: 75ms; }
-.fii-duration-150 { transition-duration: 150ms; }
-.fii-duration-300 { transition-duration: 300ms; }
-.fii-duration-500 { transition-duration: 500ms; }
+/* Transition – prefix nano- */
+.nano-transition-none { transition-property: none; }
+.nano-transition { transition-property: color, background-color, border-color, opacity, box-shadow; transition-timing-function: ease; transition-duration: 150ms; }
+.nano-transition-all { transition-property: all; transition-timing-function: ease; transition-duration: 150ms; }
+.nano-duration-75 { transition-duration: 75ms; }
+.nano-duration-150 { transition-duration: 150ms; }
+.nano-duration-300 { transition-duration: 300ms; }
+.nano-duration-500 { transition-duration: 500ms; }

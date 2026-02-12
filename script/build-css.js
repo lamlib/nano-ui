@@ -8,8 +8,8 @@ class Builder {
         this.css += fs.readFileSync(sourceRelativeURL, { encoding: 'utf-8' }) + '\n';
     }
     build() {
-        this.css = this.css.split('\n') .filter(line => !/^@/.test(line)) .join('\n');
-        fs.writeFileSync("./dist/fii.min.css", this.css);
+        this.css = this.css.split('\n').filter(line => !/^\s*@import\b/.test(line)).join('\n');
+        fs.writeFileSync("./dist/nano.min.css", this.css);
         console.log('Build CSS successful!')
     }
 }

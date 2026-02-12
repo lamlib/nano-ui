@@ -3,41 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../class/style.css">
+    <title>Card – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
-<body class="fii-h-full fii-w-full fii-flex fii-items-center fii-justify-center">
-    <div class="fii-flex fii-gap-4">
-        <article class="fii-card">
-            <header class="fii-card__header"></header>
-            <div class="fii-card__body">
-                <h4 class="fii-text-lg fii-font-bold">Knowledge Database</h4>
+<body>
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-h-full nano-w-full nano-flex nano-items-center nano-justify-center" style="min-height: 50vh;">
+    <div class="nano-flex nano-gap-4">
+        <article class="nano-card">
+            <header class="nano-card__header"></header>
+            <div class="nano-card__body">
+                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
             </div>
-            <footer class="fii-card__footer"></footer>
+            <footer class="nano-card__footer"></footer>
         </article>
-        <article class="fii-card fii-card--primary">
-            <header class="fii-card__header"></header>
-            <div class="fii-card__body">
-                <h4 class="fii-text-lg fii-font-bold">Knowledge Database</h4>
+        <article class="nano-card nano-card--primary">
+            <header class="nano-card__header"></header>
+            <div class="nano-card__body">
+                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
             </div>
-            <footer class="fii-card__footer"></footer>
+            <footer class="nano-card__footer"></footer>
         </article>
-        <article class="fii-card fii-card--danger">
-            <header class="fii-card__header"></header>
-            <div class="fii-card__body">
-                <h4 class="fii-text-lg fii-font-bold">Knowledge Database</h4>
+        <article class="nano-card nano-card--danger">
+            <header class="nano-card__header"></header>
+            <div class="nano-card__body">
+                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
             </div>
-            <footer class="fii-card__footer"></footer>
+            <footer class="nano-card__footer"></footer>
         </article>
-        <article class="fii-card">
-            <header class="fii-card__header"></header>
-            <div class="fii-card__body">
-                <h4 class="fii-text-lg fii-font-bold">Knowledge Database</h4>
+        <article class="nano-card">
+            <header class="nano-card__header"></header>
+            <div class="nano-card__body">
+                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
             </div>
-            <footer class="fii-card__footer"></footer>
+            <footer class="nano-card__footer"></footer>
         </article>
     </div>
-    <script src="main.js"></script>
+    </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

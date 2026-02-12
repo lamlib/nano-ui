@@ -1,22 +1,22 @@
-/* Display & cursor – prefix fii- */
-.fii-cursor-pointer { cursor: pointer; }
-.fii-cursor-default { cursor: default; }
-.fii-cursor-not-allowed { cursor: not-allowed; }
+/* Display & cursor – prefix nano- */
+.nano-cursor-pointer { cursor: pointer; }
+.nano-cursor-default { cursor: default; }
+.nano-cursor-not-allowed { cursor: not-allowed; }
 
-.fii-block { display: block; }
-.fii-inline-block { display: inline-block; }
-.fii-inline { display: inline; }
-.fii-flex { display: flex; }
-.fii-inline-flex { display: inline-flex; }
-.fii-grid { display: grid; }
-.fii-inline-grid { display: inline-grid; }
-.fii-hidden { display: none; }
-.fii-table { display: table; }
-.fii-table-row { display: table-row; }
-.fii-table-cell { display: table-cell; }
+.nano-block { display: block; }
+.nano-inline-block { display: inline-block; }
+.nano-inline { display: inline; }
+.nano-flex { display: flex; }
+.nano-inline-flex { display: inline-flex; }
+.nano-grid { display: grid; }
+.nano-inline-grid { display: inline-grid; }
+.nano-hidden { display: none; }
+.nano-table { display: table; }
+.nano-table-row { display: table-row; }
+.nano-table-cell { display: table-cell; }
 
-.fii-visible { visibility: visible; }
-.fii-invisible { visibility: hidden; }
+.nano-visible { visibility: visible; }
+.nano-invisible { visibility: hidden; }
 
-.fii-pointer-events-none { pointer-events: none; }
-.fii-pointer-events-auto { pointer-events: auto; }
+.nano-pointer-events-none { pointer-events: none; }
+.nano-pointer-events-auto { pointer-events: auto; }

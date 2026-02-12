@@ -1,12 +1,12 @@
-/* Border – prefix fii-, var(--color-*) var(--radius-base) */
-.fii-border { border-width: 1px; border-style: solid; border-color: var(--color-gray); }
-.fii-border-0 { border-width: 0; }
-.fii-border-t { border-top-width: 1px; border-top-style: solid; border-top-color: var(--color-gray); }
-.fii-border-r { border-right-width: 1px; border-right-style: solid; border-right-color: var(--color-gray); }
-.fii-border-b { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: var(--color-gray); }
-.fii-border-l { border-left-width: 1px; border-left-style: solid; border-left-color: var(--color-gray); }
+/* Border – prefix nano-, var(--color-*) var(--radius-base) */
+.nano-border { border-width: 1px; border-style: solid; border-color: var(--color-gray); }
+.nano-border-0 { border-width: 0; }
+.nano-border-t { border-top-width: 1px; border-top-style: solid; border-top-color: var(--color-gray); }
+.nano-border-r { border-right-width: 1px; border-right-style: solid; border-right-color: var(--color-gray); }
+.nano-border-b { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: var(--color-gray); }
+.nano-border-l { border-left-width: 1px; border-left-style: solid; border-left-color: var(--color-gray); }
 
-.fii-border-primary { border-color: var(--color-primary); }
-.fii-border-red { border-color: var(--color-red); }
-.fii-border-gray { border-color: var(--color-gray); }
-.fii-border-transparent { border-color: transparent; }
+.nano-border-primary { border-color: var(--color-primary); }
+.nano-border-red { border-color: var(--color-red); }
+.nano-border-gray { border-color: var(--color-gray); }
+.nano-border-transparent { border-color: transparent; }

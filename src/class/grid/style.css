@@ -4,42 +4,42 @@
     --grid-gutter: 1rem;
 }
 
-.fii-container {
+.nano-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1366px;
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--grid-gutter);
     padding-right: var(--grid-gutter);
 }
 
-.fii-row {
+.nano-row {
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     gap: var(--grid-gutter);
 }
 
-.fii-col-1 { grid-column: span 1; }
-.fii-col-2 { grid-column: span 2; }
-.fii-col-3 { grid-column: span 3; }
-.fii-col-4 { grid-column: span 4; }
-.fii-col-5 { grid-column: span 5; }
-.fii-col-6 { grid-column: span 6; }
-.fii-col-7 { grid-column: span 7; }
-.fii-col-8 { grid-column: span 8; }
-.fii-col-9 { grid-column: span 9; }
-.fii-col-10 { grid-column: span 10; }
-.fii-col-11 { grid-column: span 11; }
-.fii-col-12 { grid-column: span 12; }
-.fii-col-13 { grid-column: span 13; }
-.fii-col-14 { grid-column: span 14; }
-.fii-col-15 { grid-column: span 15; }
-.fii-col-16 { grid-column: span 16; }
-.fii-col-17 { grid-column: span 17; }
-.fii-col-18 { grid-column: span 18; }
-.fii-col-19 { grid-column: span 19; }
-.fii-col-20 { grid-column: span 20; }
-.fii-col-21 { grid-column: span 21; }
-.fii-col-22 { grid-column: span 22; }
-.fii-col-23 { grid-column: span 23; }
-.fii-col-24 { grid-column: span 24; }
+.nano-col-1 { grid-column: span 1; }
+.nano-col-2 { grid-column: span 2; }
+.nano-col-3 { grid-column: span 3; }
+.nano-col-4 { grid-column: span 4; }
+.nano-col-5 { grid-column: span 5; }
+.nano-col-6 { grid-column: span 6; }
+.nano-col-7 { grid-column: span 7; }
+.nano-col-8 { grid-column: span 8; }
+.nano-col-9 { grid-column: span 9; }
+.nano-col-10 { grid-column: span 10; }
+.nano-col-11 { grid-column: span 11; }
+.nano-col-12 { grid-column: span 12; }
+.nano-col-13 { grid-column: span 13; }
+.nano-col-14 { grid-column: span 14; }
+.nano-col-15 { grid-column: span 15; }
+.nano-col-16 { grid-column: span 16; }
+.nano-col-17 { grid-column: span 17; }
+.nano-col-18 { grid-column: span 18; }
+.nano-col-19 { grid-column: span 19; }
+.nano-col-20 { grid-column: span 20; }
+.nano-col-21 { grid-column: span 21; }
+.nano-col-22 { grid-column: span 22; }
+.nano-col-23 { grid-column: span 23; }
+.nano-col-24 { grid-column: span 24; }

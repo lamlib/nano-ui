@@ -1,16 +1,16 @@
-/* Opacity – prefix fii- */
-.fii-opacity-0 { opacity: 0; }
-.fii-opacity-5 { opacity: 0.05; }
-.fii-opacity-10 { opacity: 0.1; }
-.fii-opacity-20 { opacity: 0.2; }
-.fii-opacity-25 { opacity: 0.25; }
-.fii-opacity-30 { opacity: 0.3; }
-.fii-opacity-40 { opacity: 0.4; }
-.fii-opacity-50 { opacity: 0.5; }
-.fii-opacity-60 { opacity: 0.6; }
-.fii-opacity-70 { opacity: 0.7; }
-.fii-opacity-75 { opacity: 0.75; }
-.fii-opacity-80 { opacity: 0.8; }
-.fii-opacity-90 { opacity: 0.9; }
-.fii-opacity-95 { opacity: 0.95; }
-.fii-opacity-100 { opacity: 1; }
+/* Opacity – prefix nano- */
+.nano-opacity-0 { opacity: 0; }
+.nano-opacity-5 { opacity: 0.05; }
+.nano-opacity-10 { opacity: 0.1; }
+.nano-opacity-20 { opacity: 0.2; }
+.nano-opacity-25 { opacity: 0.25; }
+.nano-opacity-30 { opacity: 0.3; }
+.nano-opacity-40 { opacity: 0.4; }
+.nano-opacity-50 { opacity: 0.5; }
+.nano-opacity-60 { opacity: 0.6; }
+.nano-opacity-70 { opacity: 0.7; }
+.nano-opacity-75 { opacity: 0.75; }
+.nano-opacity-80 { opacity: 0.8; }
+.nano-opacity-90 { opacity: 0.9; }
+.nano-opacity-95 { opacity: 0.95; }
+.nano-opacity-100 { opacity: 1; }

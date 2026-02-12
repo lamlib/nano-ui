@@ -1,9 +1,9 @@
-/* Overflow – prefix fii- */
-.fii-overflow-auto { overflow: auto; }
-.fii-overflow-hidden { overflow: hidden; }
-.fii-overflow-visible { overflow: visible; }
-.fii-overflow-scroll { overflow: scroll; }
-.fii-overflow-x-auto { overflow-x: auto; overflow-y: visible; }
-.fii-overflow-y-auto { overflow-y: auto; overflow-x: visible; }
-.fii-overflow-x-hidden { overflow-x: hidden; }
-.fii-overflow-y-hidden { overflow-y: hidden; }
+/* Overflow – prefix nano- */
+.nano-overflow-auto { overflow: auto; }
+.nano-overflow-hidden { overflow: hidden; }
+.nano-overflow-visible { overflow: visible; }
+.nano-overflow-scroll { overflow: scroll; }
+.nano-overflow-x-auto { overflow-x: auto; overflow-y: visible; }
+.nano-overflow-y-auto { overflow-y: auto; overflow-x: visible; }
+.nano-overflow-x-hidden { overflow-x: hidden; }
+.nano-overflow-y-hidden { overflow-y: hidden; }

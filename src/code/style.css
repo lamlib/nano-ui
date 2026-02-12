@@ -1,18 +1,18 @@
 @import url("../share/style.css");
 
-var.fii-var {
+var.nano-var {
     font-style: italic;
     font-weight: bold;
 }
 
-code.fii-code {
+code.nano-code {
     font-weight: bold;
     background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
     display: inline-block;
     padding: 0rem 1cap;
 }
 
-kbd.fii-kbd {
+kbd.nano-kbd {
     font-weight: bold;
     border-radius: 2px;
     box-shadow: 0px 1px 0px 3px color-mix(in srgb, var(--color-dark) 30%, var(--color-light));
@@ -20,17 +20,47 @@ kbd.fii-kbd {
     margin: 0 0.125rem;
 }
 
-samp.fii-samp {
+samp.nano-samp {
     font-weight: bold;
     display: block;
     padding: 1rem;
     background: var(--color-dark);
     color: var(--color-light);
     white-space: pre;
+    overflow-x: auto;
 }
 
-pre.fii-pre {
+pre.nano-pre {
     font-weight: bold;
     background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
     padding: 1rem;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+/* Code block with copy button */
+.nano-code-block {
+    position: relative;
+}
+.nano-code-block .nano-code-block__copy {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-foreground);
+    background: var(--color-component-01);
+    border: 1px solid var(--color-component-02);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+.nano-code-block .nano-code-block__copy:hover {
+    background: var(--color-layer-02);
+    color: var(--color-primary);
+}
+.nano-code-block pre.nano-pre,
+.nano-code-block samp.nano-samp {
+    padding-top: 2.25rem;
 }

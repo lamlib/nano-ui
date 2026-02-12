@@ -3,324 +3,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Utilities – Fii UI</title>
-    <link rel="stylesheet" href="../../dist/fii.min.css">
+    <title>Utilities – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
 <body>
-    <div class="fii-container" style="padding: 1.5rem 1rem 2rem;">
-        <h1 class="fii-mb-4">Class Utilities</h1>
-        <p class="fii-text-gray fii-mb-6">Tất cả utilities dùng tiền tố <code>fii-</code>. Design tokens: <code>--color-*</code>, <code>--unit-base</code>, <code>--radius-base</code>.</p>
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-pt-6 nano-px-4 nano-pb-8">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Utilities</span></li>
+            </ol>
+        </nav>
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Class Utilities</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">Prefix <code class="nano-code">nano-</code>. Tokens: <code class="nano-code">--color-*</code>, <code class="nano-code">--unit-base</code>, <code class="nano-code">--radius-base</code>.</p>
 
-        <!-- 1. Margin -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">1. Margin</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">m | mt | mr | mb | ml | mx | my. Scale: 0,1,2,3,4,5,6,8,10,12,16,20. *-auto</p>
-            <div class="fii-flex fii-gap-2 fii-flex-wrap">
-                <span class="fii-p-2 fii-bg-blue fii-text-light fii-rounded">m-2</span>
-                <span class="fii-m-4 fii-p-2 fii-bg-green fii-text-light fii-rounded">m-4</span>
-                <span class="fii-mx-auto fii-p-2 fii-bg-primary fii-text-light fii-rounded">mx-auto</span>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Margin</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">m | mt | mr | mb | ml | mx | my. Scale 0–20. *-auto</p>
+            <div class="nano-flex nano-gap-2 nano-flex-wrap nano-items-center">
+                <span class="nano-p-2 nano-bg-primary nano-text-light nano-rounded">m-2</span>
+                <span class="nano-m-4 nano-p-2 nano-bg-green nano-text-light nano-rounded">m-4</span>
+                <span class="nano-mx-auto nano-p-2 nano-bg-primary nano-text-light nano-rounded">mx-auto</span>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;span class="nano-m-4 nano-p-2 nano-bg-green nano-text-light nano-rounded"&gt;m-4&lt;/span&gt;
+&lt;span class="nano-mx-auto nano-p-2 nano-bg-primary nano-text-light nano-rounded"&gt;mx-auto&lt;/span&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 2. Padding -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">2. Padding</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">p | pt | pr | pb | pl | px | py. Scale: 0–20</p>
-            <div class="fii-flex fii-gap-2 fii-flex-wrap">
-                <span class="fii-p-2 fii-bg-orange fii-text-dark fii-rounded">p-2</span>
-                <span class="fii-p-4 fii-bg-yellow fii-text-dark fii-rounded">p-4</span>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Padding</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">p | pt | pr | pb | pl | px | py. Scale 0–20</p>
+            <div class="nano-flex nano-gap-2 nano-flex-wrap">
+                <span class="nano-p-2 nano-bg-orange nano-text-dark nano-rounded">p-2</span>
+                <span class="nano-p-4 nano-bg-yellow nano-text-dark nano-rounded">p-4</span>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;span class="nano-p-2 nano-bg-orange nano-rounded"&gt;p-2&lt;/span&gt;
+&lt;span class="nano-p-4 nano-bg-yellow nano-rounded"&gt;p-4&lt;/span&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 3. Text -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">3. Text</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">Size: text-xs | text-sm | text-base | text-lg | text-xl | text-2xl | text-3xl</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-baseline fii-mb-2">
-                <span class="fii-text-xs">xs</span>
-                <span class="fii-text-sm">sm</span>
-                <span class="fii-text-base">base</span>
-                <span class="fii-text-lg">lg</span>
-                <span class="fii-text-xl">xl</span>
-                <span class="fii-text-2xl">2xl</span>
-                <span class="fii-text-3xl">3xl</span>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Text</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-2">Size: text-xs | text-sm | text-base | text-lg | text-xl | text-2xl | text-3xl</p>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-baseline nano-mb-4">
+                <span class="nano-text-xs">xs</span>
+                <span class="nano-text-sm">sm</span>
+                <span class="nano-text-base">base</span>
+                <span class="nano-text-lg">lg</span>
+                <span class="nano-text-xl">xl</span>
+                <span class="nano-text-2xl">2xl</span>
+                <span class="nano-text-3xl">3xl</span>
             </div>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">Align: text-left | text-center | text-right. Transform: uppercase | lowercase | capitalize</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-mb-2">
-                <span class="fii-text-left fii-w-full">text-left</span>
-                <span class="fii-text-center fii-w-full">text-center</span>
-                <span class="fii-text-right fii-w-full">text-right</span>
-                <span class="fii-uppercase">Uppercase</span>
-                <span class="fii-lowercase">Lowercase</span>
-                <span class="fii-capitalize">capitalize</span>
+            <p class="nano-text-sm nano-text-secondary nano-mb-2">Align: text-left | text-center | text-right. Font: font-normal | font-medium | font-semibold | font-bold</p>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap nano-mb-4">
+                <span class="nano-text-left nano-w-full">text-left</span>
+                <span class="nano-text-center nano-w-full">text-center</span>
+                <span class="nano-text-right nano-w-full">text-right</span>
+                <span class="nano-font-normal">normal</span>
+                <span class="nano-font-semibold">semibold</span>
             </div>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">Font: font-normal | font-medium | font-semibold | font-bold</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-mb-2">
-                <span class="fii-font-normal">normal</span>
-                <span class="fii-font-medium">medium</span>
-                <span class="fii-font-semibold">semibold</span>
-                <span class="fii-font-bold">bold</span>
+            <p class="nano-text-sm nano-text-secondary nano-mb-2">Color: text-primary, text-red, text-green, text-blue, text-secondary… + text-*-10 … text-*-90</p>
+            <div class="nano-flex nano-gap-2 nano-flex-wrap">
+                <span class="nano-text-primary">primary</span>
+                <span class="nano-text-red">red</span>
+                <span class="nano-text-green">green</span>
+                <span class="nano-text-blue">blue</span>
+                <span class="nano-text-secondary">secondary</span>
+                <span class="nano-text-primary-50">primary-50</span>
+                <span class="nano-text-red-90">red-90</span>
             </div>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">Màu chữ: text-primary, text-red, text-green, text-blue, text-gray, text-danger, text-warning, text-success… + text-*-10 … text-*-90</p>
-            <div class="fii-flex fii-gap-2 fii-flex-wrap">
-                <span class="fii-text-primary">primary</span>
-                <span class="fii-text-red">red</span>
-                <span class="fii-text-green">green</span>
-                <span class="fii-text-blue">blue</span>
-                <span class="fii-text-gray">gray</span>
-                <span class="fii-text-danger">danger</span>
-                <span class="fii-text-success">success</span>
-                <span class="fii-text-primary-50">primary-50</span>
-                <span class="fii-text-red-90">red-90</span>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;span class="nano-text-lg"&gt;lg&lt;/span&gt;
+&lt;span class="nano-text-primary"&gt;primary&lt;/span&gt;
+&lt;span class="nano-text-primary-50"&gt;primary-50&lt;/span&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 4. List -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">4. List</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">list-none</p>
-            <ul class="fii-list-none fii-flex fii-gap-2">
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">List</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">list-none | list-disc | list-decimal</p>
+            <ul class="nano-list-none nano-flex nano-gap-2">
                 <li>Item 1</li>
                 <li>Item 2</li>
             </ul>
-        </section>
-
-        <!-- 5. Grid (24 cột) -->
-        <section id="grid" class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">5. Grid</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-4">Giống Bootstrap nhưng 24 cột. <code>fii-container</code> | <code>fii-row</code> | <code>fii-col-1</code> … <code>fii-col-24</code>. --grid-columns, --grid-gutter</p>
-
-            <p class="fii-text-sm fii-font-medium fii-mb-2">24 cột = 1+1+…+1</p>
-            <div class="fii-row fii-mb-4">
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
-            </div>
-
-            <p class="fii-text-sm fii-font-medium fii-mb-2">12 + 12</p>
-            <div class="fii-row fii-mb-4">
-                <div class="fii-col-12 fii-p-3 fii-bg-primary-20 fii-rounded fii-text-center">col-12</div>
-                <div class="fii-col-12 fii-p-3 fii-bg-blue-20 fii-rounded fii-text-center">col-12</div>
-            </div>
-
-            <p class="fii-text-sm fii-font-medium fii-mb-2">8 + 8 + 8</p>
-            <div class="fii-row fii-mb-4">
-                <div class="fii-col-8 fii-p-3 fii-bg-green-20 fii-rounded fii-text-center">col-8</div>
-                <div class="fii-col-8 fii-p-3 fii-bg-yellow-20 fii-rounded fii-text-center">col-8</div>
-                <div class="fii-col-8 fii-p-3 fii-bg-orange-20 fii-rounded fii-text-center">col-8</div>
-            </div>
-
-            <p class="fii-text-sm fii-font-medium fii-mb-2">6 + 12 + 6</p>
-            <div class="fii-row fii-mb-4">
-                <div class="fii-col-6 fii-p-3 fii-bg-red-20 fii-rounded fii-text-center">col-6</div>
-                <div class="fii-col-12 fii-p-3 fii-bg-gray-20 fii-rounded fii-text-center">col-12</div>
-                <div class="fii-col-6 fii-p-3 fii-bg-indigo-20 fii-rounded fii-text-center">col-6</div>
-            </div>
-
-            <p class="fii-text-sm fii-font-medium fii-mb-2">16 + 8</p>
-            <div class="fii-row fii-mb-4">
-                <div class="fii-col-16 fii-p-3 fii-bg-violet-20 fii-rounded fii-text-center">col-16</div>
-                <div class="fii-col-8 fii-p-3 fii-bg-success-20 fii-rounded fii-text-center">col-8</div>
-            </div>
-
-            <p class="fii-text-sm fii-font-medium fii-mb-2">Form layout trong grid</p>
-            <div class="fii-row fii-mb-2">
-                <div class="fii-col-12">
-                    <label class="fii-block fii-text-sm fii-mb-1">Họ</label>
-                    <input type="text" class="fii-input fii-w-full" placeholder="Họ">
-                </div>
-                <div class="fii-col-12">
-                    <label class="fii-block fii-text-sm fii-mb-1">Tên</label>
-                    <input type="text" class="fii-input fii-w-full" placeholder="Tên">
-                </div>
-            </div>
-            <div class="fii-row">
-                <div class="fii-col-24">
-                    <label class="fii-block fii-text-sm fii-mb-1">Email</label>
-                    <input type="email" class="fii-input fii-w-full" placeholder="email@example.com">
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;ul class="nano-list-none nano-flex nano-gap-2"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 6. Display -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">6. Display & Cursor</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">block | inline-block | inline | flex | inline-flex | grid | hidden | table… cursor-pointer | cursor-default | cursor-not-allowed. visible | invisible. pointer-events-none | pointer-events-auto</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-center">
-                <span class="fii-inline-block fii-p-2 fii-bg-primary fii-text-light fii-rounded">inline-block</span>
-                <span class="fii-cursor-pointer fii-p-2 fii-bg-blue fii-text-light fii-rounded">cursor-pointer</span>
+        <section id="grid" class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Grid (24 columns)</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4"><code class="nano-code">nano-container</code> | <code class="nano-code">nano-row</code> | <code class="nano-code">nano-col-1</code> … <code class="nano-code">nano-col-24</code>. --grid-columns, --grid-gutter</p>
+            <p class="nano-text-sm nano-font-medium nano-mb-2">12 + 12</p>
+            <div class="nano-row nano-mb-4">
+                <div class="nano-col-12 nano-p-3 nano-bg-primary-20 nano-rounded nano-text-center">col-12</div>
+                <div class="nano-col-12 nano-p-3 nano-bg-blue-20 nano-rounded nano-text-center">col-12</div>
+            </div>
+            <p class="nano-text-sm nano-font-medium nano-mb-2">8 + 8 + 8</p>
+            <div class="nano-row nano-mb-4">
+                <div class="nano-col-8 nano-p-3 nano-bg-green-20 nano-rounded nano-text-center">col-8</div>
+                <div class="nano-col-8 nano-p-3 nano-bg-yellow-20 nano-rounded nano-text-center">col-8</div>
+                <div class="nano-col-8 nano-p-3 nano-bg-orange-20 nano-rounded nano-text-center">col-8</div>
+            </div>
+            <p class="nano-text-sm nano-font-medium nano-mb-2">6 + 12 + 6</p>
+            <div class="nano-row nano-mb-4">
+                <div class="nano-col-6 nano-p-3 nano-bg-red-20 nano-rounded nano-text-center">col-6</div>
+                <div class="nano-col-12 nano-p-3 nano-bg-gray-20 nano-rounded nano-text-center">col-12</div>
+                <div class="nano-col-6 nano-p-3 nano-bg-indigo-20 nano-rounded nano-text-center">col-6</div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-row"&gt;
+  &lt;div class="nano-col-12 nano-p-3 nano-bg-primary-20 nano-rounded"&gt;col-12&lt;/div&gt;
+  &lt;div class="nano-col-12 nano-p-3 nano-bg-blue-20 nano-rounded"&gt;col-12&lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 6. Layout -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">7. Layout</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">w-full | h-full | w-screen | h-screen | min-w-0 | min-h-0 | min-h-full. max-w-sm | max-w-md | max-w-lg | max-w-xl | max-w-2xl | max-w-4xl | max-w-6xl | max-w-full</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-mb-2">
-                <div class="fii-max-w-sm fii-p-2 fii-bg-gray-10 fii-rounded">max-w-sm</div>
-                <div class="fii-max-w-md fii-p-2 fii-bg-gray-10 fii-rounded">max-w-md</div>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Display &amp; Cursor</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">block | inline-block | inline | flex | grid | hidden. cursor-pointer | cursor-default | cursor-not-allowed</p>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-center">
+                <span class="nano-inline-block nano-p-2 nano-bg-primary nano-text-light nano-rounded">inline-block</span>
+                <span class="nano-cursor-pointer nano-p-2 nano-bg-blue nano-text-light nano-rounded">cursor-pointer</span>
             </div>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">aspect-square | aspect-video | aspect-auto. object-contain | object-cover | object-fill</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap">
-                <div class="fii-aspect-square fii-w-full fii-max-w-20 fii-bg-primary-20 fii-rounded"></div>
-                <div class="fii-aspect-video fii-w-full fii-max-w-32 fii-bg-blue-20 fii-rounded"></div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;span class="nano-inline-block nano-p-2 nano-bg-primary nano-text-light nano-rounded"&gt;inline-block&lt;/span&gt;
+&lt;span class="nano-cursor-pointer nano-p-2 nano-bg-blue nano-text-light nano-rounded"&gt;cursor-pointer&lt;/span&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 7. Flex -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">8. Flex & Gap</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">flex-1 | flex-none | flex-auto. flex-col | flex-row. flex-wrap | flex-nowrap. items-start | items-center | items-end | items-stretch | items-baseline. justify-start | justify-center | justify-end | justify-between | justify-around | justify-evenly. self-start | self-center | self-end | self-stretch. gap-0 … gap-20</p>
-            <div class="fii-flex fii-justify-between fii-items-center fii-gap-4 fii-p-4 fii-bg-blue fii-text-light fii-rounded-lg fii-mb-2">
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Layout</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">w-full | h-full | max-w-sm … max-w-6xl | max-w-full. aspect-square | aspect-video. object-contain | object-cover</p>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap nano-mb-4">
+                <div class="nano-max-w-sm nano-p-2 nano-bg-gray-20 nano-rounded">max-w-sm</div>
+                <div class="nano-max-w-md nano-p-2 nano-bg-gray-20 nano-rounded">max-w-md</div>
+            </div>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap">
+                <div class="nano-aspect-square nano-w-full nano-max-w-20 nano-bg-primary-20 nano-rounded"></div>
+                <div class="nano-aspect-video nano-w-full nano-max-w-32 nano-bg-blue-20 nano-rounded"></div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-max-w-sm nano-p-2 nano-bg-gray-20 nano-rounded"&gt;max-w-sm&lt;/div&gt;
+&lt;div class="nano-aspect-square nano-w-full nano-max-w-20 nano-bg-primary-20 nano-rounded"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Flex &amp; Gap</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">flex-1 | flex-none. flex-col | flex-row. flex-wrap. items-* | justify-* | self-*. gap-0 … gap-20</p>
+            <div class="nano-flex nano-justify-between nano-items-center nano-gap-4 nano-p-4 nano-bg-primary nano-text-light nano-rounded-lg nano-mb-4">
                 <span>start</span>
                 <span>end</span>
             </div>
-            <div class="fii-flex fii-gap-6 fii-flex-wrap">
-                <span class="fii-p-2 fii-bg-green fii-text-light fii-rounded">gap-6</span>
-                <span class="fii-p-2 fii-bg-green fii-text-light fii-rounded">1</span>
-                <span class="fii-p-2 fii-bg-green fii-text-light fii-rounded">2</span>
+            <div class="nano-flex nano-gap-6 nano-flex-wrap">
+                <span class="nano-p-2 nano-bg-green nano-text-light nano-rounded">gap-6</span>
+                <span class="nano-p-2 nano-bg-green nano-text-light nano-rounded">1</span>
+                <span class="nano-p-2 nano-bg-green nano-text-light nano-rounded">2</span>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-flex nano-justify-between nano-items-center nano-gap-4 nano-p-4 nano-bg-primary nano-text-light nano-rounded-lg"&gt;
+  &lt;span&gt;start&lt;/span&gt;
+  &lt;span&gt;end&lt;/span&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 8. Position -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">9. Position & Z-index</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">relative | absolute | fixed | sticky | static. z-0 | z-10 | z-20 | z-30 | z-40 | z-50 | z-auto. inset-0 | top-0 | right-0 | bottom-0 | left-0</p>
-            <div class="fii-relative fii-p-4 fii-bg-gray-10 fii-rounded">
-                <span class="fii-relative fii-z-10 fii-p-2 fii-bg-primary fii-text-light fii-rounded">relative z-10</span>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Position</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">relative | absolute | fixed | sticky | static. z-0 … z-50 | z-auto</p>
+            <div class="nano-relative nano-p-4 nano-bg-gray-20 nano-rounded">
+                <span class="nano-relative nano-z-10 nano-p-2 nano-bg-primary nano-text-light nano-rounded">relative z-10</span>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-relative nano-p-4 nano-bg-gray-20 nano-rounded"&gt;
+  &lt;span class="nano-relative nano-z-10 nano-p-2 nano-bg-primary nano-text-light nano-rounded"&gt;relative z-10&lt;/span&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 9. Rounded -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">10. Rounded</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">rounded-none | rounded-sm | rounded | rounded-md | rounded-lg | rounded-xl | rounded-2xl | rounded-full</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-end">
-                <div class="fii-rounded-none fii-size-8 fii-bg-red"></div>
-                <div class="fii-rounded-sm fii-size-8 fii-bg-orange"></div>
-                <div class="fii-rounded fii-size-8 fii-bg-yellow"></div>
-                <div class="fii-rounded-lg fii-size-8 fii-bg-green"></div>
-                <div class="fii-rounded-xl fii-size-8 fii-bg-blue"></div>
-                <div class="fii-rounded-2xl fii-size-8 fii-bg-indigo"></div>
-                <div class="fii-rounded-full fii-size-8 fii-bg-violet"></div>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Rounded</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">rounded-none | rounded-sm | rounded | rounded-lg | rounded-xl | rounded-full</p>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-end">
+                <div class="nano-rounded-none nano-size-8 nano-bg-red"></div>
+                <div class="nano-rounded-sm nano-size-8 nano-bg-orange"></div>
+                <div class="nano-rounded nano-size-8 nano-bg-yellow"></div>
+                <div class="nano-rounded-lg nano-size-8 nano-bg-green"></div>
+                <div class="nano-rounded-xl nano-size-8 nano-bg-blue"></div>
+                <div class="nano-rounded-full nano-size-8 nano-bg-violet"></div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-rounded nano-size-8 nano-bg-yellow"&gt;&lt;/div&gt;
+&lt;div class="nano-rounded-lg nano-size-8 nano-bg-green"&gt;&lt;/div&gt;
+&lt;div class="nano-rounded-full nano-size-8 nano-bg-violet"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 10. Size -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">11. Size (w+h)</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">size-1 | size-2 | size-4 | size-6 | size-8 | size-10 | size-12</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-end">
-                <div class="fii-size-1 fii-bg-primary fii-rounded-sm"></div>
-                <div class="fii-size-2 fii-bg-primary fii-rounded-sm"></div>
-                <div class="fii-size-4 fii-bg-primary fii-rounded-sm"></div>
-                <div class="fii-size-6 fii-bg-primary fii-rounded"></div>
-                <div class="fii-size-8 fii-bg-primary fii-rounded"></div>
-                <div class="fii-size-10 fii-bg-primary fii-rounded"></div>
-                <div class="fii-size-12 fii-bg-primary fii-rounded-lg"></div>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Size</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">size-1 | size-2 | size-4 | size-6 | size-8 | size-10 | size-12 (w+h cùng giá trị)</p>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-end">
+                <div class="nano-size-1 nano-bg-primary nano-rounded-sm"></div>
+                <div class="nano-size-2 nano-bg-primary nano-rounded-sm"></div>
+                <div class="nano-size-4 nano-bg-primary nano-rounded-sm"></div>
+                <div class="nano-size-6 nano-bg-primary nano-rounded"></div>
+                <div class="nano-size-8 nano-bg-primary nano-rounded"></div>
+                <div class="nano-size-10 nano-bg-primary nano-rounded"></div>
+                <div class="nano-size-12 nano-bg-primary nano-rounded-lg"></div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-size-4 nano-bg-primary nano-rounded-sm"&gt;&lt;/div&gt;
+&lt;div class="nano-size-8 nano-bg-primary nano-rounded"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 11. Background -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">12. Background</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">Solid: bg-primary, bg-red, bg-orange, bg-yellow, bg-green, bg-blue, bg-indigo, bg-violet, bg-gray, bg-white, bg-black, bg-danger, bg-warning, bg-success, bg-secondary</p>
-            <div class="fii-flex fii-gap-2 fii-flex-wrap fii-mb-2">
-                <span class="fii-p-2 fii-rounded fii-bg-primary fii-text-light">primary</span>
-                <span class="fii-p-2 fii-rounded fii-bg-red fii-text-light">red</span>
-                <span class="fii-p-2 fii-rounded fii-bg-green fii-text-light">green</span>
-                <span class="fii-p-2 fii-rounded fii-bg-blue fii-text-light">blue</span>
-                <span class="fii-p-2 fii-rounded fii-bg-gray fii-text-light">gray</span>
-                <span class="fii-p-2 fii-rounded fii-bg-danger fii-text-light">danger</span>
-                <span class="fii-p-2 fii-rounded fii-bg-success fii-text-light">success</span>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Background</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">bg-primary, bg-red, bg-green, … bg-*-10 … bg-*-90</p>
+            <div class="nano-flex nano-gap-2 nano-flex-wrap">
+                <span class="nano-p-2 nano-rounded nano-bg-primary nano-text-light">primary</span>
+                <span class="nano-p-2 nano-rounded nano-bg-red nano-text-light">red</span>
+                <span class="nano-p-2 nano-rounded nano-bg-green nano-text-light">green</span>
+                <span class="nano-p-2 nano-rounded nano-bg-blue nano-text-light">blue</span>
+                <span class="nano-p-2 nano-rounded nano-bg-red-10">red-10</span>
+                <span class="nano-p-2 nano-rounded nano-bg-red-50">red-50</span>
+                <span class="nano-p-2 nano-rounded nano-bg-blue-20">blue-20</span>
             </div>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">Pha màu 10–90%: bg-primary-10 … bg-primary-90, bg-red-10 … bg-red-90, … (tất cả màu)</p>
-            <div class="fii-flex fii-gap-2 fii-flex-wrap">
-                <span class="fii-p-2 fii-rounded fii-bg-red-10">red-10</span>
-                <span class="fii-p-2 fii-rounded fii-bg-red-50">red-50</span>
-                <span class="fii-p-2 fii-rounded fii-bg-red-90">red-90</span>
-                <span class="fii-p-2 fii-rounded fii-bg-blue-10">blue-10</span>
-                <span class="fii-p-2 fii-rounded fii-bg-green-50">green-50</span>
-            </div>
-        </section>
-
-        <!-- 12. Overflow -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">13. Overflow</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">overflow-auto | overflow-hidden | overflow-visible | overflow-scroll | overflow-x-auto | overflow-y-auto | overflow-x-hidden | overflow-y-hidden</p>
-            <div class="fii-overflow-auto fii-max-w-md fii-p-2 fii-bg-gray-10 fii-rounded" style="height: 5rem;">
-                <div style="width: 200%; height: 80px; background: var(--color-primary); opacity: 0.3;"></div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;span class="nano-p-2 nano-rounded nano-bg-primary nano-text-light"&gt;primary&lt;/span&gt;
+&lt;span class="nano-p-2 nano-rounded nano-bg-red-10"&gt;red-10&lt;/span&gt;
+&lt;span class="nano-p-2 nano-rounded nano-bg-blue-20"&gt;blue-20&lt;/span&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 13. Opacity -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">14. Opacity</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">opacity-0 | opacity-5 | opacity-10 … opacity-95 | opacity-100</p>
-            <div class="fii-flex fii-gap-2 fii-flex-wrap">
-                <div class="fii-opacity-0 fii-p-2 fii-bg-primary fii-rounded">0</div>
-                <div class="fii-opacity-25 fii-p-2 fii-bg-primary fii-text-light fii-rounded">25</div>
-                <div class="fii-opacity-50 fii-p-2 fii-bg-primary fii-text-light fii-rounded">50</div>
-                <div class="fii-opacity-75 fii-p-2 fii-bg-primary fii-text-light fii-rounded">75</div>
-                <div class="fii-opacity-100 fii-p-2 fii-bg-primary fii-text-light fii-rounded">100</div>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Overflow</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">overflow-auto | overflow-hidden | overflow-visible | overflow-scroll</p>
+            <div class="nano-overflow-auto nano-max-w-md nano-p-2 nano-bg-gray-20 nano-rounded nano-h-20">
+                <div class="nano-h-20 nano-bg-primary nano-opacity-30"></div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-overflow-auto nano-max-w-md nano-p-2 nano-bg-gray-20 nano-rounded nano-h-20"&gt;
+  &lt;div class="nano-h-20 nano-bg-primary nano-opacity-30"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 14. Border -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">15. Border</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">border | border-0 | border-t | border-r | border-b | border-l. border-primary | border-red | border-gray | border-transparent</p>
-            <div class="fii-flex fii-gap-4 fii-flex-wrap">
-                <div class="fii-border fii-p-3 fii-rounded">border</div>
-                <div class="fii-border fii-border-primary fii-p-3 fii-rounded">border-primary</div>
-                <div class="fii-border fii-border-red fii-p-3 fii-rounded">border-red</div>
-                <div class="fii-border-t fii-border-b fii-p-3 fii-rounded">border-t border-b</div>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Opacity</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">opacity-0 | opacity-25 | opacity-50 | opacity-75 | opacity-100</p>
+            <div class="nano-flex nano-gap-2 nano-flex-wrap">
+                <div class="nano-opacity-0 nano-p-2 nano-bg-primary nano-rounded">0</div>
+                <div class="nano-opacity-25 nano-p-2 nano-bg-primary nano-text-light nano-rounded">25</div>
+                <div class="nano-opacity-50 nano-p-2 nano-bg-primary nano-text-light nano-rounded">50</div>
+                <div class="nano-opacity-75 nano-p-2 nano-bg-primary nano-text-light nano-rounded">75</div>
+                <div class="nano-opacity-100 nano-p-2 nano-bg-primary nano-text-light nano-rounded">100</div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-opacity-50 nano-p-2 nano-bg-primary nano-text-light nano-rounded"&gt;50&lt;/div&gt;
+&lt;div class="nano-opacity-100 nano-p-2 nano-bg-primary nano-text-light nano-rounded"&gt;100&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 15. Shadow -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">16. Shadow</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">shadow-none | shadow-sm | shadow | shadow-md | shadow-lg</p>
-            <div class="fii-flex fii-gap-6 fii-flex-wrap">
-                <div class="fii-shadow-none fii-p-4 fii-bg-white fii-rounded">none</div>
-                <div class="fii-shadow-sm fii-p-4 fii-bg-white fii-rounded">sm</div>
-                <div class="fii-shadow fii-p-4 fii-bg-white fii-rounded">default</div>
-                <div class="fii-shadow-md fii-p-4 fii-bg-white fii-rounded">md</div>
-                <div class="fii-shadow-lg fii-p-4 fii-bg-white fii-rounded">lg</div>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Border</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">border | border-t | border-r | border-b | border-l. border-primary | border-red | border-gray</p>
+            <div class="nano-flex nano-gap-4 nano-flex-wrap">
+                <div class="nano-border nano-p-3 nano-rounded">border</div>
+                <div class="nano-border nano-border-primary nano-p-3 nano-rounded">border-primary</div>
+                <div class="nano-border nano-border-red nano-p-3 nano-rounded">border-red</div>
+                <div class="nano-border-t nano-border-b nano-p-3 nano-rounded">border-t b</div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-border nano-p-3 nano-rounded"&gt;border&lt;/div&gt;
+&lt;div class="nano-border nano-border-primary nano-p-3 nano-rounded"&gt;border-primary&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 16. Transition -->
-        <section class="fii-mb-6">
-            <h2 class="fii-text-lg fii-mb-3">17. Transition</h2>
-            <p class="fii-text-sm fii-text-gray fii-mb-2">transition-none | transition | transition-all. duration-75 | duration-150 | duration-300 | duration-500</p>
-            <div class="fii-flex fii-gap-4">
-                <button type="button" class="fii-transition fii-p-3 fii-bg-primary fii-text-light fii-rounded fii-cursor-pointer">transition</button>
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Shadow</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">shadow-none | shadow-sm | shadow | shadow-md | shadow-lg</p>
+            <div class="nano-flex nano-gap-6 nano-flex-wrap">
+                <div class="nano-shadow-none nano-p-4 nano-bg-white nano-rounded">none</div>
+                <div class="nano-shadow-sm nano-p-4 nano-bg-white nano-rounded">sm</div>
+                <div class="nano-shadow nano-p-4 nano-bg-white nano-rounded">default</div>
+                <div class="nano-shadow-md nano-p-4 nano-bg-white nano-rounded">md</div>
+                <div class="nano-shadow-lg nano-p-4 nano-bg-white nano-rounded">lg</div>
+            </div>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;div class="nano-shadow-sm nano-p-4 nano-bg-white nano-rounded"&gt;sm&lt;/div&gt;
+&lt;div class="nano-shadow-md nano-p-4 nano-bg-white nano-rounded"&gt;md&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nano-mb-8">
+            <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Transition</h2>
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">transition-none | transition | transition-all. duration-75 | duration-150 | duration-300 | duration-500</p>
+            <button type="button" class="nano-transition nano-p-3 nano-bg-primary nano-text-light nano-rounded nano-cursor-pointer">transition</button>
+            <div class="nano-mt-4" data-nano-accordion="group">
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Snippet</button>
+                    <div class="nano-accordion__body">
+                        <div class="nano-code-block">
+                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                            <pre class="nano-pre">&lt;button type="button" class="nano-transition nano-p-3 nano-bg-primary nano-text-light nano-rounded nano-cursor-pointer"&gt;transition&lt;/button&gt;</pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

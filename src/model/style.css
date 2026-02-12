@@ -1,22 +1,22 @@
 @import url("../share/style.css");
 
-.fii-model {
+.nano-model {
     margin: auto;
     border: unset;
     border-radius: var(--radius-base);
     width: 30rem;
 }
 
-.fii-model::backdrop {
+.nano-model::backdrop {
     background: var(--color-dark);
     opacity: 0.4;
 }
 
-.fii-model__body {
+.nano-model__body {
     padding: calc(var(--space-base) * 6) calc(var(--space-base) * 6) calc(var(--space-base) * 0) calc(var(--space-base) * 6);
 }
 
-.fii-model__footer {
+.nano-model__footer {
     display: flex;
     gap: .75rem;
     padding: .75rem 1rem;

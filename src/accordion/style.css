@@ -1,37 +1,65 @@
 @import url("../share/style.css");
 
-details.micro-accordion {
-    border: 1px solid #aaaaaa;
-    padding: 0.5em 0.5em 0;
-    &.micro-accordion--no-border-top {
-        border-top: unset;
-    }
-    &.micro-accordion--only-border-bottom {
-        border-top: unset;
-        border-left: unset;
-        border-right: unset;
-    }
-    &.micro-accordion--no-border-vertical {
-        border-left: unset;
-        border-right: unset;
-    }
+/* ---------- Accordion ---------- */
+.nano-accordion__item {
+    border-bottom: 1px solid var(--color-component-02);
+    background: var(--color-light);
+    transition: box-shadow 0.2s ease;
+}
+.nano-accordion__item:first-child {
+    border-top: 1px solid var(--color-component-02);
+}
+.nano-accordion__item.nano-accordion__item--open {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-summary.micro-accordion__header {
+.nano-accordion__header {
     cursor: pointer;
-    font-weight: bold;
-    margin: -0.5em -0.5em 0;
-    padding: 0.5em 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--color-foreground);
+    background: transparent;
+    border: none;
+    text-align: left;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    user-select: none;
+    font-family: inherit;
+}
+.nano-accordion__header::before {
+    content: "";
+    flex-shrink: 0;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-1px);
+    transition: transform 0.2s ease;
+}
+.nano-accordion__item.nano-accordion__item--open .nano-accordion__header::before {
+    transform: rotate(-135deg) translateY(1px);
+}
+.nano-accordion__header:hover {
+    background: var(--color-layer-02);
+    color: var(--color-primary);
 }
 
-details.micro-accordion[open] {
-    padding: 0.5em;
+.nano-accordion__body {
+    display: none;
+    padding: 0 1rem 1rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--color-foreground);
+}
+.nano-accordion__item.nano-accordion__item--open .nano-accordion__body {
+    display: block;
 }
 
-details.micro-accordion[open] summary.micro-accordion__header {
-    border-bottom: 1px solid #aaaaaa;
-    margin-bottom: 0.5em;
-    &.micro-accordion__header--no-border-bottom {
-        border-bottom: unset;
-    }
+.nano-accordion__item.nano-accordion__item--open .nano-accordion__header {
+    border-bottom: 1px solid var(--color-component-02);
+    padding-bottom: 0.75rem;
 }

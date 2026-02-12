@@ -3,26 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Code – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
-<body style="display: grid; place-items: center; height: 100vh;">
-    <div>
-        This is variable <var class="fii-var">w</var> with inline code <code class="fii-code">test</code> you can press <kbd class="fii-kbd">Ctrl</kbd> + <kbd>C</kbd> to copy <br>
-        terminal will showing:
-<samp class="fii-samp">Your content is copied!
+<body>
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-py-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Code</span></li>
+            </ol>
+        </nav>
+        <p class="nano-mb-2">This is variable <var class="nano-var">w</var> with inline code <code class="nano-code">test</code>; you can press <kbd class="nano-kbd">Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
+        <p class="nano-mb-2">Terminal output:</p>
+        <div class="nano-code-block nano-mb-4">
+            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+            <samp class="nano-samp">Your content is copied!
 You can check here asdf 
 {
     asdf
 }</samp>
-<pre class="fii-pre">
-// Here is some line of code
+        </div>
+        <div class="nano-code-block nano-mb-4">
+            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+            <pre class="nano-pre">// Here is some line of code
 function test {
     const a = 12;
     return a;
-}
-</pre>
+}</pre>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-3 nano-mt-8">Snippets</h2>
+        <p class="nano-text-sm nano-text-secondary nano-mb-4">Copy HTML to use in your page.</p>
+        <div class="nano-mb-6" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Inline code &amp; variable</button>
+                <div class="nano-accordion__body">
+                    <div class="nano-code-block">
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre">&lt;code class="nano-code"&gt;value&lt;/code&gt;
+&lt;var class="nano-var"&gt;x&lt;/var&gt;</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Code block with copy button</button>
+                <div class="nano-accordion__body">
+                    <div class="nano-code-block">
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre">&lt;div class="nano-code-block"&gt;
+  &lt;button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy"&gt;Copy&lt;/button&gt;
+  &lt;pre class="nano-pre"&gt;your code here&lt;/pre&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Keyboard key</button>
+                <div class="nano-accordion__body">
+                    <div class="nano-code-block">
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre">&lt;kbd class="nano-kbd"&gt;Ctrl&lt;/kbd&gt; + &lt;kbd class="nano-kbd"&gt;C&lt;/kbd&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

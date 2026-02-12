@@ -1,16 +1,47 @@
 @import url("../share/style.css");
 
-.fii-breadcrumb ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: end;
+/* ---------- Breadcrumb ---------- */
+.nano-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
 }
 
-.fii-breadcrumb li:not(:last-child)::after {
-  display: inline-block;
-  margin: 0 0.25rem;
-  content: "/";
+.nano-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nano-breadcrumb li:not(:last-child)::after {
+    content: "›";
+    margin-left: 0.25rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.nano-breadcrumb a {
+    color: var(--color-foreground);
+    text-decoration: none;
+    padding: 0.25rem 0;
+    border-radius: 2px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.nano-breadcrumb a:hover {
+    color: var(--color-primary);
+}
+
+.nano-breadcrumb [aria-current="page"],
+.nano-breadcrumb li:last-child span {
+    color: var(--color-secondary);
+    font-weight: 500;
+    padding: 0.25rem 0;
 }

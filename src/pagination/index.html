@@ -3,43 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagination – Fii UI</title>
-    <link rel="stylesheet" href="../share/style.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Pagination – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
 <body>
-    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-p-6">
         <h1>Pagination</h1>
-        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.fii-pagination</code>. Các nút: <code>.fii-pagination__item</code>. Trang hiện tại: <code>.fii-pagination__item--active</code>. Dấu …: <code>.fii-pagination__ellipsis</code>.</p>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.nano-pagination</code>. Các nút: <code>.nano-pagination__item</code>. Trang hiện tại: <code>.nano-pagination__item--active</code>. Dấu …: <code>.nano-pagination__ellipsis</code>.</p>
 
         <h2>Cơ bản</h2>
-        <nav class="fii-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
-            <a href="#" class="fii-pagination__item" aria-label="Trang trước">‹</a>
-            <a href="#" class="fii-pagination__item">1</a>
-            <a href="#" class="fii-pagination__item fii-pagination__item--active">2</a>
-            <a href="#" class="fii-pagination__item">3</a>
-            <a href="#" class="fii-pagination__item" aria-label="Trang sau">›</a>
+        <nav class="nano-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
+            <a href="#" class="nano-pagination__item" aria-label="Trang trước">‹</a>
+            <a href="#" class="nano-pagination__item">1</a>
+            <a href="#" class="nano-pagination__item nano-pagination__item--active">2</a>
+            <a href="#" class="nano-pagination__item">3</a>
+            <a href="#" class="nano-pagination__item" aria-label="Trang sau">›</a>
         </nav>
 
         <h2>Nhiều trang (có ellipsis)</h2>
-        <nav class="fii-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
-            <a href="#" class="fii-pagination__item" aria-label="Trang trước">‹</a>
-            <a href="#" class="fii-pagination__item">1</a>
-            <span class="fii-pagination__ellipsis">…</span>
-            <a href="#" class="fii-pagination__item">4</a>
-            <a href="#" class="fii-pagination__item fii-pagination__item--active">5</a>
-            <a href="#" class="fii-pagination__item">6</a>
-            <span class="fii-pagination__ellipsis">…</span>
-            <a href="#" class="fii-pagination__item">10</a>
-            <a href="#" class="fii-pagination__item" aria-label="Trang sau">›</a>
+        <nav class="nano-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
+            <a href="#" class="nano-pagination__item" aria-label="Trang trước">‹</a>
+            <a href="#" class="nano-pagination__item">1</a>
+            <span class="nano-pagination__ellipsis">…</span>
+            <a href="#" class="nano-pagination__item">4</a>
+            <a href="#" class="nano-pagination__item nano-pagination__item--active">5</a>
+            <a href="#" class="nano-pagination__item">6</a>
+            <span class="nano-pagination__ellipsis">…</span>
+            <a href="#" class="nano-pagination__item">10</a>
+            <a href="#" class="nano-pagination__item" aria-label="Trang sau">›</a>
         </nav>
 
         <h2>Disabled</h2>
-        <nav class="fii-pagination" aria-label="Phân trang">
-            <span class="fii-pagination__item" aria-disabled="true">‹</span>
-            <a href="#" class="fii-pagination__item fii-pagination__item--active">1</a>
-            <a href="#" class="fii-pagination__item">›</a>
+        <nav class="nano-pagination" aria-label="Phân trang">
+            <span class="nano-pagination__item" aria-disabled="true">‹</span>
+            <a href="#" class="nano-pagination__item nano-pagination__item--active">1</a>
+            <a href="#" class="nano-pagination__item">›</a>
         </nav>
     </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

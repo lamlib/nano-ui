@@ -3,43 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tooltip – Fii UI</title>
-    <link rel="stylesheet" href="../share/style.css">
-    <link rel="stylesheet" href="../button/style.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Tooltip – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
 <body>
-    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-p-6">
         <h1>Tooltip</h1>
-        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Bọc trigger trong <code>.fii-tooltip</code>, nội dung trong <code>.fii-tooltip__content</code>. Vị trí: mặc định (top), <code>--bottom</code>, <code>--left</code>, <code>--right</code>. Hiện khi hover/focus.</p>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Bọc trigger trong <code>.nano-tooltip</code>, nội dung trong <code>.nano-tooltip__content</code>. Vị trí: mặc định (top), <code>--bottom</code>, <code>--left</code>, <code>--right</code>. Hiện khi hover/focus.</p>
 
         <h2>Vị trí</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center; min-height: 180px;">
-            <span class="fii-tooltip">
+            <span class="nano-tooltip">
                 Trên (top)
-                <span class="fii-tooltip__content">Tooltip phía trên</span>
+                <span class="nano-tooltip__content">Tooltip phía trên</span>
             </span>
-            <span class="fii-tooltip">
+            <span class="nano-tooltip">
                 Dưới (bottom)
-                <span class="fii-tooltip__content fii-tooltip__content--bottom">Tooltip phía dưới</span>
+                <span class="nano-tooltip__content nano-tooltip__content--bottom">Tooltip phía dưới</span>
             </span>
-            <span class="fii-tooltip">
+            <span class="nano-tooltip">
                 Trái (left)
-                <span class="fii-tooltip__content fii-tooltip__content--left">Tooltip bên trái</span>
+                <span class="nano-tooltip__content nano-tooltip__content--left">Tooltip bên trái</span>
             </span>
-            <span class="fii-tooltip">
+            <span class="nano-tooltip">
                 Phải (right)
-                <span class="fii-tooltip__content fii-tooltip__content--right">Tooltip bên phải</span>
+                <span class="nano-tooltip__content nano-tooltip__content--right">Tooltip bên phải</span>
             </span>
         </div>
 
         <h2>Trên nút</h2>
         <div style="margin-top: 1rem;">
-            <span class="fii-tooltip">
-                <button type="button" class="fii-button fii-button--primary">Lưu</button>
-                <span class="fii-tooltip__content">Nhấn để lưu thay đổi</span>
+            <span class="nano-tooltip">
+                <button type="button" class="nano-button nano-button--primary">Lưu</button>
+                <span class="nano-tooltip__content">Nhấn để lưu thay đổi</span>
             </span>
         </div>
     </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

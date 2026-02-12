@@ -1,26 +1,26 @@
 /* ---------- Spinner ---------- */
-.fii-spinner {
+.nano-spinner {
     width: 2rem;
     height: 2rem;
     border: 2px solid var(--color-component-02);
     border-top-color: var(--color-primary);
     border-radius: 50%;
-    animation: fii-spinner-rotate 0.7s linear infinite;
+    animation: nano-spinner-rotate 0.7s linear infinite;
 }
 
-.fii-spinner--sm {
+.nano-spinner--sm {
     width: 1.25rem;
     height: 1.25rem;
     border-width: 1.5px;
 }
 
-.fii-spinner--lg {
+.nano-spinner--lg {
     width: 2.75rem;
     height: 2.75rem;
     border-width: 3px;
 }
 
-@keyframes fii-spinner-rotate {
+@keyframes nano-spinner-rotate {
     to {
         transform: rotate(360deg);
     }

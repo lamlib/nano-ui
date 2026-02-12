@@ -3,18 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Breadcrumb – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
 <body>
-    <nav aria-label="Breadcrumb" class="fii-breadcrumb">
-        <ol>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Category</a></li>
-            <li><a href="#">Sub Category</a></li>
-            <li><a href="#">Type</a></li>
-            <li><span aria-current="page">Product</span></li>
-        </ol>
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
     </nav>
+    <div class="nano-container nano-py-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Breadcrumb</span></li>
+            </ol>
+        </nav>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Example</h2>
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-8">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Sub Category</a></li>
+                <li><span aria-current="page">Product</span></li>
+            </ol>
+        </nav>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Snippets</h2>
+        <p class="nano-text-sm nano-text-secondary nano-mb-4">Copy HTML to use in your page.</p>
+        <div data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Basic breadcrumb</button>
+                <div class="nano-accordion__body">
+                    <div class="nano-code-block">
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre">&lt;nav aria-label="Breadcrumb" class="nano-breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span aria-current="page"&gt;Current&lt;/span&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Breadcrumb with multiple levels</button>
+                <div class="nano-accordion__body">
+                    <div class="nano-code-block">
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre">&lt;nav aria-label="Breadcrumb" class="nano-breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Category&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Sub Category&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span aria-current="page"&gt;Product&lt;/span&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>

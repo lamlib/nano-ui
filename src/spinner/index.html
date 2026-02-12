@@ -3,35 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinner – Fii UI</title>
-    <link rel="stylesheet" href="../share/style.css">
-    <link rel="stylesheet" href="../button/style.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Spinner – Nano UI</title>
+    <link rel="stylesheet" href="../../dist/nano.min.css">
 </head>
 <body>
-    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+    <nav class="nano-navbar">
+        <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
+        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+        <div class="nano-navbar__nav">
+            <a href="../../index.html" class="nano-navbar__link">Home</a>
+            <a href="../class/index.html" class="nano-navbar__link">Utilities</a>
+            <a href="../template/landing/index.html" class="nano-navbar__link">Landing</a>
+            <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
+        </div>
+    </nav>
+    <div class="nano-container nano-p-6">
         <h1>Spinner</h1>
-        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.fii-spinner</code>. Kích thước: <code>.fii-spinner--sm</code>, <code>.fii-spinner--lg</code>.</p>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.nano-spinner</code>. Kích thước: <code>.nano-spinner--sm</code>, <code>.nano-spinner--lg</code>.</p>
 
         <h2>Kích thước</h2>
         <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-            <div class="fii-spinner fii-spinner--sm" aria-hidden="true"></div>
-            <div class="fii-spinner" aria-hidden="true"></div>
-            <div class="fii-spinner fii-spinner--lg" aria-hidden="true"></div>
+            <div class="nano-spinner nano-spinner--sm" aria-hidden="true"></div>
+            <div class="nano-spinner" aria-hidden="true"></div>
+            <div class="nano-spinner nano-spinner--lg" aria-hidden="true"></div>
         </div>
 
         <h2>Trong nút</h2>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-            <button type="button" class="fii-button fii-button--primary" disabled>
-                <span class="fii-spinner fii-spinner--sm" aria-hidden="true" style="margin-right: 0.5rem;"></span>
+            <button type="button" class="nano-button nano-button--primary" disabled>
+                <span class="nano-spinner nano-spinner--sm" aria-hidden="true" style="margin-right: 0.5rem;"></span>
                 Đang tải…
             </button>
         </div>
 
         <h2>Trong khối (centered)</h2>
         <div style="display: flex; justify-content: center; align-items: center; min-height: 120px; background: var(--color-component-01); border-radius: 0.5rem;">
-            <div class="fii-spinner" aria-hidden="true"></div>
+            <div class="nano-spinner" aria-hidden="true"></div>
         </div>
     </div>
+    <script src="../../dist/nano.min.js"></script>
 </body>
 </html>
