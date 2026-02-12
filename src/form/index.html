@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form – Fii UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Form components</h1>
+
+    <section style="margin-bottom: 2rem;">
+        <h2>Ví dụ form đầy đủ (layout .fii-form + .fii-field)</h2>
+        <form class="fii-form" action="#" method="get">
+            <div class="fii-field">
+                <label for="demo-name">Họ tên</label>
+                <input id="demo-name" class="fii-input fii-input-text" type="text" placeholder="Nhập họ tên">
+                <span class="fii-field-message">Có thể thêm mô tả hoặc thông báo lỗi ở đây.</span>
+            </div>
+            <div class="fii-field">
+                <label for="demo-email">Email</label>
+                <input id="demo-email" class="fii-input fii-input-email" type="email" placeholder="email@example.com">
+            </div>
+            <div class="fii-field fii-field--error">
+                <label for="demo-err">Ô có lỗi (demo)</label>
+                <input id="demo-err" class="fii-input fii-input-text" type="text" value="Giá trị không hợp lệ">
+                <span class="fii-field-message">Ví dụ: thông báo lỗi màu đỏ.</span>
+            </div>
+            <div class="fii-field">
+                <label for="demo-bio">Giới thiệu</label>
+                <textarea id="demo-bio" class="fii-input fii-input-textarea" placeholder="Nhiều dòng..."></textarea>
+            </div>
+            <div class="fii-form-actions">
+                <button type="submit" class="fii-button fii-button--primary">Gửi</button>
+                <button type="reset" class="fii-button fii-button--outline">Đặt lại</button>
+            </div>
+        </form>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+        <h2>Phần tử nhập liệu</h2>
+        <div class="fii-form" style="max-width: 100%;">
+            <div class="fii-field">
+                <label>Ô text 1 dòng</label>
+                <input class="fii-input fii-input-text" type="text" placeholder="Placeholder">
+            </div>
+            <div class="fii-field">
+                <label>Mật khẩu</label>
+                <input class="fii-input fii-input-password" type="password" placeholder="••••••••">
+            </div>
+            <div class="fii-field">
+                <label>Email</label>
+                <input class="fii-input fii-input-email" type="email" placeholder="email@example.com">
+            </div>
+            <div class="fii-field">
+                <label>Số (spinner ẩn)</label>
+                <input class="fii-input fii-input-number" type="number" value="0" min="0" max="100">
+            </div>
+            <div class="fii-field">
+                <label>Điện thoại</label>
+                <input class="fii-input fii-input-tel" type="tel" placeholder="0912345678">
+            </div>
+            <div class="fii-field">
+                <label>URL</label>
+                <input class="fii-input fii-input-url" type="url" placeholder="https://">
+            </div>
+            <div class="fii-field">
+                <label>Search</label>
+                <input class="fii-input fii-input-search" type="search" placeholder="Tìm kiếm...">
+            </div>
+            <div class="fii-field">
+                <label>Ngày</label>
+                <input class="fii-input" type="date">
+            </div>
+            <div class="fii-field">
+                <label>Giờ</label>
+                <input class="fii-input" type="time">
+            </div>
+            <div class="fii-field">
+                <label>Ngày + giờ (local)</label>
+                <input class="fii-input" type="datetime-local">
+            </div>
+            <div class="fii-field">
+                <label>Tháng</label>
+                <input class="fii-input" type="month">
+            </div>
+            <div class="fii-field">
+                <label>Tuần</label>
+                <input class="fii-input" type="week">
+            </div>
+            <div class="fii-field">
+                <label>Chọn màu</label>
+                <input class="fii-input" type="color" value="#2563eb">
+            </div>
+            <div class="fii-field">
+                <label>Thanh trượt (range)</label>
+                <input class="fii-input" type="range" min="0" max="100" value="50">
+            </div>
+            <div class="fii-field">
+                <label>Chọn tệp</label>
+                <input class="fii-input" type="file" accept="image/*">
+            </div>
+            <div class="fii-field">
+                <label>Textarea</label>
+                <textarea class="fii-input fii-input-textarea" placeholder="Nhiều dòng..."></textarea>
+            </div>
+            <div class="fii-field">
+                <label>Select</label>
+                <select class="fii-input fii-input-select">
+                    <option value="">-- Chọn --</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+            <div class="fii-field">
+                <label for="datalist-demo">Datalist (gợi ý)</label>
+                <input id="datalist-demo" class="fii-input" type="text" list="ice-cream-flavors" name="ice-cream" placeholder="Chọn hoặc gõ...">
+                <datalist id="ice-cream-flavors">
+                    <option value="Chocolate"></option>
+                    <option value="Coconut"></option>
+                    <option value="Mint"></option>
+                    <option value="Strawberry"></option>
+                    <option value="Vanilla"></option>
+                </datalist>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+        <h2>Checkbox & Radio</h2>
+        <div class="fii-form" style="max-width: 100%;">
+            <div class="fii-field" style="flex-direction: row; align-items: center; gap: 0.5rem;">
+                <input class="fii-input" type="checkbox" id="c1">
+                <label for="c1">Chọn một (checkbox)</label>
+            </div>
+            <div class="fii-field">
+                <label>Radio (chọn một trong nhóm)</label>
+                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                        <input class="fii-input" type="radio" name="r1" value="a">
+                        Option A
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                        <input class="fii-input" type="radio" name="r1" value="b">
+                        Option B
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                        <input class="fii-input" type="radio" name="r1" value="c">
+                        Option C
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+        <h2>Nút trong form</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+            <form action="#" style="display: inline;"><button type="submit" class="fii-button fii-button--primary">Submit (button)</button></form>
+            <form action="#" style="display: inline;"><button type="reset" class="fii-button fii-button--outline">Reset (button)</button></form>
+            <button type="button" class="fii-button">Button thường</button>
+            <input type="submit" class="fii-button fii-button--primary" value="Submit (input)">
+            <input type="reset" class="fii-button fii-button--outline" value="Reset (input)">
+        </div>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+        <h2>Fieldset, output, progress, meter</h2>
+        <fieldset class="fii-fieldset">
+            <legend class="fii-legend">Nhóm thông tin (fieldset)</legend>
+            <div class="fii-field">
+                <label for="fs-name">Tên trong fieldset</label>
+                <input id="fs-name" class="fii-input fii-input-text" type="text">
+            </div>
+        </fieldset>
+        <div class="fii-field">
+            <label>Output (ví dụ)</label>
+            <output for="out-a out-b">0</output>
+            <input class="fii-input" type="range" id="out-a" min="0" max="100" value="50" style="max-width: 200px;">
+        </div>
+        <div class="fii-field">
+            <label>Progress</label>
+            <progress value="70" max="100">70%</progress>
+        </div>
+        <div class="fii-field">
+            <label>Meter</label>
+            <meter value="0.6" min="0" max="1" low="0.25" high="0.75" optimum="0.5">60%</meter>
+        </div>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+        <h2>Disabled state</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+            <input class="fii-input fii-input-text" type="text" placeholder="Disabled" disabled>
+            <select class="fii-input fii-input-select" disabled>
+                <option>Disabled select</option>
+            </select>
+            <textarea class="fii-input fii-input-textarea" placeholder="Disabled" disabled></textarea>
+            <input class="fii-input" type="checkbox" disabled>
+            <input class="fii-input" type="radio" disabled>
+        </div>
+    </section>
+</body>
+
+</html>

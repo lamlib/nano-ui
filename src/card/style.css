@@ -1,0 +1,28 @@
+@import url("../share/style.css");
+
+.fii-card {
+    background: var(--color-layer-03);
+    border-radius: calc(var(--radius-base) * 2);
+
+    &.fii-card--primary {
+        background: var(--color-primary);
+        color: var(--color-light);
+    }
+
+    &.fii-card--danger {
+        background: var(--color-danger);
+        color: var(--color-light);
+    }
+}
+
+.fii-card__header {
+    padding-top: calc(var(--space-base) * 6);
+}
+
+.fii-card__body {
+    padding: calc(var(--space-base) * 0) calc(var(--space-base) * 6) calc(var(--space-base) * 0) calc(var(--space-base) * 6);
+}
+
+.fii-card__footer {
+    padding-bottom: calc(var(--space-base) * 6);
+}

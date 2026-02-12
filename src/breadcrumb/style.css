@@ -1,6 +1,6 @@
 @import url("../share/style.css");
 
-.nano-breadcrumb ol {
+.fii-breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -9,7 +9,7 @@
   align-items: end;
 }
 
-.nano-breadcrumb li:not(:last-child)::after {
+.fii-breadcrumb li:not(:last-child)::after {
   display: inline-block;
   margin: 0 0.25rem;
   content: "/";

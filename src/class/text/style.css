@@ -1,0 +1,131 @@
+.fii-text-6 {
+    font-size: calc(var(--fsize-base) * 7);
+}
+
+.fii-text-5 {
+    font-size: calc(var(--fsize-base) * 8);
+}
+
+.fii-text-4 {
+    font-size: calc(var(--fsize-base) * 9);
+}
+
+.fii-text-3 {
+    font-size: calc(var(--fsize-base) * 10);
+}
+
+.fii-text-2 {
+    font-size: calc(var(--fsize-base) * 11);
+}
+
+.fii-text-1 {
+    font-size: calc(var(--fsize-base) * 12);
+}
+
+/* ALIGN */
+
+.fii-text-left {
+    text-align: left;
+}
+
+.fii-text-center {
+    text-align: center;
+}
+
+.fii-text-right {
+    text-align: right;
+}
+
+/* TRANFORM */
+
+.fii-text-capitalized {
+    text-transform: capitalize;
+}
+
+.fii-text-lowercase {
+    text-transform: lowercase;
+}
+
+.fii-text-uppercase {
+    text-transform: uppercase;
+}
+
+/* WEIGHT */
+
+.fii-text-bold {
+    font-weight: bold
+}
+
+/* COLOR */
+
+.fii-text-light {
+    color: var(--color-light);
+}
+
+.fii-text-dark {
+    color: var(--color-dark);
+}
+
+.fii-text-red {
+    color: var(--color-red);
+}
+
+.fii-text-orange {
+    color: var(--color-orange);
+}
+
+.fii-text-yellow {
+    color: var(--color-yellow);
+}
+
+.fii-text-green {
+    color: var(--color-green);
+}
+
+.fii-text-blue {
+    color: var(--color-blue);
+}
+
+.fii-text-indigo {
+    color: var(--color-indigo);
+}
+
+.fii-text-violet {
+    color: var(--color-violet);
+}
+
+.fii-text-gray {
+    color: var(--color-gray);
+}
+
+.fii-text-red--subtle {
+    color: color-mix(in srgb, var(--color-red) 10%, white);
+}
+
+.fii-text-orange--subtle {
+    color: color-mix(in srgb, var(--color-orange) 10%, white);
+}
+
+.fii-text-yellow--subtle {
+    color: color-mix(in srgb, var(--color-yellow) 10%, white);
+}
+
+.fii-text-green--subtle {
+    color: color-mix(in srgb, var(--color-green) 10%, white);
+}
+
+.fii-text-blue--subtle {
+    color: color-mix(in srgb, var(--color-blue) 10%, white);
+}
+
+.fii-text-indigo--subtle {
+    color: color-mix(in srgb, var(--color-indigo) 10%, white);
+}
+
+.fii-text-violet--subtle {
+    color: color-mix(in srgb, var(--color-violet) 10%, white);
+}
+
+.fii-text-gray--subtle {
+    color: color-mix(in srgb, var(--color-gray) 10%, white);
+}

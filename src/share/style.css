@@ -26,10 +26,11 @@
     --color-component-03: color-mix(in srgb, var(--color-light) 70%, var(--color-dark));
 
     --color-layer-01: color-mix(in srgb, var(--color-primary) 2%, var(--color-light));
-    --color-layer-02: color-mix(in srgb, var(--color-primary) 4%, var(--color-light));
-    --color-layer-03: color-mix(in srgb, var(--color-primary) 6%, var(--color-light));
-
+    --color-layer-02: color-mix(in srgb, var(--color-primary) 6%, var(--color-light));
+    --color-layer-03: color-mix(in srgb, var(--color-primary) 10%, var(--color-light));
+    
     --unit-base: 0.25rem;
+    --fsize-base: calc(var(--unit-base) / 2);
     --radius-base: calc(var(--unit-base) * 2);
     --space-base: calc(var(--unit-base) * 1);
 
@@ -37,6 +38,7 @@
     --color-foreground: color-mix(in srgb, var(--color-black) 80%, var(--color-light));
 }
 
+/* RESET */
 *,
 ::before,
 ::after {
@@ -46,17 +48,20 @@
 }
 
 body {
-    padding: calc(var(--space-base) * 6);
     font-family: system-ui, -apple-system, sans-serif;
-    font-size: 14px;
+    font-size: calc(var(--fsize-base) * 7);
     line-height: 1.5;
     color: var(--color-foreground);
     background: var(--color-background);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-size: calc(var(--fsize-base) * 7);
+    font-weight: 500;
+}
 
 /* ======================= */
-.nano-button {
+.fii-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -92,11 +97,11 @@ body {
         background: color-mix(in srgb, var(--color-component-01) 60%, white);
     }
 
-    &.nano-button--active {
+    &.fii-button--active {
         background: color-mix(in srgb, var(--color-component-01) 80%, black);
     }
 
-    &.nano-button--outline {
+    &.fii-button--outline {
         border: 1px solid var(--color-component-01);
         background: unset;
 
@@ -114,7 +119,7 @@ body {
         }
     }
 
-    &.nano-button--ghost {
+    &.fii-button--ghost {
         background: unset;
         &:hover {
             background: color-mix(in srgb, var(--color-component-01) 90%, black);
@@ -129,12 +134,12 @@ body {
         }
     }
 
-    &.nano-button--ghost-active {
+    &.fii-button--ghost-active {
         background: color-mix(in srgb, var(--color-component-01) 80%, black);
     }
 
     /* PRIMARY */
-    &.nano-button--primary {
+    &.fii-button--primary {
         background: var(--color-primary);
         color: white;
 
@@ -151,12 +156,12 @@ body {
         }
     }
 
-    &.nano-button--primary-active {
+    &.fii-button--primary-active {
         color: white;
         background: color-mix(in srgb, var(--color-primary) 80%, black);
     }
 
-    &.nano-button--primary-outline {
+    &.fii-button--primary-outline {
         border: 1px solid var(--color-primary);
         background: unset;
         color: var(--color-primary);
@@ -180,12 +185,12 @@ body {
         }
     }
 
-    &.nano-button--primary-outline-active {
+    &.fii-button--primary-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-primary) 80%, black);
     }
 
-    &.nano-button--primary-ghost {
+    &.fii-button--primary-ghost {
         background: unset;
 
         color: var(--color-primary);
@@ -208,13 +213,13 @@ body {
         }
     }
 
-    &.nano-button--primary-ghost-active {
+    &.fii-button--primary-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-primary) 80%, black);
     }
 
     /* DANGER */
-    &.nano-button--danger {
+    &.fii-button--danger {
         background: var(--color-danger);
         color: white;
 
@@ -233,12 +238,12 @@ body {
         }
     }
 
-    &.nano-button--danger-active {
+    &.fii-button--danger-active {
         color: white;
         background: color-mix(in srgb, var(--color-danger) 80%, black);
     }
 
-    &.nano-button--danger-outline {
+    &.fii-button--danger-outline {
         border: 1px solid var(--color-danger);
         background: unset;
         color: var(--color-danger);
@@ -262,12 +267,12 @@ body {
         }
     }
 
-    &.nano-button--danger-outline-active {
+    &.fii-button--danger-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-danger) 80%, black);
     }
 
-    &.nano-button--danger-ghost {
+    &.fii-button--danger-ghost {
         background: unset;
 
         color: var(--color-danger);
@@ -290,13 +295,13 @@ body {
         }
     }
 
-    &.nano-button--danger-ghost-active {
+    &.fii-button--danger-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-danger) 80%, black);
     }
 
     /* WARNING */
-    &.nano-button--warning {
+    &.fii-button--warning {
         background: var(--color-warning);
         color: white;
 
@@ -315,12 +320,12 @@ body {
         }
     }
 
-    &.nano-button--warning-active {
+    &.fii-button--warning-active {
         color: white;
         background: color-mix(in srgb, var(--color-warning) 80%, red);
     }
 
-    &.nano-button--warning-outline {
+    &.fii-button--warning-outline {
         border: 1px solid var(--color-warning);
         background: unset;
         color: var(--color-warning);
@@ -344,12 +349,12 @@ body {
         }
     }
 
-    &.nano-button--warning-outline-active {
+    &.fii-button--warning-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-warning) 80%, red);
     }
 
-    &.nano-button--warning-ghost {
+    &.fii-button--warning-ghost {
         background: unset;
 
         color: var(--color-warning);
@@ -372,13 +377,13 @@ body {
         }
     }
 
-    &.nano-button--warning-ghost-active {
+    &.fii-button--warning-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-warning) 80%, red);
     }
 
     /* SUCCESS */
-    &.nano-button--success {
+    &.fii-button--success {
         background: var(--color-success);
         color: white;
 
@@ -397,12 +402,12 @@ body {
         }
     }
 
-    &.nano-button--success-active {
+    &.fii-button--success-active {
         color: white;
         background: color-mix(in srgb, var(--color-success) 80%, black);
     }
 
-    &.nano-button--success-outline {
+    &.fii-button--success-outline {
         border: 1px solid var(--color-success);
         background: unset;
         color: var(--color-success);
@@ -426,12 +431,12 @@ body {
         }
     }
 
-    &.nano-button--success-outline-active {
+    &.fii-button--success-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-success) 80%, black);
     }
 
-    &.nano-button--success-ghost {
+    &.fii-button--success-ghost {
         background: unset;
 
         color: var(--color-success);
@@ -454,13 +459,13 @@ body {
         }
     }
 
-    &.nano-button--success-ghost-active {
+    &.fii-button--success-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-success) 80%, black);
     }
 
     /* SECONDARY */
-    &.nano-button--secondary {
+    &.fii-button--secondary {
         background: var(--color-secondary);
         color: white;
 
@@ -479,12 +484,12 @@ body {
         }
     }
 
-    &.nano-button--secondary-active {
+    &.fii-button--secondary-active {
         color: white;
         background: color-mix(in srgb, var(--color-secondary) 80%, black);
     }
 
-    &.nano-button--secondary-outline {
+    &.fii-button--secondary-outline {
         border: 1px solid var(--color-secondary);
         background: unset;
         color: var(--color-secondary);
@@ -508,12 +513,12 @@ body {
         }
     }
 
-    &.nano-button--secondary-outline-active {
+    &.fii-button--secondary-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-secondary) 80%, black);
     }
 
-    &.nano-button--secondary-ghost {
+    &.fii-button--secondary-ghost {
         background: unset;
 
         color: var(--color-secondary);
@@ -536,13 +541,13 @@ body {
         }
     }
 
-    &.nano-button--secondary-ghost-active {
+    &.fii-button--secondary-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-secondary) 80%, black);
     }
 
     /* BLUE */
-    &.nano-button--blue {
+    &.fii-button--blue {
         background: var(--color-blue);
         color: white;
 
@@ -561,12 +566,12 @@ body {
         }
     }
 
-    &.nano-button--blue-active {
+    &.fii-button--blue-active {
         color: white;
         background: color-mix(in srgb, var(--color-blue) 80%, black);
     }
 
-    &.nano-button--blue-outline {
+    &.fii-button--blue-outline {
         border: 1px solid var(--color-blue);
         background: unset;
         color: var(--color-blue);
@@ -590,12 +595,12 @@ body {
         }
     }
 
-    &.nano-button--blue-outline-active {
+    &.fii-button--blue-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-blue) 80%, black);
     }
 
-    &.nano-button--blue-ghost {
+    &.fii-button--blue-ghost {
         background: unset;
 
         color: var(--color-blue);
@@ -618,13 +623,13 @@ body {
         }
     }
 
-    &.nano-button--blue-ghost-active {
+    &.fii-button--blue-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-blue) 80%, black);
     }
 
     /* RED */
-    &.nano-button--red {
+    &.fii-button--red {
         background: var(--color-red);
         color: white;
 
@@ -641,12 +646,12 @@ body {
         }
     }
 
-    &.nano-button--red-active {
+    &.fii-button--red-active {
         color: white;
         background: color-mix(in srgb, var(--color-red) 80%, black);
     }
 
-    &.nano-button--red-outline {
+    &.fii-button--red-outline {
         border: 1px solid var(--color-red);
         background: unset;
         color: var(--color-red);
@@ -668,12 +673,12 @@ body {
         }
     }
 
-    &.nano-button--red-outline-active {
+    &.fii-button--red-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-red) 80%, black);
     }
 
-    &.nano-button--red-ghost {
+    &.fii-button--red-ghost {
         background: unset;
         color: var(--color-red);
 
@@ -693,13 +698,13 @@ body {
         }
     }
 
-    &.nano-button--red-ghost-active {
+    &.fii-button--red-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-red) 80%, black);
     }
 
     /* ORANGE */
-    &.nano-button--orange {
+    &.fii-button--orange {
         background: var(--color-orange);
         color: white;
 
@@ -718,12 +723,12 @@ body {
         }
     }
 
-    &.nano-button--orange-active {
+    &.fii-button--orange-active {
         color: white;
         background: color-mix(in srgb, var(--color-orange) 80%, red);
     }
 
-    &.nano-button--orange-outline {
+    &.fii-button--orange-outline {
         border: 1px solid var(--color-orange);
         background: unset;
         color: var(--color-orange);
@@ -745,12 +750,12 @@ body {
         }
     }
 
-    &.nano-button--orange-outline-active {
+    &.fii-button--orange-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-orange) 80%, red);
     }
 
-    &.nano-button--orange-ghost {
+    &.fii-button--orange-ghost {
         background: unset;
         color: var(--color-orange);
 
@@ -770,13 +775,13 @@ body {
         }
     }
 
-    &.nano-button--orange-ghost-active {
+    &.fii-button--orange-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-orange) 80%, red);
     }
 
     /* YELLOW */
-    &.nano-button--yellow {
+    &.fii-button--yellow {
         background: var(--color-yellow);
         color: black;
 
@@ -793,12 +798,12 @@ body {
         }
     }
 
-    &.nano-button--yellow-active {
+    &.fii-button--yellow-active {
         color: black;
         background: color-mix(in srgb, var(--color-yellow) 80%, red);
     }
 
-    &.nano-button--yellow-outline {
+    &.fii-button--yellow-outline {
         border: 1px solid var(--color-yellow);
         background: unset;
         color: var(--color-yellow);
@@ -820,12 +825,12 @@ body {
         }
     }
 
-    &.nano-button--yellow-outline-active {
+    &.fii-button--yellow-outline-active {
         color: black;
         background: color-mix(in srgb, var(--color-yellow) 80%, red);
     }
 
-    &.nano-button--yellow-ghost {
+    &.fii-button--yellow-ghost {
         background: unset;
         color: var(--color-yellow);
 
@@ -845,13 +850,13 @@ body {
         }
     }
 
-    &.nano-button--yellow-ghost-active {
+    &.fii-button--yellow-ghost-active {
         color: black;
         background: color-mix(in srgb, var(--color-yellow) 80%, red);
     }
 
     /* GREEN */
-    &.nano-button--green {
+    &.fii-button--green {
         background: var(--color-green);
         color: white;
 
@@ -868,12 +873,12 @@ body {
         }
     }
 
-    &.nano-button--green-active {
+    &.fii-button--green-active {
         color: white;
         background: color-mix(in srgb, var(--color-green) 80%, black);
     }
 
-    &.nano-button--green-outline {
+    &.fii-button--green-outline {
         border: 1px solid var(--color-green);
         background: unset;
         color: var(--color-green);
@@ -895,12 +900,12 @@ body {
         }
     }
 
-    &.nano-button--green-outline-active {
+    &.fii-button--green-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-green) 80%, black);
     }
 
-    &.nano-button--green-ghost {
+    &.fii-button--green-ghost {
         background: unset;
         color: var(--color-green);
 
@@ -920,13 +925,13 @@ body {
         }
     }
 
-    &.nano-button--green-ghost-active {
+    &.fii-button--green-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-green) 80%, black);
     }
 
     /* INDIGO */
-    &.nano-button--indigo {
+    &.fii-button--indigo {
         background: var(--color-indigo);
         color: white;
 
@@ -943,12 +948,12 @@ body {
         }
     }
 
-    &.nano-button--indigo-active {
+    &.fii-button--indigo-active {
         color: white;
         background: color-mix(in srgb, var(--color-indigo) 80%, black);
     }
 
-    &.nano-button--indigo-outline {
+    &.fii-button--indigo-outline {
         border: 1px solid var(--color-indigo);
         background: unset;
         color: var(--color-indigo);
@@ -970,12 +975,12 @@ body {
         }
     }
 
-    &.nano-button--indigo-outline-active {
+    &.fii-button--indigo-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-indigo) 80%, black);
     }
 
-    &.nano-button--indigo-ghost {
+    &.fii-button--indigo-ghost {
         background: unset;
         color: var(--color-indigo);
 
@@ -995,13 +1000,13 @@ body {
         }
     }
 
-    &.nano-button--indigo-ghost-active {
+    &.fii-button--indigo-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-indigo) 80%, black);
     }
 
     /* VIOLET */
-    &.nano-button--violet {
+    &.fii-button--violet {
         background: var(--color-violet);
         color: white;
 
@@ -1018,12 +1023,12 @@ body {
         }
     }
 
-    &.nano-button--violet-active {
+    &.fii-button--violet-active {
         color: white;
         background: color-mix(in srgb, var(--color-violet) 80%, black);
     }
 
-    &.nano-button--violet-outline {
+    &.fii-button--violet-outline {
         border: 1px solid var(--color-violet);
         background: unset;
         color: var(--color-violet);
@@ -1045,12 +1050,12 @@ body {
         }
     }
 
-    &.nano-button--violet-outline-active {
+    &.fii-button--violet-outline-active {
         color: white;
         background: color-mix(in srgb, var(--color-violet) 80%, black);
     }
 
-    &.nano-button--violet-ghost {
+    &.fii-button--violet-ghost {
         background: unset;
         color: var(--color-violet);
 
@@ -1070,7 +1075,7 @@ body {
         }
     }
 
-    &.nano-button--violet-ghost-active {
+    &.fii-button--violet-ghost-active {
         color: white;
         background: color-mix(in srgb, var(--color-violet) 80%, black);
     }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="max-width: 900px; margin: 0 auto; padding: 1.5rem;">
+        <h1>Table</h1>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.fii-table</code>. Tùy chọn: <code>.fii-table--striped</code>, <code>.fii-table--bordered</code>, <code>.fii-table--compact</code>.</p>
+
+        <h2>Bảng cơ bản</h2>
+        <div class="fii-table-wrapper" style="margin-bottom: 2rem;">
+            <table class="fii-table">
+                <caption>Danh sách thành viên</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Họ tên</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Vai trò</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>a@example.com</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Trần Thị B</td>
+                        <td>b@example.com</td>
+                        <td>Editor</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Lê Văn C</td>
+                        <td>c@example.com</td>
+                        <td>User</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Striped (sọc)</h2>
+        <div class="fii-table-wrapper" style="margin-bottom: 2rem;">
+            <table class="fii-table fii-table--striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Sản phẩm</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Đơn giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Áo thun</td><td>10</td><td>150.000</td></tr>
+                    <tr><td>Quần jean</td><td>5</td><td>350.000</td></tr>
+                    <tr><td>Giày</td><td>3</td><td>420.000</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Bordered + compact</h2>
+        <div class="fii-table-wrapper" style="margin-bottom: 2rem;">
+            <table class="fii-table fii-table--bordered fii-table--compact">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Mã</th>
+                        <th scope="col">Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>ORD-001</td><td>Đã giao</td></tr>
+                    <tr><td>2</td><td>ORD-002</td><td>Đang xử lý</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

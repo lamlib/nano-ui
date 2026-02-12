@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 24 – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="../form/style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grid-demo [class^="fii-col-"] {
+            background: color-mix(in srgb, var(--color-primary) 12%, white);
+            border: 1px solid color-mix(in srgb, var(--color-primary) 25%, white);
+            border-radius: 0.25rem;
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="fii-container" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+        <h1>Grid 24 columns</h1>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Giống Bootstrap nhưng dùng 24 cột thay vì 12. Class: <code>.fii-row</code> + <code>.fii-col-1</code> … <code>.fii-col-24</code>.</p>
+
+        <h2>Ví dụ: 24 cột = 1+1+…+1</h2>
+        <div class="fii-row grid-demo" style="margin-bottom: 1.5rem;">
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+            <div class="fii-col-1">1</div>
+        </div>
+
+        <h2>Ví dụ: 12 + 12</h2>
+        <div class="fii-row grid-demo" style="margin-bottom: 1.5rem;">
+            <div class="fii-col-12">col-12</div>
+            <div class="fii-col-12">col-12</div>
+        </div>
+
+        <h2>Ví dụ: 8 + 8 + 8</h2>
+        <div class="fii-row grid-demo" style="margin-bottom: 1.5rem;">
+            <div class="fii-col-8">col-8</div>
+            <div class="fii-col-8">col-8</div>
+            <div class="fii-col-8">col-8</div>
+        </div>
+
+        <h2>Ví dụ: 6 + 12 + 6</h2>
+        <div class="fii-row grid-demo" style="margin-bottom: 1.5rem;">
+            <div class="fii-col-6">col-6</div>
+            <div class="fii-col-12">col-12</div>
+            <div class="fii-col-6">col-6</div>
+        </div>
+
+        <h2>Ví dụ: 16 + 8</h2>
+        <div class="fii-row grid-demo" style="margin-bottom: 1.5rem;">
+            <div class="fii-col-16">col-16</div>
+            <div class="fii-col-8">col-8</div>
+        </div>
+
+        <h2>Form layout trong grid</h2>
+        <div class="fii-row" style="margin-bottom: 1.5rem;">
+            <div class="fii-col-12">
+                <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;">Họ</label>
+                <input type="text" class="fii-input" style="width: 100%;" placeholder="Họ">
+            </div>
+            <div class="fii-col-12">
+                <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;">Tên</label>
+                <input type="text" class="fii-input" style="width: 100%;" placeholder="Tên">
+            </div>
+        </div>
+        <div class="fii-row" style="margin-bottom: 1.5rem;">
+            <div class="fii-col-24">
+                <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;">Email</label>
+                <input type="email" class="fii-input" style="width: 100%;" placeholder="email@example.com">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

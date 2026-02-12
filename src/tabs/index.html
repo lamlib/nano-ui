@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+        <h1>Tabs</h1>
+        <p style="margin-bottom: 1rem; color: var(--color-secondary);">CSS-only: dùng <code>input[type=radio]</code> ẩn + <code>label</code>. Id tab: <code>tab1</code>, <code>tab2</code>, <code>tab3</code>; id panel: <code>panel1</code>, <code>panel2</code>, <code>panel3</code> (thêm tab thì thêm rule trong CSS).</p>
+
+        <div class="fii-tabs">
+            <input type="radio" name="tabs" id="tab1" class="fii-tabs__input" checked>
+            <input type="radio" name="tabs" id="tab2" class="fii-tabs__input">
+            <input type="radio" name="tabs" id="tab3" class="fii-tabs__input">
+            <div class="fii-tabs__list">
+                <label for="tab1" class="fii-tabs__tab">Tab 1</label>
+                <label for="tab2" class="fii-tabs__tab">Tab 2</label>
+                <label for="tab3" class="fii-tabs__tab">Tab 3</label>
+            </div>
+            <div class="fii-tabs__panel" id="panel1">Nội dung tab 1. Có thể đặt bất kỳ HTML nào ở đây.</div>
+            <div class="fii-tabs__panel" id="panel2">Nội dung tab 2.</div>
+            <div class="fii-tabs__panel" id="panel3">Nội dung tab 3.</div>
+        </div>
+    </div>
+</body>
+</html>

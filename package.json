@@ -1,0 +1,22 @@
+{
+  "name": "nano-ui",
+  "version": "1.0.0",
+  "description": "CSS Component and Utilities Library",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "node script/build-css.js",
+    "build:js": "node script/build-js.js",
+    "build": "node script/build-css.js && node script/build-js.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamlib/nano-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamlib/nano-ui/issues"
+  },
+  "homepage": "https://github.com/lamlib/nano-ui#readme"
+}

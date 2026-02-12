@@ -1,29 +1,28 @@
 @import url("../share/style.css");
 
-.nano-model {
+.fii-model {
     margin: auto;
     border: unset;
     border-radius: var(--radius-base);
     width: 30rem;
 }
 
-.nano-model::backdrop {
-  background: var(--color-dark);
-  opacity: 0.4;
+.fii-model::backdrop {
+    background: var(--color-dark);
+    opacity: 0.4;
 }
 
-.nano-model__body {
-    padding: .75rem 1rem;
+.fii-model__body {
+    padding: calc(var(--space-base) * 6) calc(var(--space-base) * 6) calc(var(--space-base) * 0) calc(var(--space-base) * 6);
 }
 
-.nano-model__footer {
+.fii-model__footer {
     display: flex;
     gap: .75rem;
     padding: .75rem 1rem;
     align-items: center;
     justify-content: end;
-    margin-top: 1rem;
+    margin-top: calc(var(--space-base) * 4);
     border-radius: 0 0 var(--radius-base);
     background-color: var(--color-layer-01);
 }
-

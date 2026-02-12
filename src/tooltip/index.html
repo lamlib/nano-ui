@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="../button/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+        <h1>Tooltip</h1>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Bọc trigger trong <code>.fii-tooltip</code>, nội dung trong <code>.fii-tooltip__content</code>. Vị trí: mặc định (top), <code>--bottom</code>, <code>--left</code>, <code>--right</code>. Hiện khi hover/focus.</p>
+
+        <h2>Vị trí</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center; min-height: 180px;">
+            <span class="fii-tooltip">
+                Trên (top)
+                <span class="fii-tooltip__content">Tooltip phía trên</span>
+            </span>
+            <span class="fii-tooltip">
+                Dưới (bottom)
+                <span class="fii-tooltip__content fii-tooltip__content--bottom">Tooltip phía dưới</span>
+            </span>
+            <span class="fii-tooltip">
+                Trái (left)
+                <span class="fii-tooltip__content fii-tooltip__content--left">Tooltip bên trái</span>
+            </span>
+            <span class="fii-tooltip">
+                Phải (right)
+                <span class="fii-tooltip__content fii-tooltip__content--right">Tooltip bên phải</span>
+            </span>
+        </div>
+
+        <h2>Trên nút</h2>
+        <div style="margin-top: 1rem;">
+            <span class="fii-tooltip">
+                <button type="button" class="fii-button fii-button--primary">Lưu</button>
+                <span class="fii-tooltip__content">Nhấn để lưu thay đổi</span>
+            </span>
+        </div>
+    </div>
+</body>
+</html>

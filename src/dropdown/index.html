@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="../button/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+        <h1>Dropdown</h1>
+        <p style="margin-bottom: 1rem; color: var(--color-secondary);">Class <code>.fii-dropdown</code>. Trigger bên ngoài, menu <code>.fii-dropdown__menu</code>, item <code>.fii-dropdown__item</code>. Mở: hover hoặc thêm <code>.fii-dropdown--open</code> (JS). Menu bên phải: <code>.fii-dropdown__menu--right</code>.</p>
+
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <div class="fii-dropdown">
+                <button type="button" class="fii-button fii-button--primary">Dropdown</button>
+                <div class="fii-dropdown__menu">
+                    <a href="#" class="fii-dropdown__item">Hành động 1</a>
+                    <a href="#" class="fii-dropdown__item">Hành động 2</a>
+                    <div class="fii-dropdown__divider"></div>
+                    <button type="button" class="fii-dropdown__item fii-dropdown__item--danger">Xóa</button>
+                </div>
+            </div>
+            <div class="fii-dropdown">
+                <button type="button" class="fii-button fii-button--outline">Menu phải</button>
+                <div class="fii-dropdown__menu fii-dropdown__menu--right">
+                    <a href="#" class="fii-dropdown__item">Option A</a>
+                    <a href="#" class="fii-dropdown__item">Option B</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

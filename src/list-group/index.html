@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List group – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="../badge/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="max-width: 24rem; margin: 0 auto; padding: 1.5rem;">
+        <h1>List group</h1>
+        <p style="margin-bottom: 1rem; color: var(--color-secondary);">Class <code>.fii-list-group</code>, <code>.fii-list-group__item</code>. Modifier: <code>--active</code>, <code>--disabled</code>, <code>--danger</code>.</p>
+
+        <div class="fii-list-group" style="margin-bottom: 1.5rem;">
+            <a href="#" class="fii-list-group__item">Mục 1</a>
+            <a href="#" class="fii-list-group__item fii-list-group__item--active">Mục đang chọn</a>
+            <a href="#" class="fii-list-group__item">Mục 3</a>
+            <span class="fii-list-group__item fii-list-group__item--disabled">Mục disabled</span>
+        </div>
+
+        <h2>Kèm badge</h2>
+        <div class="fii-list-group">
+            <a href="#" class="fii-list-group__item">
+                Thông báo
+                <span class="fii-badge fii-badge--primary">3</span>
+            </a>
+            <a href="#" class="fii-list-group__item">
+                Đã đọc
+                <span class="fii-badge fii-badge--outline fii-badge--success">OK</span>
+            </a>
+            <a href="#" class="fii-list-group__item fii-list-group__item--danger">
+                Xóa
+            </a>
+        </div>
+    </div>
+</body>
+</html>

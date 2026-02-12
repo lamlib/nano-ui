@@ -1,0 +1,4055 @@
+
+
+:root {
+    --color-red: #dc2626;
+    --color-orange: #ff6900;
+    --color-yellow: #ffc107;
+    --color-green: #059669;
+    --color-blue: #2563eb;
+    --color-indigo: #4f46e5;
+    --color-violet: #7c3aed;
+
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray: #64748b;
+
+    --color-primary: var(--color-blue);
+    --color-danger: var(--color-red);
+    --color-warning: var(--color-orange);
+    --color-success: var(--color-green);
+    --color-secondary: var(--color-gray);
+    --color-dark: var(--color-black);
+    --color-light: var(--color-white);
+
+    --color-component-01: color-mix(in srgb, var(--color-light) 90%, var(--color-dark));
+    --color-component-02: color-mix(in srgb, var(--color-light) 80%, var(--color-dark));
+    --color-component-03: color-mix(in srgb, var(--color-light) 70%, var(--color-dark));
+
+    --color-layer-01: color-mix(in srgb, var(--color-primary) 2%, var(--color-light));
+    --color-layer-02: color-mix(in srgb, var(--color-primary) 6%, var(--color-light));
+    --color-layer-03: color-mix(in srgb, var(--color-primary) 10%, var(--color-light));
+    
+    --unit-base: 0.25rem;
+    --fsize-base: calc(var(--unit-base) / 2);
+    --radius-base: calc(var(--unit-base) * 2);
+    --space-base: calc(var(--unit-base) * 1);
+
+    --color-background: var(--color-layer-01);
+    --color-foreground: color-mix(in srgb, var(--color-black) 80%, var(--color-light));
+}
+
+/* RESET */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: calc(var(--fsize-base) * 7);
+    line-height: 1.5;
+    color: var(--color-foreground);
+    background: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: calc(var(--fsize-base) * 7);
+    font-weight: 500;
+}
+
+/* ======================= */
+.fii-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-base);
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    background: var(--color-component-01);
+
+    &:hover {
+        background: color-mix(in srgb, var(--color-component-01) 90%, black);
+    }
+
+    &:active {
+       background: color-mix(in srgb, var(--color-component-01) 80%, black);
+    }
+
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+
+    &:focus {
+
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        background: color-mix(in srgb, var(--color-component-01) 60%, white);
+    }
+
+    &.fii-button--active {
+        background: color-mix(in srgb, var(--color-component-01) 80%, black);
+    }
+
+    &.fii-button--outline {
+        border: 1px solid var(--color-component-01);
+        background: unset;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-light) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-light) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-component-01) 60%, white);
+        }
+    }
+
+    &.fii-button--ghost {
+        background: unset;
+        &:hover {
+            background: color-mix(in srgb, var(--color-component-01) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-component-01) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+        }
+    }
+
+    &.fii-button--ghost-active {
+        background: color-mix(in srgb, var(--color-component-01) 80%, black);
+    }
+
+    /* PRIMARY */
+    &.fii-button--primary {
+        background: var(--color-primary);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-primary) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-primary) 60%, white);
+        }
+    }
+
+    &.fii-button--primary-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-primary) 80%, black);
+    }
+
+    &.fii-button--primary-outline {
+        border: 1px solid var(--color-primary);
+        background: unset;
+        color: var(--color-primary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-primary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-primary) 60%, white);
+            color: color-mix(in srgb, var(--color-primary) 60%, white);
+        }
+    }
+
+    &.fii-button--primary-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-primary) 80%, black);
+    }
+
+    &.fii-button--primary-ghost {
+        background: unset;
+
+        color: var(--color-primary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-primary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-primary) 60%, white);
+        }
+    }
+
+    &.fii-button--primary-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-primary) 80%, black);
+    }
+
+    /* DANGER */
+    &.fii-button--danger {
+        background: var(--color-danger);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-danger) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-danger) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-danger) 60%, white);
+        }
+    }
+
+    &.fii-button--danger-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-danger) 80%, black);
+    }
+
+    &.fii-button--danger-outline {
+        border: 1px solid var(--color-danger);
+        background: unset;
+        color: var(--color-danger);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-danger) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-danger) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-danger) 60%, white);
+            color: color-mix(in srgb, var(--color-danger) 60%, white);
+        }
+    }
+
+    &.fii-button--danger-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-danger) 80%, black);
+    }
+
+    &.fii-button--danger-ghost {
+        background: unset;
+
+        color: var(--color-danger);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-danger) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-danger) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-danger) 60%, white);
+        }
+    }
+
+    &.fii-button--danger-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-danger) 80%, black);
+    }
+
+    /* WARNING */
+    &.fii-button--warning {
+        background: var(--color-warning);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-warning) 90%, red);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-warning) 60%, white);
+        }
+    }
+
+    &.fii-button--warning-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-warning) 80%, red);
+    }
+
+    &.fii-button--warning-outline {
+        border: 1px solid var(--color-warning);
+        background: unset;
+        color: var(--color-warning);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-warning) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-warning) 60%, white);
+            color: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+    }
+
+    &.fii-button--warning-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-warning) 80%, red);
+    }
+
+    &.fii-button--warning-ghost {
+        background: unset;
+
+        color: var(--color-warning);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-warning) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-warning) 60%, white);
+        }
+    }
+
+    &.fii-button--warning-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-warning) 80%, red);
+    }
+
+    /* SUCCESS */
+    &.fii-button--success {
+        background: var(--color-success);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-success) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-success) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-success) 60%, white);
+        }
+    }
+
+    &.fii-button--success-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-success) 80%, black);
+    }
+
+    &.fii-button--success-outline {
+        border: 1px solid var(--color-success);
+        background: unset;
+        color: var(--color-success);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-success) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-success) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-success) 60%, white);
+            color: color-mix(in srgb, var(--color-success) 60%, white);
+        }
+    }
+
+    &.fii-button--success-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-success) 80%, black);
+    }
+
+    &.fii-button--success-ghost {
+        background: unset;
+
+        color: var(--color-success);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-success) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-success) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-success) 60%, white);
+        }
+    }
+
+    &.fii-button--success-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-success) 80%, black);
+    }
+
+    /* SECONDARY */
+    &.fii-button--secondary {
+        background: var(--color-secondary);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-secondary) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-secondary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-secondary) 60%, white);
+        }
+    }
+
+    &.fii-button--secondary-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-secondary) 80%, black);
+    }
+
+    &.fii-button--secondary-outline {
+        border: 1px solid var(--color-secondary);
+        background: unset;
+        color: var(--color-secondary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-secondary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-secondary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-secondary) 60%, white);
+            color: color-mix(in srgb, var(--color-secondary) 60%, white);
+        }
+    }
+
+    &.fii-button--secondary-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-secondary) 80%, black);
+    }
+
+    &.fii-button--secondary-ghost {
+        background: unset;
+
+        color: var(--color-secondary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-secondary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-secondary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-secondary) 60%, white);
+        }
+    }
+
+    &.fii-button--secondary-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-secondary) 80%, black);
+    }
+
+    /* BLUE */
+    &.fii-button--blue {
+        background: var(--color-blue);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-blue) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-blue) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-blue) 60%, white);
+        }
+    }
+
+    &.fii-button--blue-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-blue) 80%, black);
+    }
+
+    &.fii-button--blue-outline {
+        border: 1px solid var(--color-blue);
+        background: unset;
+        color: var(--color-blue);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-blue) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-blue) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-blue) 60%, white);
+            color: color-mix(in srgb, var(--color-blue) 60%, white);
+        }
+    }
+
+    &.fii-button--blue-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-blue) 80%, black);
+    }
+
+    &.fii-button--blue-ghost {
+        background: unset;
+
+        color: var(--color-blue);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-blue) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-blue) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-blue) 60%, white);
+        }
+    }
+
+    &.fii-button--blue-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-blue) 80%, black);
+    }
+
+    /* RED */
+    &.fii-button--red {
+        background: var(--color-red);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-red) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-red) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-red) 60%, white);
+        }
+    }
+
+    &.fii-button--red-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-red) 80%, black);
+    }
+
+    &.fii-button--red-outline {
+        border: 1px solid var(--color-red);
+        background: unset;
+        color: var(--color-red);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-red) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-red) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-red) 60%, white);
+            color: color-mix(in srgb, var(--color-red) 60%, white);
+        }
+    }
+
+    &.fii-button--red-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-red) 80%, black);
+    }
+
+    &.fii-button--red-ghost {
+        background: unset;
+        color: var(--color-red);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-red) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-red) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-red) 60%, white);
+        }
+    }
+
+    &.fii-button--red-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-red) 80%, black);
+    }
+
+    /* ORANGE */
+    &.fii-button--orange {
+        background: var(--color-orange);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-orange) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-orange) 80%, red);
+            color: white;
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-orange) 60%, white);
+        }
+    }
+
+    &.fii-button--orange-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-orange) 80%, red);
+    }
+
+    &.fii-button--orange-outline {
+        border: 1px solid var(--color-orange);
+        background: unset;
+        color: var(--color-orange);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-orange) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-orange) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-orange) 60%, white);
+            color: color-mix(in srgb, var(--color-orange) 60%, white);
+        }
+    }
+
+    &.fii-button--orange-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-orange) 80%, red);
+    }
+
+    &.fii-button--orange-ghost {
+        background: unset;
+        color: var(--color-orange);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-orange) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-orange) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-orange) 60%, white);
+        }
+    }
+
+    &.fii-button--orange-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-orange) 80%, red);
+    }
+
+    /* YELLOW */
+    &.fii-button--yellow {
+        background: var(--color-yellow);
+        color: black;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-yellow) 90%, red);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-yellow) 80%, red);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-yellow) 60%, white);
+        }
+    }
+
+    &.fii-button--yellow-active {
+        color: black;
+        background: color-mix(in srgb, var(--color-yellow) 80%, red);
+    }
+
+    &.fii-button--yellow-outline {
+        border: 1px solid var(--color-yellow);
+        background: unset;
+        color: var(--color-yellow);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-yellow) 90%, red);
+            color: black;
+        }
+
+        &:active {
+            color: black;
+            background: color-mix(in srgb, var(--color-yellow) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-yellow) 60%, white);
+            color: color-mix(in srgb, var(--color-yellow) 60%, white);
+        }
+    }
+
+    &.fii-button--yellow-outline-active {
+        color: black;
+        background: color-mix(in srgb, var(--color-yellow) 80%, red);
+    }
+
+    &.fii-button--yellow-ghost {
+        background: unset;
+        color: var(--color-yellow);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-yellow) 90%, red);
+            color: black;
+        }
+
+        &:active {
+            color: black;
+            background: color-mix(in srgb, var(--color-yellow) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-yellow) 60%, white);
+        }
+    }
+
+    &.fii-button--yellow-ghost-active {
+        color: black;
+        background: color-mix(in srgb, var(--color-yellow) 80%, red);
+    }
+
+    /* GREEN */
+    &.fii-button--green {
+        background: var(--color-green);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-green) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-green) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-green) 60%, white);
+        }
+    }
+
+    &.fii-button--green-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-green) 80%, black);
+    }
+
+    &.fii-button--green-outline {
+        border: 1px solid var(--color-green);
+        background: unset;
+        color: var(--color-green);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-green) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-green) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-green) 60%, white);
+            color: color-mix(in srgb, var(--color-green) 60%, white);
+        }
+    }
+
+    &.fii-button--green-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-green) 80%, black);
+    }
+
+    &.fii-button--green-ghost {
+        background: unset;
+        color: var(--color-green);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-green) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-green) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-green) 60%, white);
+        }
+    }
+
+    &.fii-button--green-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-green) 80%, black);
+    }
+
+    /* INDIGO */
+    &.fii-button--indigo {
+        background: var(--color-indigo);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-indigo) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-indigo) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-indigo) 60%, white);
+        }
+    }
+
+    &.fii-button--indigo-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-indigo) 80%, black);
+    }
+
+    &.fii-button--indigo-outline {
+        border: 1px solid var(--color-indigo);
+        background: unset;
+        color: var(--color-indigo);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-indigo) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-indigo) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-indigo) 60%, white);
+            color: color-mix(in srgb, var(--color-indigo) 60%, white);
+        }
+    }
+
+    &.fii-button--indigo-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-indigo) 80%, black);
+    }
+
+    &.fii-button--indigo-ghost {
+        background: unset;
+        color: var(--color-indigo);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-indigo) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-indigo) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-indigo) 60%, white);
+        }
+    }
+
+    &.fii-button--indigo-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-indigo) 80%, black);
+    }
+
+    /* VIOLET */
+    &.fii-button--violet {
+        background: var(--color-violet);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-violet) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-violet) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-violet) 60%, white);
+        }
+    }
+
+    &.fii-button--violet-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-violet) 80%, black);
+    }
+
+    &.fii-button--violet-outline {
+        border: 1px solid var(--color-violet);
+        background: unset;
+        color: var(--color-violet);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-violet) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-violet) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-violet) 60%, white);
+            color: color-mix(in srgb, var(--color-violet) 60%, white);
+        }
+    }
+
+    &.fii-button--violet-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-violet) 80%, black);
+    }
+
+    &.fii-button--violet-ghost {
+        background: unset;
+        color: var(--color-violet);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-violet) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-violet) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-violet) 60%, white);
+        }
+    }
+
+    &.fii-button--violet-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-violet) 80%, black);
+    }
+}
+
+details.micro-accordion {
+    border: 1px solid #aaaaaa;
+    padding: 0.5em 0.5em 0;
+    &.micro-accordion--no-border-top {
+        border-top: unset;
+    }
+    &.micro-accordion--only-border-bottom {
+        border-top: unset;
+        border-left: unset;
+        border-right: unset;
+    }
+    &.micro-accordion--no-border-vertical {
+        border-left: unset;
+        border-right: unset;
+    }
+}
+
+summary.micro-accordion__header {
+    cursor: pointer;
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em 1rem;
+}
+
+details.micro-accordion[open] {
+    padding: 0.5em;
+}
+
+details.micro-accordion[open] summary.micro-accordion__header {
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 0.5em;
+    &.micro-accordion__header--no-border-bottom {
+        border-bottom: unset;
+    }
+}
+/* ---------- Alert ---------- */
+.fii-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border: 1px solid transparent;
+}
+
+.fii-alert--success {
+    background: color-mix(in srgb, var(--color-success) 12%, white);
+    color: color-mix(in srgb, var(--color-success) 40%, black);
+    border-color: color-mix(in srgb, var(--color-success) 30%, transparent);
+}
+
+.fii-alert--warning {
+    background: color-mix(in srgb, var(--color-warning) 14%, white);
+    color: color-mix(in srgb, var(--color-warning) 35%, black);
+    border-color: color-mix(in srgb, var(--color-warning) 28%, transparent);
+}
+
+.fii-alert--danger {
+    background: color-mix(in srgb, var(--color-danger) 12%, white);
+    color: color-mix(in srgb, var(--color-danger) 40%, black);
+    border-color: color-mix(in srgb, var(--color-danger) 28%, transparent);
+}
+
+.fii-alert--info {
+    background: color-mix(in srgb, var(--color-primary) 12%, white);
+    color: color-mix(in srgb, var(--color-primary) 40%, black);
+    border-color: color-mix(in srgb, var(--color-primary) 28%, transparent);
+}
+
+.fii-alert__content {
+    flex: 1;
+}
+
+.fii-alert__close {
+    flex-shrink: 0;
+    padding: 0.125rem;
+    border: none;
+    background: none;
+    color: inherit;
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 1.125rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+    transition: opacity 0.15s ease;
+}
+
+.fii-alert__close:hover {
+    opacity: 1;
+}
+
+.fii-alert__close:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* ---------- Badge ---------- */
+.fii-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.fii-badge--primary {
+    background: var(--color-primary);
+    color: var(--color-light);
+}
+
+.fii-badge--success {
+    background: var(--color-success);
+    color: var(--color-light);
+}
+
+.fii-badge--warning {
+    background: var(--color-warning);
+    color: var(--color-dark);
+}
+
+.fii-badge--danger {
+    background: var(--color-danger);
+    color: var(--color-light);
+}
+
+.fii-badge--secondary {
+    background: var(--color-secondary);
+    color: var(--color-light);
+}
+
+.fii-badge--outline {
+    background: transparent;
+    border: 1px solid currentColor;
+}
+
+.fii-badge--outline.fii-badge--primary {
+    color: var(--color-primary);
+}
+
+.fii-badge--outline.fii-badge--success {
+    color: var(--color-success);
+}
+
+.fii-badge--outline.fii-badge--warning {
+    color: var(--color-warning);
+}
+
+.fii-badge--outline.fii-badge--danger {
+    color: var(--color-danger);
+}
+
+.fii-badge--outline.fii-badge--secondary {
+    color: var(--color-secondary);
+}
+
+
+.fii-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: end;
+}
+
+.fii-breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "/";
+}
+
+.fii-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-base);
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    background: var(--color-component-01);
+
+    &:hover {
+        background: color-mix(in srgb, var(--color-component-01) 90%, black);
+    }
+
+    &:active {
+       background: color-mix(in srgb, var(--color-component-01) 80%, black);
+    }
+
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+
+    &:focus {
+
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        background: color-mix(in srgb, var(--color-component-01) 60%, white);
+    }
+
+    &.fii-button--active {
+        background: color-mix(in srgb, var(--color-component-01) 80%, black);
+    }
+
+    &.fii-button--outline {
+        border: 1px solid var(--color-component-01);
+        background: unset;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-light) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-light) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-component-01) 60%, white);
+        }
+    }
+
+    &.fii-button--ghost {
+        background: unset;
+        &:hover {
+            background: color-mix(in srgb, var(--color-component-01) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-component-01) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+        }
+    }
+
+    &.fii-button--ghost-active {
+        background: color-mix(in srgb, var(--color-component-01) 80%, black);
+    }
+
+    /* PRIMARY */
+    &.fii-button--primary {
+        background: var(--color-primary);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-primary) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-primary) 60%, white);
+        }
+    }
+
+    &.fii-button--primary-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-primary) 80%, black);
+    }
+
+    &.fii-button--primary-outline {
+        border: 1px solid var(--color-primary);
+        background: unset;
+        color: var(--color-primary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-primary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-primary) 60%, white);
+            color: color-mix(in srgb, var(--color-primary) 60%, white);
+        }
+    }
+
+    &.fii-button--primary-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-primary) 80%, black);
+    }
+
+    &.fii-button--primary-ghost {
+        background: unset;
+
+        color: var(--color-primary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-primary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-primary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-primary) 60%, white);
+        }
+    }
+
+    &.fii-button--primary-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-primary) 80%, black);
+    }
+
+    /* DANGER */
+    &.fii-button--danger {
+        background: var(--color-danger);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-danger) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-danger) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-danger) 60%, white);
+        }
+    }
+
+    &.fii-button--danger-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-danger) 80%, black);
+    }
+
+    &.fii-button--danger-outline {
+        border: 1px solid var(--color-danger);
+        background: unset;
+        color: var(--color-danger);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-danger) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-danger) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-danger) 60%, white);
+            color: color-mix(in srgb, var(--color-danger) 60%, white);
+        }
+    }
+
+    &.fii-button--danger-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-danger) 80%, black);
+    }
+
+    &.fii-button--danger-ghost {
+        background: unset;
+
+        color: var(--color-danger);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-danger) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-danger) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-danger) 60%, white);
+        }
+    }
+
+    &.fii-button--danger-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-danger) 80%, black);
+    }
+
+    /* WARNING */
+    &.fii-button--warning {
+        background: var(--color-warning);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-warning) 90%, red);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-warning) 60%, white);
+        }
+    }
+
+    &.fii-button--warning-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-warning) 80%, red);
+    }
+
+    &.fii-button--warning-outline {
+        border: 1px solid var(--color-warning);
+        background: unset;
+        color: var(--color-warning);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-warning) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-warning) 60%, white);
+            color: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+    }
+
+    &.fii-button--warning-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-warning) 80%, red);
+    }
+
+    &.fii-button--warning-ghost {
+        background: unset;
+
+        color: var(--color-warning);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-warning) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-warning) 80%, red);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-warning) 60%, white);
+        }
+    }
+
+    &.fii-button--warning-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-warning) 80%, red);
+    }
+
+    /* SUCCESS */
+    &.fii-button--success {
+        background: var(--color-success);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-success) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-success) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-success) 60%, white);
+        }
+    }
+
+    &.fii-button--success-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-success) 80%, black);
+    }
+
+    &.fii-button--success-outline {
+        border: 1px solid var(--color-success);
+        background: unset;
+        color: var(--color-success);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-success) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-success) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-success) 60%, white);
+            color: color-mix(in srgb, var(--color-success) 60%, white);
+        }
+    }
+
+    &.fii-button--success-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-success) 80%, black);
+    }
+
+    &.fii-button--success-ghost {
+        background: unset;
+
+        color: var(--color-success);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-success) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-success) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-success) 60%, white);
+        }
+    }
+
+    &.fii-button--success-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-success) 80%, black);
+    }
+
+    /* SECONDARY */
+    &.fii-button--secondary {
+        background: var(--color-secondary);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-secondary) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-secondary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-secondary) 60%, white);
+        }
+    }
+
+    &.fii-button--secondary-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-secondary) 80%, black);
+    }
+
+    &.fii-button--secondary-outline {
+        border: 1px solid var(--color-secondary);
+        background: unset;
+        color: var(--color-secondary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-secondary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-secondary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-secondary) 60%, white);
+            color: color-mix(in srgb, var(--color-secondary) 60%, white);
+        }
+    }
+
+    &.fii-button--secondary-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-secondary) 80%, black);
+    }
+
+    &.fii-button--secondary-ghost {
+        background: unset;
+
+        color: var(--color-secondary);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-secondary) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-secondary) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-secondary) 60%, white);
+        }
+    }
+
+    &.fii-button--secondary-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-secondary) 80%, black);
+    }
+
+    /* BLUE */
+    &.fii-button--blue {
+        background: var(--color-blue);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-blue) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-blue) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-blue) 60%, white);
+        }
+    }
+
+    &.fii-button--blue-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-blue) 80%, black);
+    }
+
+    &.fii-button--blue-outline {
+        border: 1px solid var(--color-blue);
+        background: unset;
+        color: var(--color-blue);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-blue) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-blue) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            border: 1px solid color-mix(in srgb, var(--color-blue) 60%, white);
+            color: color-mix(in srgb, var(--color-blue) 60%, white);
+        }
+    }
+
+    &.fii-button--blue-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-blue) 80%, black);
+    }
+
+    &.fii-button--blue-ghost {
+        background: unset;
+
+        color: var(--color-blue);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-blue) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-blue) 80%, black);
+        }
+
+        
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-blue) 60%, white);
+        }
+    }
+
+    &.fii-button--blue-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-blue) 80%, black);
+    }
+
+    /* RED */
+    &.fii-button--red {
+        background: var(--color-red);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-red) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-red) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-red) 60%, white);
+        }
+    }
+
+    &.fii-button--red-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-red) 80%, black);
+    }
+
+    &.fii-button--red-outline {
+        border: 1px solid var(--color-red);
+        background: unset;
+        color: var(--color-red);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-red) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-red) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-red) 60%, white);
+            color: color-mix(in srgb, var(--color-red) 60%, white);
+        }
+    }
+
+    &.fii-button--red-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-red) 80%, black);
+    }
+
+    &.fii-button--red-ghost {
+        background: unset;
+        color: var(--color-red);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-red) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-red) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-red) 60%, white);
+        }
+    }
+
+    &.fii-button--red-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-red) 80%, black);
+    }
+
+    /* ORANGE */
+    &.fii-button--orange {
+        background: var(--color-orange);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-orange) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-orange) 80%, red);
+            color: white;
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-orange) 60%, white);
+        }
+    }
+
+    &.fii-button--orange-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-orange) 80%, red);
+    }
+
+    &.fii-button--orange-outline {
+        border: 1px solid var(--color-orange);
+        background: unset;
+        color: var(--color-orange);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-orange) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-orange) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-orange) 60%, white);
+            color: color-mix(in srgb, var(--color-orange) 60%, white);
+        }
+    }
+
+    &.fii-button--orange-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-orange) 80%, red);
+    }
+
+    &.fii-button--orange-ghost {
+        background: unset;
+        color: var(--color-orange);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-orange) 90%, red);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-orange) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-orange) 60%, white);
+        }
+    }
+
+    &.fii-button--orange-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-orange) 80%, red);
+    }
+
+    /* YELLOW */
+    &.fii-button--yellow {
+        background: var(--color-yellow);
+        color: black;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-yellow) 90%, red);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-yellow) 80%, red);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-yellow) 60%, white);
+        }
+    }
+
+    &.fii-button--yellow-active {
+        color: black;
+        background: color-mix(in srgb, var(--color-yellow) 80%, red);
+    }
+
+    &.fii-button--yellow-outline {
+        border: 1px solid var(--color-yellow);
+        background: unset;
+        color: var(--color-yellow);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-yellow) 90%, red);
+            color: black;
+        }
+
+        &:active {
+            color: black;
+            background: color-mix(in srgb, var(--color-yellow) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-yellow) 60%, white);
+            color: color-mix(in srgb, var(--color-yellow) 60%, white);
+        }
+    }
+
+    &.fii-button--yellow-outline-active {
+        color: black;
+        background: color-mix(in srgb, var(--color-yellow) 80%, red);
+    }
+
+    &.fii-button--yellow-ghost {
+        background: unset;
+        color: var(--color-yellow);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-yellow) 90%, red);
+            color: black;
+        }
+
+        &:active {
+            color: black;
+            background: color-mix(in srgb, var(--color-yellow) 80%, red);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-yellow) 60%, white);
+        }
+    }
+
+    &.fii-button--yellow-ghost-active {
+        color: black;
+        background: color-mix(in srgb, var(--color-yellow) 80%, red);
+    }
+
+    /* GREEN */
+    &.fii-button--green {
+        background: var(--color-green);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-green) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-green) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-green) 60%, white);
+        }
+    }
+
+    &.fii-button--green-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-green) 80%, black);
+    }
+
+    &.fii-button--green-outline {
+        border: 1px solid var(--color-green);
+        background: unset;
+        color: var(--color-green);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-green) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-green) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-green) 60%, white);
+            color: color-mix(in srgb, var(--color-green) 60%, white);
+        }
+    }
+
+    &.fii-button--green-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-green) 80%, black);
+    }
+
+    &.fii-button--green-ghost {
+        background: unset;
+        color: var(--color-green);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-green) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-green) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-green) 60%, white);
+        }
+    }
+
+    &.fii-button--green-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-green) 80%, black);
+    }
+
+    /* INDIGO */
+    &.fii-button--indigo {
+        background: var(--color-indigo);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-indigo) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-indigo) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-indigo) 60%, white);
+        }
+    }
+
+    &.fii-button--indigo-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-indigo) 80%, black);
+    }
+
+    &.fii-button--indigo-outline {
+        border: 1px solid var(--color-indigo);
+        background: unset;
+        color: var(--color-indigo);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-indigo) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-indigo) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-indigo) 60%, white);
+            color: color-mix(in srgb, var(--color-indigo) 60%, white);
+        }
+    }
+
+    &.fii-button--indigo-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-indigo) 80%, black);
+    }
+
+    &.fii-button--indigo-ghost {
+        background: unset;
+        color: var(--color-indigo);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-indigo) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-indigo) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-indigo) 60%, white);
+        }
+    }
+
+    &.fii-button--indigo-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-indigo) 80%, black);
+    }
+
+    /* VIOLET */
+    &.fii-button--violet {
+        background: var(--color-violet);
+        color: white;
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-violet) 90%, black);
+        }
+
+        &:active {
+            background: color-mix(in srgb, var(--color-violet) 80%, black);
+        }
+
+        &:disabled {
+            background: color-mix(in srgb, var(--color-violet) 60%, white);
+        }
+    }
+
+    &.fii-button--violet-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-violet) 80%, black);
+    }
+
+    &.fii-button--violet-outline {
+        border: 1px solid var(--color-violet);
+        background: unset;
+        color: var(--color-violet);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-violet) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-violet) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            border-color: color-mix(in srgb, var(--color-violet) 60%, white);
+            color: color-mix(in srgb, var(--color-violet) 60%, white);
+        }
+    }
+
+    &.fii-button--violet-outline-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-violet) 80%, black);
+    }
+
+    &.fii-button--violet-ghost {
+        background: unset;
+        color: var(--color-violet);
+
+        &:hover {
+            background: color-mix(in srgb, var(--color-violet) 90%, black);
+            color: white;
+        }
+
+        &:active {
+            color: white;
+            background: color-mix(in srgb, var(--color-violet) 80%, black);
+        }
+
+        &:disabled {
+            background: unset;
+            color: color-mix(in srgb, var(--color-violet) 60%, white);
+        }
+    }
+
+    &.fii-button--violet-ghost-active {
+        color: white;
+        background: color-mix(in srgb, var(--color-violet) 80%, black);
+    }
+}
+
+.fii-card {
+    background: var(--color-layer-03);
+    border-radius: calc(var(--radius-base) * 2);
+
+    &.fii-card--primary {
+        background: var(--color-primary);
+        color: var(--color-light);
+    }
+
+    &.fii-card--danger {
+        background: var(--color-danger);
+        color: var(--color-light);
+    }
+}
+
+.fii-card__header {
+    padding-top: calc(var(--space-base) * 6);
+}
+
+.fii-card__body {
+    padding: calc(var(--space-base) * 0) calc(var(--space-base) * 6) calc(var(--space-base) * 0) calc(var(--space-base) * 6);
+}
+
+.fii-card__footer {
+    padding-bottom: calc(var(--space-base) * 6);
+}
+
+var.fii-var {
+    font-style: italic;
+    font-weight: bold;
+}
+
+code.fii-code {
+    font-weight: bold;
+    background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
+    display: inline-block;
+    padding: 0rem 1cap;
+}
+
+kbd.fii-kbd {
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0px 1px 0px 3px color-mix(in srgb, var(--color-dark) 30%, var(--color-light));
+    padding: 0rem 1cap;
+    margin: 0 0.125rem;
+}
+
+samp.fii-samp {
+    font-weight: bold;
+    display: block;
+    padding: 1rem;
+    background: var(--color-dark);
+    color: var(--color-light);
+    white-space: pre;
+}
+
+pre.fii-pre {
+    font-weight: bold;
+    background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
+    padding: 1rem;
+}
+/* ---------- Dropdown ---------- */
+.fii-dropdown {
+    position: relative;
+    display: inline-flex;
+}
+
+.fii-dropdown__menu {
+    position: absolute;
+    z-index: 50;
+    top: 100%;
+    left: 0;
+    min-width: 10rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    background: var(--color-light);
+    border: 1px solid var(--color-component-02);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+}
+
+.fii-dropdown--open .fii-dropdown__menu,
+.fii-dropdown:hover .fii-dropdown__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.fii-dropdown__menu--right {
+    left: auto;
+    right: 0;
+}
+
+.fii-dropdown__item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-foreground);
+    text-align: left;
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.fii-dropdown__item:hover {
+    background: var(--color-layer-02);
+}
+
+.fii-dropdown__item--danger:hover {
+    background: color-mix(in srgb, var(--color-danger) 10%, white);
+    color: var(--color-danger);
+}
+
+.fii-dropdown__divider {
+    height: 1px;
+    margin: 0.25rem 0;
+    background: var(--color-component-02);
+}
+
+
+.fii-model {
+    margin: auto;
+    border: unset;
+    border-radius: var(--radius-base);
+    width: 30rem;
+}
+
+.fii-model::backdrop {
+    background: var(--color-dark);
+    opacity: 0.4;
+}
+
+.fii-model__body {
+    padding: calc(var(--space-base) * 6) calc(var(--space-base) * 6) calc(var(--space-base) * 0) calc(var(--space-base) * 6);
+}
+
+.fii-model__footer {
+    display: flex;
+    gap: .75rem;
+    padding: .75rem 1rem;
+    align-items: center;
+    justify-content: end;
+    margin-top: calc(var(--space-base) * 4);
+    border-radius: 0 0 var(--radius-base);
+    background-color: var(--color-layer-01);
+}
+/* ---------- Table ---------- */
+:root {
+    --table-border: 1px solid var(--color-component-02);
+    --table-radius: 0.5rem;
+}
+
+.fii-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    color: var(--color-foreground);
+    background: var(--color-light);
+    border-radius: var(--table-radius);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.fii-table th,
+.fii-table td {
+    padding: 0.625rem 0.875rem;
+    text-align: left;
+    border-bottom: var(--table-border);
+}
+
+.fii-table th {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    background: var(--color-component-02);
+    color: var(--color-foreground);
+}
+
+.fii-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.fii-table tbody tr:hover {
+    background: var(--color-layer-02);
+}
+
+.fii-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.fii-table caption {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--color-foreground);
+    caption-side: top;
+}
+
+/* Striped rows */
+.fii-table.fii-table--striped tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--color-component-02) 40%, transparent);
+}
+
+.fii-table.fii-table--striped tbody tr:nth-child(even):hover {
+    background: var(--color-layer-02);
+}
+
+/* Bordered (full borders) */
+.fii-table.fii-table--bordered th,
+.fii-table.fii-table--bordered td {
+    border: var(--table-border);
+}
+
+.fii-table.fii-table--bordered th {
+    border-bottom: 2px solid var(--color-component-03);
+}
+
+/* Compact padding */
+.fii-table.fii-table--compact th,
+.fii-table.fii-table--compact td {
+    padding: 0.375rem 0.625rem;
+}
+
+/* Wrapper for horizontal scroll on small screens */
+.fii-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--table-radius);
+}
+
+
+:root {
+    --form-radius: 0.5rem;
+    --form-border: 1px solid color-mix(in srgb, var(--color-component-02) 80%, transparent);
+    --form-focus-ring: 0 0 0 3px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+
+.fii-input,
+.fii-input-text,
+.fii-input-password,
+.fii-input-email,
+.fii-input-number,
+.fii-input-tel,
+.fii-input-url,
+.fii-input-search,
+.fii-input-textarea,
+.fii-input-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font: inherit;
+    font-size: 0.9375rem;
+    color: var(--color-foreground);
+    background: var(--color-light);
+    border: var(--form-border);
+    border-radius: var(--form-radius);
+    padding: 0.625rem 0.875rem;
+    min-height: 44px;
+    width: 100%;
+    max-width: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.fii-input:hover,
+.fii-input-textarea:hover,
+.fii-input-select:hover {
+    border-color: color-mix(in srgb, var(--color-component-02) 100%, var(--color-primary) 10%);
+}
+
+.fii-input:focus,
+.fii-input-textarea:focus,
+.fii-input-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: var(--form-focus-ring);
+    background: var(--color-light);
+}
+
+.fii-input:disabled,
+.fii-input-textarea:disabled,
+.fii-input-select:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    background: var(--color-component-02);
+    box-shadow: none;
+}
+
+.fii-input:invalid:not(:placeholder-shown):not(:focus),
+.fii-input-textarea:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: var(--color-danger);
+}
+
+.fii-input::placeholder,
+.fii-input-textarea::placeholder {
+    color: var(--color-secondary);
+}
+
+.fii-input-textarea {
+    min-height: 96px;
+    resize: vertical;
+    padding: 0.625rem 0.875rem;
+    line-height: 1.5;
+}
+
+.fii-input-select {
+    padding-right: 2.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.875rem center;
+    background-size: 14px;
+    cursor: pointer;
+}
+
+.fii-input-search[type="search"]::-webkit-search-cancel-button,
+.fii-input-search[type="search"]::-webkit-search-decoration {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.fii-input-number[type="number"]::-webkit-outer-spin-button,
+.fii-input-number[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+.fii-input-number[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.fii-input[type="range"] {
+    height: 6px;
+    padding: 0;
+    min-height: unset;
+    background: var(--color-component-02);
+    border: none;
+    border-radius: 999px;
+    box-shadow: none;
+}
+.fii-input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-light);
+    cursor: pointer;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.fii-input[type="range"]:hover::-webkit-slider-thumb {
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+.fii-input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-light);
+    cursor: pointer;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.fii-input[type="range"]:hover::-moz-range-thumb {
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.fii-input[type="color"] {
+    padding: 3px;
+    height: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+.fii-input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+.fii-input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: calc(var(--form-radius) - 2px);
+}
+.fii-input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: calc(var(--form-radius) - 2px);
+}
+
+.fii-input[type="file"] {
+    padding: 0.35rem 0.75rem;
+    min-height: unset;
+}
+.fii-input[type="file"]::file-selector-button {
+    appearance: none;
+    -webkit-appearance: none;
+    font: inherit;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.875rem;
+    margin-right: 0.875rem;
+    border: var(--form-border);
+    border-radius: var(--form-radius);
+    background: var(--color-component-02);
+    color: var(--color-foreground);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.fii-input[type="file"]::file-selector-button:hover {
+    background: var(--color-component-03);
+}
+
+.fii-input[type="checkbox"],
+.fii-input[type="radio"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    min-height: unset;
+    padding: 0;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 0.25rem;
+    box-shadow: none;
+}
+.fii-input[type="radio"] {
+    border-radius: 50%;
+}
+
+.fii-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    margin-bottom: 1.25rem;
+}
+.fii-field label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--color-foreground);
+}
+.fii-field .fii-field-message {
+    font-size: 0.8125rem;
+    color: var(--color-secondary);
+    margin-top: 0.125rem;
+}
+.fii-field.fii-field--error .fii-field-message {
+    color: var(--color-danger);
+}
+.fii-field.fii-field--error .fii-input,
+.fii-field.fii-field--error .fii-input-textarea {
+    border-color: var(--color-danger);
+}
+
+/* ---------- Form wrapper ---------- */
+.fii-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 28rem;
+}
+
+.fii-form .fii-form-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+/* ---------- Fieldset & legend ---------- */
+.fii-fieldset,
+fieldset {
+    border: var(--form-border);
+    border-radius: var(--form-radius);
+    padding: 1.25rem;
+    margin: 0 0 1.25rem 0;
+    background: color-mix(in srgb, var(--color-light) 95%, var(--color-component-01));
+}
+.fii-legend,
+legend {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--color-foreground);
+    padding: 0 0.5rem;
+}
+
+/* ---------- Output, progress, meter ---------- */
+output {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-foreground);
+}
+progress {
+    width: 100%;
+    height: 8px;
+    border: none;
+    border-radius: 999px;
+    background: var(--color-component-02);
+    overflow: hidden;
+}
+progress::-webkit-progress-bar {
+    background: var(--color-component-02);
+    border-radius: 999px;
+}
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 85%, white));
+    border-radius: 999px;
+    transition: width 0.25s ease;
+}
+progress::-moz-progress-bar {
+    background: var(--color-primary);
+    border-radius: 999px;
+}
+meter {
+    width: 100%;
+    height: 10px;
+    border: none;
+    border-radius: 999px;
+    background: var(--color-component-02);
+    overflow: hidden;
+}
+meter::-webkit-meter-bar {
+    background: var(--color-component-02);
+    border-radius: 999px;
+}
+meter::-webkit-meter-optimum-value {
+    background: linear-gradient(90deg, var(--color-success), color-mix(in srgb, var(--color-success) 85%, white));
+    border-radius: 999px;
+}
+meter::-moz-meter-bar {
+    background: var(--color-primary);
+    border-radius: 999px;
+}
+
+/* ---------- Grid: 24 columns (Bootstrap-like) ---------- */
+:root {
+    --grid-columns: 24;
+    --grid-gutter: 1rem;
+}
+
+.fii-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--grid-gutter);
+    padding-right: var(--grid-gutter);
+}
+
+.fii-row {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: var(--grid-gutter);
+}
+
+.fii-col-1 { grid-column: span 1; }
+.fii-col-2 { grid-column: span 2; }
+.fii-col-3 { grid-column: span 3; }
+.fii-col-4 { grid-column: span 4; }
+.fii-col-5 { grid-column: span 5; }
+.fii-col-6 { grid-column: span 6; }
+.fii-col-7 { grid-column: span 7; }
+.fii-col-8 { grid-column: span 8; }
+.fii-col-9 { grid-column: span 9; }
+.fii-col-10 { grid-column: span 10; }
+.fii-col-11 { grid-column: span 11; }
+.fii-col-12 { grid-column: span 12; }
+.fii-col-13 { grid-column: span 13; }
+.fii-col-14 { grid-column: span 14; }
+.fii-col-15 { grid-column: span 15; }
+.fii-col-16 { grid-column: span 16; }
+.fii-col-17 { grid-column: span 17; }
+.fii-col-18 { grid-column: span 18; }
+.fii-col-19 { grid-column: span 19; }
+.fii-col-20 { grid-column: span 20; }
+.fii-col-21 { grid-column: span 21; }
+.fii-col-22 { grid-column: span 22; }
+.fii-col-23 { grid-column: span 23; }
+.fii-col-24 { grid-column: span 24; }
+
+/* ---------- List group ---------- */
+.fii-list-group {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-component-02);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.fii-list-group__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    color: var(--color-foreground);
+    background: var(--color-light);
+    border-bottom: 1px solid var(--color-component-02);
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.fii-list-group__item:last-child {
+    border-bottom: none;
+}
+
+.fii-list-group__item:hover {
+    background: var(--color-layer-02);
+}
+
+.fii-list-group__item--active {
+    background: var(--color-layer-02);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.fii-list-group__item--disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.fii-list-group__item--danger:hover {
+    background: color-mix(in srgb, var(--color-danger) 10%, white);
+    color: var(--color-danger);
+}
+
+/* ---------- Navbar ---------- */
+.fii-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-light);
+    border-bottom: 1px solid var(--color-component-02);
+}
+
+.fii-navbar__brand {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-foreground);
+    text-decoration: none;
+}
+
+.fii-navbar__brand:hover {
+    color: var(--color-primary);
+}
+
+.fii-navbar__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.fii-navbar__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-foreground);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.fii-navbar__link:hover {
+    background: var(--color-layer-02);
+    color: var(--color-primary);
+}
+
+.fii-navbar__link--active {
+    background: var(--color-layer-02);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.fii-navbar__toggler {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1px solid var(--color-component-02);
+    border-radius: 0.5rem;
+    background: var(--color-light);
+    color: var(--color-foreground);
+    cursor: pointer;
+}
+
+    .fii-navbar__toggler {
+        display: inline-flex;
+    }
+    .fii-navbar__nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .fii-navbar__nav.fii-navbar__nav--open {
+        display: flex;
+    }
+    .fii-navbar__link {
+        justify-content: flex-start;
+    }
+}
+
+/* ---------- Pagination ---------- */
+.fii-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.fii-pagination__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    height: 2.25rem;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-foreground);
+    background: var(--color-light);
+    border: 1px solid var(--color-component-02);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.fii-pagination__item:hover {
+    background: var(--color-layer-02);
+    border-color: var(--color-component-03);
+}
+
+.fii-pagination__item:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.fii-pagination__item--active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-light);
+    cursor: default;
+}
+
+.fii-pagination__item--active:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.fii-pagination__item--disabled,
+.fii-pagination__item[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.fii-pagination__ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+}
+
+/* ---------- Spinner ---------- */
+.fii-spinner {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--color-component-02);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: fii-spinner-rotate 0.7s linear infinite;
+}
+
+.fii-spinner--sm {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-width: 1.5px;
+}
+
+.fii-spinner--lg {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-width: 3px;
+}
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- Tabs ---------- */
+.fii-tabs__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.fii-tabs__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    border-bottom: 2px solid var(--color-component-02);
+    margin-bottom: 0;
+}
+
+.fii-tabs__tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.fii-tabs__tab:hover {
+    color: var(--color-foreground);
+}
+
+#tab1:checked ~ .fii-tabs__list label[for="tab1"],
+#tab2:checked ~ .fii-tabs__list label[for="tab2"],
+#tab3:checked ~ .fii-tabs__list label[for="tab3"] {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.fii-tabs__panel {
+    display: none;
+    padding: 1rem 0;
+}
+
+#tab1:checked ~ .fii-tabs__panel#panel1,
+#tab2:checked ~ .fii-tabs__panel#panel2,
+#tab3:checked ~ .fii-tabs__panel#panel3 {
+    display: block;
+}
+
+/* ---------- Tooltip ---------- */
+.fii-tooltip {
+    position: relative;
+    display: inline-flex;
+}
+
+.fii-tooltip__content {
+    position: absolute;
+    z-index: 100;
+    padding: 0.375rem 0.625rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-light);
+    background: var(--color-dark);
+    border-radius: 0.375rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+}
+
+.fii-tooltip:hover .fii-tooltip__content,
+.fii-tooltip:focus-within .fii-tooltip__content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Top (default) */
+.fii-tooltip__content {
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 4px);
+    margin-bottom: 0.375rem;
+}
+
+.fii-tooltip:hover .fii-tooltip__content,
+.fii-tooltip:focus-within .fii-tooltip__content {
+    transform: translate(-50%, 0);
+}
+
+/* Bottom */
+.fii-tooltip__content--bottom {
+    bottom: auto;
+    top: 100%;
+    margin-bottom: 0;
+    margin-top: 0.375rem;
+    transform: translate(-50%, -4px);
+}
+
+.fii-tooltip:hover .fii-tooltip__content--bottom,
+.fii-tooltip:focus-within .fii-tooltip__content--bottom {
+    transform: translate(-50%, 0);
+}
+
+/* Left */
+.fii-tooltip__content--left {
+    bottom: auto;
+    left: auto;
+    right: 100%;
+    top: 50%;
+    margin-bottom: 0;
+    margin-right: 0.375rem;
+    transform: translate(4px, -50%);
+}
+
+.fii-tooltip:hover .fii-tooltip__content--left,
+.fii-tooltip:focus-within .fii-tooltip__content--left {
+    transform: translate(0, -50%);
+}
+
+/* Right */
+.fii-tooltip__content--right {
+    bottom: auto;
+    left: 100%;
+    top: 50%;
+    margin-bottom: 0;
+    margin-left: 0.375rem;
+    transform: translate(-4px, -50%);
+}
+
+.fii-tooltip:hover .fii-tooltip__content--right,
+.fii-tooltip:focus-within .fii-tooltip__content--right {
+    transform: translate(0, -50%);
+}
+
+.fii-m-0 { margin: calc(var(--unit-base) * 0); }
+.fii-m-1 { margin: calc(var(--unit-base) * 1); }
+.fii-m-2 { margin: calc(var(--unit-base) * 2); }
+.fii-m-3 { margin: calc(var(--unit-base) * 3); }
+.fii-m-4 { margin: calc(var(--unit-base) * 4); }
+.fii-m-5 { margin: calc(var(--unit-base) * 5); }
+.fii-m-6 { margin: calc(var(--unit-base) * 6); }
+.fii-m-7 { margin: calc(var(--unit-base) * 7); }
+.fii-m-8 { margin: calc(var(--unit-base) * 8); }
+.fii-m-9 { margin: calc(var(--unit-base) * 9); }
+.fii-m-10 { margin: calc(var(--unit-base) * 10); }
+.fii-m-11 { margin: calc(var(--unit-base) * 11); }
+.fii-m-12 { margin: calc(var(--unit-base) * 12); }
+.fii-m-13 { margin: calc(var(--unit-base) * 13); }
+.fii-m-14 { margin: calc(var(--unit-base) * 14); }
+.fii-m-15 { margin: calc(var(--unit-base) * 15); }
+.fii-m-16 { margin: calc(var(--unit-base) * 16); }
+.fii-m-17 { margin: calc(var(--unit-base) * 17); }
+.fii-m-18 { margin: calc(var(--unit-base) * 18); }
+.fii-m-19 { margin: calc(var(--unit-base) * 19); }
+.fii-m-20 { margin: calc(var(--unit-base) * 20); }
+
+.fii-mt-0 { margin-top: calc(var(--unit-base) * 0); }
+.fii-mt-1 { margin-top: calc(var(--unit-base) * 1); }
+.fii-mt-2 { margin-top: calc(var(--unit-base) * 2); }
+.fii-mt-3 { margin-top: calc(var(--unit-base) * 3); }
+.fii-mt-4 { margin-top: calc(var(--unit-base) * 4); }
+.fii-mt-5 { margin-top: calc(var(--unit-base) * 5); }
+.fii-mt-6 { margin-top: calc(var(--unit-base) * 6); }
+.fii-mt-7 { margin-top: calc(var(--unit-base) * 7); }
+.fii-mt-8 { margin-top: calc(var(--unit-base) * 8); }
+.fii-mt-9 { margin-top: calc(var(--unit-base) * 9); }
+.fii-mt-10 { margin-top: calc(var(--unit-base) * 10); }
+.fii-mt-11 { margin-top: calc(var(--unit-base) * 11); }
+.fii-mt-12 { margin-top: calc(var(--unit-base) * 12); }
+.fii-mt-13 { margin-top: calc(var(--unit-base) * 13); }
+.fii-mt-14 { margin-top: calc(var(--unit-base) * 14); }
+.fii-mt-15 { margin-top: calc(var(--unit-base) * 15); }
+.fii-mt-16 { margin-top: calc(var(--unit-base) * 16); }
+.fii-mt-17 { margin-top: calc(var(--unit-base) * 17); }
+.fii-mt-18 { margin-top: calc(var(--unit-base) * 18); }
+.fii-mt-19 { margin-top: calc(var(--unit-base) * 19); }
+.fii-mt-20 { margin-top: calc(var(--unit-base) * 20); }
+
+.fii-mr-0 { margin-right: calc(var(--unit-base) * 0); }
+.fii-mr-1 { margin-right: calc(var(--unit-base) * 1); }
+.fii-mr-2 { margin-right: calc(var(--unit-base) * 2); }
+.fii-mr-3 { margin-right: calc(var(--unit-base) * 3); }
+.fii-mr-4 { margin-right: calc(var(--unit-base) * 4); }
+.fii-mr-5 { margin-right: calc(var(--unit-base) * 5); }
+.fii-mr-6 { margin-right: calc(var(--unit-base) * 6); }
+.fii-mr-7 { margin-right: calc(var(--unit-base) * 7); }
+.fii-mr-8 { margin-right: calc(var(--unit-base) * 8); }
+.fii-mr-9 { margin-right: calc(var(--unit-base) * 9); }
+.fii-mr-10 { margin-right: calc(var(--unit-base) * 10); }
+.fii-mr-11 { margin-right: calc(var(--unit-base) * 11); }
+.fii-mr-12 { margin-right: calc(var(--unit-base) * 12); }
+.fii-mr-13 { margin-right: calc(var(--unit-base) * 13); }
+.fii-mr-14 { margin-right: calc(var(--unit-base) * 14); }
+.fii-mr-15 { margin-right: calc(var(--unit-base) * 15); }
+.fii-mr-16 { margin-right: calc(var(--unit-base) * 16); }
+.fii-mr-17 { margin-right: calc(var(--unit-base) * 17); }
+.fii-mr-18 { margin-right: calc(var(--unit-base) * 18); }
+.fii-mr-19 { margin-right: calc(var(--unit-base) * 19); }
+.fii-mr-20 { margin-right: calc(var(--unit-base) * 20); }
+
+.fii-mb-0 { margin-bottom: calc(var(--unit-base) * 0); }
+.fii-mb-1 { margin-bottom: calc(var(--unit-base) * 1); }
+.fii-mb-2 { margin-bottom: calc(var(--unit-base) * 2); }
+.fii-mb-3 { margin-bottom: calc(var(--unit-base) * 3); }
+.fii-mb-4 { margin-bottom: calc(var(--unit-base) * 4); }
+.fii-mb-5 { margin-bottom: calc(var(--unit-base) * 5); }
+.fii-mb-6 { margin-bottom: calc(var(--unit-base) * 6); }
+.fii-mb-7 { margin-bottom: calc(var(--unit-base) * 7); }
+.fii-mb-8 { margin-bottom: calc(var(--unit-base) * 8); }
+.fii-mb-9 { margin-bottom: calc(var(--unit-base) * 9); }
+.fii-mb-10 { margin-bottom: calc(var(--unit-base) * 10); }
+.fii-mb-11 { margin-bottom: calc(var(--unit-base) * 11); }
+.fii-mb-12 { margin-bottom: calc(var(--unit-base) * 12); }
+.fii-mb-13 { margin-bottom: calc(var(--unit-base) * 13); }
+.fii-mb-14 { margin-bottom: calc(var(--unit-base) * 14); }
+.fii-mb-15 { margin-bottom: calc(var(--unit-base) * 15); }
+.fii-mb-16 { margin-bottom: calc(var(--unit-base) * 16); }
+.fii-mb-17 { margin-bottom: calc(var(--unit-base) * 17); }
+.fii-mb-18 { margin-bottom: calc(var(--unit-base) * 18); }
+.fii-mb-19 { margin-bottom: calc(var(--unit-base) * 19); }
+.fii-mb-20 { margin-bottom: calc(var(--unit-base) * 20); }
+
+.fii-ml-0 { margin-left: calc(var(--unit-base) * 0); }
+.fii-ml-1 { margin-left: calc(var(--unit-base) * 1); }
+.fii-ml-2 { margin-left: calc(var(--unit-base) * 2); }
+.fii-ml-3 { margin-left: calc(var(--unit-base) * 3); }
+.fii-ml-4 { margin-left: calc(var(--unit-base) * 4); }
+.fii-ml-5 { margin-left: calc(var(--unit-base) * 5); }
+.fii-ml-6 { margin-left: calc(var(--unit-base) * 6); }
+.fii-ml-7 { margin-left: calc(var(--unit-base) * 7); }
+.fii-ml-8 { margin-left: calc(var(--unit-base) * 8); }
+.fii-ml-9 { margin-left: calc(var(--unit-base) * 9); }
+.fii-ml-10 { margin-left: calc(var(--unit-base) * 10); }
+.fii-ml-11 { margin-left: calc(var(--unit-base) * 11); }
+.fii-ml-12 { margin-left: calc(var(--unit-base) * 12); }
+.fii-ml-13 { margin-left: calc(var(--unit-base) * 13); }
+.fii-ml-14 { margin-left: calc(var(--unit-base) * 14); }
+.fii-ml-15 { margin-left: calc(var(--unit-base) * 15); }
+.fii-ml-16 { margin-left: calc(var(--unit-base) * 16); }
+.fii-ml-17 { margin-left: calc(var(--unit-base) * 17); }
+.fii-ml-18 { margin-left: calc(var(--unit-base) * 18); }
+.fii-ml-19 { margin-left: calc(var(--unit-base) * 19); }
+.fii-ml-20 { margin-left: calc(var(--unit-base) * 20); }
+
+.fii-mx-0 { margin-left: calc(var(--unit-base) * 0); margin-right: calc(var(--unit-base) * 0); }
+.fii-mx-1 { margin-left: calc(var(--unit-base) * 1); margin-right: calc(var(--unit-base) * 1); }
+.fii-mx-2 { margin-left: calc(var(--unit-base) * 2); margin-right: calc(var(--unit-base) * 2); }
+.fii-mx-3 { margin-left: calc(var(--unit-base) * 3); margin-right: calc(var(--unit-base) * 3); }
+.fii-mx-4 { margin-left: calc(var(--unit-base) * 4); margin-right: calc(var(--unit-base) * 4); }
+.fii-mx-5 { margin-left: calc(var(--unit-base) * 5); margin-right: calc(var(--unit-base) * 5); }
+.fii-mx-6 { margin-left: calc(var(--unit-base) * 6); margin-right: calc(var(--unit-base) * 6); }
+.fii-mx-7 { margin-left: calc(var(--unit-base) * 7); margin-right: calc(var(--unit-base) * 7); }
+.fii-mx-8 { margin-left: calc(var(--unit-base) * 8); margin-right: calc(var(--unit-base) * 8); }
+.fii-mx-9 { margin-left: calc(var(--unit-base) * 9); margin-right: calc(var(--unit-base) * 9); }
+.fii-mx-10 { margin-left: calc(var(--unit-base) * 10); margin-right: calc(var(--unit-base) * 10); }
+.fii-mx-11 { margin-left: calc(var(--unit-base) * 11); margin-right: calc(var(--unit-base) * 11); }
+.fii-mx-12 { margin-left: calc(var(--unit-base) * 12); margin-right: calc(var(--unit-base) * 12); }
+.fii-mx-13 { margin-left: calc(var(--unit-base) * 13); margin-right: calc(var(--unit-base) * 13); }
+.fii-mx-14 { margin-left: calc(var(--unit-base) * 14); margin-right: calc(var(--unit-base) * 14); }
+.fii-mx-15 { margin-left: calc(var(--unit-base) * 15); margin-right: calc(var(--unit-base) * 15); }
+.fii-mx-16 { margin-left: calc(var(--unit-base) * 16); margin-right: calc(var(--unit-base) * 16); }
+.fii-mx-17 { margin-left: calc(var(--unit-base) * 17); margin-right: calc(var(--unit-base) * 17); }
+.fii-mx-18 { margin-left: calc(var(--unit-base) * 18); margin-right: calc(var(--unit-base) * 18); }
+.fii-mx-19 { margin-left: calc(var(--unit-base) * 19); margin-right: calc(var(--unit-base) * 19); }
+.fii-mx-20 { margin-left: calc(var(--unit-base) * 20); margin-right: calc(var(--unit-base) * 20); }
+
+.fii-my-0 { margin-top: calc(var(--unit-base) * 0); margin-bottom: calc(var(--unit-base) * 0); }
+.fii-my-1 { margin-top: calc(var(--unit-base) * 1); margin-bottom: calc(var(--unit-base) * 1); }
+.fii-my-2 { margin-top: calc(var(--unit-base) * 2); margin-bottom: calc(var(--unit-base) * 2); }
+.fii-my-3 { margin-top: calc(var(--unit-base) * 3); margin-bottom: calc(var(--unit-base) * 3); }
+.fii-my-4 { margin-top: calc(var(--unit-base) * 4); margin-bottom: calc(var(--unit-base) * 4); }
+.fii-my-5 { margin-top: calc(var(--unit-base) * 5); margin-bottom: calc(var(--unit-base) * 5); }
+.fii-my-6 { margin-top: calc(var(--unit-base) * 6); margin-bottom: calc(var(--unit-base) * 6); }
+.fii-my-7 { margin-top: calc(var(--unit-base) * 7); margin-bottom: calc(var(--unit-base) * 7); }
+.fii-my-8 { margin-top: calc(var(--unit-base) * 8); margin-bottom: calc(var(--unit-base) * 8); }
+.fii-my-9 { margin-top: calc(var(--unit-base) * 9); margin-bottom: calc(var(--unit-base) * 9); }
+.fii-my-10 { margin-top: calc(var(--unit-base) * 10); margin-bottom: calc(var(--unit-base) * 10); }
+.fii-my-11 { margin-top: calc(var(--unit-base) * 11); margin-bottom: calc(var(--unit-base) * 11); }
+.fii-my-12 { margin-top: calc(var(--unit-base) * 12); margin-bottom: calc(var(--unit-base) * 12); }
+.fii-my-13 { margin-top: calc(var(--unit-base) * 13); margin-bottom: calc(var(--unit-base) * 13); }
+.fii-my-14 { margin-top: calc(var(--unit-base) * 14); margin-bottom: calc(var(--unit-base) * 14); }
+.fii-my-15 { margin-top: calc(var(--unit-base) * 15); margin-bottom: calc(var(--unit-base) * 15); }
+.fii-my-16 { margin-top: calc(var(--unit-base) * 16); margin-bottom: calc(var(--unit-base) * 16); }
+.fii-my-17 { margin-top: calc(var(--unit-base) * 17); margin-bottom: calc(var(--unit-base) * 17); }
+.fii-my-18 { margin-top: calc(var(--unit-base) * 18); margin-bottom: calc(var(--unit-base) * 18); }
+.fii-my-19 { margin-top: calc(var(--unit-base) * 19); margin-bottom: calc(var(--unit-base) * 19); }
+.fii-my-20 { margin-top: calc(var(--unit-base) * 20); margin-bottom: calc(var(--unit-base) * 20); }
+
+.fii-m-auto {
+    margin: auto;
+}
+
+.fii-mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fii-my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.fii-mt-auto {
+    margin-top: auto;
+}
+
+.fii-mr-auto {
+    margin-right: auto;
+}
+
+.fii-mb-auto {
+    margin-bottom: auto;
+}
+
+.fii-ml-auto {
+    margin-left: auto;
+}
+
+
+.fii-p-0 { padding: calc(var(--unit-base) * 0); }
+.fii-p-1 { padding: calc(var(--unit-base) * 1); }
+.fii-p-2 { padding: calc(var(--unit-base) * 2); }
+.fii-p-3 { padding: calc(var(--unit-base) * 3); }
+.fii-p-4 { padding: calc(var(--unit-base) * 4); }
+.fii-p-5 { padding: calc(var(--unit-base) * 5); }
+.fii-p-6 { padding: calc(var(--unit-base) * 6); }
+.fii-p-7 { padding: calc(var(--unit-base) * 7); }
+.fii-p-8 { padding: calc(var(--unit-base) * 8); }
+.fii-p-9 { padding: calc(var(--unit-base) * 9); }
+.fii-p-10 { padding: calc(var(--unit-base) * 10); }
+.fii-p-11 { padding: calc(var(--unit-base) * 11); }
+.fii-p-12 { padding: calc(var(--unit-base) * 12); }
+.fii-p-13 { padding: calc(var(--unit-base) * 13); }
+.fii-p-14 { padding: calc(var(--unit-base) * 14); }
+.fii-p-15 { padding: calc(var(--unit-base) * 15); }
+.fii-p-16 { padding: calc(var(--unit-base) * 16); }
+.fii-p-17 { padding: calc(var(--unit-base) * 17); }
+.fii-p-18 { padding: calc(var(--unit-base) * 18); }
+.fii-p-19 { padding: calc(var(--unit-base) * 19); }
+.fii-p-20 { padding: calc(var(--unit-base) * 20); }
+
+.fii-pt-0 { padding-top: calc(var(--unit-base) * 0); }
+.fii-pt-1 { padding-top: calc(var(--unit-base) * 1); }
+.fii-pt-2 { padding-top: calc(var(--unit-base) * 2); }
+.fii-pt-3 { padding-top: calc(var(--unit-base) * 3); }
+.fii-pt-4 { padding-top: calc(var(--unit-base) * 4); }
+.fii-pt-5 { padding-top: calc(var(--unit-base) * 5); }
+.fii-pt-6 { padding-top: calc(var(--unit-base) * 6); }
+.fii-pt-7 { padding-top: calc(var(--unit-base) * 7); }
+.fii-pt-8 { padding-top: calc(var(--unit-base) * 8); }
+.fii-pt-9 { padding-top: calc(var(--unit-base) * 9); }
+.fii-pt-10 { padding-top: calc(var(--unit-base) * 10); }
+.fii-pt-11 { padding-top: calc(var(--unit-base) * 11); }
+.fii-pt-12 { padding-top: calc(var(--unit-base) * 12); }
+.fii-pt-13 { padding-top: calc(var(--unit-base) * 13); }
+.fii-pt-14 { padding-top: calc(var(--unit-base) * 14); }
+.fii-pt-15 { padding-top: calc(var(--unit-base) * 15); }
+.fii-pt-16 { padding-top: calc(var(--unit-base) * 16); }
+.fii-pt-17 { padding-top: calc(var(--unit-base) * 17); }
+.fii-pt-18 { padding-top: calc(var(--unit-base) * 18); }
+.fii-pt-19 { padding-top: calc(var(--unit-base) * 19); }
+.fii-pt-20 { padding-top: calc(var(--unit-base) * 20); }
+
+.fii-pr-0 { padding-right: calc(var(--unit-base) * 0); }
+.fii-pr-1 { padding-right: calc(var(--unit-base) * 1); }
+.fii-pr-2 { padding-right: calc(var(--unit-base) * 2); }
+.fii-pr-3 { padding-right: calc(var(--unit-base) * 3); }
+.fii-pr-4 { padding-right: calc(var(--unit-base) * 4); }
+.fii-pr-5 { padding-right: calc(var(--unit-base) * 5); }
+.fii-pr-6 { padding-right: calc(var(--unit-base) * 6); }
+.fii-pr-7 { padding-right: calc(var(--unit-base) * 7); }
+.fii-pr-8 { padding-right: calc(var(--unit-base) * 8); }
+.fii-pr-9 { padding-right: calc(var(--unit-base) * 9); }
+.fii-pr-10 { padding-right: calc(var(--unit-base) * 10); }
+.fii-pr-11 { padding-right: calc(var(--unit-base) * 11); }
+.fii-pr-12 { padding-right: calc(var(--unit-base) * 12); }
+.fii-pr-13 { padding-right: calc(var(--unit-base) * 13); }
+.fii-pr-14 { padding-right: calc(var(--unit-base) * 14); }
+.fii-pr-15 { padding-right: calc(var(--unit-base) * 15); }
+.fii-pr-16 { padding-right: calc(var(--unit-base) * 16); }
+.fii-pr-17 { padding-right: calc(var(--unit-base) * 17); }
+.fii-pr-18 { padding-right: calc(var(--unit-base) * 18); }
+.fii-pr-19 { padding-right: calc(var(--unit-base) * 19); }
+.fii-pr-20 { padding-right: calc(var(--unit-base) * 20); }
+
+.fii-pb-0 { padding-bottom: calc(var(--unit-base) * 0); }
+.fii-pb-1 { padding-bottom: calc(var(--unit-base) * 1); }
+.fii-pb-2 { padding-bottom: calc(var(--unit-base) * 2); }
+.fii-pb-3 { padding-bottom: calc(var(--unit-base) * 3); }
+.fii-pb-4 { padding-bottom: calc(var(--unit-base) * 4); }
+.fii-pb-5 { padding-bottom: calc(var(--unit-base) * 5); }
+.fii-pb-6 { padding-bottom: calc(var(--unit-base) * 6); }
+.fii-pb-7 { padding-bottom: calc(var(--unit-base) * 7); }
+.fii-pb-8 { padding-bottom: calc(var(--unit-base) * 8); }
+.fii-pb-9 { padding-bottom: calc(var(--unit-base) * 9); }
+.fii-pb-10 { padding-bottom: calc(var(--unit-base) * 10); }
+.fii-pb-11 { padding-bottom: calc(var(--unit-base) * 11); }
+.fii-pb-12 { padding-bottom: calc(var(--unit-base) * 12); }
+.fii-pb-13 { padding-bottom: calc(var(--unit-base) * 13); }
+.fii-pb-14 { padding-bottom: calc(var(--unit-base) * 14); }
+.fii-pb-15 { padding-bottom: calc(var(--unit-base) * 15); }
+.fii-pb-16 { padding-bottom: calc(var(--unit-base) * 16); }
+.fii-pb-17 { padding-bottom: calc(var(--unit-base) * 17); }
+.fii-pb-18 { padding-bottom: calc(var(--unit-base) * 18); }
+.fii-pb-19 { padding-bottom: calc(var(--unit-base) * 19); }
+.fii-pb-20 { padding-bottom: calc(var(--unit-base) * 20); }
+
+.fii-pl-0 { padding-left: calc(var(--unit-base) * 0); }
+.fii-pl-1 { padding-left: calc(var(--unit-base) * 1); }
+.fii-pl-2 { padding-left: calc(var(--unit-base) * 2); }
+.fii-pl-3 { padding-left: calc(var(--unit-base) * 3); }
+.fii-pl-4 { padding-left: calc(var(--unit-base) * 4); }
+.fii-pl-5 { padding-left: calc(var(--unit-base) * 5); }
+.fii-pl-6 { padding-left: calc(var(--unit-base) * 6); }
+.fii-pl-7 { padding-left: calc(var(--unit-base) * 7); }
+.fii-pl-8 { padding-left: calc(var(--unit-base) * 8); }
+.fii-pl-9 { padding-left: calc(var(--unit-base) * 9); }
+.fii-pl-10 { padding-left: calc(var(--unit-base) * 10); }
+.fii-pl-11 { padding-left: calc(var(--unit-base) * 11); }
+.fii-pl-12 { padding-left: calc(var(--unit-base) * 12); }
+.fii-pl-13 { padding-left: calc(var(--unit-base) * 13); }
+.fii-pl-14 { padding-left: calc(var(--unit-base) * 14); }
+.fii-pl-15 { padding-left: calc(var(--unit-base) * 15); }
+.fii-pl-16 { padding-left: calc(var(--unit-base) * 16); }
+.fii-pl-17 { padding-left: calc(var(--unit-base) * 17); }
+.fii-pl-18 { padding-left: calc(var(--unit-base) * 18); }
+.fii-pl-19 { padding-left: calc(var(--unit-base) * 19); }
+.fii-pl-20 { padding-left: calc(var(--unit-base) * 20); }
+
+.fii-px-0 { padding-left: calc(var(--unit-base) * 0); padding-right: calc(var(--unit-base) * 0); }
+.fii-px-1 { padding-left: calc(var(--unit-base) * 1); padding-right: calc(var(--unit-base) * 1); }
+.fii-px-2 { padding-left: calc(var(--unit-base) * 2); padding-right: calc(var(--unit-base) * 2); }
+.fii-px-3 { padding-left: calc(var(--unit-base) * 3); padding-right: calc(var(--unit-base) * 3); }
+.fii-px-4 { padding-left: calc(var(--unit-base) * 4); padding-right: calc(var(--unit-base) * 4); }
+.fii-px-5 { padding-left: calc(var(--unit-base) * 5); padding-right: calc(var(--unit-base) * 5); }
+.fii-px-6 { padding-left: calc(var(--unit-base) * 6); padding-right: calc(var(--unit-base) * 6); }
+.fii-px-7 { padding-left: calc(var(--unit-base) * 7); padding-right: calc(var(--unit-base) * 7); }
+.fii-px-8 { padding-left: calc(var(--unit-base) * 8); padding-right: calc(var(--unit-base) * 8); }
+.fii-px-9 { padding-left: calc(var(--unit-base) * 9); padding-right: calc(var(--unit-base) * 9); }
+.fii-px-10 { padding-left: calc(var(--unit-base) * 10); padding-right: calc(var(--unit-base) * 10); }
+.fii-px-11 { padding-left: calc(var(--unit-base) * 11); padding-right: calc(var(--unit-base) * 11); }
+.fii-px-12 { padding-left: calc(var(--unit-base) * 12); padding-right: calc(var(--unit-base) * 12); }
+.fii-px-13 { padding-left: calc(var(--unit-base) * 13); padding-right: calc(var(--unit-base) * 13); }
+.fii-px-14 { padding-left: calc(var(--unit-base) * 14); padding-right: calc(var(--unit-base) * 14); }
+.fii-px-15 { padding-left: calc(var(--unit-base) * 15); padding-right: calc(var(--unit-base) * 15); }
+.fii-px-16 { padding-left: calc(var(--unit-base) * 16); padding-right: calc(var(--unit-base) * 16); }
+.fii-px-17 { padding-left: calc(var(--unit-base) * 17); padding-right: calc(var(--unit-base) * 17); }
+.fii-px-18 { padding-left: calc(var(--unit-base) * 18); padding-right: calc(var(--unit-base) * 18); }
+.fii-px-19 { padding-left: calc(var(--unit-base) * 19); padding-right: calc(var(--unit-base) * 19); }
+.fii-px-20 { padding-left: calc(var(--unit-base) * 20); padding-right: calc(var(--unit-base) * 20); }
+
+.fii-py-0 { padding-top: calc(var(--unit-base) * 0); padding-bottom: calc(var(--unit-base) * 0); }
+.fii-py-1 { padding-top: calc(var(--unit-base) * 1); padding-bottom: calc(var(--unit-base) * 1); }
+.fii-py-2 { padding-top: calc(var(--unit-base) * 2); padding-bottom: calc(var(--unit-base) * 2); }
+.fii-py-3 { padding-top: calc(var(--unit-base) * 3); padding-bottom: calc(var(--unit-base) * 3); }
+.fii-py-4 { padding-top: calc(var(--unit-base) * 4); padding-bottom: calc(var(--unit-base) * 4); }
+.fii-py-5 { padding-top: calc(var(--unit-base) * 5); padding-bottom: calc(var(--unit-base) * 5); }
+.fii-py-6 { padding-top: calc(var(--unit-base) * 6); padding-bottom: calc(var(--unit-base) * 6); }
+.fii-py-7 { padding-top: calc(var(--unit-base) * 7); padding-bottom: calc(var(--unit-base) * 7); }
+.fii-py-8 { padding-top: calc(var(--unit-base) * 8); padding-bottom: calc(var(--unit-base) * 8); }
+.fii-py-9 { padding-top: calc(var(--unit-base) * 9); padding-bottom: calc(var(--unit-base) * 9); }
+.fii-py-10 { padding-top: calc(var(--unit-base) * 10); padding-bottom: calc(var(--unit-base) * 10); }
+.fii-py-11 { padding-top: calc(var(--unit-base) * 11); padding-bottom: calc(var(--unit-base) * 11); }
+.fii-py-12 { padding-top: calc(var(--unit-base) * 12); padding-bottom: calc(var(--unit-base) * 12); }
+.fii-py-13 { padding-top: calc(var(--unit-base) * 13); padding-bottom: calc(var(--unit-base) * 13); }
+.fii-py-14 { padding-top: calc(var(--unit-base) * 14); padding-bottom: calc(var(--unit-base) * 14); }
+.fii-py-15 { padding-top: calc(var(--unit-base) * 15); padding-bottom: calc(var(--unit-base) * 15); }
+.fii-py-16 { padding-top: calc(var(--unit-base) * 16); padding-bottom: calc(var(--unit-base) * 16); }
+.fii-py-17 { padding-top: calc(var(--unit-base) * 17); padding-bottom: calc(var(--unit-base) * 17); }
+.fii-py-18 { padding-top: calc(var(--unit-base) * 18); padding-bottom: calc(var(--unit-base) * 18); }
+.fii-py-19 { padding-top: calc(var(--unit-base) * 19); padding-bottom: calc(var(--unit-base) * 19); }
+.fii-py-20 { padding-top: calc(var(--unit-base) * 20); padding-bottom: calc(var(--unit-base) * 20); }
+
+.fii-p-auto {
+    padding: auto;
+}
+
+.fii-px-auto {
+    padding-right: auto;
+    padding-top: auto;
+}
+
+.fii-py-auto {
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.fii-pt-auto {
+    padding-top: auto;
+}
+
+.fii-pr-auto {
+    padding-right: auto;
+}
+
+.fii-pb-auto {
+    padding-bottom: auto;
+}
+
+.fii-pl-auto {
+    padding-left: auto;
+}
+.fii-text-6 {
+    font-size: calc(var(--fsize-base) * 7);
+}
+
+.fii-text-5 {
+    font-size: calc(var(--fsize-base) * 8);
+}
+
+.fii-text-4 {
+    font-size: calc(var(--fsize-base) * 9);
+}
+
+.fii-text-3 {
+    font-size: calc(var(--fsize-base) * 10);
+}
+
+.fii-text-2 {
+    font-size: calc(var(--fsize-base) * 11);
+}
+
+.fii-text-1 {
+    font-size: calc(var(--fsize-base) * 12);
+}
+
+/* ALIGN */
+
+.fii-text-left {
+    text-align: left;
+}
+
+.fii-text-center {
+    text-align: center;
+}
+
+.fii-text-right {
+    text-align: right;
+}
+
+/* TRANFORM */
+
+.fii-text-capitalized {
+    text-transform: capitalize;
+}
+
+.fii-text-lowercase {
+    text-transform: lowercase;
+}
+
+.fii-text-uppercase {
+    text-transform: uppercase;
+}
+
+/* WEIGHT */
+
+.fii-text-bold {
+    font-weight: bold
+}
+
+/* COLOR */
+
+.fii-text-light {
+    color: var(--color-light);
+}
+
+.fii-text-dark {
+    color: var(--color-dark);
+}
+
+.fii-text-red {
+    color: var(--color-red);
+}
+
+.fii-text-orange {
+    color: var(--color-orange);
+}
+
+.fii-text-yellow {
+    color: var(--color-yellow);
+}
+
+.fii-text-green {
+    color: var(--color-green);
+}
+
+.fii-text-blue {
+    color: var(--color-blue);
+}
+
+.fii-text-indigo {
+    color: var(--color-indigo);
+}
+
+.fii-text-violet {
+    color: var(--color-violet);
+}
+
+.fii-text-gray {
+    color: var(--color-gray);
+}
+
+.fii-text-red--subtle {
+    color: color-mix(in srgb, var(--color-red) 10%, white);
+}
+
+.fii-text-orange--subtle {
+    color: color-mix(in srgb, var(--color-orange) 10%, white);
+}
+
+.fii-text-yellow--subtle {
+    color: color-mix(in srgb, var(--color-yellow) 10%, white);
+}
+
+.fii-text-green--subtle {
+    color: color-mix(in srgb, var(--color-green) 10%, white);
+}
+
+.fii-text-blue--subtle {
+    color: color-mix(in srgb, var(--color-blue) 10%, white);
+}
+
+.fii-text-indigo--subtle {
+    color: color-mix(in srgb, var(--color-indigo) 10%, white);
+}
+
+.fii-text-violet--subtle {
+    color: color-mix(in srgb, var(--color-violet) 10%, white);
+}
+
+.fii-text-gray--subtle {
+    color: color-mix(in srgb, var(--color-gray) 10%, white);
+}
+.fii-list-style-none {
+    list-style-type: none;
+}
+
+.fii-pointer {
+    cursor: pointer;
+}
+
+.fii-w-100 {
+    width: 100%;
+}
+
+.fii-h-100 {
+    height: 100%;
+}
+
+.fii-maxw-2 {
+    max-width: calc(var(--space-base) * 2);
+}
+
+.fii-maxw-4 {
+    max-width: calc(var(--space-base) * 4);
+}
+
+.fii-maxw-6 {
+    max-width: calc(var(--space-base) * 6);
+}
+
+.fii-maxw-8 {
+    max-width: calc(var(--space-base) * 8);
+}
+
+.fii-maxw-10 {
+    max-width: calc(var(--space-base) * 10);
+}
+
+.fii-maxw-20 {
+    max-width: calc(var(--space-base) * 20);
+}
+
+.fii-maxw-30 {
+    max-width: calc(var(--space-base) * 30);
+}
+
+.fii-maxw-40 {
+    max-width: calc(var(--space-base) * 40);
+}
+
+.fii-maxw-50 {
+    max-width: calc(var(--space-base) * 50);
+}
+
+.fii-maxw-60 {
+    max-width: calc(var(--space-base) * 60);
+}
+
+.fii-maxw-80 {
+    max-width: calc(var(--space-base) * 80);
+}
+
+.fii-maxw-100 {
+    max-width: calc(var(--space-base) * 100);
+}
+
+.fii-maxw-140 {
+    max-width: calc(var(--space-base) * 140);
+}
+
+.fii-maxw-180 {
+    max-width: calc(var(--space-base) * 180);
+}
+
+.fii-maxw-250 {
+    max-width: calc(var(--space-base) * 250);
+}
+
+.fii-maxw-300 {
+    max-width: calc(var(--space-base) * 300);
+}
+
+.fii-maxw-350 {
+    max-width: calc(var(--space-base) * 350);
+}
+
+
+.fii-block {
+    display: block;
+}
+
+.fii-inline-block {
+    display: inline-block;
+}
+
+.fii-flex {
+    display: flex;
+}
+
+.fii-flex-inline {
+    display: inline-flex;
+}
+
+.fii-flex-grow {
+    flex: 1 0 auto;
+}
+
+.fii-flex-basic {
+    flex: 0 0 auto;
+}
+
+.fii-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.fii-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.fii-flex-items-start {
+    align-items: start;
+}
+
+.fii-flex-items-center {
+    align-items: center
+}
+
+.fii-flex-items-stretch {
+    align-items: stretch
+}
+
+.fii-flex-item-base-line {
+    align-items: baseline
+}
+
+.fii-flex-justify-center {
+    justify-content: center
+}
+
+.fii-flex-justify-start {
+    justify-content: flex-start
+}
+
+.fii-flex-justify-end {
+    justify-content: flex-end
+}
+
+.fii-flex-justify-between {
+    justify-content: space-between
+}
+
+.fii-flex-flow-column {
+    flex-flow: column
+}
+
+.fii-flex-flow-wrap {
+    flex-flow: wrap
+}
+
+.fii-flex-direction-column {
+    flex-direction: column
+}
+
+.fii-flex-align-center {
+    align-items: center
+}
+
+.fii-flex-align-baseline {
+    align-items: baseline
+}
+
+.fii-flex-align-end {
+    align-items: flex-end
+}
+
+.fii-flex-align-start {
+    align-items: flex-start
+}
+
+/* SPACING */
+.fii-gap-1 { gap: calc(var(--unit-base) * 1); }
+.fii-gap-2 { gap: calc(var(--unit-base) * 2); }
+.fii-gap-3 { gap: calc(var(--unit-base) * 3); }
+.fii-gap-4 { gap: calc(var(--unit-base) * 4); }
+.fii-gap-5 { gap: calc(var(--unit-base) * 5); }
+.fii-gap-6 { gap: calc(var(--unit-base) * 6); }
+.fii-gap-7 { gap: calc(var(--unit-base) * 7); }
+.fii-gap-8 { gap: calc(var(--unit-base) * 8); }
+.fii-gap-9 { gap: calc(var(--unit-base) * 9); }
+.fii-gap-10 { gap: calc(var(--unit-base) * 10); }
+.fii-gap-11 { gap: calc(var(--unit-base) * 11); }
+.fii-gap-11 { gap: calc(var(--unit-base) * 11); }
+.fii-gap-12 { gap: calc(var(--unit-base) * 12); }
+.fii-gap-13 { gap: calc(var(--unit-base) * 13); }
+.fii-gap-14 { gap: calc(var(--unit-base) * 14); }
+.fii-gap-15 { gap: calc(var(--unit-base) * 15); }
+.fii-gap-16 { gap: calc(var(--unit-base) * 16); }
+.fii-gap-17 { gap: calc(var(--unit-base) * 17); }
+.fii-gap-18 { gap: calc(var(--unit-base) * 18); }
+.fii-gap-19 { gap: calc(var(--unit-base) * 19); }
+.fii-gap-20 { gap: calc(var(--unit-base) * 20); }
+
+/* POSITIONING */
+.fii-relative {
+    position: relative;
+}
+
+.fii-absolute {
+    position: absolute;
+}
+
+.fii-fixed {
+    position: fixed;
+}
+
+.fii-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ROUNDING */
+.fii-rounded {
+    border-radius: var(--radius-base);
+}
+
+.fii-rounded-1 {
+    border-radius: calc(var(--unit-base) * 1);
+}
+
+.fii-rounded-2 {
+    border-radius: calc(var(--unit-base) * 2);
+}
+
+.fii-rounded-3 {
+    border-radius: calc(var(--unit-base) * 3);
+}
+
+.fii-rounded-4 {
+    border-radius: calc(var(--unit-base) * 4);
+}
+
+.fii-rounded-5 {
+    border-radius: calc(var(--unit-base) * 5);
+}
+
+.fii-rounded-6 {
+    border-radius: calc(var(--unit-base) * 5);
+}
+
+.fii-rounded-circle {
+    border-radius: 9999px;
+}
+
+/* SIZING */
+.fii-size-1 {
+    width: calc(var(--unit-base) * 1);
+    height: calc(var(--unit-base) * 1);
+}
+
+.fii-size-2 {
+    width: calc(var(--unit-base) * 2);
+    height: calc(var(--unit-base) * 2);
+}
+
+.fii-size-3 {
+    width: calc(var(--unit-base) * 3);
+    height: calc(var(--unit-base) * 3);
+}
+
+.fii-size-4 {
+    width: calc(var(--unit-base) * 4);
+    height: calc(var(--unit-base) * 4);
+}
+
+.fii-size-5 {
+    width: calc(var(--unit-base) * 5);
+    height: calc(var(--unit-base) * 5);
+}
+
+.fii-size-6 {
+    width: calc(var(--unit-base) * 6);
+    height: calc(var(--unit-base) * 6);
+}
+
+/* COLORING */
+.fii-bg-primary {
+    background-color: var(--color-blue);
+}
+
+.fii-bg-red {
+    background-color: var(--color-red);
+}
+
+.fii-bg-orange {
+    background-color: var(--color-orange);
+}
+
+.fii-bg-yellow {
+    background-color: var(--color-yellow);
+}
+
+.fii-bg-green {
+    background-color: var(--color-green);
+}
+
+.fii-bg-blue {
+    background-color: var(--color-blue);
+}
+
+.fii-bg-indigo {
+    background-color: var(--color-indigo);
+}
+
+.fii-bg-violet {
+    background-color: var(--color-violet);
+}
+
+.fii-bg-red--subtle {
+    background-color: color-mix(in srgb, var(--color-red) 10%, white) ;
+}
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+        <h1>Pagination</h1>
+        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.fii-pagination</code>. Các nút: <code>.fii-pagination__item</code>. Trang hiện tại: <code>.fii-pagination__item--active</code>. Dấu …: <code>.fii-pagination__ellipsis</code>.</p>
+
+        <h2>Cơ bản</h2>
+        <nav class="fii-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
+            <a href="#" class="fii-pagination__item" aria-label="Trang trước">‹</a>
+            <a href="#" class="fii-pagination__item">1</a>
+            <a href="#" class="fii-pagination__item fii-pagination__item--active">2</a>
+            <a href="#" class="fii-pagination__item">3</a>
+            <a href="#" class="fii-pagination__item" aria-label="Trang sau">›</a>
+        </nav>
+
+        <h2>Nhiều trang (có ellipsis)</h2>
+        <nav class="fii-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
+            <a href="#" class="fii-pagination__item" aria-label="Trang trước">‹</a>
+            <a href="#" class="fii-pagination__item">1</a>
+            <span class="fii-pagination__ellipsis">…</span>
+            <a href="#" class="fii-pagination__item">4</a>
+            <a href="#" class="fii-pagination__item fii-pagination__item--active">5</a>
+            <a href="#" class="fii-pagination__item">6</a>
+            <span class="fii-pagination__ellipsis">…</span>
+            <a href="#" class="fii-pagination__item">10</a>
+            <a href="#" class="fii-pagination__item" aria-label="Trang sau">›</a>
+        </nav>
+
+        <h2>Disabled</h2>
+        <nav class="fii-pagination" aria-label="Phân trang">
+            <span class="fii-pagination__item" aria-disabled="true">‹</span>
+            <a href="#" class="fii-pagination__item fii-pagination__item--active">1</a>
+            <a href="#" class="fii-pagination__item">›</a>
+        </nav>
+    </div>
+</body>
+</html>

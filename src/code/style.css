@@ -1,18 +1,18 @@
 @import url("../share/style.css");
 
-var.nano-var {
+var.fii-var {
     font-style: italic;
     font-weight: bold;
 }
 
-code.nano-code {
+code.fii-code {
     font-weight: bold;
     background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
     display: inline-block;
     padding: 0rem 1cap;
 }
 
-kbd.nano-kbd {
+kbd.fii-kbd {
     font-weight: bold;
     border-radius: 2px;
     box-shadow: 0px 1px 0px 3px color-mix(in srgb, var(--color-dark) 30%, var(--color-light));
@@ -20,7 +20,7 @@ kbd.nano-kbd {
     margin: 0 0.125rem;
 }
 
-samp.nano-samp {
+samp.fii-samp {
     font-weight: bold;
     display: block;
     padding: 1rem;
@@ -29,7 +29,7 @@ samp.nano-samp {
     white-space: pre;
 }
 
-pre.nano-pre {
+pre.fii-pre {
     font-weight: bold;
     background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
     padding: 1rem;

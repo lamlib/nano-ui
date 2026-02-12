@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar – Fii UI</title>
+    <link rel="stylesheet" href="../share/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="fii-navbar">
+        <a href="#" class="fii-navbar__brand">Fii UI</a>
+        <button type="button" class="fii-navbar__toggler" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('fii-navbar__nav--open')">☰</button>
+        <div class="fii-navbar__nav">
+            <a href="#" class="fii-navbar__link fii-navbar__link--active">Trang chủ</a>
+            <a href="#" class="fii-navbar__link">Giới thiệu</a>
+            <a href="#" class="fii-navbar__link">Components</a>
+            <a href="#" class="fii-navbar__link">Liên hệ</a>
+        </div>
+    </nav>
+
+    <div style="max-width: 36rem; margin: 0 auto; padding: 1.5rem;">
+        <h1>Navbar</h1>
+        <p style="margin-bottom: 1rem; color: var(--color-secondary);">Class <code>.fii-navbar</code>, <code>.fii-navbar__brand</code>, <code>.fii-navbar__nav</code>, <code>.fii-navbar__link</code>. Active: <code>.fii-navbar__link--active</code>. Mobile: <code>.fii-navbar__toggler</code> + <code>.fii-navbar__nav--open</code> (JS toggle).</p>
+        <p>Thu nhỏ cửa sổ để xem menu collapse và nút ☰.</p>
+    </div>
+</body>
+</html>

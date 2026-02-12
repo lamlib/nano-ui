@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard – Fii UI Template</title>
+    <link rel="stylesheet" href="../../../dist/fii.min.css">
+</head>
+<body>
+    <!-- Modal: Thêm đơn hàng -->
+    <dialog id="model-add-order" data-fii-component="model" class="fii-model">
+        <div class="fii-model__body">
+            <h3 style="margin-bottom: 0.75rem;">Thêm đơn hàng</h3>
+            <form class="fii-form" style="max-width: 100%;">
+                <div class="fii-field">
+                    <label for="ord-customer">Khách hàng</label>
+                    <input id="ord-customer" class="fii-input fii-input-text" type="text" placeholder="Họ tên">
+                </div>
+                <div class="fii-field">
+                    <label for="ord-amount">Tổng tiền</label>
+                    <input id="ord-amount" class="fii-input fii-input-number" type="number" placeholder="0">
+                </div>
+            </form>
+        </div>
+        <div class="fii-model__footer">
+            <button type="button" data-fii-trigger="model" data-fii-target="model-add-order" data-fii-action="close" class="fii-button fii-button--outline">Hủy</button>
+            <button type="button" data-fii-trigger="model" data-fii-target="model-add-order" data-fii-action="close" class="fii-button fii-button--primary">Lưu</button>
+        </div>
+    </dialog>
+    <nav class="fii-navbar">
+        <a href="#" class="fii-navbar__brand">Fii Dashboard</a>
+        <button type="button" class="fii-navbar__toggler" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('fii-navbar__nav--open')">☰</button>
+        <div class="fii-navbar__nav">
+            <a href="#" class="fii-navbar__link fii-navbar__link--active">Tổng quan</a>
+            <a href="#" class="fii-navbar__link">Đơn hàng</a>
+            <a href="#" class="fii-navbar__link">Sản phẩm</a>
+            <a href="#" class="fii-navbar__link">Cài đặt</a>
+        </div>
+    </nav>
+
+    <main class="fii-container" style="padding-top: 1.5rem; padding-bottom: 2rem;">
+        <h1 style="margin-bottom: 0.5rem;">Tổng quan</h1>
+        <p style="color: var(--color-secondary); margin-bottom: 1.5rem;">Template dùng toàn bộ component từ dist/fii.min.css</p>
+
+        <div class="fii-alert fii-alert--info" style="margin-bottom: 1.5rem;">
+            <span class="fii-alert__content">Đây là trang dashboard mẫu. Mọi component (navbar, grid, card, bảng, phân trang, nút, form…) đều dùng class Fii UI đã build.</span>
+        </div>
+
+        <section style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Thống kê nhanh</h2>
+            <div class="fii-row">
+                <div class="fii-col-6">
+                    <article class="fii-card">
+                        <div class="fii-card__body">
+                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Đơn hàng hôm nay</div>
+                            <div style="font-size: 1.5rem; font-weight: 600;">24</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="fii-col-6">
+                    <article class="fii-card">
+                        <div class="fii-card__body">
+                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Doanh thu tháng</div>
+                            <div style="font-size: 1.5rem; font-weight: 600;">42.5M</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="fii-col-6">
+                    <article class="fii-card">
+                        <div class="fii-card__body">
+                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Sản phẩm</div>
+                            <div style="font-size: 1.5rem; font-weight: 600;">128</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="fii-col-6">
+                    <article class="fii-card">
+                        <div class="fii-card__body">
+                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Thành viên mới</div>
+                            <div style="font-size: 1.5rem; font-weight: 600;">7</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 2rem;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.75rem;">
+                <h2 style="font-size: 1rem; margin: 0;">Đơn hàng gần đây</h2>
+                <button type="button" data-fii-trigger="model" data-fii-target="model-add-order" data-fii-action="open" class="fii-button fii-button--primary">Thêm đơn</button>
+            </div>
+            <div class="fii-table-wrapper">
+                <table class="fii-table fii-table--striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Mã</th>
+                            <th scope="col">Khách hàng</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-101</td>
+                            <td>Nguyễn Văn A</td>
+                            <td><span class="fii-badge fii-badge--success">Đã giao</span></td>
+                            <td>1.250.000</td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-102</td>
+                            <td>Trần Thị B</td>
+                            <td><span class="fii-badge fii-badge--warning">Đang giao</span></td>
+                            <td>890.000</td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-103</td>
+                            <td>Lê Văn C</td>
+                            <td><span class="fii-badge fii-badge--secondary">Chờ xử lý</span></td>
+                            <td>2.100.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav class="fii-pagination" aria-label="Phân trang" style="margin-top: 1rem;">
+                <a href="#" class="fii-pagination__item" aria-label="Trang trước">‹</a>
+                <a href="#" class="fii-pagination__item fii-pagination__item--active">1</a>
+                <a href="#" class="fii-pagination__item">2</a>
+                <a href="#" class="fii-pagination__item" aria-label="Trang sau">›</a>
+            </nav>
+        </section>
+
+        <section style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Tabs mẫu</h2>
+            <div class="fii-tabs">
+                <input type="radio" name="dash" id="tab1" class="fii-tabs__input" checked>
+                <input type="radio" name="dash" id="tab2" class="fii-tabs__input">
+                <input type="radio" name="dash" id="tab3" class="fii-tabs__input">
+                <div class="fii-tabs__list">
+                    <label for="tab1" class="fii-tabs__tab">Tổng quan</label>
+                    <label for="tab2" class="fii-tabs__tab">Báo cáo</label>
+                    <label for="tab3" class="fii-tabs__tab">Lịch</label>
+                </div>
+                <div class="fii-tabs__panel" id="panel1">Nội dung tab Tổng quan. Có thể đặt biểu đồ hoặc danh sách ở đây.</div>
+                <div class="fii-tabs__panel" id="panel2">Nội dung tab Báo cáo.</div>
+                <div class="fii-tabs__panel" id="panel3">Nội dung tab Lịch.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Form nhanh</h2>
+            <form class="fii-form" style="max-width: 24rem;">
+                <div class="fii-field">
+                    <label for="q">Tìm kiếm</label>
+                    <input id="q" class="fii-input fii-input-text" type="text" placeholder="Mã đơn, tên khách...">
+                </div>
+                <div class="fii-form-actions">
+                    <button type="submit" class="fii-button fii-button--primary">Tìm</button>
+                    <button type="reset" class="fii-button fii-button--outline">Xóa</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="../../../dist/fii.min.js"></script>
+</body>
+</html>
