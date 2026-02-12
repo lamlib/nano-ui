@@ -1,0 +1,8 @@
+/* Size (w+h cùng giá trị) – prefix fii-, var(--unit-base) */
+.fii-size-1 { width: calc(var(--unit-base) * 1); height: calc(var(--unit-base) * 1); }
+.fii-size-2 { width: calc(var(--unit-base) * 2); height: calc(var(--unit-base) * 2); }
+.fii-size-4 { width: calc(var(--unit-base) * 4); height: calc(var(--unit-base) * 4); }
+.fii-size-6 { width: calc(var(--unit-base) * 6); height: calc(var(--unit-base) * 6); }
+.fii-size-8 { width: calc(var(--unit-base) * 8); height: calc(var(--unit-base) * 8); }
+.fii-size-10 { width: calc(var(--unit-base) * 10); height: calc(var(--unit-base) * 10); }
+.fii-size-12 { width: calc(var(--unit-base) * 12); height: calc(var(--unit-base) * 12); }

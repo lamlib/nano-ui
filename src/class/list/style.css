@@ -1,3 +1,2 @@
-.fii-list-style-none {
-    list-style-type: none;
-}
+/* List – Tailwind */
+.fii-list-none { list-style-type: none; }

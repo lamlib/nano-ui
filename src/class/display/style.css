@@ -1,0 +1,22 @@
+/* Display & cursor – prefix fii- */
+.fii-cursor-pointer { cursor: pointer; }
+.fii-cursor-default { cursor: default; }
+.fii-cursor-not-allowed { cursor: not-allowed; }
+
+.fii-block { display: block; }
+.fii-inline-block { display: inline-block; }
+.fii-inline { display: inline; }
+.fii-flex { display: flex; }
+.fii-inline-flex { display: inline-flex; }
+.fii-grid { display: grid; }
+.fii-inline-grid { display: inline-grid; }
+.fii-hidden { display: none; }
+.fii-table { display: table; }
+.fii-table-row { display: table-row; }
+.fii-table-cell { display: table-cell; }
+
+.fii-visible { visibility: visible; }
+.fii-invisible { visibility: hidden; }
+
+.fii-pointer-events-none { pointer-events: none; }
+.fii-pointer-events-auto { pointer-events: auto; }

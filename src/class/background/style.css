@@ -1,0 +1,125 @@
+/* Background – prefix fii-, var(--color-*). Solid + pha màu 10–90% */
+.fii-bg-red { background-color: var(--color-red); }
+.fii-bg-orange { background-color: var(--color-orange); }
+.fii-bg-yellow { background-color: var(--color-yellow); }
+.fii-bg-green { background-color: var(--color-green); }
+.fii-bg-blue { background-color: var(--color-blue); }
+.fii-bg-indigo { background-color: var(--color-indigo); }
+.fii-bg-violet { background-color: var(--color-violet); }
+.fii-bg-gray { background-color: var(--color-gray); }
+.fii-bg-white { background-color: var(--color-light); }
+.fii-bg-black { background-color: var(--color-dark); }
+.fii-bg-danger { background-color: var(--color-danger); }
+.fii-bg-warning { background-color: var(--color-warning); }
+.fii-bg-success { background-color: var(--color-success); }
+.fii-bg-primary { background-color: var(--color-primary); }
+.fii-bg-secondary { background-color: var(--color-secondary); }
+
+.fii-bg-primary-10 { background-color: color-mix(in srgb, var(--color-primary) 10%, white); }
+.fii-bg-primary-20 { background-color: color-mix(in srgb, var(--color-primary) 20%, white); }
+.fii-bg-primary-30 { background-color: color-mix(in srgb, var(--color-primary) 30%, white); }
+.fii-bg-primary-40 { background-color: color-mix(in srgb, var(--color-primary) 40%, white); }
+.fii-bg-primary-50 { background-color: color-mix(in srgb, var(--color-primary) 50%, white); }
+.fii-bg-primary-60 { background-color: color-mix(in srgb, var(--color-primary) 60%, white); }
+.fii-bg-primary-70 { background-color: color-mix(in srgb, var(--color-primary) 70%, white); }
+.fii-bg-primary-80 { background-color: color-mix(in srgb, var(--color-primary) 80%, white); }
+.fii-bg-primary-90 { background-color: color-mix(in srgb, var(--color-primary) 90%, white); }
+.fii-bg-red-10 { background-color: color-mix(in srgb, var(--color-red) 10%, white); }
+.fii-bg-red-20 { background-color: color-mix(in srgb, var(--color-red) 20%, white); }
+.fii-bg-red-30 { background-color: color-mix(in srgb, var(--color-red) 30%, white); }
+.fii-bg-red-40 { background-color: color-mix(in srgb, var(--color-red) 40%, white); }
+.fii-bg-red-50 { background-color: color-mix(in srgb, var(--color-red) 50%, white); }
+.fii-bg-red-60 { background-color: color-mix(in srgb, var(--color-red) 60%, white); }
+.fii-bg-red-70 { background-color: color-mix(in srgb, var(--color-red) 70%, white); }
+.fii-bg-red-80 { background-color: color-mix(in srgb, var(--color-red) 80%, white); }
+.fii-bg-red-90 { background-color: color-mix(in srgb, var(--color-red) 90%, white); }
+.fii-bg-orange-10 { background-color: color-mix(in srgb, var(--color-orange) 10%, white); }
+.fii-bg-orange-20 { background-color: color-mix(in srgb, var(--color-orange) 20%, white); }
+.fii-bg-orange-30 { background-color: color-mix(in srgb, var(--color-orange) 30%, white); }
+.fii-bg-orange-40 { background-color: color-mix(in srgb, var(--color-orange) 40%, white); }
+.fii-bg-orange-50 { background-color: color-mix(in srgb, var(--color-orange) 50%, white); }
+.fii-bg-orange-60 { background-color: color-mix(in srgb, var(--color-orange) 60%, white); }
+.fii-bg-orange-70 { background-color: color-mix(in srgb, var(--color-orange) 70%, white); }
+.fii-bg-orange-80 { background-color: color-mix(in srgb, var(--color-orange) 80%, white); }
+.fii-bg-orange-90 { background-color: color-mix(in srgb, var(--color-orange) 90%, white); }
+.fii-bg-yellow-10 { background-color: color-mix(in srgb, var(--color-yellow) 10%, white); }
+.fii-bg-yellow-20 { background-color: color-mix(in srgb, var(--color-yellow) 20%, white); }
+.fii-bg-yellow-30 { background-color: color-mix(in srgb, var(--color-yellow) 30%, white); }
+.fii-bg-yellow-40 { background-color: color-mix(in srgb, var(--color-yellow) 40%, white); }
+.fii-bg-yellow-50 { background-color: color-mix(in srgb, var(--color-yellow) 50%, white); }
+.fii-bg-yellow-60 { background-color: color-mix(in srgb, var(--color-yellow) 60%, white); }
+.fii-bg-yellow-70 { background-color: color-mix(in srgb, var(--color-yellow) 70%, white); }
+.fii-bg-yellow-80 { background-color: color-mix(in srgb, var(--color-yellow) 80%, white); }
+.fii-bg-yellow-90 { background-color: color-mix(in srgb, var(--color-yellow) 90%, white); }
+.fii-bg-green-10 { background-color: color-mix(in srgb, var(--color-green) 10%, white); }
+.fii-bg-green-20 { background-color: color-mix(in srgb, var(--color-green) 20%, white); }
+.fii-bg-green-30 { background-color: color-mix(in srgb, var(--color-green) 30%, white); }
+.fii-bg-green-40 { background-color: color-mix(in srgb, var(--color-green) 40%, white); }
+.fii-bg-green-50 { background-color: color-mix(in srgb, var(--color-green) 50%, white); }
+.fii-bg-green-60 { background-color: color-mix(in srgb, var(--color-green) 60%, white); }
+.fii-bg-green-70 { background-color: color-mix(in srgb, var(--color-green) 70%, white); }
+.fii-bg-green-80 { background-color: color-mix(in srgb, var(--color-green) 80%, white); }
+.fii-bg-green-90 { background-color: color-mix(in srgb, var(--color-green) 90%, white); }
+.fii-bg-blue-10 { background-color: color-mix(in srgb, var(--color-blue) 10%, white); }
+.fii-bg-blue-20 { background-color: color-mix(in srgb, var(--color-blue) 20%, white); }
+.fii-bg-blue-30 { background-color: color-mix(in srgb, var(--color-blue) 30%, white); }
+.fii-bg-blue-40 { background-color: color-mix(in srgb, var(--color-blue) 40%, white); }
+.fii-bg-blue-50 { background-color: color-mix(in srgb, var(--color-blue) 50%, white); }
+.fii-bg-blue-60 { background-color: color-mix(in srgb, var(--color-blue) 60%, white); }
+.fii-bg-blue-70 { background-color: color-mix(in srgb, var(--color-blue) 70%, white); }
+.fii-bg-blue-80 { background-color: color-mix(in srgb, var(--color-blue) 80%, white); }
+.fii-bg-blue-90 { background-color: color-mix(in srgb, var(--color-blue) 90%, white); }
+.fii-bg-indigo-10 { background-color: color-mix(in srgb, var(--color-indigo) 10%, white); }
+.fii-bg-indigo-20 { background-color: color-mix(in srgb, var(--color-indigo) 20%, white); }
+.fii-bg-indigo-30 { background-color: color-mix(in srgb, var(--color-indigo) 30%, white); }
+.fii-bg-indigo-40 { background-color: color-mix(in srgb, var(--color-indigo) 40%, white); }
+.fii-bg-indigo-50 { background-color: color-mix(in srgb, var(--color-indigo) 50%, white); }
+.fii-bg-indigo-60 { background-color: color-mix(in srgb, var(--color-indigo) 60%, white); }
+.fii-bg-indigo-70 { background-color: color-mix(in srgb, var(--color-indigo) 70%, white); }
+.fii-bg-indigo-80 { background-color: color-mix(in srgb, var(--color-indigo) 80%, white); }
+.fii-bg-indigo-90 { background-color: color-mix(in srgb, var(--color-indigo) 90%, white); }
+.fii-bg-violet-10 { background-color: color-mix(in srgb, var(--color-violet) 10%, white); }
+.fii-bg-violet-20 { background-color: color-mix(in srgb, var(--color-violet) 20%, white); }
+.fii-bg-violet-30 { background-color: color-mix(in srgb, var(--color-violet) 30%, white); }
+.fii-bg-violet-40 { background-color: color-mix(in srgb, var(--color-violet) 40%, white); }
+.fii-bg-violet-50 { background-color: color-mix(in srgb, var(--color-violet) 50%, white); }
+.fii-bg-violet-60 { background-color: color-mix(in srgb, var(--color-violet) 60%, white); }
+.fii-bg-violet-70 { background-color: color-mix(in srgb, var(--color-violet) 70%, white); }
+.fii-bg-violet-80 { background-color: color-mix(in srgb, var(--color-violet) 80%, white); }
+.fii-bg-violet-90 { background-color: color-mix(in srgb, var(--color-violet) 90%, white); }
+.fii-bg-gray-10 { background-color: color-mix(in srgb, var(--color-gray) 10%, white); }
+.fii-bg-gray-20 { background-color: color-mix(in srgb, var(--color-gray) 20%, white); }
+.fii-bg-gray-30 { background-color: color-mix(in srgb, var(--color-gray) 30%, white); }
+.fii-bg-gray-40 { background-color: color-mix(in srgb, var(--color-gray) 40%, white); }
+.fii-bg-gray-50 { background-color: color-mix(in srgb, var(--color-gray) 50%, white); }
+.fii-bg-gray-60 { background-color: color-mix(in srgb, var(--color-gray) 60%, white); }
+.fii-bg-gray-70 { background-color: color-mix(in srgb, var(--color-gray) 70%, white); }
+.fii-bg-gray-80 { background-color: color-mix(in srgb, var(--color-gray) 80%, white); }
+.fii-bg-gray-90 { background-color: color-mix(in srgb, var(--color-gray) 90%, white); }
+.fii-bg-danger-10 { background-color: color-mix(in srgb, var(--color-danger) 10%, white); }
+.fii-bg-danger-20 { background-color: color-mix(in srgb, var(--color-danger) 20%, white); }
+.fii-bg-danger-30 { background-color: color-mix(in srgb, var(--color-danger) 30%, white); }
+.fii-bg-danger-40 { background-color: color-mix(in srgb, var(--color-danger) 40%, white); }
+.fii-bg-danger-50 { background-color: color-mix(in srgb, var(--color-danger) 50%, white); }
+.fii-bg-danger-60 { background-color: color-mix(in srgb, var(--color-danger) 60%, white); }
+.fii-bg-danger-70 { background-color: color-mix(in srgb, var(--color-danger) 70%, white); }
+.fii-bg-danger-80 { background-color: color-mix(in srgb, var(--color-danger) 80%, white); }
+.fii-bg-danger-90 { background-color: color-mix(in srgb, var(--color-danger) 90%, white); }
+.fii-bg-warning-10 { background-color: color-mix(in srgb, var(--color-warning) 10%, white); }
+.fii-bg-warning-20 { background-color: color-mix(in srgb, var(--color-warning) 20%, white); }
+.fii-bg-warning-30 { background-color: color-mix(in srgb, var(--color-warning) 30%, white); }
+.fii-bg-warning-40 { background-color: color-mix(in srgb, var(--color-warning) 40%, white); }
+.fii-bg-warning-50 { background-color: color-mix(in srgb, var(--color-warning) 50%, white); }
+.fii-bg-warning-60 { background-color: color-mix(in srgb, var(--color-warning) 60%, white); }
+.fii-bg-warning-70 { background-color: color-mix(in srgb, var(--color-warning) 70%, white); }
+.fii-bg-warning-80 { background-color: color-mix(in srgb, var(--color-warning) 80%, white); }
+.fii-bg-warning-90 { background-color: color-mix(in srgb, var(--color-warning) 90%, white); }
+.fii-bg-success-10 { background-color: color-mix(in srgb, var(--color-success) 10%, white); }
+.fii-bg-success-20 { background-color: color-mix(in srgb, var(--color-success) 20%, white); }
+.fii-bg-success-30 { background-color: color-mix(in srgb, var(--color-success) 30%, white); }
+.fii-bg-success-40 { background-color: color-mix(in srgb, var(--color-success) 40%, white); }
+.fii-bg-success-50 { background-color: color-mix(in srgb, var(--color-success) 50%, white); }
+.fii-bg-success-60 { background-color: color-mix(in srgb, var(--color-success) 60%, white); }
+.fii-bg-success-70 { background-color: color-mix(in srgb, var(--color-success) 70%, white); }
+.fii-bg-success-80 { background-color: color-mix(in srgb, var(--color-success) 80%, white); }
+.fii-bg-success-90 { background-color: color-mix(in srgb, var(--color-success) 90%, white); }

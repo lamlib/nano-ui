@@ -1,11 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Class Utilities – Fii UI</title>
+    <link rel="stylesheet" href="../../dist/fii.min.css">
 </head>
 <body>
-    
+    <div class="fii-container" style="padding: 1.5rem 1rem 2rem;">
+        <h1 class="fii-mb-4">Class Utilities</h1>
+        <p class="fii-text-gray fii-mb-6">Tất cả utilities dùng tiền tố <code>fii-</code>. Design tokens: <code>--color-*</code>, <code>--unit-base</code>, <code>--radius-base</code>.</p>
+
+        <!-- 1. Margin -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">1. Margin</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">m | mt | mr | mb | ml | mx | my. Scale: 0,1,2,3,4,5,6,8,10,12,16,20. *-auto</p>
+            <div class="fii-flex fii-gap-2 fii-flex-wrap">
+                <span class="fii-p-2 fii-bg-blue fii-text-light fii-rounded">m-2</span>
+                <span class="fii-m-4 fii-p-2 fii-bg-green fii-text-light fii-rounded">m-4</span>
+                <span class="fii-mx-auto fii-p-2 fii-bg-primary fii-text-light fii-rounded">mx-auto</span>
+            </div>
+        </section>
+
+        <!-- 2. Padding -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">2. Padding</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">p | pt | pr | pb | pl | px | py. Scale: 0–20</p>
+            <div class="fii-flex fii-gap-2 fii-flex-wrap">
+                <span class="fii-p-2 fii-bg-orange fii-text-dark fii-rounded">p-2</span>
+                <span class="fii-p-4 fii-bg-yellow fii-text-dark fii-rounded">p-4</span>
+            </div>
+        </section>
+
+        <!-- 3. Text -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">3. Text</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">Size: text-xs | text-sm | text-base | text-lg | text-xl | text-2xl | text-3xl</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-baseline fii-mb-2">
+                <span class="fii-text-xs">xs</span>
+                <span class="fii-text-sm">sm</span>
+                <span class="fii-text-base">base</span>
+                <span class="fii-text-lg">lg</span>
+                <span class="fii-text-xl">xl</span>
+                <span class="fii-text-2xl">2xl</span>
+                <span class="fii-text-3xl">3xl</span>
+            </div>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">Align: text-left | text-center | text-right. Transform: uppercase | lowercase | capitalize</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-mb-2">
+                <span class="fii-text-left fii-w-full">text-left</span>
+                <span class="fii-text-center fii-w-full">text-center</span>
+                <span class="fii-text-right fii-w-full">text-right</span>
+                <span class="fii-uppercase">Uppercase</span>
+                <span class="fii-lowercase">Lowercase</span>
+                <span class="fii-capitalize">capitalize</span>
+            </div>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">Font: font-normal | font-medium | font-semibold | font-bold</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-mb-2">
+                <span class="fii-font-normal">normal</span>
+                <span class="fii-font-medium">medium</span>
+                <span class="fii-font-semibold">semibold</span>
+                <span class="fii-font-bold">bold</span>
+            </div>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">Màu chữ: text-primary, text-red, text-green, text-blue, text-gray, text-danger, text-warning, text-success… + text-*-10 … text-*-90</p>
+            <div class="fii-flex fii-gap-2 fii-flex-wrap">
+                <span class="fii-text-primary">primary</span>
+                <span class="fii-text-red">red</span>
+                <span class="fii-text-green">green</span>
+                <span class="fii-text-blue">blue</span>
+                <span class="fii-text-gray">gray</span>
+                <span class="fii-text-danger">danger</span>
+                <span class="fii-text-success">success</span>
+                <span class="fii-text-primary-50">primary-50</span>
+                <span class="fii-text-red-90">red-90</span>
+            </div>
+        </section>
+
+        <!-- 4. List -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">4. List</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">list-none</p>
+            <ul class="fii-list-none fii-flex fii-gap-2">
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </section>
+
+        <!-- 5. Grid (24 cột) -->
+        <section id="grid" class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">5. Grid</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-4">Giống Bootstrap nhưng 24 cột. <code>fii-container</code> | <code>fii-row</code> | <code>fii-col-1</code> … <code>fii-col-24</code>. --grid-columns, --grid-gutter</p>
+
+            <p class="fii-text-sm fii-font-medium fii-mb-2">24 cột = 1+1+…+1</p>
+            <div class="fii-row fii-mb-4">
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+                <div class="fii-col-1 fii-p-2 fii-bg-primary-20 fii-rounded fii-text-center fii-text-sm">1</div>
+            </div>
+
+            <p class="fii-text-sm fii-font-medium fii-mb-2">12 + 12</p>
+            <div class="fii-row fii-mb-4">
+                <div class="fii-col-12 fii-p-3 fii-bg-primary-20 fii-rounded fii-text-center">col-12</div>
+                <div class="fii-col-12 fii-p-3 fii-bg-blue-20 fii-rounded fii-text-center">col-12</div>
+            </div>
+
+            <p class="fii-text-sm fii-font-medium fii-mb-2">8 + 8 + 8</p>
+            <div class="fii-row fii-mb-4">
+                <div class="fii-col-8 fii-p-3 fii-bg-green-20 fii-rounded fii-text-center">col-8</div>
+                <div class="fii-col-8 fii-p-3 fii-bg-yellow-20 fii-rounded fii-text-center">col-8</div>
+                <div class="fii-col-8 fii-p-3 fii-bg-orange-20 fii-rounded fii-text-center">col-8</div>
+            </div>
+
+            <p class="fii-text-sm fii-font-medium fii-mb-2">6 + 12 + 6</p>
+            <div class="fii-row fii-mb-4">
+                <div class="fii-col-6 fii-p-3 fii-bg-red-20 fii-rounded fii-text-center">col-6</div>
+                <div class="fii-col-12 fii-p-3 fii-bg-gray-20 fii-rounded fii-text-center">col-12</div>
+                <div class="fii-col-6 fii-p-3 fii-bg-indigo-20 fii-rounded fii-text-center">col-6</div>
+            </div>
+
+            <p class="fii-text-sm fii-font-medium fii-mb-2">16 + 8</p>
+            <div class="fii-row fii-mb-4">
+                <div class="fii-col-16 fii-p-3 fii-bg-violet-20 fii-rounded fii-text-center">col-16</div>
+                <div class="fii-col-8 fii-p-3 fii-bg-success-20 fii-rounded fii-text-center">col-8</div>
+            </div>
+
+            <p class="fii-text-sm fii-font-medium fii-mb-2">Form layout trong grid</p>
+            <div class="fii-row fii-mb-2">
+                <div class="fii-col-12">
+                    <label class="fii-block fii-text-sm fii-mb-1">Họ</label>
+                    <input type="text" class="fii-input fii-w-full" placeholder="Họ">
+                </div>
+                <div class="fii-col-12">
+                    <label class="fii-block fii-text-sm fii-mb-1">Tên</label>
+                    <input type="text" class="fii-input fii-w-full" placeholder="Tên">
+                </div>
+            </div>
+            <div class="fii-row">
+                <div class="fii-col-24">
+                    <label class="fii-block fii-text-sm fii-mb-1">Email</label>
+                    <input type="email" class="fii-input fii-w-full" placeholder="email@example.com">
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Display -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">6. Display & Cursor</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">block | inline-block | inline | flex | inline-flex | grid | hidden | table… cursor-pointer | cursor-default | cursor-not-allowed. visible | invisible. pointer-events-none | pointer-events-auto</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-center">
+                <span class="fii-inline-block fii-p-2 fii-bg-primary fii-text-light fii-rounded">inline-block</span>
+                <span class="fii-cursor-pointer fii-p-2 fii-bg-blue fii-text-light fii-rounded">cursor-pointer</span>
+            </div>
+        </section>
+
+        <!-- 6. Layout -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">7. Layout</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">w-full | h-full | w-screen | h-screen | min-w-0 | min-h-0 | min-h-full. max-w-sm | max-w-md | max-w-lg | max-w-xl | max-w-2xl | max-w-4xl | max-w-6xl | max-w-full</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-mb-2">
+                <div class="fii-max-w-sm fii-p-2 fii-bg-gray-10 fii-rounded">max-w-sm</div>
+                <div class="fii-max-w-md fii-p-2 fii-bg-gray-10 fii-rounded">max-w-md</div>
+            </div>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">aspect-square | aspect-video | aspect-auto. object-contain | object-cover | object-fill</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap">
+                <div class="fii-aspect-square fii-w-full fii-max-w-20 fii-bg-primary-20 fii-rounded"></div>
+                <div class="fii-aspect-video fii-w-full fii-max-w-32 fii-bg-blue-20 fii-rounded"></div>
+            </div>
+        </section>
+
+        <!-- 7. Flex -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">8. Flex & Gap</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">flex-1 | flex-none | flex-auto. flex-col | flex-row. flex-wrap | flex-nowrap. items-start | items-center | items-end | items-stretch | items-baseline. justify-start | justify-center | justify-end | justify-between | justify-around | justify-evenly. self-start | self-center | self-end | self-stretch. gap-0 … gap-20</p>
+            <div class="fii-flex fii-justify-between fii-items-center fii-gap-4 fii-p-4 fii-bg-blue fii-text-light fii-rounded-lg fii-mb-2">
+                <span>start</span>
+                <span>end</span>
+            </div>
+            <div class="fii-flex fii-gap-6 fii-flex-wrap">
+                <span class="fii-p-2 fii-bg-green fii-text-light fii-rounded">gap-6</span>
+                <span class="fii-p-2 fii-bg-green fii-text-light fii-rounded">1</span>
+                <span class="fii-p-2 fii-bg-green fii-text-light fii-rounded">2</span>
+            </div>
+        </section>
+
+        <!-- 8. Position -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">9. Position & Z-index</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">relative | absolute | fixed | sticky | static. z-0 | z-10 | z-20 | z-30 | z-40 | z-50 | z-auto. inset-0 | top-0 | right-0 | bottom-0 | left-0</p>
+            <div class="fii-relative fii-p-4 fii-bg-gray-10 fii-rounded">
+                <span class="fii-relative fii-z-10 fii-p-2 fii-bg-primary fii-text-light fii-rounded">relative z-10</span>
+            </div>
+        </section>
+
+        <!-- 9. Rounded -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">10. Rounded</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">rounded-none | rounded-sm | rounded | rounded-md | rounded-lg | rounded-xl | rounded-2xl | rounded-full</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-end">
+                <div class="fii-rounded-none fii-size-8 fii-bg-red"></div>
+                <div class="fii-rounded-sm fii-size-8 fii-bg-orange"></div>
+                <div class="fii-rounded fii-size-8 fii-bg-yellow"></div>
+                <div class="fii-rounded-lg fii-size-8 fii-bg-green"></div>
+                <div class="fii-rounded-xl fii-size-8 fii-bg-blue"></div>
+                <div class="fii-rounded-2xl fii-size-8 fii-bg-indigo"></div>
+                <div class="fii-rounded-full fii-size-8 fii-bg-violet"></div>
+            </div>
+        </section>
+
+        <!-- 10. Size -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">11. Size (w+h)</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">size-1 | size-2 | size-4 | size-6 | size-8 | size-10 | size-12</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap fii-items-end">
+                <div class="fii-size-1 fii-bg-primary fii-rounded-sm"></div>
+                <div class="fii-size-2 fii-bg-primary fii-rounded-sm"></div>
+                <div class="fii-size-4 fii-bg-primary fii-rounded-sm"></div>
+                <div class="fii-size-6 fii-bg-primary fii-rounded"></div>
+                <div class="fii-size-8 fii-bg-primary fii-rounded"></div>
+                <div class="fii-size-10 fii-bg-primary fii-rounded"></div>
+                <div class="fii-size-12 fii-bg-primary fii-rounded-lg"></div>
+            </div>
+        </section>
+
+        <!-- 11. Background -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">12. Background</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">Solid: bg-primary, bg-red, bg-orange, bg-yellow, bg-green, bg-blue, bg-indigo, bg-violet, bg-gray, bg-white, bg-black, bg-danger, bg-warning, bg-success, bg-secondary</p>
+            <div class="fii-flex fii-gap-2 fii-flex-wrap fii-mb-2">
+                <span class="fii-p-2 fii-rounded fii-bg-primary fii-text-light">primary</span>
+                <span class="fii-p-2 fii-rounded fii-bg-red fii-text-light">red</span>
+                <span class="fii-p-2 fii-rounded fii-bg-green fii-text-light">green</span>
+                <span class="fii-p-2 fii-rounded fii-bg-blue fii-text-light">blue</span>
+                <span class="fii-p-2 fii-rounded fii-bg-gray fii-text-light">gray</span>
+                <span class="fii-p-2 fii-rounded fii-bg-danger fii-text-light">danger</span>
+                <span class="fii-p-2 fii-rounded fii-bg-success fii-text-light">success</span>
+            </div>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">Pha màu 10–90%: bg-primary-10 … bg-primary-90, bg-red-10 … bg-red-90, … (tất cả màu)</p>
+            <div class="fii-flex fii-gap-2 fii-flex-wrap">
+                <span class="fii-p-2 fii-rounded fii-bg-red-10">red-10</span>
+                <span class="fii-p-2 fii-rounded fii-bg-red-50">red-50</span>
+                <span class="fii-p-2 fii-rounded fii-bg-red-90">red-90</span>
+                <span class="fii-p-2 fii-rounded fii-bg-blue-10">blue-10</span>
+                <span class="fii-p-2 fii-rounded fii-bg-green-50">green-50</span>
+            </div>
+        </section>
+
+        <!-- 12. Overflow -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">13. Overflow</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">overflow-auto | overflow-hidden | overflow-visible | overflow-scroll | overflow-x-auto | overflow-y-auto | overflow-x-hidden | overflow-y-hidden</p>
+            <div class="fii-overflow-auto fii-max-w-md fii-p-2 fii-bg-gray-10 fii-rounded" style="height: 5rem;">
+                <div style="width: 200%; height: 80px; background: var(--color-primary); opacity: 0.3;"></div>
+            </div>
+        </section>
+
+        <!-- 13. Opacity -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">14. Opacity</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">opacity-0 | opacity-5 | opacity-10 … opacity-95 | opacity-100</p>
+            <div class="fii-flex fii-gap-2 fii-flex-wrap">
+                <div class="fii-opacity-0 fii-p-2 fii-bg-primary fii-rounded">0</div>
+                <div class="fii-opacity-25 fii-p-2 fii-bg-primary fii-text-light fii-rounded">25</div>
+                <div class="fii-opacity-50 fii-p-2 fii-bg-primary fii-text-light fii-rounded">50</div>
+                <div class="fii-opacity-75 fii-p-2 fii-bg-primary fii-text-light fii-rounded">75</div>
+                <div class="fii-opacity-100 fii-p-2 fii-bg-primary fii-text-light fii-rounded">100</div>
+            </div>
+        </section>
+
+        <!-- 14. Border -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">15. Border</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">border | border-0 | border-t | border-r | border-b | border-l. border-primary | border-red | border-gray | border-transparent</p>
+            <div class="fii-flex fii-gap-4 fii-flex-wrap">
+                <div class="fii-border fii-p-3 fii-rounded">border</div>
+                <div class="fii-border fii-border-primary fii-p-3 fii-rounded">border-primary</div>
+                <div class="fii-border fii-border-red fii-p-3 fii-rounded">border-red</div>
+                <div class="fii-border-t fii-border-b fii-p-3 fii-rounded">border-t border-b</div>
+            </div>
+        </section>
+
+        <!-- 15. Shadow -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">16. Shadow</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">shadow-none | shadow-sm | shadow | shadow-md | shadow-lg</p>
+            <div class="fii-flex fii-gap-6 fii-flex-wrap">
+                <div class="fii-shadow-none fii-p-4 fii-bg-white fii-rounded">none</div>
+                <div class="fii-shadow-sm fii-p-4 fii-bg-white fii-rounded">sm</div>
+                <div class="fii-shadow fii-p-4 fii-bg-white fii-rounded">default</div>
+                <div class="fii-shadow-md fii-p-4 fii-bg-white fii-rounded">md</div>
+                <div class="fii-shadow-lg fii-p-4 fii-bg-white fii-rounded">lg</div>
+            </div>
+        </section>
+
+        <!-- 16. Transition -->
+        <section class="fii-mb-6">
+            <h2 class="fii-text-lg fii-mb-3">17. Transition</h2>
+            <p class="fii-text-sm fii-text-gray fii-mb-2">transition-none | transition | transition-all. duration-75 | duration-150 | duration-300 | duration-500</p>
+            <div class="fii-flex fii-gap-4">
+                <button type="button" class="fii-transition fii-p-3 fii-bg-primary fii-text-light fii-rounded fii-cursor-pointer">transition</button>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

@@ -1,0 +1,25 @@
+/* Layout – width, height, max-width. prefix fii-, var(--unit-base) */
+.fii-w-full { width: 100%; }
+.fii-h-full { height: 100%; }
+.fii-w-screen { width: 100vw; }
+.fii-h-screen { height: 100vh; }
+.fii-min-w-0 { min-width: 0; }
+.fii-min-h-0 { min-height: 0; }
+.fii-min-h-full { min-height: 100%; }
+
+.fii-max-w-sm { max-width: 24rem; }
+.fii-max-w-md { max-width: 28rem; }
+.fii-max-w-lg { max-width: 32rem; }
+.fii-max-w-xl { max-width: 36rem; }
+.fii-max-w-2xl { max-width: 42rem; }
+.fii-max-w-4xl { max-width: 56rem; }
+.fii-max-w-6xl { max-width: 72rem; }
+.fii-max-w-full { max-width: 100%; }
+
+.fii-aspect-square { aspect-ratio: 1 / 1; }
+.fii-aspect-video { aspect-ratio: 16 / 9; }
+.fii-aspect-auto { aspect-ratio: auto; }
+
+.fii-object-contain { object-fit: contain; }
+.fii-object-cover { object-fit: cover; }
+.fii-object-fill { object-fit: fill; }

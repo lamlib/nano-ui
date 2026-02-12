@@ -1,0 +1,9 @@
+/* Border radius – prefix fii-, var(--radius-base) */
+.fii-rounded-none { border-radius: 0; }
+.fii-rounded-sm { border-radius: 0.125rem; }
+.fii-rounded { border-radius: var(--radius-base); }
+.fii-rounded-md { border-radius: var(--radius-base); }
+.fii-rounded-lg { border-radius: 0.5rem; }
+.fii-rounded-xl { border-radius: 0.75rem; }
+.fii-rounded-2xl { border-radius: 1rem; }
+.fii-rounded-full { border-radius: 9999px; }
