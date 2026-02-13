@@ -6,9 +6,11 @@
     background: var(--color-light);
     transition: box-shadow 0.2s ease;
 }
+
 .nano-accordion__item:first-child {
     border-top: 1px solid var(--color-component-02);
 }
+
 .nano-accordion__item.nano-accordion__item--open {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
@@ -30,6 +32,7 @@
     user-select: none;
     font-family: inherit;
 }
+
 .nano-accordion__header::before {
     content: "";
     flex-shrink: 0;
@@ -40,9 +43,11 @@
     transform: rotate(45deg) translateY(-1px);
     transition: transform 0.2s ease;
 }
+
 .nano-accordion__item.nano-accordion__item--open .nano-accordion__header::before {
     transform: rotate(-135deg) translateY(1px);
 }
+
 .nano-accordion__header:hover {
     background: var(--color-layer-02);
     color: var(--color-primary);
@@ -50,7 +55,7 @@
 
 .nano-accordion__body {
     display: none;
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     font-size: 0.875rem;
     line-height: 1.55;
     color: var(--color-foreground);

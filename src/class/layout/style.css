@@ -15,6 +15,7 @@
 .nano-max-w-4xl { max-width: 56rem; }
 .nano-max-w-6xl { max-width: 72rem; }
 .nano-max-w-full { max-width: 100%; }
+.nano-max-w-fit { max-width: fit-content; }
 
 .nano-aspect-square { aspect-ratio: 1 / 1; }
 .nano-aspect-video { aspect-ratio: 16 / 9; }

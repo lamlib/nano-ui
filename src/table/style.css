@@ -10,7 +10,6 @@
     font-size: 0.875rem;
     color: var(--color-foreground);
     background: var(--color-light);
-    border-radius: var(--table-radius);
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
@@ -25,7 +24,7 @@
 .nano-table th {
     font-weight: 600;
     letter-spacing: 0.01em;
-    background: var(--color-component-02);
+    background: var(--color-component-01);
     color: var(--color-foreground);
 }
 
@@ -66,7 +65,11 @@
 }
 
 .nano-table.nano-table--bordered th {
-    border-bottom: 2px solid var(--color-component-03);
+    border-bottom: 1px solid var(--color-component-03);
+}
+
+.nano-table tbody tr:last-child td {
+    border-bottom: 1px solid var(--color-component-03);;
 }
 
 /* Compact padding */
@@ -79,5 +82,4 @@
 .nano-table-wrapper {
     width: 100%;
     overflow-x: auto;
-    border-radius: var(--table-radius);
 }

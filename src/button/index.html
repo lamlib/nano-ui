@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
 </head>
 <body>
     <nav class="nano-navbar">
@@ -18,6 +19,12 @@
         </div>
     </nav>
     <div class="nano-container nano-py-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Button</span></li>
+            </ol>
+        </nav>
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Default button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
         <button type="button" class="nano-button">Default</button>
@@ -30,6 +37,98 @@
         <button type="button" class="nano-button nano-button--ghost-active">Default Ghost Active</button>
         <button type="button" class="nano-button nano-button--ghost" disabled>Default Ghost Disabled</button>
     </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button&quot;&gt;Default&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button active (force state)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--active&quot;&gt;Default Active&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button disabled (force state)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button&quot; disabled&gt;Default Disabled&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button outline</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--outline&quot; &gt;Default Outline&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button outline active (force state)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--outline nano-button--active&quot;&gt;Default Outline Active&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button outline disabled (force state)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--outline&quot; disabled&gt;Default Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button ghost</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--ghost&quot;&gt;Default Ghost&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button ghost active (force state)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--ghost-active&quot;&gt;Default Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Default button ghost disabled (force state)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--ghost&quot; disabled&gt;Default Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Primary button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
@@ -43,7 +142,99 @@
         <button type="button" class="nano-button nano-button--primary-ghost-active">Primary Ghost Active</button>
         <button type="button" class="nano-button nano-button--primary-ghost" disabled>Primary Ghost Disabled</button>
     </div>
-    
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary&quot;&gt;Primary&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary-active&quot;&gt;Primary Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary&quot; disabled&gt;Primary Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary-outline&quot;&gt;Primary Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary-active&quot;&gt;Primary Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary-outline&quot; disabled&gt;Primary Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary-ghost&quot;&gt;Primary Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary-ghost-active&quot;&gt;Primary Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Primary button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--primary-ghost&quot; disabled&gt;Primary Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Danger button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
         <button type="button" class="nano-button nano-button--danger">Danger</button>
@@ -55,6 +246,98 @@
         <button type="button" class="nano-button nano-button--danger-ghost">Danger Ghost</button>
         <button type="button" class="nano-button nano-button--danger-ghost-active">Danger Ghost Active</button>
         <button type="button" class="nano-button nano-button--danger-ghost" disabled>Danger Ghost Disabled</button>
+    </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger&quot;&gt;Danger&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger-active&quot;&gt;Danger Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger&quot; disabled&gt;Danger Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger-outline&quot;&gt;Danger Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger-active&quot;&gt;Danger Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger-outline&quot; disabled&gt;Danger Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger-ghost&quot;&gt;Danger Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger-ghost-active&quot;&gt;Danger Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Danger button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--danger-ghost&quot; disabled&gt;Danger Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Warning button</h2>
@@ -69,6 +352,98 @@
         <button type="button" class="nano-button nano-button--warning-ghost-active">Warning Ghost Active</button>
         <button type="button" class="nano-button nano-button--warning-ghost" disabled>Warning Ghost Disabled</button>
     </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning&quot;&gt;Warning&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning-active&quot;&gt;Warning Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning&quot; disabled&gt;Warning Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning-outline&quot;&gt;Warning Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning-active&quot;&gt;Warning Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning-outline&quot; disabled&gt;Warning Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning-ghost&quot;&gt;Warning Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning-ghost-active&quot;&gt;Warning Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Warning button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--warning-ghost&quot; disabled&gt;Warning Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Success button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
@@ -81,6 +456,98 @@
         <button type="button" class="nano-button nano-button--success-ghost">Success Ghost</button>
         <button type="button" class="nano-button nano-button--success-ghost-active">Success Ghost Active</button>
         <button type="button" class="nano-button nano-button--success-ghost" disabled>Success Ghost Disabled</button>
+    </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success&quot;&gt;Success&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success-active&quot;&gt;Success Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success&quot; disabled&gt;Success Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success-outline&quot;&gt;Success Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success-active&quot;&gt;Success Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success-outline&quot; disabled&gt;Success Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success-ghost&quot;&gt;Success Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success-ghost-active&quot;&gt;Success Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Success button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--success-ghost&quot; disabled&gt;Success Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Secondary button</h2>
@@ -95,6 +562,98 @@
         <button type="button" class="nano-button nano-button--secondary-ghost-active">Secondary Ghost Active</button>
         <button type="button" class="nano-button nano-button--secondary-ghost" disabled>Secondary Ghost Disabled</button>
     </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary&quot;&gt;Secondary&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary-active&quot;&gt;Secondary Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary&quot; disabled&gt;Secondary Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary-outline&quot;&gt;Secondary Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary-active&quot;&gt;Secondary Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary-outline&quot; disabled&gt;Secondary Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary-ghost&quot;&gt;Secondary Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary-ghost-active&quot;&gt;Secondary Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Secondary button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--secondary-ghost&quot; disabled&gt;Secondary Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Blue button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
@@ -107,6 +666,98 @@
         <button type="button" class="nano-button nano-button--blue-ghost">Blue Ghost</button>
         <button type="button" class="nano-button nano-button--blue-ghost-active">Blue Ghost Active</button>
         <button type="button" class="nano-button nano-button--blue-ghost" disabled>Blue Ghost Disabled</button>
+    </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue&quot;&gt;Blue&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue-active&quot;&gt;Blue Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue&quot; disabled&gt;Blue Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue-outline&quot;&gt;Blue Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue-active&quot;&gt;Blue Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue-outline&quot; disabled&gt;Blue Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue-ghost&quot;&gt;Blue Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue-ghost-active&quot;&gt;Blue Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Blue button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--blue-ghost&quot; disabled&gt;Blue Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Red button</h2>
@@ -121,6 +772,98 @@
         <button type="button" class="nano-button nano-button--red-ghost-active">Red Ghost Active</button>
         <button type="button" class="nano-button nano-button--red-ghost" disabled>Red Ghost Disabled</button>
     </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red&quot;&gt;Red&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red-active&quot;&gt;Red Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red&quot; disabled&gt;Red Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red-outline&quot;&gt;Red Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red-active&quot;&gt;Red Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red-outline&quot; disabled&gt;Red Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red-ghost&quot;&gt;Red Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red-ghost-active&quot;&gt;Red Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Red button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--red-ghost&quot; disabled&gt;Red Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Orange button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
@@ -133,6 +876,98 @@
         <button type="button" class="nano-button nano-button--orange-ghost">Orange Ghost</button>
         <button type="button" class="nano-button nano-button--orange-ghost-active">Orange Ghost Active</button>
         <button type="button" class="nano-button nano-button--orange-ghost" disabled>Orange Ghost Disabled</button>
+    </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange&quot;&gt;Orange&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange-active&quot;&gt;Orange Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange&quot; disabled&gt;Orange Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange-outline&quot;&gt;Orange Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange-active&quot;&gt;Orange Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange-outline&quot; disabled&gt;Orange Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange-ghost&quot;&gt;Orange Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange-ghost-active&quot;&gt;Orange Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Orange button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--orange-ghost&quot; disabled&gt;Orange Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Yellow button</h2>
@@ -147,6 +982,98 @@
         <button type="button" class="nano-button nano-button--yellow-ghost-active">Yellow Ghost Active</button>
         <button type="button" class="nano-button nano-button--yellow-ghost" disabled>Yellow Ghost Disabled</button>
     </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow&quot;&gt;Yellow&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow-active&quot;&gt;Yellow Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow&quot; disabled&gt;Yellow Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow-outline&quot;&gt;Yellow Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow-active&quot;&gt;Yellow Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow-outline&quot; disabled&gt;Yellow Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow-ghost&quot;&gt;Yellow Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow-ghost-active&quot;&gt;Yellow Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Yellow button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--yellow-ghost&quot; disabled&gt;Yellow Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Green button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
@@ -159,6 +1086,98 @@
         <button type="button" class="nano-button nano-button--green-ghost">Green Ghost</button>
         <button type="button" class="nano-button nano-button--green-ghost-active">Green Ghost Active</button>
         <button type="button" class="nano-button nano-button--green-ghost" disabled>Green Ghost Disabled</button>
+    </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green&quot;&gt;Green&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green-active&quot;&gt;Green Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green&quot; disabled&gt;Green Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green-outline&quot;&gt;Green Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green-active&quot;&gt;Green Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green-outline&quot; disabled&gt;Green Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green-ghost&quot;&gt;Green Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green-ghost-active&quot;&gt;Green Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Green button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--green-ghost&quot; disabled&gt;Green Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Indigo button</h2>
@@ -173,6 +1192,98 @@
         <button type="button" class="nano-button nano-button--indigo-ghost-active">Indigo Ghost Active</button>
         <button type="button" class="nano-button nano-button--indigo-ghost" disabled>Indigo Ghost Disabled</button>
     </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo&quot;&gt;Indigo&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo-active&quot;&gt;Indigo Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo&quot; disabled&gt;Indigo Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo-outline&quot;&gt;Indigo Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo-active&quot;&gt;Indigo Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo-outline&quot; disabled&gt;Indigo Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo-ghost&quot;&gt;Indigo Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo-ghost-active&quot;&gt;Indigo Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Indigo button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--indigo-ghost&quot; disabled&gt;Indigo Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h2 class="nano-text-lg nano-font-semibold nano-mb-2 nano-mt-6">Violet button</h2>
     <div class="nano-flex nano-gap-1 nano-mt-4 nano-mb-4">
@@ -186,7 +1297,101 @@
         <button type="button" class="nano-button nano-button--violet-ghost-active">Violet Ghost Active</button>
         <button type="button" class="nano-button nano-button--violet-ghost" disabled>Violet Ghost Disabled</button>
     </div>
+    <div class="nano-mb-6" data-nano-accordion="group">
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet&quot;&gt;Violet&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet-active&quot;&gt;Violet Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet&quot; disabled&gt;Violet Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button outline</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet-outline&quot;&gt;Violet Outline&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button outline active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet-active&quot;&gt;Violet Outline Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button outline disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet-outline&quot; disabled&gt;Violet Outline Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button ghost</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet-ghost&quot;&gt;Violet Ghost&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button ghost active (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet-ghost-active&quot;&gt;Violet Ghost Active&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="nano-accordion__item">
+            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Violet button ghost disabled (force state)</button>
+            <div class="nano-accordion__body nano-p-0">
+                <div class="nano-code-block">
+                    <h6 class="nano-code-block__title">HTML</h6>
+                    <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                    <pre class="nano-pre nano-bg-white"><code>&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-button nano-button--violet-ghost&quot; disabled&gt;Violet Ghost Disabled&lt;&#x2F;button&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>

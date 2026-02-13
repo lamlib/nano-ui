@@ -1087,9 +1087,11 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-light);
     transition: box-shadow 0.2s ease;
 }
+
 .nano-accordion__item:first-child {
     border-top: 1px solid var(--color-component-02);
 }
+
 .nano-accordion__item.nano-accordion__item--open {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
@@ -1111,6 +1113,7 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
     font-family: inherit;
 }
+
 .nano-accordion__header::before {
     content: "";
     flex-shrink: 0;
@@ -1121,9 +1124,11 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(45deg) translateY(-1px);
     transition: transform 0.2s ease;
 }
+
 .nano-accordion__item.nano-accordion__item--open .nano-accordion__header::before {
     transform: rotate(-135deg) translateY(1px);
 }
+
 .nano-accordion__header:hover {
     background: var(--color-layer-02);
     color: var(--color-primary);
@@ -1131,7 +1136,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nano-accordion__body {
     display: none;
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     font-size: 0.875rem;
     line-height: 1.55;
     color: var(--color-foreground);
@@ -2368,27 +2373,28 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: calc(var(--space-base) * 6);
 }
 
-var.nano-var {
+.nano-var {
     font-style: italic;
     font-weight: bold;
 }
 
-code.nano-code {
+.nano-code {
     font-weight: bold;
     background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
     display: inline-block;
     padding: 0rem 1cap;
+    border-radius: var(--radius-base);
 }
 
-kbd.nano-kbd {
+.nano-kbd {
     font-weight: bold;
-    border-radius: 2px;
+    border-radius: var(--radius-base);
     box-shadow: 0px 1px 0px 3px color-mix(in srgb, var(--color-dark) 30%, var(--color-light));
     padding: 0rem 1cap;
     margin: 0 0.125rem;
 }
 
-samp.nano-samp {
+.nano-samp {
     font-weight: bold;
     display: block;
     padding: 1rem;
@@ -2398,7 +2404,7 @@ samp.nano-samp {
     overflow-x: auto;
 }
 
-pre.nano-pre {
+.nano-pre {
     font-weight: bold;
     background: color-mix(in srgb, var(--color-dark) 10%, var(--color-light));
     padding: 1rem;
@@ -2406,30 +2412,39 @@ pre.nano-pre {
     overflow-x: auto;
 }
 
-/* Code block with copy button */
 .nano-code-block {
     position: relative;
 }
 .nano-code-block .nano-code-block__copy {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0.35rem;
+    right: 1rem;
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
     font-weight: 500;
     color: var(--color-foreground);
     background: var(--color-component-01);
     border: 1px solid var(--color-component-02);
-    border-radius: 2px;
+    border-radius: var(--radius-base);
     cursor: pointer;
     transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nano-code-block .nano-code-block__title {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    padding: 0.25rem 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-foreground);
 }
 .nano-code-block .nano-code-block__copy:hover {
     background: var(--color-layer-02);
     color: var(--color-primary);
 }
-.nano-code-block pre.nano-pre,
-.nano-code-block samp.nano-samp {
+.nano-code-block .nano-pre,
+.nano-code-block .nano-samp {
     padding-top: 2.25rem;
 }
 /* ---------- Dropdown ---------- */
@@ -2537,7 +2552,6 @@ pre.nano-pre {
     font-size: 0.875rem;
     color: var(--color-foreground);
     background: var(--color-light);
-    border-radius: var(--table-radius);
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
@@ -2552,7 +2566,7 @@ pre.nano-pre {
 .nano-table th {
     font-weight: 600;
     letter-spacing: 0.01em;
-    background: var(--color-component-02);
+    background: var(--color-component-01);
     color: var(--color-foreground);
 }
 
@@ -2593,7 +2607,11 @@ pre.nano-pre {
 }
 
 .nano-table.nano-table--bordered th {
-    border-bottom: 2px solid var(--color-component-03);
+    border-bottom: 1px solid var(--color-component-03);
+}
+
+.nano-table tbody tr:last-child td {
+    border-bottom: 1px solid var(--color-component-03);;
 }
 
 /* Compact padding */
@@ -2606,7 +2624,6 @@ pre.nano-pre {
 .nano-table-wrapper {
     width: 100%;
     overflow-x: auto;
-    border-radius: var(--table-radius);
 }
 
 
@@ -3717,6 +3734,7 @@ meter::-moz-meter-bar {
 .nano-max-w-4xl { max-width: 56rem; }
 .nano-max-w-6xl { max-width: 72rem; }
 .nano-max-w-full { max-width: 100%; }
+.nano-max-w-fit { max-width: fit-content; }
 
 .nano-aspect-square { aspect-ratio: 1 / 1; }
 .nano-aspect-video { aspect-ratio: 16 / 9; }
@@ -3807,7 +3825,27 @@ meter::-moz-meter-bar {
 .nano-size-12 { width: calc(var(--unit-base) * 12); height: calc(var(--unit-base) * 12); }
 
 
+.nano-w-1 { width: calc(var(--unit-base) * 1); }
+.nano-w-2 { width: calc(var(--unit-base) * 2); }
+.nano-w-4 { width: calc(var(--unit-base) * 4); }
+.nano-w-6 { width: calc(var(--unit-base) * 6); }
+.nano-w-8 { width: calc(var(--unit-base) * 8); }
+.nano-w-10 { width: calc(var(--unit-base) * 10); }
+.nano-w-12 { width: calc(var(--unit-base) * 12); }
+.nano-w-16 { width: calc(var(--unit-base) * 16); }
+.nano-w-20 { width: calc(var(--unit-base) * 20); }
+
+.nano-h-1 { height: calc(var(--unit-base) * 1); }
+.nano-h-2 { height: calc(var(--unit-base) * 2); }
+.nano-h-4 { height: calc(var(--unit-base) * 4); }
+.nano-h-6 { height: calc(var(--unit-base) * 6); }
+.nano-h-8 { height: calc(var(--unit-base) * 8); }
+.nano-h-10 { height: calc(var(--unit-base) * 10); }
+.nano-h-12 { height: calc(var(--unit-base) * 12); }
+.nano-h-16 { height: calc(var(--unit-base) * 16); }
 .nano-h-20 { height: calc(var(--unit-base) * 20); }
+
+
 /* Background – prefix nano-, var(--color-*). Solid + pha màu 10–90% */
 .nano-bg-red { background-color: var(--color-red); }
 .nano-bg-orange { background-color: var(--color-orange); }
@@ -3969,6 +4007,13 @@ meter::-moz-meter-bar {
 .nano-border-b { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: var(--color-gray); }
 .nano-border-l { border-left-width: 1px; border-left-style: solid; border-left-color: var(--color-gray); }
 
+/* Border style (Tailwind-like) */
+.nano-border-solid { border-style: solid; }
+.nano-border-dashed { border-style: dashed; }
+.nano-border-dotted { border-style: dotted; }
+.nano-border-double { border-style: double; }
+.nano-border-none { border-style: none; }
+
 .nano-border-primary { border-color: var(--color-primary); }
 .nano-border-red { border-color: var(--color-red); }
 .nano-border-gray { border-color: var(--color-gray); }
@@ -3989,4 +4034,21 @@ meter::-moz-meter-bar {
 .nano-duration-150 { transition-duration: 150ms; }
 .nano-duration-300 { transition-duration: 300ms; }
 .nano-duration-500 { transition-duration: 500ms; }
+
+/* Override .nano-table tbody tr default transition when row has transition utility */
+.nano-table tbody tr.nano-transition-none { transition-property: none; }
+.nano-table tbody tr.nano-transition {
+    transition-property: color, background-color, border-color, opacity, box-shadow;
+    transition-timing-function: ease;
+    transition-duration: 150ms;
+}
+.nano-table tbody tr.nano-transition-all {
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 150ms;
+}
+.nano-table tbody tr.nano-duration-75 { transition-duration: 75ms; }
+.nano-table tbody tr.nano-duration-150 { transition-duration: 150ms; }
+.nano-table tbody tr.nano-duration-300 { transition-duration: 300ms; }
+.nano-table tbody tr.nano-duration-500 { transition-duration: 500ms; }
 

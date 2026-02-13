@@ -6,6 +6,13 @@
 .nano-border-b { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: var(--color-gray); }
 .nano-border-l { border-left-width: 1px; border-left-style: solid; border-left-color: var(--color-gray); }
 
+/* Border style (Tailwind-like) */
+.nano-border-solid { border-style: solid; }
+.nano-border-dashed { border-style: dashed; }
+.nano-border-dotted { border-style: dotted; }
+.nano-border-double { border-style: double; }
+.nano-border-none { border-style: none; }
+
 .nano-border-primary { border-color: var(--color-primary); }
 .nano-border-red { border-color: var(--color-red); }
 .nano-border-gray { border-color: var(--color-gray); }

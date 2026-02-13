@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-overlayscrollbars-initialize>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accordion – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,87 +21,170 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-py-6">
+    <div class="nano-container nano-mx-auto nano-p-6">
         <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
             <ol>
                 <li><a href="../../index.html">Home</a></li>
                 <li><span aria-current="page">Accordion</span></li>
             </ol>
         </nav>
-    <h2 class="nano-text-lg nano-font-semibold nano-mb-2">Separate accordion</h2>
-    <div class="nano-flex nano-flex-col nano-gap-0 nano-mb-6">
-        <div class="nano-accordion__item nano-accordion__item--open">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-        <div class="nano-accordion__item">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-        <div class="nano-accordion__item nano-accordion__item--open">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-        <div class="nano-accordion__item">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-    </div>
-    <h2 class="nano-text-lg nano-font-semibold nano-mb-2">Group accordion</h2>
-    <div class="nano-mb-4" data-nano-accordion="group">
-        <div class="nano-accordion__item nano-accordion__item--open">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-        <div class="nano-accordion__item">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-        <div class="nano-accordion__item">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-        <div class="nano-accordion__item">
-            <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Accordion Header</button>
-            <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
-        </div>
-    </div>
 
-        <h2 class="nano-text-xl nano-font-semibold nano-mb-3 nano-mt-8">Snippets</h2>
-        <p class="nano-text-sm nano-text-secondary nano-mb-4">Copy HTML to use in your page.</p>
-        <div class="nano-mb-6" data-nano-accordion="group">
+        
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Accordion</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            The accordion component delivers large amounts of content in a small space throught progressive disclosure. 
+            The header title gives the user a high level overview of the content allowing the user to decide which sections 
+            to read.
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Accordions can make information processing and discovering more effective. However, it does hide content from users and it's 
+            important to account for a user not noticing or reading all of the included content.
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Separate accordion</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-col nano-gap-0">
+                <div class="nano-accordion__item nano-accordion__item--open">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                        aria-expanded="true">Accordion Header</button>
+                    <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse
+                        illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem
+                        repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+                </div>
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                        aria-expanded="false">Accordion Header</button>
+                    <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse
+                        illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem
+                        repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+                </div>
+                <div class="nano-accordion__item nano-accordion__item--open">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                        aria-expanded="true">Accordion Header</button>
+                    <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse
+                        illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem
+                        repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+                </div>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
             <div class="nano-accordion__item">
-                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Single accordion item</button>
-                <div class="nano-accordion__body">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                    aria-expanded="false">Separate accordion</button>
+                <div class="nano-accordion__body nano-p-0">
                     <div class="nano-code-block">
-                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                        <pre class="nano-pre">&lt;div class="nano-accordion__item"&gt;
-  &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false"&gt;Title&lt;/button&gt;
-  &lt;div class="nano-accordion__body"&gt;Content here.&lt;/div&gt;
-&lt;/div&gt;</pre>
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
+                            aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-accordion__item"&gt;
+    &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false"&gt;Single accordion item&lt;/button&gt;
+    &lt;div class="nano-accordion__body"&gt;Content here.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                     </div>
                 </div>
             </div>
             <div class="nano-accordion__item">
-                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Group accordion (one open)</button>
-                <div class="nano-accordion__body">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                    aria-expanded="false">Group separate accordion</button>
+                <div class="nano-accordion__body nano-p-0">
                     <div class="nano-code-block">
-                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                        <pre class="nano-pre">&lt;div data-nano-accordion="group"&gt;
-  &lt;div class="nano-accordion__item nano-accordion__item--open"&gt;
-    &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true"&gt;Item 1&lt;/button&gt;
-    &lt;div class="nano-accordion__body"&gt;Content 1.&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="nano-accordion__item"&gt;
-    &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false"&gt;Item 2&lt;/button&gt;
-    &lt;div class="nano-accordion__body"&gt;Content 2.&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
+                            aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class&#x3D;&quot;nano-flex nano-flex-col nano-gap-0&quot;&gt;
+    &lt;div class&#x3D;&quot;nano-accordion__item nano-accordion__item--open&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-accordion__header&quot; data-nano-trigger&#x3D;&quot;accordion&quot; aria-expanded&#x3D;&quot;true&quot;&gt;Accordion Header&lt;&#x2F;button&gt;
+        &lt;div class&#x3D;&quot;nano-accordion__body&quot;&gt;Content here.&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;nano-accordion__item&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-accordion__header&quot; data-nano-trigger&#x3D;&quot;accordion&quot; aria-expanded&#x3D;&quot;false&quot;&gt;Accordion Header&lt;&#x2F;button&gt;
+        &lt;div class&#x3D;&quot;nano-accordion__body&quot;&gt;Content here.&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;nano-accordion__item nano-accordion__item--open&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-accordion__header&quot; data-nano-trigger&#x3D;&quot;accordion&quot; aria-expanded&#x3D;&quot;true&quot;&gt;Accordion Header&lt;&#x2F;button&gt;
+        &lt;div class&#x3D;&quot;nano-accordion__body&quot;&gt;Content here.&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;nano-accordion__item&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;nano-accordion__header&quot; data-nano-trigger&#x3D;&quot;accordion&quot; aria-expanded&#x3D;&quot;false&quot;&gt;Accordion Header&lt;&#x2F;button&gt;
+        &lt;div class&#x3D;&quot;nano-accordion__body&quot;&gt;Content here.&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Equivalent accordion</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+                <div class="nano-accordion__item nano-accordion__item--open">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                        aria-expanded="true">Accordion Header</button>
+                    <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse
+                        illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem
+                        repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+                </div>
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                        aria-expanded="false">Accordion Header</button>
+                    <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse
+                        illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem
+                        repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+                </div>
+                <div class="nano-accordion__item">
+                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                        aria-expanded="false">Accordion Header</button>
+                    <div class="nano-accordion__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse
+                        illum ex, dolorem quaerat aspernatur dolore nostrum modi impedit laudantium quia voluptatem
+                        repellendus sed consectetur, nobis ratione itaque est repudiandae.</div>
+                </div>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion"
+                    aria-expanded="false">Equivalent accordion</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
+                            aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div data-nano-accordion="group"&gt;
+    &lt;div class="nano-accordion__item nano-accordion__item--open"&gt;
+        &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="true"&gt;Accordion Header&lt;/button&gt;
+        &lt;div class="nano-accordion__body"&gt;Content here.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="nano-accordion__item"&gt;
+        &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false"&gt;Accordion Header&lt;/button&gt;
+        &lt;div class="nano-accordion__body"&gt;Content here.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="nano-accordion__item"&gt;
+        &lt;button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false"&gt;Accordion Header&lt;/button&gt;
+        &lt;div class="nano-accordion__body"&gt;Content here.&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = {
+            scrollbars: {
+                autoHide: 'leave',
+                autoHideDelay: 300,
+            },
+        }
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
+
 </html>

@@ -6,3 +6,20 @@
 .nano-duration-150 { transition-duration: 150ms; }
 .nano-duration-300 { transition-duration: 300ms; }
 .nano-duration-500 { transition-duration: 500ms; }
+
+/* Override .nano-table tbody tr default transition when row has transition utility */
+.nano-table tbody tr.nano-transition-none { transition-property: none; }
+.nano-table tbody tr.nano-transition {
+    transition-property: color, background-color, border-color, opacity, box-shadow;
+    transition-timing-function: ease;
+    transition-duration: 150ms;
+}
+.nano-table tbody tr.nano-transition-all {
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 150ms;
+}
+.nano-table tbody tr.nano-duration-75 { transition-duration: 75ms; }
+.nano-table tbody tr.nano-duration-150 { transition-duration: 150ms; }
+.nano-table tbody tr.nano-duration-300 { transition-duration: 300ms; }
+.nano-table tbody tr.nano-duration-500 { transition-duration: 500ms; }
