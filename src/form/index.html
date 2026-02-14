@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,200 +19,246 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <h1 style="margin: 1rem;">Form components</h1>
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Form</span></li>
+            </ol>
+        </nav>
 
-    <section style="margin-bottom: 2rem;">
-        <h2>Ví dụ form đầy đủ (layout .nano-form + .nano-field)</h2>
-        <form class="nano-form" action="#" method="get">
-            <div class="nano-field">
-                <label for="demo-name">Họ tên</label>
-                <input id="demo-name" class="nano-input nano-input-text" type="text" placeholder="Nhập họ tên">
-                <span class="nano-field-message">Có thể thêm mô tả hoặc thông báo lỗi ở đây.</span>
-            </div>
-            <div class="nano-field">
-                <label for="demo-email">Email</label>
-                <input id="demo-email" class="nano-input nano-input-email" type="email" placeholder="email@example.com">
-            </div>
-            <div class="nano-field nano-field--error">
-                <label for="demo-err">Ô có lỗi (demo)</label>
-                <input id="demo-err" class="nano-input nano-input-text" type="text" value="Giá trị không hợp lệ">
-                <span class="nano-field-message">Ví dụ: thông báo lỗi màu đỏ.</span>
-            </div>
-            <div class="nano-field">
-                <label for="demo-bio">Giới thiệu</label>
-                <textarea id="demo-bio" class="nano-input nano-input-textarea" placeholder="Nhiều dòng..."></textarea>
-            </div>
-            <div class="nano-form-actions">
-                <button type="submit" class="nano-button nano-button--primary">Gửi</button>
-                <button type="reset" class="nano-button nano-button--outline">Đặt lại</button>
-            </div>
-        </form>
-    </section>
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Form</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Form dùng <code class="nano-code">nano-form</code> bọc ngoài, mỗi nhóm label + input đặt trong <code class="nano-code">nano-field</code>. Input dùng class <code class="nano-code">nano-input</code> kèm modifier: <code class="nano-code">nano-input-text</code>, <code class="nano-code">nano-input-email</code>, <code class="nano-code">nano-input-number</code>, <code class="nano-code">nano-input-textarea</code>, <code class="nano-code">nano-input-select</code>, …
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Thông báo gợi ý hoặc lỗi dùng <code class="nano-code">nano-field-message</code>. Trạng thái lỗi: thêm <code class="nano-code">nano-field--error</code> lên <code class="nano-code">nano-field</code>. Nút gửi/reset đặt trong <code class="nano-code">nano-form-actions</code>.
+        </p>
 
-    <section style="margin-bottom: 2rem;">
-        <h2>Phần tử nhập liệu</h2>
-        <div class="nano-form" style="max-width: 100%;">
-            <div class="nano-field">
-                <label>Ô text 1 dòng</label>
-                <input class="nano-input nano-input-text" type="text" placeholder="Placeholder">
-            </div>
-            <div class="nano-field">
-                <label>Mật khẩu</label>
-                <input class="nano-input nano-input-password" type="password" placeholder="••••••••">
-            </div>
-            <div class="nano-field">
-                <label>Email</label>
-                <input class="nano-input nano-input-email" type="email" placeholder="email@example.com">
-            </div>
-            <div class="nano-field">
-                <label>Số (spinner ẩn)</label>
-                <input class="nano-input nano-input-number" type="number" value="0" min="0" max="100">
-            </div>
-            <div class="nano-field">
-                <label>Điện thoại</label>
-                <input class="nano-input nano-input-tel" type="tel" placeholder="0912345678">
-            </div>
-            <div class="nano-field">
-                <label>URL</label>
-                <input class="nano-input nano-input-url" type="url" placeholder="https://">
-            </div>
-            <div class="nano-field">
-                <label>Search</label>
-                <input class="nano-input nano-input-search" type="search" placeholder="Tìm kiếm...">
-            </div>
-            <div class="nano-field">
-                <label>Ngày</label>
-                <input class="nano-input" type="date">
-            </div>
-            <div class="nano-field">
-                <label>Giờ</label>
-                <input class="nano-input" type="time">
-            </div>
-            <div class="nano-field">
-                <label>Ngày + giờ (local)</label>
-                <input class="nano-input" type="datetime-local">
-            </div>
-            <div class="nano-field">
-                <label>Tháng</label>
-                <input class="nano-input" type="month">
-            </div>
-            <div class="nano-field">
-                <label>Tuần</label>
-                <input class="nano-input" type="week">
-            </div>
-            <div class="nano-field">
-                <label>Chọn màu</label>
-                <input class="nano-input" type="color" value="#2563eb">
-            </div>
-            <div class="nano-field">
-                <label>Thanh trượt (range)</label>
-                <input class="nano-input" type="range" min="0" max="100" value="50">
-            </div>
-            <div class="nano-field">
-                <label>Chọn tệp</label>
-                <input class="nano-input" type="file" accept="image/*">
-            </div>
-            <div class="nano-field">
-                <label>Textarea</label>
-                <textarea class="nano-input nano-input-textarea" placeholder="Nhiều dòng..."></textarea>
-            </div>
-            <div class="nano-field">
-                <label>Select</label>
-                <select class="nano-input nano-input-select">
-                    <option value="">-- Chọn --</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-            </div>
-            <div class="nano-field">
-                <label for="datalist-demo">Datalist (gợi ý)</label>
-                <input id="datalist-demo" class="nano-input" type="text" list="ice-cream-flavors" name="ice-cream" placeholder="Chọn hoặc gõ...">
-                <datalist id="ice-cream-flavors">
-                    <option value="Chocolate"></option>
-                    <option value="Coconut"></option>
-                    <option value="Mint"></option>
-                    <option value="Strawberry"></option>
-                    <option value="Vanilla"></option>
-                </datalist>
-            </div>
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Form cơ bản</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <form class="nano-form" action="#" method="get">
+                <div class="nano-field">
+                    <label for="demo-name">Họ tên</label>
+                    <input id="demo-name" class="nano-input nano-input-text" type="text" placeholder="Nhập họ tên">
+                </div>
+                <div class="nano-field">
+                    <label for="demo-email">Email</label>
+                    <input id="demo-email" class="nano-input nano-input-email" type="email" placeholder="email@example.com">
+                </div>
+                <div class="nano-form-actions">
+                    <button type="submit" class="nano-button nano-button--primary">Gửi</button>
+                    <button type="reset" class="nano-button nano-button--outline">Đặt lại</button>
+                </div>
+            </form>
         </div>
-    </section>
-
-    <section style="margin-bottom: 2rem;">
-        <h2>Checkbox & Radio</h2>
-        <div class="nano-form" style="max-width: 100%;">
-            <div class="nano-field" style="flex-direction: row; align-items: center; gap: 0.5rem;">
-                <input class="nano-input" type="checkbox" id="c1">
-                <label for="c1">Chọn một (checkbox)</label>
-            </div>
-            <div class="nano-field">
-                <label>Radio (chọn một trong nhóm)</label>
-                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                        <input class="nano-input" type="radio" name="r1" value="a">
-                        Option A
-                    </label>
-                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                        <input class="nano-input" type="radio" name="r1" value="b">
-                        Option B
-                    </label>
-                    <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                        <input class="nano-input" type="radio" name="r1" value="c">
-                        Option C
-                    </label>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Form + field + form-actions</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;form class="nano-form" action="#" method="get"&gt;
+  &lt;div class="nano-field"&gt;
+    &lt;label for="name"&gt;Họ tên&lt;/label&gt;
+    &lt;input id="name" class="nano-input nano-input-text" type="text" placeholder="Nhập họ tên"&gt;
+  &lt;/div&gt;
+  &lt;div class="nano-form-actions"&gt;
+    &lt;button type="submit" class="nano-button nano-button--primary"&gt;Gửi&lt;/button&gt;
+    &lt;button type="reset" class="nano-button nano-button--outline"&gt;Đặt lại&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section style="margin-bottom: 2rem;">
-        <h2>Nút trong form</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
-            <form action="#" style="display: inline;"><button type="submit" class="nano-button nano-button--primary">Submit (button)</button></form>
-            <form action="#" style="display: inline;"><button type="reset" class="nano-button nano-button--outline">Reset (button)</button></form>
-            <button type="button" class="nano-button">Button thường</button>
-            <input type="submit" class="nano-button nano-button--primary" value="Submit (input)">
-            <input type="reset" class="nano-button nano-button--outline" value="Reset (input)">
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Field message và trạng thái lỗi</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <form class="nano-form">
+                <div class="nano-field">
+                    <label for="demo-msg">Ô có mô tả</label>
+                    <input id="demo-msg" class="nano-input nano-input-text" type="text" placeholder="Nhập...">
+                    <span class="nano-field-message">Mô tả hoặc gợi ý cho người dùng.</span>
+                </div>
+                <div class="nano-field nano-field--error">
+                    <label for="demo-err">Ô có lỗi (demo)</label>
+                    <input id="demo-err" class="nano-input nano-input-text" type="text" value="Giá trị không hợp lệ">
+                    <span class="nano-field-message">Thông báo lỗi màu đỏ.</span>
+                </div>
+            </form>
         </div>
-    </section>
-
-    <section style="margin-bottom: 2rem;">
-        <h2>Fieldset, output, progress, meter</h2>
-        <fieldset class="nano-fieldset">
-            <legend class="nano-legend">Nhóm thông tin (fieldset)</legend>
-            <div class="nano-field">
-                <label for="fs-name">Tên trong fieldset</label>
-                <input id="fs-name" class="nano-input nano-input-text" type="text">
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">nano-field-message và nano-field--error</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-field"&gt;
+  &lt;label&gt;Ô có mô tả&lt;/label&gt;
+  &lt;input class="nano-input nano-input-text" type="text"&gt;
+  &lt;span class="nano-field-message"&gt;Mô tả hoặc gợi ý.&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="nano-field nano-field--error"&gt;
+  &lt;label&gt;Ô lỗi&lt;/label&gt;
+  &lt;input class="nano-input nano-input-text" type="text"&gt;
+  &lt;span class="nano-field-message"&gt;Thông báo lỗi.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
             </div>
-        </fieldset>
-        <div class="nano-field">
-            <label>Output (ví dụ)</label>
-            <output for="out-a out-b">0</output>
-            <input class="nano-input" type="range" id="out-a" min="0" max="100" value="50" style="max-width: 200px;">
         </div>
-        <div class="nano-field">
-            <label>Progress</label>
-            <progress value="70" max="100">70%</progress>
-        </div>
-        <div class="nano-field">
-            <label>Meter</label>
-            <meter value="0.6" min="0" max="1" low="0.25" high="0.75" optimum="0.5">60%</meter>
-        </div>
-    </section>
 
-    <section style="margin-bottom: 2rem;">
-        <h2>Disabled state</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-            <input class="nano-input nano-input-text" type="text" placeholder="Disabled" disabled>
-            <select class="nano-input nano-input-select" disabled>
-                <option>Disabled select</option>
-            </select>
-            <textarea class="nano-input nano-input-textarea" placeholder="Disabled" disabled></textarea>
-            <input class="nano-input" type="checkbox" disabled>
-            <input class="nano-input" type="radio" disabled>
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Textarea, Select, các loại input</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <form class="nano-form">
+                <div class="nano-field">
+                    <label for="demo-bio">Giới thiệu</label>
+                    <textarea id="demo-bio" class="nano-input nano-input-textarea" placeholder="Nhiều dòng..."></textarea>
+                </div>
+                <div class="nano-field">
+                    <label for="demo-select">Chọn</label>
+                    <select id="demo-select" class="nano-input nano-input-select">
+                        <option value="">-- Chọn --</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="nano-field">
+                    <label for="demo-num">Số</label>
+                    <input id="demo-num" class="nano-input nano-input-number" type="number" value="0" min="0" max="100">
+                </div>
+            </form>
         </div>
-    </section>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Textarea, Select, Number</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>nano-input-text | nano-input-email | nano-input-password | nano-input-number
+nano-input-tel | nano-input-url | nano-input-search
+nano-input-textarea | nano-input-select</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">4. Checkbox &amp; Radio</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <form class="nano-form">
+                <div class="nano-field nano-flex nano-flex-row nano-items-center nano-gap-2">
+                    <input class="nano-input" type="checkbox" id="demo-cb">
+                    <label for="demo-cb">Checkbox (chọn nhiều)</label>
+                </div>
+                <div class="nano-field">
+                    <label>Radio (chọn một)</label>
+                    <div class="nano-flex nano-flex-col nano-gap-1">
+                        <label class="nano-flex nano-items-center nano-gap-2 nano-font-normal">
+                            <input class="nano-input" type="radio" name="demo-r" value="a"> Option A
+                        </label>
+                        <label class="nano-flex nano-items-center nano-gap-2 nano-font-normal">
+                            <input class="nano-input" type="radio" name="demo-r" value="b"> Option B
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Checkbox và Radio</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-field nano-flex nano-flex-row nano-items-center nano-gap-2"&gt;
+  &lt;input class="nano-input" type="checkbox" id="c1"&gt;
+  &lt;label for="c1"&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+&lt;label class="nano-flex nano-items-center nano-gap-2"&gt;
+  &lt;input class="nano-input" type="radio" name="r1" value="a"&gt; Option A
+&lt;/label&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">5. Fieldset</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <fieldset class="nano-fieldset">
+                <legend class="nano-legend">Nhóm thông tin</legend>
+                <div class="nano-field">
+                    <label for="fs-name">Tên</label>
+                    <input id="fs-name" class="nano-input nano-input-text" type="text">
+                </div>
+            </fieldset>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Fieldset + legend</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;fieldset class="nano-fieldset"&gt;
+  &lt;legend class="nano-legend"&gt;Nhóm thông tin&lt;/legend&gt;
+  &lt;div class="nano-field"&gt;...&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">6. Disabled</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-4">
+                <input class="nano-input nano-input-text" type="text" placeholder="Disabled" disabled>
+                <select class="nano-input nano-input-select" disabled>
+                    <option>Disabled select</option>
+                </select>
+                <input class="nano-input" type="checkbox" disabled>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-form</code></td><td>Wrapper form (flex column, gap, max-width 28rem)</td></tr>
+                    <tr><td><code class="nano-code">nano-field</code></td><td>Nhóm label + input (flex column, margin-bottom)</td></tr>
+                    <tr><td><code class="nano-code">nano-input</code></td><td>Base cho input, select, textarea (border, padding, focus)</td></tr>
+                    <tr><td><code class="nano-code">nano-input-text</code> <code class="nano-code">nano-input-email</code> …</td><td>Modifier theo type (text, email, number, password, tel, url, search, textarea, select)</td></tr>
+                    <tr><td><code class="nano-code">nano-field-message</code></td><td>Mô tả hoặc thông báo lỗi dưới input</td></tr>
+                    <tr><td><code class="nano-code">nano-field--error</code></td><td>Trạng thái lỗi (border đỏ, message màu danger)</td></tr>
+                    <tr><td><code class="nano-code">nano-form-actions</code></td><td>Vùng nút (flex, gap) trong form</td></tr>
+                    <tr><td><code class="nano-code">nano-fieldset</code></td><td>Nhóm field (border, padding)</td></tr>
+                    <tr><td><code class="nano-code">nano-legend</code></td><td>Tiêu đề fieldset</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal – Nano UI</title>
+    <title>Model – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,28 +19,245 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-p-4">
-    <dialog id="model-delete-account" data-nano-component="model" closedby="any" class="nano-model">
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Model</span></li>
+            </ol>
+        </nav>
+
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Model (Modal)</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Model dùng thẻ <code class="nano-code">dialog</code> HTML5, class <code class="nano-code">nano-model</code>, kèm <code class="nano-code">data-nano-component="model"</code>. Nội dung chia thành <code class="nano-code">nano-model__body</code> và <code class="nano-code">nano-model__footer</code> (nút hành động).
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Mở/đóng bằng JS: nút có <code class="nano-code">data-nano-trigger="model"</code>, <code class="nano-code">data-nano-target="id-dialog"</code>, <code class="nano-code">data-nano-action="open"</code> hoặc <code class="nano-code">close</code>. Cần load <code class="nano-code">nano.min.js</code>.
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Model cơ bản</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-basic" data-nano-action="open" class="nano-button nano-button--primary">Mở model</button>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Dialog + nút mở/đóng</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;dialog id="my-model" data-nano-component="model" class="nano-model"&gt;
+  &lt;div class="nano-model__body"&gt;
+    &lt;h3 class="nano-text-lg nano-font-semibold nano-mb-4"&gt;Tiêu đề&lt;/h3&gt;
+    &lt;p&gt;Nội dung model.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="nano-model__footer"&gt;
+    &lt;button type="button" data-nano-trigger="model" data-nano-target="my-model" data-nano-action="close" class="nano-button nano-button--outline"&gt;Hủy&lt;/button&gt;
+    &lt;button type="button" data-nano-trigger="model" data-nano-target="my-model" data-nano-action="close" class="nano-button nano-button--primary"&gt;Xong&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;
+&lt;button type="button" data-nano-trigger="model" data-nano-target="my-model" data-nano-action="open" class="nano-button nano-button--primary"&gt;Mở model&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Model có form</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-form" data-nano-action="open" class="nano-button nano-button--primary">Mở model form</button>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Model chứa form</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;dialog id="model-form" data-nano-component="model" class="nano-model"&gt;
+  &lt;div class="nano-model__body"&gt;
+    &lt;h3 class="nano-text-lg nano-font-semibold nano-mb-4"&gt;Thêm đơn hàng&lt;/h3&gt;
+    &lt;form class="nano-form"&gt;
+      &lt;div class="nano-field"&gt;&lt;label for="name"&gt;Khách hàng&lt;/label&gt;&lt;input id="name" class="nano-input nano-input-text" type="text"&gt;&lt;/div&gt;
+      &lt;div class="nano-field"&gt;&lt;label for="amount"&gt;Tổng tiền&lt;/label&gt;&lt;input id="amount" class="nano-input nano-input-number" type="number"&gt;&lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class="nano-model__footer"&gt;
+    &lt;button type="button" data-nano-trigger="model" data-nano-target="model-form" data-nano-action="close" class="nano-button nano-button--outline"&gt;Hủy&lt;/button&gt;
+    &lt;button type="button" data-nano-trigger="model" data-nano-target="model-form" data-nano-action="close" class="nano-button nano-button--primary"&gt;Lưu&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Model xác nhận (confirm)</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-confirm" data-nano-action="open" class="nano-button nano-button--danger-outline">Mở model xác nhận xóa</button>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Model xác nhận nguy hiểm</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;dialog id="model-confirm" data-nano-component="model" closedby="any" class="nano-model"&gt;
+  &lt;div class="nano-model__body"&gt;
+    &lt;h5 class="nano-text-base nano-font-semibold nano-mb-2"&gt;Xóa tài khoản&lt;/h5&gt;
+    &lt;p class="nano-text-secondary"&gt;Bạn chắc chắn muốn xóa? Dữ liệu không thể khôi phục.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="nano-model__footer"&gt;
+    &lt;button data-nano-trigger="model" data-nano-target="model-confirm" data-nano-action="close" type="button" class="nano-button nano-button--outline"&gt;Hủy&lt;/button&gt;
+    &lt;button data-nano-trigger="model" data-nano-target="model-confirm" data-nano-action="close" type="button" class="nano-button nano-button--danger"&gt;Đồng ý&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">4. Trigger qua JavaScript</h2>
+        <p class="nano-text-sm nano-text-secondary nano-mb-4">
+            Model dùng thẻ <code class="nano-code">dialog</code> HTML5 nên có thể mở/đóng trực tiếp bằng JavaScript qua API native: <code class="nano-code">showModal()</code> để mở (có backdrop, bắt focus), <code class="nano-code">close()</code> để đóng. Không bắt buộc phải dùng <code class="nano-code">data-nano-trigger</code>.
+        </p>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-2">
+                <button type="button" id="btn-open-model-js" class="nano-button nano-button--primary">Mở model bằng JS</button>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Mở / đóng model bằng JavaScript</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">JavaScript</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>// Lấy tham chiếu dialog (theo id hoặc selector)
+const dialog = document.getElementById('my-model');
+// Hoặc: document.querySelector('[data-nano-component="model"]');
+
+// Mở model (hiển thị backdrop, focus vào dialog)
+dialog.showModal();
+
+// Đóng model
+dialog.close();
+
+// Lắng nghe sự kiện đóng (khi user đóng hoặc gọi close())
+dialog.addEventListener('close', function() {
+  console.log('Model đã đóng');
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Ví dụ: nút bấm mở model bằng JS</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML + JavaScript</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type="button" id="btnOpen" class="nano-button nano-button--primary"&gt;Mở model&lt;/button&gt;
+&lt;dialog id="my-model" data-nano-component="model" class="nano-model"&gt;...&lt;/dialog&gt;
+
+&lt;script&gt;
+document.getElementById('btnOpen').addEventListener('click', function() {
+  document.getElementById('my-model').showModal();
+});
+&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class / Attribute</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-model</code></td><td>Class đặt trên <code class="nano-code">dialog</code> (width, margin, border-radius, backdrop)</td></tr>
+                    <tr><td><code class="nano-code">nano-model__body</code></td><td>Vùng nội dung chính (padding)</td></tr>
+                    <tr><td><code class="nano-code">nano-model__footer</code></td><td>Vùng chân (nút Hủy / Xác nhận, flex end)</td></tr>
+                    <tr><td><code class="nano-code">data-nano-component="model"</code></td><td>Đánh dấu dialog do Nano JS xử lý mở/đóng</td></tr>
+                    <tr><td><code class="nano-code">data-nano-trigger="model"</code></td><td>Nút hoặc element kích hoạt (cùng với target + action)</td></tr>
+                    <tr><td><code class="nano-code">data-nano-target="id-dialog"</code></td><td>ID của <code class="nano-code">dialog</code> cần mở/đóng</td></tr>
+                    <tr><td><code class="nano-code">data-nano-action="open"</code> / <code class="nano-code">close</code></td><td>Hành động: mở hoặc đóng model</td></tr>
+                    <tr><td><code class="nano-code">closedby="any"</code></td><td>Tùy chọn: đóng khi click bên ngoài (nếu JS hỗ trợ)</td></tr>
+                    <tr><td><code class="nano-code">dialog.showModal()</code></td><td>Mở model (backdrop, focus). Gọi trực tiếp trên element <code class="nano-code">dialog</code>.</td></tr>
+                    <tr><td><code class="nano-code">dialog.close()</code></td><td>Đóng model. Có thể truyền giá trị trả về: <code class="nano-code">dialog.close(value)</code>.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Demo dialogs (ẩn, mở bằng nút trong doc) -->
+    <dialog id="model-demo-basic" data-nano-component="model" class="nano-model">
+        <div class="nano-model__body">
+            <h3 class="nano-text-lg nano-font-semibold nano-mb-4">Model cơ bản</h3>
+            <p class="nano-text-secondary nano-mb-0">Nội dung model. Dùng nút bên dưới để đóng.</p>
+        </div>
+        <div class="nano-model__footer">
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-basic" data-nano-action="close" class="nano-button nano-button--outline">Hủy</button>
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-basic" data-nano-action="close" class="nano-button nano-button--primary">Xong</button>
+        </div>
+    </dialog>
+    <dialog id="model-demo-form" data-nano-component="model" class="nano-model">
+        <div class="nano-model__body">
+            <h3 class="nano-text-lg nano-font-semibold nano-mb-4">Thêm đơn hàng</h3>
+            <form class="nano-form">
+                <div class="nano-field">
+                    <label for="demo-customer">Khách hàng</label>
+                    <input id="demo-customer" class="nano-input nano-input-text" type="text" placeholder="Họ tên">
+                </div>
+                <div class="nano-field">
+                    <label for="demo-amount">Tổng tiền</label>
+                    <input id="demo-amount" class="nano-input nano-input-number" type="number" placeholder="0">
+                </div>
+            </form>
+        </div>
+        <div class="nano-model__footer">
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-form" data-nano-action="close" class="nano-button nano-button--outline">Hủy</button>
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-form" data-nano-action="close" class="nano-button nano-button--primary">Lưu</button>
+        </div>
+    </dialog>
+    <dialog id="model-demo-confirm" data-nano-component="model" closedby="any" class="nano-model">
         <div class="nano-model__body">
             <div class="nano-flex nano-items-start nano-gap-4">
-                <div class="nano-text-red nano-bg-red-10 nano-flex nano-items-center nano-rounded-full nano-p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 21h2m-2 0a1.5 1.5 0 0 1-1.5-1.5V17H12m2 4h-4m0 0H8m2 0a1.5 1.5 0 0 0 1.5-1.5V17h.5m0 0v4m4-18H8c-2.828 0-4.243 0-5.121.879C2 4.757 2 6.172 2 9v2c0 2.828 0 4.243.879 5.121C3.757 17 5.172 17 8 17h8c2.828 0 4.243 0 5.121-.879C22 15.243 22 13.828 22 11V9c0-2.828 0-4.243-.879-5.121C20.243 3 18.828 3 16 3"/></svg>
+                <div class="nano-text-red nano-bg-red-10 nano-flex nano-items-center nano-justify-center nano-rounded-full nano-p-3 nano-flex-none">
+                    <span class="nano-text-xl" aria-hidden="true">!</span>
                 </div>
                 <div>
-                    <h5 class="nano-text-base nano-uppercase nano-mb-2">Xóa tài khoản</h5>
-                    <p class="nano-text-gray">Bạn chắn chắn muốn xóa tài khoản này? Mọi dữ liệu sẽ bị xóa khỏi hệ thống và không thể khôi phục.</p>
+                    <h5 class="nano-text-base nano-font-semibold nano-mb-2">Xóa tài khoản</h5>
+                    <p class="nano-text-secondary nano-mb-0">Bạn chắc chắn muốn xóa tài khoản này? Mọi dữ liệu sẽ bị xóa và không thể khôi phục.</p>
                 </div>
             </div>
         </div>
         <div class="nano-model__footer">
-            <button data-nano-trigger="model" data-nano-target="model-delete-account" data-nano-action="close" type="button" class="nano-button nano-button--outline">Hủy</button>
-            <button data-nano-trigger="model" data-nano-target="model-delete-account" data-nano-action="close" type="button" class="nano-button nano-button--danger">Đồng ý</button>
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-confirm" data-nano-action="close" class="nano-button nano-button--outline">Hủy</button>
+            <button type="button" data-nano-trigger="model" data-nano-target="model-demo-confirm" data-nano-action="close" class="nano-button nano-button--danger">Đồng ý</button>
         </div>
     </dialog>
 
-    <!-- Nút giúp người dùng mở model-->
-    <button data-nano-trigger="model" data-nano-target="model-delete-account" data-nano-action="open" class="nano-button nano-button--danger-outline">Hiện thị model xoá dữ liệu</button>
-    </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+        // Demo: mở model bằng JS
+        document.getElementById('btn-open-model-js').addEventListener('click', function() {
+            document.getElementById('model-demo-basic').showModal();
+        });
+    </script>
 </body>
 </html>

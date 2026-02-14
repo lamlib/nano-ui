@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breadcrumb – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,7 +19,7 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-py-6">
+    <div class="nano-container nano-mx-auto nano-p-6">
         <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
             <ol>
                 <li><a href="../../index.html">Home</a></li>
@@ -25,51 +27,100 @@
             </ol>
         </nav>
 
-        <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Example</h2>
-        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-8">
-            <ol>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Sub Category</a></li>
-                <li><span aria-current="page">Product</span></li>
-            </ol>
-        </nav>
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Breadcrumb</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Breadcrumb hiển thị đường dẫn điều hướng (phân cấp trang). Giúp người dùng biết vị trí hiện tại và quay lại cấp trên.
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Dùng thẻ <code class="nano-code">nav</code> với <code class="nano-code">aria-label="Breadcrumb"</code>, bên trong <code class="nano-code">ol</code> &gt; <code class="nano-code">li</code>. Trang hiện tại dùng <code class="nano-code">span aria-current="page"</code> thay cho link.
+        </p>
 
-        <h2 class="nano-text-xl nano-font-semibold nano-mb-3">Snippets</h2>
-        <p class="nano-text-sm nano-text-secondary nano-mb-4">Copy HTML to use in your page.</p>
-        <div data-nano-accordion="group">
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Breadcrumb cơ bản</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <nav aria-label="Breadcrumb" class="nano-breadcrumb">
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><span aria-current="page">Current</span></li>
+                </ol>
+            </nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
             <div class="nano-accordion__item">
-                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Basic breadcrumb</button>
-                <div class="nano-accordion__body">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Breadcrumb cơ bản (2 cấp)</button>
+                <div class="nano-accordion__body nano-p-0">
                     <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
                         <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                        <pre class="nano-pre">&lt;nav aria-label="Breadcrumb" class="nano-breadcrumb"&gt;
+                        <pre class="nano-pre nano-bg-white"><code>&lt;nav aria-label="Breadcrumb" class="nano-breadcrumb"&gt;
   &lt;ol&gt;
     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;span aria-current="page"&gt;Current&lt;/span&gt;&lt;/li&gt;
   &lt;/ol&gt;
-&lt;/nav&gt;</pre>
+&lt;/nav&gt;</code></pre>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Breadcrumb nhiều cấp</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <nav aria-label="Breadcrumb" class="nano-breadcrumb">
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Sub Category</a></li>
+                    <li><span aria-current="page">Product</span></li>
+                </ol>
+            </nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
             <div class="nano-accordion__item">
-                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Breadcrumb with multiple levels</button>
-                <div class="nano-accordion__body">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Breadcrumb nhiều cấp (Home → Category → Sub → Product)</button>
+                <div class="nano-accordion__body nano-p-0">
                     <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
                         <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                        <pre class="nano-pre">&lt;nav aria-label="Breadcrumb" class="nano-breadcrumb"&gt;
+                        <pre class="nano-pre nano-bg-white"><code>&lt;nav aria-label="Breadcrumb" class="nano-breadcrumb"&gt;
   &lt;ol&gt;
     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Category&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Sub Category&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;span aria-current="page"&gt;Product&lt;/span&gt;&lt;/li&gt;
   &lt;/ol&gt;
-&lt;/nav&gt;</pre>
+&lt;/nav&gt;</code></pre>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class / Cấu trúc</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-breadcrumb</code></td><td>Class đặt trên <code class="nano-code">nav</code>, kèm <code class="nano-code">aria-label="Breadcrumb"</code></td></tr>
+                    <tr><td><code class="nano-code">ol</code></td><td>Danh sách có thứ tự, chứa các <code class="nano-code">li</code></td></tr>
+                    <tr><td><code class="nano-code">li &gt; a</code></td><td>Liên kết tới cấp trước</td></tr>
+                    <tr><td><code class="nano-code">li &gt; span[aria-current="page"]</code></td><td>Trang hiện tại (không click), dùng cho mục cuối</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>

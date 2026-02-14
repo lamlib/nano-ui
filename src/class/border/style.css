@@ -16,4 +16,13 @@
 .nano-border-primary { border-color: var(--color-primary); }
 .nano-border-red { border-color: var(--color-red); }
 .nano-border-gray { border-color: var(--color-gray); }
+.nano-border-gray-10 { border-color: color-mix(in srgb, var(--color-gray) 10%, white); }
+.nano-border-gray-20 { border-color: color-mix(in srgb, var(--color-gray) 20%, white); }
+.nano-border-gray-30 { border-color: color-mix(in srgb, var(--color-gray) 30%, white); }
+.nano-border-gray-40 { border-color: color-mix(in srgb, var(--color-gray) 40%, white); }
+.nano-border-gray-50 { border-color: color-mix(in srgb, var(--color-gray) 50%, white); }
+.nano-border-gray-60 { border-color: color-mix(in srgb, var(--color-gray) 60%, white); }
+.nano-border-gray-70 { border-color: color-mix(in srgb, var(--color-gray) 70%, white); }
+.nano-border-gray-80 { border-color: color-mix(in srgb, var(--color-gray) 80%, white); }
+.nano-border-gray-90 { border-color: color-mix(in srgb, var(--color-gray) 90%, white); }
 .nano-border-transparent { border-color: transparent; }

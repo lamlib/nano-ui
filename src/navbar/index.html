@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,23 +19,145 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <p style="margin: 1rem; font-size: 0.875rem; color: var(--color-secondary);">Demo navbar bên dưới (cùng component, link mẫu):</p>
-    <nav class="nano-navbar">
-        <a href="#" class="nano-navbar__brand">Nano UI</a>
-        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
-        <div class="nano-navbar__nav">
-            <a href="#" class="nano-navbar__link nano-navbar__link--active">Trang chủ</a>
-            <a href="#" class="nano-navbar__link">Giới thiệu</a>
-            <a href="#" class="nano-navbar__link">Components</a>
-            <a href="#" class="nano-navbar__link">Liên hệ</a>
-        </div>
-    </nav>
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Navbar</span></li>
+            </ol>
+        </nav>
 
-    <div class="nano-container nano-p-6">
-        <h1>Navbar</h1>
-        <p style="margin-bottom: 1rem; color: var(--color-secondary);">Class <code>.nano-navbar</code>, <code>.nano-navbar__brand</code>, <code>.nano-navbar__nav</code>, <code>.nano-navbar__link</code>. Active: <code>.nano-navbar__link--active</code>. Mobile: <code>.nano-navbar__toggler</code> + <code>.nano-navbar__nav--open</code> (JS toggle).</p>
-        <p>Thu nhỏ cửa sổ để xem menu collapse và nút ☰.</p>
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Navbar</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Thanh điều hướng trên cùng trang. Dùng <code class="nano-code">nano-navbar</code> bọc ngoài, bên trong: <code class="nano-code">nano-navbar__brand</code> (logo/ tên), <code class="nano-code">nano-navbar__toggler</code> (nút menu mobile), <code class="nano-code">nano-navbar__nav</code> chứa các <code class="nano-code">nano-navbar__link</code>.
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Trên màn hình nhỏ (≤768px), menu ẩn và hiện khi bấm toggler (cần <code class="nano-code">data-nano-trigger="navbar"</code> và <code class="nano-code">nano.min.js</code>). Link đang chọn thêm class <code class="nano-code">nano-navbar__link--active</code>.
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Navbar cơ bản</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <nav class="nano-navbar nano-rounded-lg">
+                <a href="#" class="nano-navbar__brand">Logo / Brand</a>
+                <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+                <div class="nano-navbar__nav">
+                    <a href="#" class="nano-navbar__link">Trang chủ</a>
+                    <a href="#" class="nano-navbar__link">Giới thiệu</a>
+                    <a href="#" class="nano-navbar__link">Sản phẩm</a>
+                    <a href="#" class="nano-navbar__link">Liên hệ</a>
+                </div>
+            </nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Navbar đầy đủ (brand + toggler + nav)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;nav class="nano-navbar"&gt;
+  &lt;a href="/" class="nano-navbar__brand"&gt;Logo&lt;/a&gt;
+  &lt;button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar"&gt;☰&lt;/button&gt;
+  &lt;div class="nano-navbar__nav"&gt;
+    &lt;a href="#" class="nano-navbar__link"&gt;Trang chủ&lt;/a&gt;
+    &lt;a href="#" class="nano-navbar__link"&gt;Giới thiệu&lt;/a&gt;
+    &lt;a href="#" class="nano-navbar__link"&gt;Liên hệ&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Link active</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <nav class="nano-navbar nano-rounded-lg">
+                <a href="#" class="nano-navbar__brand">App</a>
+                <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+                <div class="nano-navbar__nav">
+                    <a href="#" class="nano-navbar__link nano-navbar__link--active">Trang chủ</a>
+                    <a href="#" class="nano-navbar__link">Cài đặt</a>
+                    <a href="#" class="nano-navbar__link">Tài khoản</a>
+                </div>
+            </nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Link đang chọn (active)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;a href="#" class="nano-navbar__link nano-navbar__link--active"&gt;Trang chủ&lt;/a&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Responsive (mobile)</h2>
+        <p class="nano-text-sm nano-text-secondary nano-mb-4">
+            Ở viewport ≤768px, <code class="nano-code">nano-navbar__nav</code> ẩn (display: none). Bấm nút toggler (☰) sẽ toggle class <code class="nano-code">nano-navbar__nav--open</code> lên <code class="nano-code">nano-navbar__nav</code> để hiện menu. Cần load <code class="nano-code">nano.min.js</code> và đặt <code class="nano-code">data-nano-trigger="navbar"</code> trên toggler.
+        </p>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <p class="nano-text-sm nano-text-secondary nano-mb-4">Thu nhỏ cửa sổ trình duyệt (hoặc dùng DevTools responsive) để thấy menu collapse và nút ☰.</p>
+            <nav class="nano-navbar nano-rounded-lg">
+                <a href="#" class="nano-navbar__brand">Nano UI</a>
+                <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
+                <div class="nano-navbar__nav">
+                    <a href="#" class="nano-navbar__link">Home</a>
+                    <a href="#" class="nano-navbar__link">Utilities</a>
+                    <a href="#" class="nano-navbar__link">Dashboard</a>
+                </div>
+            </nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Toggler + JS (nano.min.js)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar"&gt;☰&lt;/button&gt;
+&lt;div class="nano-navbar__nav"&gt;...&lt;/div&gt;
+&lt;!-- nano.min.js sẽ toggle class nano-navbar__nav--open khi bấm toggler --&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class / Attribute</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-navbar</code></td><td>Container: flex, padding, border-bottom, background</td></tr>
+                    <tr><td><code class="nano-code">nano-navbar__brand</code></td><td>Logo / tên site (link), font-weight 600</td></tr>
+                    <tr><td><code class="nano-code">nano-navbar__toggler</code></td><td>Nút menu mobile (ẩn trên desktop, hiện ≤768px)</td></tr>
+                    <tr><td><code class="nano-code">data-nano-trigger="navbar"</code></td><td>Đặt trên toggler; nano.min.js dùng để toggle menu</td></tr>
+                    <tr><td><code class="nano-code">nano-navbar__nav</code></td><td>Wrapper chứa danh sách link (flex, căn phải)</td></tr>
+                    <tr><td><code class="nano-code">nano-navbar__nav--open</code></td><td>Class do JS thêm/xóa: hiện menu trên mobile</td></tr>
+                    <tr><td><code class="nano-code">nano-navbar__link</code></td><td>Từng link điều hướng</td></tr>
+                    <tr><td><code class="nano-code">nano-navbar__link--active</code></td><td>Link đang chọn (background, màu primary)</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dropdown – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,29 +19,149 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-p-6">
-        <h1>Dropdown</h1>
-        <p style="margin-bottom: 1rem; color: var(--color-secondary);">Class <code>.nano-dropdown</code>. Trigger bên ngoài, menu <code>.nano-dropdown__menu</code>, item <code>.nano-dropdown__item</code>. Mở: hover hoặc thêm <code>.nano-dropdown--open</code> (JS). Menu bên phải: <code>.nano-dropdown__menu--right</code>.</p>
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Dropdown</span></li>
+            </ol>
+        </nav>
 
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <div class="nano-dropdown">
-                <button type="button" class="nano-button nano-button--primary">Dropdown</button>
-                <div class="nano-dropdown__menu">
-                    <a href="#" class="nano-dropdown__item">Hành động 1</a>
-                    <a href="#" class="nano-dropdown__item">Hành động 2</a>
-                    <div class="nano-dropdown__divider"></div>
-                    <button type="button" class="nano-dropdown__item nano-dropdown__item--danger">Xóa</button>
-                </div>
-            </div>
-            <div class="nano-dropdown">
-                <button type="button" class="nano-button nano-button--outline">Menu phải</button>
-                <div class="nano-dropdown__menu nano-dropdown__menu--right">
-                    <a href="#" class="nano-dropdown__item">Option A</a>
-                    <a href="#" class="nano-dropdown__item">Option B</a>
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Dropdown</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Menu thả xuống: trigger (nút hoặc link) bên ngoài, menu ẩn trong <code class="nano-code">nano-dropdown__menu</code>. Mỗi mục dùng <code class="nano-code">nano-dropdown__item</code> (thẻ <code class="nano-code">a</code> hoặc <code class="nano-code">button</code>). Chia nhóm bằng <code class="nano-code">nano-dropdown__divider</code>.
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Menu hiện khi <strong>hover</strong> vào vùng <code class="nano-code">nano-dropdown</code>, hoặc khi thêm class <code class="nano-code">nano-dropdown--open</code> (có thể toggle bằng JS). Căn menu bên phải trigger: thêm <code class="nano-code">nano-dropdown__menu--right</code> lên menu.
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Dropdown cơ bản</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-2">
+                <div class="nano-dropdown">
+                    <button type="button" class="nano-button nano-button--primary">Dropdown</button>
+                    <div class="nano-dropdown__menu">
+                        <a href="#" class="nano-dropdown__item">Hành động 1</a>
+                        <a href="#" class="nano-dropdown__item">Hành động 2</a>
+                        <a href="#" class="nano-dropdown__item">Hành động 3</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Dropdown cơ bản (hover)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-dropdown"&gt;
+  &lt;button type="button" class="nano-button nano-button--primary"&gt;Dropdown&lt;/button&gt;
+  &lt;div class="nano-dropdown__menu"&gt;
+    &lt;a href="#" class="nano-dropdown__item"&gt;Hành động 1&lt;/a&gt;
+    &lt;a href="#" class="nano-dropdown__item"&gt;Hành động 2&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Divider và item danger</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-2">
+                <div class="nano-dropdown">
+                    <button type="button" class="nano-button nano-button--outline">Tùy chọn</button>
+                    <div class="nano-dropdown__menu">
+                        <a href="#" class="nano-dropdown__item">Chỉnh sửa</a>
+                        <a href="#" class="nano-dropdown__item">Sao chép</a>
+                        <div class="nano-dropdown__divider"></div>
+                        <button type="button" class="nano-dropdown__item nano-dropdown__item--danger">Xóa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Divider + item danger</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-dropdown__menu"&gt;
+  &lt;a href="#" class="nano-dropdown__item"&gt;Chỉnh sửa&lt;/a&gt;
+  &lt;div class="nano-dropdown__divider"&gt;&lt;/div&gt;
+  &lt;button type="button" class="nano-dropdown__item nano-dropdown__item--danger"&gt;Xóa&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Menu căn phải</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-2 nano-justify-end">
+                <div class="nano-dropdown">
+                    <button type="button" class="nano-button nano-button--secondary">Menu phải</button>
+                    <div class="nano-dropdown__menu nano-dropdown__menu--right">
+                        <a href="#" class="nano-dropdown__item">Option A</a>
+                        <a href="#" class="nano-dropdown__item">Option B</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Menu căn phải (--right)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-dropdown__menu nano-dropdown__menu--right"&gt;
+  &lt;a href="#" class="nano-dropdown__item"&gt;Option A&lt;/a&gt;
+  &lt;a href="#" class="nano-dropdown__item"&gt;Option B&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">4. Mở bằng class (JS)</h2>
+        <p class="nano-text-sm nano-text-secondary nano-mb-4">
+            Mặc định menu hiện khi hover. Nếu cần mở/đóng bằng click (ví dụ trên mobile), thêm hoặc xóa class <code class="nano-code">nano-dropdown--open</code> trên wrapper <code class="nano-code">nano-dropdown</code>. Nano UI không kèm sẵn JS cho dropdown; bạn tự gắn click vào trigger để <code class="nano-code">classList.toggle('nano-dropdown--open')</code>.
+        </p>
+        <div class="nano-mb-4 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-dropdown</code></td><td>Wrapper (position: relative, display: inline-flex). Trigger + menu đặt bên trong.</td></tr>
+                    <tr><td><code class="nano-code">nano-dropdown__menu</code></td><td>Menu thả xuống (absolute, ẩn mặc định; hiện khi hover hoặc parent có --open)</td></tr>
+                    <tr><td><code class="nano-code">nano-dropdown__menu--right</code></td><td>Căn menu sát cạnh phải trigger (right: 0)</td></tr>
+                    <tr><td><code class="nano-code">nano-dropdown__item</code></td><td>Mỗi mục menu (link hoặc button), block, padding</td></tr>
+                    <tr><td><code class="nano-code">nano-dropdown__item--danger</code></td><td>Item nguy hiểm (hover: nền đỏ nhạt, chữ danger)</td></tr>
+                    <tr><td><code class="nano-code">nano-dropdown__divider</code></td><td>Đường kẻ ngăn cách giữa các nhóm item</td></tr>
+                    <tr><td><code class="nano-code">nano-dropdown--open</code></td><td>Modifier trên wrapper: giữ menu hiển thị (dùng khi điều khiển bằng click/JS)</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>

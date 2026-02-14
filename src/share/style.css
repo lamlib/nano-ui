@@ -10,14 +10,14 @@
     --color-violet: #7c3aed;
 
     --color-black: #000000;
-    --color-white: #ffffff;
     --color-gray: #64748b;
+    --color-white: #ffffff;
 
     --color-primary: var(--color-blue);
+    --color-secondary: var(--color-gray);
     --color-danger: var(--color-red);
     --color-warning: var(--color-orange);
     --color-success: var(--color-green);
-    --color-secondary: var(--color-gray);
     --color-dark: var(--color-black);
     --color-light: var(--color-white);
 
@@ -30,7 +30,7 @@
     --color-layer-03: color-mix(in srgb, var(--color-primary) 10%, var(--color-light));
     
     --unit-base: 0.25rem;
-    --fsize-base: calc(var(--unit-base) / 2);
+    --size-base: calc(var(--unit-base) / 2);
     --radius-base: calc(var(--unit-base) * 2);
     --space-base: calc(var(--unit-base) * 1);
 
@@ -49,14 +49,14 @@
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
-    font-size: calc(var(--fsize-base) * 7);
+    font-size: calc(var(--size-base) * 8);
     line-height: 1.5;
     color: var(--color-foreground);
     background: var(--color-background);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: calc(var(--fsize-base) * 7);
+    font-size: calc(var(--size-base) * 8);
     font-weight: 500;
 }
 

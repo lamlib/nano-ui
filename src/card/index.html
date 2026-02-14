@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,38 +19,156 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-h-full nano-w-full nano-flex nano-items-center nano-justify-center" style="min-height: 50vh;">
-    <div class="nano-flex nano-gap-4">
-        <article class="nano-card">
-            <header class="nano-card__header"></header>
-            <div class="nano-card__body">
-                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Card</span></li>
+            </ol>
+        </nav>
+
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Card</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Card là khối nội dung gồm header, body, footer. Dùng <code class="nano-code">nano-card</code> bọc ngoài, bên trong dùng <code class="nano-code">nano-card__header</code>, <code class="nano-code">nano-card__body</code>, <code class="nano-code">nano-card__footer</code>. Header và footer có thể bỏ trống hoặc không dùng.
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Modifier màu: <code class="nano-code">nano-card--primary</code>, <code class="nano-code">nano-card--danger</code> (nền màu, chữ sáng).
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Card đầy đủ (header + body + footer)</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-4">
+                <article class="nano-card nano-max-w-sm">
+                    <header class="nano-card__header nano-p-4 nano-border-b">
+                        <span class="nano-text-sm nano-text-secondary">Tiêu đề card</span>
+                    </header>
+                    <div class="nano-card__body">
+                        <h4 class="nano-text-lg nano-font-semibold nano-mb-2">Knowledge Database</h4>
+                        <p class="nano-text-sm nano-text-secondary">Nội dung chính đặt trong body. Có thể dùng tiêu đề, đoạn văn, danh sách.</p>
+                    </div>
+                    <footer class="nano-card__footer nano-p-4 nano-border-t">
+                        <button type="button" class="nano-button nano-button--primary nano-button--outline nano-text-sm">Xem thêm</button>
+                    </footer>
+                </article>
             </div>
-            <footer class="nano-card__footer"></footer>
-        </article>
-        <article class="nano-card nano-card--primary">
-            <header class="nano-card__header"></header>
-            <div class="nano-card__body">
-                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Card đầy đủ header / body / footer</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;article class="nano-card"&gt;
+  &lt;header class="nano-card__header"&gt;Tiêu đề&lt;/header&gt;
+  &lt;div class="nano-card__body"&gt;
+    &lt;h4 class="nano-text-lg"&gt;Nội dung chính&lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;footer class="nano-card__footer"&gt;Chân card&lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </div>
             </div>
-            <footer class="nano-card__footer"></footer>
-        </article>
-        <article class="nano-card nano-card--danger">
-            <header class="nano-card__header"></header>
-            <div class="nano-card__body">
-                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Card chỉ body</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-4">
+                <article class="nano-card nano-max-w-sm">
+                    <div class="nano-card__body">
+                        <h4 class="nano-text-lg nano-font-semibold">Chỉ có body</h4>
+                        <p class="nano-text-sm nano-text-secondary nano-mb-0">Header và footer có thể bỏ qua.</p>
+                    </div>
+                </article>
             </div>
-            <footer class="nano-card__footer"></footer>
-        </article>
-        <article class="nano-card">
-            <header class="nano-card__header"></header>
-            <div class="nano-card__body">
-                <h4 class="nano-text-lg nano-font-bold">Knowledge Database</h4>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Card chỉ body</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;article class="nano-card"&gt;
+  &lt;div class="nano-card__body"&gt;
+    &lt;h4 class="nano-text-lg"&gt;Nội dung&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </div>
             </div>
-            <footer class="nano-card__footer"></footer>
-        </article>
-    </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Card màu (primary, danger)</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-4">
+                <article class="nano-card nano-card--primary nano-max-w-sm">
+                    <header class="nano-card__header"></header>
+                    <div class="nano-card__body">
+                        <h4 class="nano-text-lg nano-font-bold">Card Primary</h4>
+                        <p class="nano-mb-0 nano-opacity-90">Nền màu primary, chữ sáng.</p>
+                    </div>
+                    <footer class="nano-card__footer"></footer>
+                </article>
+                <article class="nano-card nano-card--danger nano-max-w-sm">
+                    <header class="nano-card__header"></header>
+                    <div class="nano-card__body">
+                        <h4 class="nano-text-lg nano-font-bold">Card Danger</h4>
+                        <p class="nano-mb-0 nano-opacity-90">Nền màu danger, chữ sáng.</p>
+                    </div>
+                    <footer class="nano-card__footer"></footer>
+                </article>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Card primary / danger</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;article class="nano-card nano-card--primary"&gt;
+  &lt;div class="nano-card__body"&gt;Nội dung&lt;/div&gt;
+&lt;/article&gt;
+&lt;article class="nano-card nano-card--danger"&gt;
+  &lt;div class="nano-card__body"&gt;Nội dung&lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-card</code></td><td>Base: background, border-radius (dùng trên <code class="nano-code">article</code> hoặc <code class="nano-code">div</code>)</td></tr>
+                    <tr><td><code class="nano-code">nano-card__header</code></td><td>Phần đầu card (padding-top)</td></tr>
+                    <tr><td><code class="nano-code">nano-card__body</code></td><td>Nội dung chính (padding trái phải)</td></tr>
+                    <tr><td><code class="nano-code">nano-card__footer</code></td><td>Phần chân card (padding-bottom)</td></tr>
+                    <tr><td><code class="nano-code">nano-card--primary</code></td><td>Nền màu primary, chữ sáng</td></tr>
+                    <tr><td><code class="nano-code">nano-card--danger</code></td><td>Nền màu danger, chữ sáng</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>

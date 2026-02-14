@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badge – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,38 +19,156 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-p-6">
-        <h1>Badge</h1>
-        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.nano-badge</code> + <code>--primary</code> | <code>--success</code> | <code>--warning</code> | <code>--danger</code> | <code>--secondary</code>. Thêm <code>--outline</code> cho viền.</p>
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Badge</span></li>
+            </ol>
+        </nav>
 
-        <h2>Màu</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-            <span class="nano-badge nano-badge--primary">primary</span>
-            <span class="nano-badge nano-badge--success">success</span>
-            <span class="nano-badge nano-badge--warning">warning</span>
-            <span class="nano-badge nano-badge--danger">danger</span>
-            <span class="nano-badge nano-badge--secondary">secondary</span>
-        </div>
-
-        <h2>Số (notification)</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-            <span class="nano-badge nano-badge--danger">3</span>
-            <span class="nano-badge nano-badge--primary">12</span>
-            <span class="nano-badge nano-badge--success">99+</span>
-        </div>
-
-        <h2>Outline</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-            <span class="nano-badge nano-badge--outline nano-badge--primary">New</span>
-            <span class="nano-badge nano-badge--outline nano-badge--success">Active</span>
-            <span class="nano-badge nano-badge--outline nano-badge--danger">Closed</span>
-        </div>
-
-        <h2>Kèm chữ</h2>
-        <p style="margin: 0;">
-            Thông báo <span class="nano-badge nano-badge--primary">5</span> mới. Trạng thái: <span class="nano-badge nano-badge--success">Đã duyệt</span>.
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Badge</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Badge dùng để hiển thị nhãn nhỏ (trạng thái, số thông báo, tag). Dùng class <code class="nano-code">nano-badge</code> kết hợp modifier màu: <code class="nano-code">nano-badge--primary</code>, <code class="nano-code">--success</code>, <code class="nano-code">--warning</code>, <code class="nano-code">--danger</code>, <code class="nano-code">--secondary</code>.
         </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Thêm <code class="nano-code">nano-badge--outline</code> để dùng kiểu viền (outline).
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Màu</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-2">
+                <span class="nano-badge nano-badge--primary">primary</span>
+                <span class="nano-badge nano-badge--success">success</span>
+                <span class="nano-badge nano-badge--warning">warning</span>
+                <span class="nano-badge nano-badge--danger">danger</span>
+                <span class="nano-badge nano-badge--secondary">secondary</span>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Badge primary</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;span class="nano-badge nano-badge--primary"&gt;primary&lt;/span&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Badge success / warning / danger / secondary</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;span class="nano-badge nano-badge--success"&gt;success&lt;/span&gt;
+&lt;span class="nano-badge nano-badge--warning"&gt;warning&lt;/span&gt;
+&lt;span class="nano-badge nano-badge--danger"&gt;danger&lt;/span&gt;
+&lt;span class="nano-badge nano-badge--secondary"&gt;secondary&lt;/span&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Số (notification)</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-2">
+                <span class="nano-badge nano-badge--danger">3</span>
+                <span class="nano-badge nano-badge--primary">12</span>
+                <span class="nano-badge nano-badge--success">99+</span>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Badge số thông báo</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;span class="nano-badge nano-badge--danger"&gt;3&lt;/span&gt;
+&lt;span class="nano-badge nano-badge--primary"&gt;12&lt;/span&gt;
+&lt;span class="nano-badge nano-badge--success"&gt;99+&lt;/span&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Outline</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-wrap nano-gap-2">
+                <span class="nano-badge nano-badge--outline nano-badge--primary">New</span>
+                <span class="nano-badge nano-badge--outline nano-badge--success">Active</span>
+                <span class="nano-badge nano-badge--outline nano-badge--warning">Pending</span>
+                <span class="nano-badge nano-badge--outline nano-badge--danger">Closed</span>
+                <span class="nano-badge nano-badge--outline nano-badge--secondary">Draft</span>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Badge outline</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;span class="nano-badge nano-badge--outline nano-badge--primary"&gt;New&lt;/span&gt;
+&lt;span class="nano-badge nano-badge--outline nano-badge--success"&gt;Active&lt;/span&gt;
+&lt;span class="nano-badge nano-badge--outline nano-badge--danger"&gt;Closed&lt;/span&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">4. Kèm chữ</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <p class="nano-m-0">Thông báo <span class="nano-badge nano-badge--primary">5</span> mới. Trạng thái: <span class="nano-badge nano-badge--success">Đã duyệt</span>.</p>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Badge trong đoạn văn</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>Thông báo &lt;span class="nano-badge nano-badge--primary"&gt;5&lt;/span&gt; mới. Trạng thái: &lt;span class="nano-badge nano-badge--success"&gt;Đã duyệt&lt;/span&gt;.</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-badge</code></td><td>Base: inline-flex, padding, font-size, border-radius</td></tr>
+                    <tr><td><code class="nano-code">nano-badge--primary</code></td><td>Màu primary</td></tr>
+                    <tr><td><code class="nano-code">nano-badge--success</code></td><td>Màu success</td></tr>
+                    <tr><td><code class="nano-code">nano-badge--warning</code></td><td>Màu warning</td></tr>
+                    <tr><td><code class="nano-code">nano-badge--danger</code></td><td>Màu danger</td></tr>
+                    <tr><td><code class="nano-code">nano-badge--secondary</code></td><td>Màu secondary</td></tr>
+                    <tr><td><code class="nano-code">nano-badge--outline</code></td><td>Kiểu viền (kết hợp với --primary, --success, …)</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>

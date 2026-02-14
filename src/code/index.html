@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,68 +19,160 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-py-6">
+    <div class="nano-container nano-mx-auto nano-p-6">
         <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
             <ol>
                 <li><a href="../../index.html">Home</a></li>
                 <li><span aria-current="page">Code</span></li>
             </ol>
         </nav>
-        <p class="nano-mb-2">This is variable <var class="nano-var">w</var> with inline code <code class="nano-code">test</code>; you can press <kbd class="nano-kbd">Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
-        <p class="nano-mb-2">Terminal output:</p>
-        <div class="nano-code-block nano-mb-4">
-            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-            <samp class="nano-samp">Your content is copied!
-You can check here asdf 
-{
-    asdf
-}</samp>
+
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Code</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Hiển thị code inline và khối code: <code class="nano-code">nano-code</code> (inline), <code class="nano-code">nano-pre</code> (khối), <code class="nano-code">nano-code-block</code> (khối kèm nút Copy). Có thể dùng thêm <code class="nano-code">nano-var</code> (biến), <code class="nano-code">nano-kbd</code> (phím), <code class="nano-code">nano-samp</code> (output mẫu).
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Để tô màu cú pháp (syntax highlighting), dùng plugin <strong>Highlight.js</strong> trong thư mục <code class="nano-code">plugin/highlight/</code>: load <code class="nano-code">highlight.min.js</code> và một theme (vd. <code class="nano-code">styles/vs.min.css</code>), thêm class <code class="nano-code">language-xxx</code> lên <code class="nano-code">pre</code> hoặc <code class="nano-code">code</code>, rồi gọi <code class="nano-code">hljs.highlightAll()</code>.
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Inline code, biến, phím</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <p class="nano-mb-0">Đây là biến <var class="nano-var">x</var> và inline code <code class="nano-code">console.log('hello')</code>. Nhấn <kbd class="nano-kbd">Ctrl</kbd> + <kbd class="nano-kbd">C</kbd> để copy.</p>
         </div>
-        <div class="nano-code-block nano-mb-4">
-            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-            <pre class="nano-pre">// Here is some line of code
-function test {
-    const a = 12;
-    return a;
-}</pre>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Inline code &amp; variable &amp; kbd</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;code class="nano-code"&gt;value&lt;/code&gt;
+&lt;var class="nano-var"&gt;x&lt;/var&gt;
+&lt;kbd class="nano-kbd"&gt;Ctrl&lt;/kbd&gt; + &lt;kbd class="nano-kbd"&gt;C&lt;/kbd&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <h2 class="nano-text-xl nano-font-semibold nano-mb-3 nano-mt-8">Snippets</h2>
-        <p class="nano-text-sm nano-text-secondary nano-mb-4">Copy HTML to use in your page.</p>
-        <div class="nano-mb-6" data-nano-accordion="group">
-            <div class="nano-accordion__item">
-                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Inline code &amp; variable</button>
-                <div class="nano-accordion__body">
-                    <div class="nano-code-block">
-                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                        <pre class="nano-pre">&lt;code class="nano-code"&gt;value&lt;/code&gt;
-&lt;var class="nano-var"&gt;x&lt;/var&gt;</pre>
-                    </div>
-                </div>
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Khối code + nút Copy</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-code-block">
+                <h6 class="nano-code-block__title">JavaScript</h6>
+                <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                <pre class="nano-pre nano-bg-white"><code>function hello() {
+  console.log('Hello, Nano UI');
+  return true;
+}</code></pre>
             </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
             <div class="nano-accordion__item">
-                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Code block with copy button</button>
-                <div class="nano-accordion__body">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Code block với nút Copy</button>
+                <div class="nano-accordion__body nano-p-0">
                     <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
                         <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                        <pre class="nano-pre">&lt;div class="nano-code-block"&gt;
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-code-block"&gt;
+  &lt;h6 class="nano-code-block__title"&gt;JavaScript&lt;/h6&gt;
   &lt;button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy"&gt;Copy&lt;/button&gt;
-  &lt;pre class="nano-pre"&gt;your code here&lt;/pre&gt;
-&lt;/div&gt;</pre>
+  &lt;pre class="nano-pre"&gt;&lt;code&gt;your code here&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</code></pre>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Output mẫu (samp)</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <p class="nano-text-sm nano-font-medium nano-mb-2">Terminal:</p>
+            <div class="nano-code-block">
+                <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                <samp class="nano-samp">$ npm install
+Your content is copied!
+{ "status": "ok" }</samp>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
             <div class="nano-accordion__item">
-                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Keyboard key</button>
-                <div class="nano-accordion__body">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">nano-samp (output / terminal)</button>
+                <div class="nano-accordion__body nano-p-0">
                     <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
                         <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                        <pre class="nano-pre">&lt;kbd class="nano-kbd"&gt;Ctrl&lt;/kbd&gt; + &lt;kbd class="nano-kbd"&gt;C&lt;/kbd&gt;</pre>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-code-block"&gt;
+  &lt;button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy"&gt;Copy&lt;/button&gt;
+  &lt;samp class="nano-samp"&gt;Output or terminal text here&lt;/samp&gt;
+&lt;/div&gt;</code></pre>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">4. Plugin Highlight.js (syntax highlighting)</h2>
+        <p class="nano-text-sm nano-text-secondary nano-mb-4">
+            Thư mục <code class="nano-code">plugin/highlight/</code> chứa <strong>Highlight.js</strong>. Load file JS và một theme CSS, thêm class <code class="nano-code">language-javascript</code>, <code class="nano-code">language-css</code>, <code class="nano-code">language-html</code>, … lên thẻ <code class="nano-code">code</code> bên trong <code class="nano-code">pre</code>, sau đó gọi <code class="nano-code">hljs.highlightAll()</code> để tô màu.
+        </p>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-code-block">
+                <h6 class="nano-code-block__title">JavaScript</h6>
+                <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                <pre class="nano-pre nano-bg-white"><code class="language-javascript">const name = 'Nano UI';
+function greet() {
+  return `Hello, ${name}`;
+}</code></pre>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Dùng Highlight.js</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML + Script</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;link rel="stylesheet" href="plugin/highlight/styles/vs.min.css"&gt;
+&lt;pre class="nano-pre"&gt;&lt;code class="language-javascript"&gt;const x = 1;&lt;/code&gt;&lt;/pre&gt;
+&lt;script src="plugin/highlight/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.highlightAll();&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class / Element</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-code</code></td><td>Code inline (nền xám nhạt, đậm)</td></tr>
+                    <tr><td><code class="nano-code">nano-var</code></td><td>Biến (italic, đậm), dùng với <code class="nano-code">&lt;var&gt;</code></td></tr>
+                    <tr><td><code class="nano-code">nano-kbd</code></td><td>Phím bấm (dạng nút), dùng với <code class="nano-code">&lt;kbd&gt;</code></td></tr>
+                    <tr><td><code class="nano-code">nano-pre</code></td><td>Khối code (white-space: pre, nền xám nhạt)</td></tr>
+                    <tr><td><code class="nano-code">nano-samp</code></td><td>Output mẫu / terminal (nền tối, chữ sáng)</td></tr>
+                    <tr><td><code class="nano-code">nano-code-block</code></td><td>Wrapper khối code (position relative, chứa copy + pre/samp)</td></tr>
+                    <tr><td><code class="nano-code">nano-code-block__title</code></td><td>Tiêu đề khối (tùy chọn), góc trái trên</td></tr>
+                    <tr><td><code class="nano-code">nano-code-block__copy</code></td><td>Nút Copy, cần <code class="nano-code">data-nano-trigger="copy-code"</code> và <code class="nano-code">nano.min.js</code></td></tr>
+                    <tr><td><code class="nano-code">language-xxx</code></td><td>Class cho Highlight.js (vd. <code class="nano-code">language-javascript</code>, <code class="nano-code">language-css</code>)</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>

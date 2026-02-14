@@ -14,14 +14,14 @@
             <a href="../../../index.html" class="nano-navbar__link">Home</a>
             <a href="../../class/index.html" class="nano-navbar__link">Utilities</a>
             <a href="../landing/index.html" class="nano-navbar__link">Landing</a>
-            <a href="index.html" class="nano-navbar__link">Dashboard</a>
+            <a href="index.html" class="nano-navbar__link nano-navbar__link--active">Dashboard</a>
         </div>
     </nav>
-    <!-- Modal: Thêm đơn hàng -->
+
     <dialog id="model-add-order" data-nano-component="model" class="nano-model">
         <div class="nano-model__body">
-            <h3 style="margin-bottom: 0.75rem;">Thêm đơn hàng</h3>
-            <form class="nano-form" style="max-width: 100%;">
+            <h3 class="nano-text-lg nano-font-semibold nano-mb-4">Thêm đơn hàng</h3>
+            <form class="nano-form">
                 <div class="nano-field">
                     <label for="ord-customer">Khách hàng</label>
                     <input id="ord-customer" class="nano-input nano-input-text" type="text" placeholder="Họ tên">
@@ -37,138 +37,149 @@
             <button type="button" data-nano-trigger="model" data-nano-target="model-add-order" data-nano-action="close" class="nano-button nano-button--primary">Lưu</button>
         </div>
     </dialog>
-    <nav class="nano-navbar">
-        <a href="#" class="nano-navbar__brand">nano Dashboard</a>
-        <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
-        <div class="nano-navbar__nav">
-            <a href="#" class="nano-navbar__link nano-navbar__link--active">Tổng quan</a>
-            <a href="#" class="nano-navbar__link">Đơn hàng</a>
-            <a href="#" class="nano-navbar__link">Sản phẩm</a>
-            <a href="#" class="nano-navbar__link">Cài đặt</a>
-        </div>
-    </nav>
 
-    <main class="nano-container nano-pt-6 nano-pb-8">
-        <h1 style="margin-bottom: 0.5rem;">Tổng quan</h1>
-        <p style="color: var(--color-secondary); margin-bottom: 1.5rem;">Template dùng toàn bộ component từ dist/nano.min.css</p>
+    <main class="nano-container nano-pt-6 nano-pb-8 nano-px-4">
+        <header class="nano-mb-6">
+            <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-2">
+                <ol>
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><span aria-current="page">Dashboard</span></li>
+                </ol>
+            </nav>
+            <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Tổng quan</h1>
+            <p class="nano-text-secondary nano-text-sm">Template dùng toàn bộ component từ dist/nano.min.css</p>
+        </header>
 
-        <div class="nano-alert nano-alert--info" style="margin-bottom: 1.5rem;">
+        <div class="nano-alert nano-alert--info nano-mb-6">
             <span class="nano-alert__content">Đây là trang dashboard mẫu. Mọi component (navbar, grid, card, bảng, phân trang, nút, form…) đều dùng class Nano UI đã build.</span>
         </div>
 
-        <section style="margin-bottom: 2rem;">
-            <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Thống kê nhanh</h2>
-            <div class="nano-row">
+        <section class="nano-mb-8">
+            <h2 class="nano-text-base nano-font-semibold nano-mb-4">Thống kê nhanh</h2>
+            <div class="nano-row nano-gap-4">
                 <div class="nano-col-6">
-                    <article class="nano-card">
-                        <div class="nano-card__body">
-                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Đơn hàng hôm nay</div>
-                            <div style="font-size: 1.5rem; font-weight: 600;">24</div>
+                    <article class="nano-card nano-h-full">
+                        <div class="nano-card__body nano-p-4">
+                            <p class="nano-text-sm nano-text-secondary nano-mb-1">Đơn hàng hôm nay</p>
+                            <p class="nano-text-2xl nano-font-semibold nano-text-primary">24</p>
                         </div>
                     </article>
                 </div>
                 <div class="nano-col-6">
-                    <article class="nano-card">
-                        <div class="nano-card__body">
-                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Doanh thu tháng</div>
-                            <div style="font-size: 1.5rem; font-weight: 600;">42.5M</div>
+                    <article class="nano-card nano-h-full">
+                        <div class="nano-card__body nano-p-4">
+                            <p class="nano-text-sm nano-text-secondary nano-mb-1">Doanh thu tháng</p>
+                            <p class="nano-text-2xl nano-font-semibold nano-text-green">42.5M</p>
                         </div>
                     </article>
                 </div>
                 <div class="nano-col-6">
-                    <article class="nano-card">
-                        <div class="nano-card__body">
-                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Sản phẩm</div>
-                            <div style="font-size: 1.5rem; font-weight: 600;">128</div>
+                    <article class="nano-card nano-h-full">
+                        <div class="nano-card__body nano-p-4">
+                            <p class="nano-text-sm nano-text-secondary nano-mb-1">Sản phẩm</p>
+                            <p class="nano-text-2xl nano-font-semibold">128</p>
                         </div>
                     </article>
                 </div>
                 <div class="nano-col-6">
-                    <article class="nano-card">
-                        <div class="nano-card__body">
-                            <div style="font-size: 0.8125rem; color: var(--color-secondary);">Thành viên mới</div>
-                            <div style="font-size: 1.5rem; font-weight: 600;">7</div>
+                    <article class="nano-card nano-h-full">
+                        <div class="nano-card__body nano-p-4">
+                            <p class="nano-text-sm nano-text-secondary nano-mb-1">Thành viên mới</p>
+                            <p class="nano-text-2xl nano-font-semibold nano-text-blue">7</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section style="margin-bottom: 2rem;">
-            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.75rem;">
-                <h2 style="font-size: 1rem; margin: 0;">Đơn hàng gần đây</h2>
+        <section class="nano-mb-8">
+            <div class="nano-flex nano-flex-wrap nano-justify-between nano-items-center nano-gap-4 nano-mb-4">
+                <h2 class="nano-text-base nano-font-semibold nano-m-0">Đơn hàng gần đây</h2>
                 <button type="button" data-nano-trigger="model" data-nano-target="model-add-order" data-nano-action="open" class="nano-button nano-button--primary">Thêm đơn</button>
             </div>
-            <div class="nano-table-wrapper">
-                <table class="nano-table nano-table--striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Mã</th>
-                            <th scope="col">Khách hàng</th>
-                            <th scope="col">Trạng thái</th>
-                            <th scope="col">Tổng</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#ORD-101</td>
-                            <td>Nguyễn Văn A</td>
-                            <td><span class="nano-badge nano-badge--success">Đã giao</span></td>
-                            <td>1.250.000</td>
-                        </tr>
-                        <tr>
-                            <td>#ORD-102</td>
-                            <td>Trần Thị B</td>
-                            <td><span class="nano-badge nano-badge--warning">Đang giao</span></td>
-                            <td>890.000</td>
-                        </tr>
-                        <tr>
-                            <td>#ORD-103</td>
-                            <td>Lê Văn C</td>
-                            <td><span class="nano-badge nano-badge--secondary">Chờ xử lý</span></td>
-                            <td>2.100.000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <nav class="nano-pagination" aria-label="Phân trang" style="margin-top: 1rem;">
-                <a href="#" class="nano-pagination__item" aria-label="Trang trước">‹</a>
-                <a href="#" class="nano-pagination__item nano-pagination__item--active">1</a>
-                <a href="#" class="nano-pagination__item">2</a>
-                <a href="#" class="nano-pagination__item" aria-label="Trang sau">›</a>
-            </nav>
-        </section>
-
-        <section style="margin-bottom: 2rem;">
-            <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Tabs mẫu</h2>
-            <div class="nano-tabs">
-                <input type="radio" name="dash" id="tab1" class="nano-tabs__input" checked>
-                <input type="radio" name="dash" id="tab2" class="nano-tabs__input">
-                <input type="radio" name="dash" id="tab3" class="nano-tabs__input">
-                <div class="nano-tabs__list">
-                    <label for="tab1" class="nano-tabs__tab">Tổng quan</label>
-                    <label for="tab2" class="nano-tabs__tab">Báo cáo</label>
-                    <label for="tab3" class="nano-tabs__tab">Lịch</label>
+            <div class="nano-card">
+                <div class="nano-table-wrapper">
+                    <table class="nano-table nano-table--striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Mã</th>
+                                <th scope="col">Khách hàng</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Tổng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="nano-code">#ORD-101</code></td>
+                                <td>Nguyễn Văn A</td>
+                                <td><span class="nano-badge nano-badge--success">Đã giao</span></td>
+                                <td>1.250.000₫</td>
+                            </tr>
+                            <tr>
+                                <td><code class="nano-code">#ORD-102</code></td>
+                                <td>Trần Thị B</td>
+                                <td><span class="nano-badge nano-badge--warning">Đang giao</span></td>
+                                <td>890.000₫</td>
+                            </tr>
+                            <tr>
+                                <td><code class="nano-code">#ORD-103</code></td>
+                                <td>Lê Văn C</td>
+                                <td><span class="nano-badge nano-badge--secondary">Chờ xử lý</span></td>
+                                <td>2.100.000₫</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="nano-tabs__panel" id="panel1">Nội dung tab Tổng quan. Có thể đặt biểu đồ hoặc danh sách ở đây.</div>
-                <div class="nano-tabs__panel" id="panel2">Nội dung tab Báo cáo.</div>
-                <div class="nano-tabs__panel" id="panel3">Nội dung tab Lịch.</div>
+                <div class="nano-p-4 nano-flex nano-justify-end">
+                    <nav class="nano-pagination" aria-label="Phân trang">
+                        <a href="#" class="nano-pagination__item" aria-label="Trang trước">‹</a>
+                        <a href="#" class="nano-pagination__item nano-pagination__item--active">1</a>
+                        <a href="#" class="nano-pagination__item">2</a>
+                        <a href="#" class="nano-pagination__item" aria-label="Trang sau">›</a>
+                    </nav>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2 style="font-size: 1rem; margin-bottom: 0.75rem;">Form nhanh</h2>
-            <form class="nano-form" style="max-width: 24rem;">
-                <div class="nano-field">
-                    <label for="q">Tìm kiếm</label>
-                    <input id="q" class="nano-input nano-input-text" type="text" placeholder="Mã đơn, tên khách...">
+        <div class="nano-row nano-gap-6">
+            <section class="nano-col-16 nano-mb-6">
+                <h2 class="nano-text-base nano-font-semibold nano-mb-4">Tabs mẫu</h2>
+                <div class="nano-tabs nano-card">
+                    <input type="radio" name="dash" id="tab1" class="nano-tabs__input" checked>
+                    <input type="radio" name="dash" id="tab2" class="nano-tabs__input">
+                    <input type="radio" name="dash" id="tab3" class="nano-tabs__input">
+                    <div class="nano-tabs__list nano-px-4 nano-pt-4">
+                        <label for="tab1" class="nano-tabs__tab">Tổng quan</label>
+                        <label for="tab2" class="nano-tabs__tab">Báo cáo</label>
+                        <label for="tab3" class="nano-tabs__tab">Lịch</label>
+                    </div>
+                    <div class="nano-tabs__panel nano-p-4" id="panel1">
+                        <p class="nano-text-secondary nano-text-sm">Nội dung tab Tổng quan. Có thể đặt biểu đồ hoặc danh sách ở đây.</p>
+                    </div>
+                    <div class="nano-tabs__panel nano-p-4" id="panel2">
+                        <p class="nano-text-secondary nano-text-sm">Nội dung tab Báo cáo.</p>
+                    </div>
+                    <div class="nano-tabs__panel nano-p-4" id="panel3">
+                        <p class="nano-text-secondary nano-text-sm">Nội dung tab Lịch.</p>
+                    </div>
                 </div>
-                <div class="nano-form-actions">
-                    <button type="submit" class="nano-button nano-button--primary">Tìm</button>
-                    <button type="reset" class="nano-button nano-button--outline">Xóa</button>
+            </section>
+            <section class="nano-col-8 nano-mb-6">
+                <h2 class="nano-text-base nano-font-semibold nano-mb-4">Tìm kiếm nhanh</h2>
+                <div class="nano-card nano-p-4">
+                    <form class="nano-form">
+                        <div class="nano-field">
+                            <label for="q">Mã đơn, tên khách</label>
+                            <input id="q" class="nano-input nano-input-text" type="text" placeholder="Nhập để tìm...">
+                        </div>
+                        <div class="nano-form-actions nano-mt-4">
+                            <button type="submit" class="nano-button nano-button--primary">Tìm</button>
+                            <button type="reset" class="nano-button nano-button--outline">Xóa</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </section>
+            </section>
+        </div>
     </main>
     <script src="../../../dist/nano.min.js"></script>
 </body>

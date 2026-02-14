@@ -10,14 +10,14 @@
     --color-violet: #7c3aed;
 
     --color-black: #000000;
-    --color-white: #ffffff;
     --color-gray: #64748b;
+    --color-white: #ffffff;
 
     --color-primary: var(--color-blue);
+    --color-secondary: var(--color-gray);
     --color-danger: var(--color-red);
     --color-warning: var(--color-orange);
     --color-success: var(--color-green);
-    --color-secondary: var(--color-gray);
     --color-dark: var(--color-black);
     --color-light: var(--color-white);
 
@@ -30,7 +30,7 @@
     --color-layer-03: color-mix(in srgb, var(--color-primary) 10%, var(--color-light));
     
     --unit-base: 0.25rem;
-    --fsize-base: calc(var(--unit-base) / 2);
+    --size-base: calc(var(--unit-base) / 2);
     --radius-base: calc(var(--unit-base) * 2);
     --space-base: calc(var(--unit-base) * 1);
 
@@ -49,14 +49,14 @@
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
-    font-size: calc(var(--fsize-base) * 7);
+    font-size: calc(var(--size-base) * 8);
     line-height: 1.5;
     color: var(--color-foreground);
     background: var(--color-background);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: calc(var(--fsize-base) * 7);
+    font-size: calc(var(--size-base) * 8);
     font-weight: 500;
 }
 
@@ -3542,13 +3542,21 @@ meter::-moz-meter-bar {
 .nano-col-24 { grid-column: span 24; }
 
 /* Text – Tailwind: text-xs/sm/base/lg/xl/2xl/3xl, font-*, align, transform. Màu dùng var(--color-*) */
-.nano-text-xs { font-size: 0.75rem; line-height: 1rem; }
-.nano-text-sm { font-size: 0.875rem; line-height: 1.25rem; }
-.nano-text-base { font-size: 1rem; line-height: 1.5rem; }
-.nano-text-lg { font-size: 1.125rem; line-height: 1.75rem; }
-.nano-text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-.nano-text-2xl { font-size: 1.5rem; line-height: 2rem; }
-.nano-text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.nano-text-xs { font-size: calc(var(--size-base) * 6); line-height: calc(var(--size-base) * 8); }
+.nano-text-sm { font-size: calc(var(--size-base) * 7); line-height: calc(var(--size-base) * 10); }
+.nano-text-base { font-size: calc(var(--size-base) * 8); line-height: calc(var(--size-base) * 12); }
+.nano-text-lg { font-size: calc(var(--size-base) * 10); line-height: calc(var(--size-base) * 14); }
+.nano-text-xl { font-size: calc(var(--size-base) * 12); line-height: calc(var(--size-base) * 16); }
+.nano-text-2xl { font-size: calc(var(--size-base) * 16); line-height: calc(var(--size-base) * 20); }
+.nano-text-3xl { font-size: calc(var(--size-base) * 20); line-height: calc(var(--size-base) * 24); }
+
+.nano-text-intent-xs { text-indent: calc(var(--size-base) * 6 * 2); }
+.nano-text-intent-sm { text-indent: calc(var(--size-base) * 7 * 2); }
+.nano-text-intent-base { text-indent: calc(var(--size-base) * 8 * 2); }
+.nano-text-intent-lg { text-indent: calc(var(--size-base) * 10 * 2); }
+.nano-text-intent-xl { text-indent: calc(var(--size-base) * 12 * 2); }
+.nano-text-intent-2xl { text-indent: calc(var(--size-base) * 16 * 2); }
+.nano-text-intent-3xl { text-indent: calc(var(--size-base) * 20 * 2); }
 
 .nano-text-left { text-align: left; }
 .nano-text-center { text-align: center; }
@@ -3558,10 +3566,15 @@ meter::-moz-meter-bar {
 .nano-lowercase { text-transform: lowercase; }
 .nano-capitalize { text-transform: capitalize; }
 
+
 .nano-font-normal { font-weight: 400; }
 .nano-font-medium { font-weight: 500; }
 .nano-font-semibold { font-weight: 600; }
 .nano-font-bold { font-weight: 700; }
+
+.nano-text-italic { font-style: italic; }
+.nano-text-underline { text-decoration: underline; }
+.nano-text-line-through { text-decoration: line-through; }
 
 .nano-text-white { color: var(--color-light); }
 .nano-text-black { color: var(--color-dark); }
@@ -3846,7 +3859,7 @@ meter::-moz-meter-bar {
 .nano-h-20 { height: calc(var(--unit-base) * 20); }
 
 
-/* Background – prefix nano-, var(--color-*). Solid + pha màu 10–90% */
+/*10 màu nền cơ bản: 7 màu trong hệ cầu vồng và 3 màu trong hệ sáng tối, là cơ cở để pha màu cho các màu khác*/
 .nano-bg-red { background-color: var(--color-red); }
 .nano-bg-orange { background-color: var(--color-orange); }
 .nano-bg-yellow { background-color: var(--color-yellow); }
@@ -3854,14 +3867,18 @@ meter::-moz-meter-bar {
 .nano-bg-blue { background-color: var(--color-blue); }
 .nano-bg-indigo { background-color: var(--color-indigo); }
 .nano-bg-violet { background-color: var(--color-violet); }
+.nano-bg-black { background-color: var(--color-dark); }
 .nano-bg-gray { background-color: var(--color-gray); }
 .nano-bg-white { background-color: var(--color-light); }
-.nano-bg-black { background-color: var(--color-dark); }
+
+/*7 màu nền theo ngữ cảnh sử dụng, dùng các màu nên cơ bản mà không pha trộn*/
 .nano-bg-danger { background-color: var(--color-danger); }
 .nano-bg-warning { background-color: var(--color-warning); }
 .nano-bg-success { background-color: var(--color-success); }
 .nano-bg-primary { background-color: var(--color-primary); }
 .nano-bg-secondary { background-color: var(--color-secondary); }
+.nano-bg-dark { background-color: var(--color-dark); }
+.nano-bg-light { background-color: var(--color-light); }
 
 .nano-bg-primary-10 { background-color: color-mix(in srgb, var(--color-primary) 10%, white); }
 .nano-bg-primary-20 { background-color: color-mix(in srgb, var(--color-primary) 20%, white); }
@@ -4017,6 +4034,15 @@ meter::-moz-meter-bar {
 .nano-border-primary { border-color: var(--color-primary); }
 .nano-border-red { border-color: var(--color-red); }
 .nano-border-gray { border-color: var(--color-gray); }
+.nano-border-gray-10 { border-color: color-mix(in srgb, var(--color-gray) 10%, white); }
+.nano-border-gray-20 { border-color: color-mix(in srgb, var(--color-gray) 20%, white); }
+.nano-border-gray-30 { border-color: color-mix(in srgb, var(--color-gray) 30%, white); }
+.nano-border-gray-40 { border-color: color-mix(in srgb, var(--color-gray) 40%, white); }
+.nano-border-gray-50 { border-color: color-mix(in srgb, var(--color-gray) 50%, white); }
+.nano-border-gray-60 { border-color: color-mix(in srgb, var(--color-gray) 60%, white); }
+.nano-border-gray-70 { border-color: color-mix(in srgb, var(--color-gray) 70%, white); }
+.nano-border-gray-80 { border-color: color-mix(in srgb, var(--color-gray) 80%, white); }
+.nano-border-gray-90 { border-color: color-mix(in srgb, var(--color-gray) 90%, white); }
 .nano-border-transparent { border-color: transparent; }
 
 /* Shadow – prefix nano- */
@@ -4051,4 +4077,3 @@ meter::-moz-meter-bar {
 .nano-table tbody tr.nano-duration-150 { transition-duration: 150ms; }
 .nano-table tbody tr.nano-duration-300 { transition-duration: 300ms; }
 .nano-table tbody tr.nano-duration-500 { transition-duration: 500ms; }
-

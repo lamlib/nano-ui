@@ -26,15 +26,341 @@
                 <li><span aria-current="page">Utilities</span></li>
             </ol>
         </nav>
-        <h1 class="nano-text-2xl nano-font-semibold nano-mb-8">Class Utilities</h1>
+        <h1 class="nano-text-3xl nano-font-semibold nano-mb-8">Class Utilities</h1>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Margin</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">0. Variables</h3>
+            <p class="nano-text-base nano-mb-2">
+                Trong một design system việc định nghĩa các token, variables sử dụng xuyên suốt trong quá trình thiết kế là mấu chốt để giữ tính
+                nhất quán trong phát triển và mở rộng của system.
+            </p>
+
+            <h4 class="nano-text-lg nano-font-semibold nano-mb-2">Hệ thống màu cơ bản</h3>
+            <div class="nano-overflow-auto nano-mb-4">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="nano-code">--color-red</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-red nano-rounded-sm"></div> Màu đỏ
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-orange</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-orange nano-rounded-sm"></div> Màu cam
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-yellow</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-yellow nano-rounded-sm"></div> Màu vàng
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-green</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-green nano-rounded-sm"></div> Màu xanh lá
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-blue</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-blue nano-rounded-sm"></div> Màu xanh dương
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-indigo</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-indigo nano-rounded-sm"></div> Màu chàm
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-violet</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-violet nano-rounded-sm"></div> Màu tím
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-black</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-black nano-rounded-sm"></div> Màu đen
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-gray</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-gray nano-rounded-sm"></div> Màu xám
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-white</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-white nano-rounded-sm"></div> Màu trắng
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="nano-text-lg nano-font-semibold nano-mb-2">Hệ thống màu theo context</h3>
+            <div class="nano-overflow-auto nano-mb-4">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="nano-code">--color-primary</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-primary nano-rounded-sm"></div> Màu chính của hệ thống
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-secondary</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-secondary nano-rounded-sm"></div> Màu phụ của hệ thống
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-danger</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-danger nano-rounded-sm"></div> Màu nguy hiểm của hệ thống
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-warning</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-warning nano-rounded-sm"></div> Màu cảnh báo của hệ thống
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-success</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-success nano-rounded-sm"></div> Màu thành công của hệ thống
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-dark</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-dark nano-rounded-sm"></div> Màu tối của hệ thống
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-light</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-light nano-rounded-sm"></div> Màu sáng của hệ thống
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h4 class="nano-text-lg nano-font-semibold nano-mb-2">Hệ thống màu mặc định cho các phần tử</h4>
+            <div class="nano-overflow-auto nano-mb-4">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="nano-code">--color-component-01</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-component-01 nano-rounded-sm"></div> Màu thành phần 01, sử dụng cho ...
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-component-02</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-component-02 nano-rounded-sm"></div> Màu thành phần 02, sử dụng cho ...
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-component-03</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-component-03 nano-rounded-sm"></div> Màu thành phần 03, sử dụng cho ...
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="nano-text-lg nano-font-semibold nano-mb-2">Hệ thống màu mặc định cho các lớp</h4>
+            <div class="nano-overflow-auto nano-mb-4">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="nano-code">--color-layer-01</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-layer-01 nano-rounded-sm"></div> Màu lớp 01, sử dụng cho màu nền toàn cục ứng dụng, ...
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-layer-02</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-layer-02 nano-rounded-sm"></div> Màu lớp 02, sử dụng cho ... 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-layer-03</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-layer-03 nano-rounded-sm"></div> Màu lớp 03, sử dụng cho ...
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="nano-text-lg nano-font-semibold nano-mb-2">Hệ thống kích thước cơ bản</h4>
+            <div class="nano-overflow-auto nano-mb-4">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="nano-code">--unit-base</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    <div class="nano-size-4 nano-inline-block nano-bg-component-01 nano-rounded-sm"></div> Kích thước cơ bản, sử dụng cho suy diễn các kích thước cơ sở đặc trưng cho các thuộc tính, mặc định là 0.25rem ứng với 4px;
+                                </div>
+                            </td>
+                        </tr>
+                </table>
+            </div>
+
+
+            <h4 class="nano-text-lg nano-font-semibold nano-mb-2">Hệ thống thuộc tính suy diễn</h4>
+            <div class="nano-overflow-auto nano-mb-4">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="nano-code">--size-base</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    Kích thước đơn vị phông chữ cơ sở, bằng một phần hai đơn vị cơ sở, mặc định là 0.125rem ứng với 2px;
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--radius-base</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    Bán kính đơn vị cơ sở, bằng hai lần đơn vị cơ sở, mặc định là 0.5rem ứng với 8px;
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--space-base</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    Khoảng cách đơn vị cơ sở, bằng đơn vị cơ sở, mặc định là 0.25rem ứng với 4px;
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-background</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    Màu nền toàn cục ứng dụng, mặc định là màu lớp 01;
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code class="nano-code">--color-foreground</code></td>
+                            <td>
+                                <div class="nano-flex nano-items-center nano-gap-2">
+                                    Màu chữ toàn cục ứng dụng, mặc định là 80% màu tối + 20% màu sáng;
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="nano-mb-6">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">1. Margin</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4">
                     <div>
                         <div class="nano-border nano-max-w-fit nano-bg-orange-20">
-                            <div class="nano-w-16 nano-p-1 nano-bg-primary nano-text-light nano-mb-auto nano-text-center">mb-auto</div>
+                            <div class="nano-w-18 nano-p-1 nano-bg-primary nano-text-light nano-mb-auto nano-text-center">mb-auto</div>
                         </div>
                     </div>
                     <div>
@@ -100,92 +426,31 @@
                     
                 </div>
             </div>
-
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Margin all</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
-                                aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-m-_0_20_auto</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Margin top</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
-                                aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-mt-_0_20_auto</code></pre>
-                        </div>
-                    </div>
-                </div> 
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Margin right</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
-                                aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-mr-_0_20_auto</code></pre>
-                        </div>
-                    </div>
-                </div> 
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Margin bottom</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
-                                aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-mb-_0_20_auto</code></pre>
-                        </div>
-                    </div>
-                </div> 
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Margin left</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
-                                aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-ml-_0_20_auto</code></pre>
-                        </div>
-                    </div>
-                </div> 
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Margin horizontal</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
-                                aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-mx-_0_20_auto</code></pre>
-                        </div>
-                    </div>
-                </div> 
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Margin vertical</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
-                                aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-my-_0_20_auto</code></pre>
-                        </div>
-                    </div>
-                </div> 
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Cụm</th>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>All</td><td><code class="nano-code">nano-m-0</code> … <code class="nano-code">nano-m-20</code>, <code class="nano-code">nano-m-auto</code></td><td>margin: calc(var(--unit-base) * n) hoặc auto</td></tr>
+                        <tr><td>Top</td><td><code class="nano-code">nano-mt-0</code> … <code class="nano-code">nano-mt-20</code>, <code class="nano-code">nano-mt-auto</code></td><td>margin-top: calc(var(--unit-base) * n) hoặc auto</td></tr>
+                        <tr><td>Right</td><td><code class="nano-code">nano-mr-0</code> … <code class="nano-code">nano-mr-20</code>, <code class="nano-code">nano-mr-auto</code></td><td>margin-right: calc(var(--unit-base) * n) hoặc auto</td></tr>
+                        <tr><td>Bottom</td><td><code class="nano-code">nano-mb-0</code> … <code class="nano-code">nano-mb-20</code>, <code class="nano-code">nano-mb-auto</code></td><td>margin-bottom: calc(var(--unit-base) * n) hoặc auto</td></tr>
+                        <tr><td>Left</td><td><code class="nano-code">nano-ml-0</code> … <code class="nano-code">nano-ml-20</code>, <code class="nano-code">nano-ml-auto</code></td><td>margin-left: calc(var(--unit-base) * n) hoặc auto</td></tr>
+                        <tr><td>X (trái + phải)</td><td><code class="nano-code">nano-mx-0</code> … <code class="nano-code">nano-mx-20</code>, <code class="nano-code">nano-mx-auto</code></td><td>margin-left & margin-right: calc(var(--unit-base) * n) hoặc auto</td></tr>
+                        <tr><td>Y (trên + dưới)</td><td><code class="nano-code">nano-my-0</code> … <code class="nano-code">nano-my-20</code>, <code class="nano-code">nano-my-auto</code></td><td>margin-top & margin-bottom: calc(var(--unit-base) * n) hoặc auto</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Padding</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">2. Padding</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap">
                     <div>
                         <div class="nano-border nano-max-w-fit">
@@ -267,87 +532,33 @@
                     </div>
                 </div>
             </div>
-
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Padding all</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-p-_0_20</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Padding top</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-pt-_0_20</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Padding right</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-pr-_0_20</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Padding bottom</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-pb-_0_20</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Padding left</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-pl-_0_20</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Padding horizontal</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-px-_0_20</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Padding vertical</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-py-_0_20</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Cụm</th>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>All</td><td><code class="nano-code">nano-p-0</code> … <code class="nano-code">nano-p-20</code></td><td>padding: calc(var(--unit-base) * n)</td></tr>
+                        <tr><td>Top</td><td><code class="nano-code">nano-pt-0</code> … <code class="nano-code">nano-pt-20</code></td><td>padding-top: calc(var(--unit-base) * n)</td></tr>
+                        <tr><td>Right</td><td><code class="nano-code">nano-pr-0</code> … <code class="nano-code">nano-pr-20</code></td><td>padding-right: calc(var(--unit-base) * n)</td></tr>
+                        <tr><td>Bottom</td><td><code class="nano-code">nano-pb-0</code> … <code class="nano-code">nano-pb-20</code></td><td>padding-bottom: calc(var(--unit-base) * n)</td></tr>
+                        <tr><td>Left</td><td><code class="nano-code">nano-pl-0</code> … <code class="nano-code">nano-pl-20</code></td><td>padding-left: calc(var(--unit-base) * n)</td></tr>
+                        <tr><td>X (trái + phải)</td><td><code class="nano-code">nano-px-0</code> … <code class="nano-code">nano-px-20</code></td><td>padding-left & padding-right: calc(var(--unit-base) * n)</td></tr>
+                        <tr><td>Y (trên + dưới)</td><td><code class="nano-code">nano-py-0</code> … <code class="nano-code">nano-py-20</code></td><td>padding-top & padding-bottom: calc(var(--unit-base) * n)</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Text</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
-                <p class="nano-text-sm nano-font-medium nano-mb-2">Size</p>
-                <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-baseline nano-mb-4">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">3. Text</h3>
+            <p class="nano-text-sm nano-font-medium nano-mb-2">Size</p>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
+                <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-baseline">
                     <span class="nano-text-xs">xs</span>
                     <span class="nano-text-sm">sm</span>
                     <span class="nano-text-base">base</span>
@@ -356,20 +567,60 @@
                     <span class="nano-text-2xl">2xl</span>
                     <span class="nano-text-3xl">3xl</span>
                 </div>
-                <p class="nano-text-sm nano-font-medium nano-mb-2">Align</p>
-                <div class="nano-flex nano-gap-4 nano-flex-wrap nano-mb-4">
-                    <span class="nano-text-left nano-w-full nano-border nano-border-b">text-left</span>
-                    <span class="nano-text-center nano-w-full nano-border nano-border-b">text-center</span>
-                    <span class="nano-text-right nano-w-full nano-border nano-border-b">text-right</span>
+            </div>
+            <p>
+                Với các kích thước chữ được định nghĩa tương ứng được sử dụng như sau:
+            </p>
+            <ul class="nano-ml-5 nano-mb-4">
+                <li>XS là viết tắt của extra small, kích thước 0.75rem ứng với 12px, chiều cao dòng chữ 16px cho các description</li>
+                <li>SM là viết tắt của small, kích thước 0.875rem ứng với 14px, chiều cao dòng chữ 20px áp dụng vào thẻ h6</li>
+                <li>BASE là viết tắt của base, kích thước 1rem ứng với 16px, chiều cao dòng chữ 24px áp dụng vào thẻ h5, nornal body text</li>
+                <li>LG là viết tắt của large, kích thước 1.125rem ứng với 18px, chiểu cao dòng chữ 28px áp dụng vào thẻ h4</li>
+                <li>XL là viết tắt của 1 extra large, kích thước 1.25rem ứng với 20px, chiểu cao dòng chữ 28px áp dụng vào thẻ h3</li>
+                <li>2XL là viết tắt của 2 extra large, kích thước 1.5rem ứng với 24px, chiểu cao dòng chữ 32px áp dụng vào thẻ h3</li>
+                <li>3XL là viết tắt của 3 extra large, kích thước 1.875rem ứng với 30px, chiểu cao dòng chữ 36px áp dụng vào thẻ h1</li>
+            </ul>
+            
+            <p class="nano-mb-4">
+                Để căn chỉnh phân biệt giữa các đoạn văn bản cùng cấp, chúng ta cần biết font size của chúng cùng line height, sau đó tính ra khoảng cách thực tế
+                giữa các đoạn text sau đó tại cuối mỗi văn bản cần thêm margin bằng khoảng cách thực tế đó.
+                Ví dụ khi sử dụng text base normal, theo như đặc tả đã định nghĩa, chữ có kích thước 16px và chiều cao dòng chữ 24px, như vậy khoảng cách thực tế giữa các đoạn text là 24px - 16px = 8px, sau đó suy ra được margin cần thêm là 16px.
+                Cần thêm margin bottom 8px vào cuối đoạn văn. Phương pháp này được áp dụng vào trong các giao diện hiện đại, còn với các giao diện truyền thống sẽ sử dụng text intent
+                khoảng cách intent sẽ được tính theo công thức <var class="nano-var">i</var> = <var class="nano-var">fs</var> * <var class="nano-var">k</var> trong đó k là hệ số khoảng cách xác định độ lớn
+                thụt dòng, <var class="nano-var">fs</var> là font size của đoạn text, <var class="nano-var">i</var> là khoảng cách intent.
+                Thực tế hệ số được lựa chọn dựa trên người thiết kế design system, khoảng từ 1.4 đến 2. Đối với nano giá trị 2 được lựa chọn để nâng cao tối đa khả năng nhận biết giữa cách đoạn văn bản.
+            </p>
+
+            <p>Để lựa chọn giữa thụt đầu dòng hay là khoảng cách giữa các đoạn văn, chúng ta có một số best practices sau đây:</p>
+            <ul class="nano-ml-5">
+                <li><span class="nano-text-orange">Dùng thụt đầu dòng khi</span>: <i class="nano-text-italic">Trong văn bản dài, nhiều đoạn</i> giúp người đọc dễ nhận biết đoạn mới, đặc biệt trong tài liệu, sách báo</li>
+                <li><span class="nano-text-orange">Dùng thụt đầu dòng khi</span>: <i class="nano-text-italic">Khi muốn giữ bố cục gọn gàng</i>, chẳng hạn các đoạn văn bản liên tục, không muốn thêm khoảng trắng giữa các đoạn</li>
+                <li><span class="nano-text-orange">Dùng thụt đầu dòng khi</span>: <i class="nano-text-italic">Trong thiết kế mô phỏng kiểu trình bày truyền thống</i>, các trang báo điện tử, blog văn học để tạo cảm giác sách in.</li>
+                <li><span class="nano-text-indigo">Dùng khoảng cách khi</span>: <i class="nano-text-italic">Trong giao diện hiện đại, UI/UX web/app</i>, để dễ scan nội dung.</li>
+                <li><span class="nano-text-indigo">Dùng khoảng cách khi</span>: <i class="nano-text-italic">Trong danh sách, form, bảng</i> vì các phần tử này có cấu trúc rõ ràng, thụt đầu dòng sẽ gây rối mắt</li>
+                <li><span class="nano-text-indigo">Dùng khoảng cách khi</span>: <i class="nano-text-italic">Khi sử dụng căn giữa hoặc căn phải</i> cần giữ đối xứng</li>
+            </ul>
+
+            </p>
+            <p class="nano-text-sm nano-font-medium nano-mb-2">Align</p>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
+                <div class="nano-flex nano-gap-4 nano-flex-wrap">
+                    <span class="nano-text-left nano-w-full">text-left</span>
+                    <span class="nano-text-center nano-w-full">text-center</span>
+                    <span class="nano-text-right nano-w-full">text-right</span>
                 </div>
-                <p class="nano-text-sm nano-font-medium nano-mb-2">Font weight</p>
-                <div class="nano-flex nano-gap-4 nano-flex-wrap nano-mb-4">
+            </div>
+            <p class="nano-text-sm nano-font-medium nano-mb-2">Font weight</p>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
+                <div class="nano-flex nano-gap-4 nano-flex-wrap">
                     <span class="nano-font-normal">normal</span>
                     <span class="nano-font-medium">medium</span>
                     <span class="nano-font-semibold">semibold</span>
                     <span class="nano-font-bold">bold</span>
                 </div>
-                <p class="nano-text-sm nano-font-medium nano-mb-2">Color</p>
+            </div>
+            <p class="nano-text-sm nano-font-medium nano-mb-2">Color</p>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-2 nano-flex-wrap">
                     <span class="nano-text-primary">primary</span>
                     <span class="nano-text-red">red</span>
@@ -381,78 +632,53 @@
                 </div>
             </div>
 
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Text size</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-text-xs | nano-text-sm | nano-text-base | nano-text-lg | nano-text-xl | nano-text-2xl | nano-text-3xl</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Text align</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-text-left | nano-text-center | nano-text-right</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Font weight</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-font-normal | nano-font-medium | nano-font-semibold | nano-font-bold</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Text color</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-text-primary | nano-text-red | nano-text-green | nano-text-blue | nano-text-secondary
-nano-text-{color}-10 … nano-text-{color}-90</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Cụm</th>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Size</td><td><code class="nano-code">nano-text-xs</code> <code class="nano-code">nano-text-sm</code> <code class="nano-code">nano-text-base</code> <code class="nano-code">nano-text-lg</code> <code class="nano-code">nano-text-xl</code> <code class="nano-code">nano-text-2xl</code> <code class="nano-code">nano-text-3xl</code></td><td>font-size, line-height</td></tr>
+                        <tr><td>Align</td><td><code class="nano-code">nano-text-left</code> <code class="nano-code">nano-text-center</code> <code class="nano-code">nano-text-right</code></td><td>text-align</td></tr>
+                        <tr><td>Font weight</td><td><code class="nano-code">nano-font-normal</code> <code class="nano-code">nano-font-medium</code> <code class="nano-code">nano-font-semibold</code> <code class="nano-code">nano-font-bold</code></td><td>font-weight</td></tr>
+                        <tr><td>Color</td><td><code class="nano-code">nano-text-primary</code> <code class="nano-code">nano-text-red</code> … <code class="nano-code">nano-text-{color}-10</code> … <code class="nano-code">nano-text-{color}-90</code></td><td>color (theme + dải 10–90)</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">4. List</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">4. List</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <ul class="nano-list-none nano-flex nano-gap-2">
                     <li>Item 1</li>
                     <li>Item 2</li>
                 </ul>
             </div>
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">List style</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-list-none | nano-list-disc | nano-list-decimal</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code class="nano-code">nano-list-none</code></td><td>list-style-type: none</td></tr>
+                        <tr><td><code class="nano-code">nano-list-disc</code></td><td>list-style-type: disc</td></tr>
+                        <tr><td><code class="nano-code">nano-list-decimal</code></td><td>list-style-type: decimal</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section id="grid" class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">5. Grid (24 columns)</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">5. Grid (24 columns)</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <p class="nano-text-sm nano-font-medium nano-mb-2">12 + 12</p>
                 <div class="nano-row nano-mb-4">
                     <div class="nano-col-12 nano-p-3 nano-bg-primary-20 nano-rounded nano-text-center">col-12</div>
@@ -471,57 +697,50 @@ nano-text-{color}-10 … nano-text-{color}-90</code></pre>
                     <div class="nano-col-6 nano-p-3 nano-bg-indigo-20 nano-rounded nano-text-center">col-6</div>
                 </div>
             </div>
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Grid row + col</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-row | nano-col-1 … nano-col-24</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code class="nano-code">nano-row</code></td><td>display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); gap</td></tr>
+                        <tr><td><code class="nano-code">nano-col-1</code> … <code class="nano-code">nano-col-24</code></td><td>grid-column: span 1 … 24</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">6. Display &amp; Cursor</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">6. Display &amp; Cursor</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-center">
                     <span class="nano-inline-block nano-p-2 nano-bg-primary nano-text-light nano-rounded">inline-block</span>
                     <span class="nano-cursor-pointer nano-p-2 nano-bg-blue nano-text-light nano-rounded">cursor-pointer</span>
                 </div>
             </div>
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Display</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-block | nano-inline-block | nano-inline | nano-flex | nano-grid | nano-hidden</code></pre>
-                        </div>
-                    </div>
-                </div>
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Cursor</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-cursor-pointer | nano-cursor-default | nano-cursor-not-allowed</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Cụm</th>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Display</td><td><code class="nano-code">nano-block</code> <code class="nano-code">nano-inline-block</code> <code class="nano-code">nano-inline</code> <code class="nano-code">nano-flex</code> <code class="nano-code">nano-inline-flex</code> <code class="nano-code">nano-grid</code> <code class="nano-code">nano-inline-grid</code> <code class="nano-code">nano-hidden</code></td><td>display</td></tr>
+                        <tr><td>Cursor</td><td><code class="nano-code">nano-cursor-pointer</code> <code class="nano-code">nano-cursor-default</code> <code class="nano-code">nano-cursor-not-allowed</code></td><td>cursor</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">7. Layout</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">7. Layout</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap nano-mb-4">
                     <div class="nano-max-w-sm nano-p-2 nano-bg-gray-20 nano-rounded">max-w-sm</div>
                     <div class="nano-max-w-md nano-p-2 nano-bg-gray-20 nano-rounded">max-w-md</div>
@@ -531,24 +750,29 @@ nano-text-{color}-10 … nano-text-{color}-90</code></pre>
                     <div class="nano-aspect-video nano-w-full nano-max-w-32 nano-bg-blue-20 nano-rounded"></div>
                 </div>
             </div>
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Layout</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-w-full | nano-h-full | nano-max-w-sm … nano-max-w-6xl | nano-aspect-square | nano-aspect-video</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code class="nano-code">nano-w-full</code></td><td>width: 100%</td></tr>
+                        <tr><td><code class="nano-code">nano-h-full</code></td><td>height: 100%</td></tr>
+                        <tr><td><code class="nano-code">nano-max-w-sm</code> … <code class="nano-code">nano-max-w-6xl</code> <code class="nano-code">nano-max-w-full</code> <code class="nano-code">nano-max-w-fit</code></td><td>max-width</td></tr>
+                        <tr><td><code class="nano-code">nano-aspect-square</code></td><td>aspect-ratio: 1 / 1</td></tr>
+                        <tr><td><code class="nano-code">nano-aspect-video</code></td><td>aspect-ratio: 16 / 9</td></tr>
+                        <tr><td><code class="nano-code">nano-aspect-auto</code></td><td>aspect-ratio: auto</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">8. Flex &amp; Gap</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">8. Flex &amp; Gap</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-justify-between nano-items-center nano-gap-4 nano-p-4 nano-bg-primary nano-text-light nano-rounded-lg nano-mb-4">
                     <span>start</span>
                     <span>end</span>
@@ -559,48 +783,85 @@ nano-text-{color}-10 … nano-text-{color}-90</code></pre>
                     <span class="nano-p-2 nano-bg-green nano-text-light nano-rounded">2</span>
                 </div>
             </div>
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Flex &amp; Gap</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-flex-1 | nano-flex-none | nano-flex-col | nano-flex-row | nano-flex-wrap
-nano-items-* | nano-justify-* | nano-self-* | nano-gap-0 … nano-gap-20</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code class="nano-code">nano-flex-1</code></td><td>flex: 1 1 0%; min-width: 0</td></tr>
+                        <tr><td><code class="nano-code">nano-flex-none</code></td><td>flex: none</td></tr>
+                        <tr><td><code class="nano-code">nano-flex-auto</code></td><td>flex: 1 1 auto</td></tr>
+                        <tr><td><code class="nano-code">nano-flex-col</code></td><td>flex-direction: column</td></tr>
+                        <tr><td><code class="nano-code">nano-flex-row</code></td><td>flex-direction: row</td></tr>
+                        <tr><td><code class="nano-code">nano-flex-wrap</code></td><td>flex-wrap: wrap</td></tr>
+                        <tr><td><code class="nano-code">nano-flex-nowrap</code></td><td>flex-wrap: nowrap</td></tr>
+                        <tr><td><code class="nano-code">nano-items-start</code></td><td>align-items: flex-start</td></tr>
+                        <tr><td><code class="nano-code">nano-items-center</code></td><td>align-items: center</td></tr>
+                        <tr><td><code class="nano-code">nano-items-end</code></td><td>align-items: flex-end</td></tr>
+                        <tr><td><code class="nano-code">nano-items-stretch</code></td><td>align-items: stretch</td></tr>
+                        <tr><td><code class="nano-code">nano-items-baseline</code></td><td>align-items: baseline</td></tr>
+                        <tr><td><code class="nano-code">nano-justify-start</code></td><td>justify-content: flex-start</td></tr>
+                        <tr><td><code class="nano-code">nano-justify-center</code></td><td>justify-content: center</td></tr>
+                        <tr><td><code class="nano-code">nano-justify-end</code></td><td>justify-content: flex-end</td></tr>
+                        <tr><td><code class="nano-code">nano-justify-between</code></td><td>justify-content: space-between</td></tr>
+                        <tr><td><code class="nano-code">nano-justify-around</code></td><td>justify-content: space-around</td></tr>
+                        <tr><td><code class="nano-code">nano-justify-evenly</code></td><td>justify-content: space-evenly</td></tr>
+                        <tr><td><code class="nano-code">nano-self-start</code></td><td>align-self: flex-start</td></tr>
+                        <tr><td><code class="nano-code">nano-self-center</code></td><td>align-self: center</td></tr>
+                        <tr><td><code class="nano-code">nano-self-end</code></td><td>align-self: flex-end</td></tr>
+                        <tr><td><code class="nano-code">nano-self-stretch</code></td><td>align-self: stretch</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-0</code></td><td>gap: calc(var(--unit-base) * 0)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-1</code></td><td>gap: calc(var(--unit-base) * 1)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-2</code></td><td>gap: calc(var(--unit-base) * 2)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-3</code></td><td>gap: calc(var(--unit-base) * 3)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-4</code></td><td>gap: calc(var(--unit-base) * 4)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-5</code></td><td>gap: calc(var(--unit-base) * 5)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-6</code></td><td>gap: calc(var(--unit-base) * 6)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-8</code></td><td>gap: calc(var(--unit-base) * 8)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-10</code></td><td>gap: calc(var(--unit-base) * 10)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-12</code></td><td>gap: calc(var(--unit-base) * 12)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-16</code></td><td>gap: calc(var(--unit-base) * 16)</td></tr>
+                        <tr><td><code class="nano-code">nano-gap-20</code></td><td>gap: calc(var(--unit-base) * 20)</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">9. Position</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
-                <div class="nano-relative nano-p-4 nano-bg-gray-20 nano-rounded">
-                    <span class="nano-relative nano-z-10 nano-p-2 nano-bg-primary nano-text-light nano-rounded">relative z-10</span>
-                </div>
-            </div>
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Position</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-relative | nano-absolute | nano-fixed | nano-sticky | nano-static
-nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">9. Position</h3>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code class="nano-code">nano-relative</code></td><td>position: relative</td></tr>
+                        <tr><td><code class="nano-code">nano-absolute</code></td><td>position: absolute</td></tr>
+                        <tr><td><code class="nano-code">nano-fixed</code></td><td>position: fixed</td></tr>
+                        <tr><td><code class="nano-code">nano-sticky</code></td><td>position: sticky</td></tr>
+                        <tr><td><code class="nano-code">nano-static</code></td><td>position: static</td></tr>
+                        <tr><td><code class="nano-code">nano-z-0</code></td><td>z-index: 0</td></tr>
+                        <tr><td><code class="nano-code">nano-z-10</code></td><td>z-index: 10</td></tr>
+                        <tr><td><code class="nano-code">nano-z-20</code></td><td>z-index: 20</td></tr>
+                        <tr><td><code class="nano-code">nano-z-30</code></td><td>z-index: 30</td></tr>
+                        <tr><td><code class="nano-code">nano-z-40</code></td><td>z-index: 40</td></tr>
+                        <tr><td><code class="nano-code">nano-z-50</code></td><td>z-index: 50</td></tr>
+                        <tr><td><code class="nano-code">nano-z-auto</code></td><td>z-index: auto</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">10. Rounded</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">10. Rounded</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-end">
                     <div class="nano-rounded-none nano-size-8 nano-bg-red"></div>
                     <div class="nano-rounded-sm nano-size-8 nano-bg-orange"></div>
@@ -610,24 +871,29 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
                     <div class="nano-rounded-full nano-size-8 nano-bg-violet"></div>
                 </div>
             </div>
-            <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
-            <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
-                <div class="nano-accordion__item">
-                    <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Rounded</button>
-                    <div class="nano-accordion__body nano-p-0">
-                        <div class="nano-code-block">
-                            <h6 class="nano-code-block__title">Plaintext</h6>
-                            <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
-                            <pre class="nano-pre nano-bg-white language-plaintext"><code>nano-rounded-none | nano-rounded-sm | nano-rounded | nano-rounded-lg | nano-rounded-xl | nano-rounded-full</code></pre>
-                        </div>
-                    </div>
-                </div>
+            <div class="nano-mb-6 nano-overflow-auto">
+                <table class="nano-table nano-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code class="nano-code">nano-rounded-none</code></td><td>border-radius: 0;</td></tr>
+                        <tr><td><code class="nano-code">nano-rounded-sm</code></td><td>border-radius: 0.125rem;</td></tr>
+                        <tr><td><code class="nano-code">nano-rounded</code></td><td>border-radius: var(--radius-base);</td></tr>
+                        <tr><td><code class="nano-code">nano-rounded-lg</code></td><td>border-radius: 0.5rem;</td></tr>
+                        <tr><td><code class="nano-code">nano-rounded-xl</code></td><td>border-radius: 0.75rem;</td></tr>
+                        <tr><td><code class="nano-code">nano-rounded-full</code></td><td>border-radius: 9999px;</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">11. Size</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">11. Size</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap nano-items-end">
                     <div class="nano-size-1 nano-bg-primary nano-rounded-sm"></div>
                     <div class="nano-size-2 nano-bg-primary nano-rounded-sm"></div>
@@ -660,8 +926,8 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">12. Background</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">12. Background</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <p class="nano-text-sm nano-font-medium nano-mb-2">primary (10 → 90 + standard 100)</p>
                 <div class="nano-flex nano-mb-3 nano-rounded nano-overflow-hidden" style="height: 2rem;">
                     <div class="nano-bg-primary-10 nano-flex-1"></div>
@@ -847,7 +1113,7 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">13. Overflow</h2>
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">13. Overflow</h3>
             <div class="nano-mb-6 nano-overflow-auto">
                 <table class="nano-table nano-table--bordered">
                     <thead>
@@ -867,8 +1133,8 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">14. Opacity</h2>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">14. Opacity</h3>
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-2 nano-flex-wrap">
                     <div class="nano-opacity-0 nano-p-2 nano-bg-primary nano-rounded">0</div>
                     <div class="nano-opacity-25 nano-p-2 nano-bg-primary nano-text-light nano-rounded">25</div>
@@ -897,16 +1163,16 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">15. Border</h2>
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">15. Border</h3>
             <p class="nano-text-sm nano-font-medium nano-mb-2">Width</p>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap">
                     <div class="nano-border nano-p-3 nano-rounded nano-bg-white">border</div>
                     <div class="nano-border-0 nano-p-3 nano-rounded nano-bg-gray-20">border-0</div>
                 </div>
             </div>
             <p class="nano-text-sm nano-font-medium nano-mb-2">Sides</p>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap">
                     <div class="nano-border-t nano-p-3 nano-bg-white">border-t</div>
                     <div class="nano-border-r nano-p-3 nano-bg-white">border-r</div>
@@ -917,7 +1183,7 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
                 </div>
             </div>
             <p class="nano-text-sm nano-font-medium nano-mb-2">Style</p>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap">
                     <div class="nano-border nano-border-solid nano-p-3 nano-rounded nano-bg-white">border-solid</div>
                     <div class="nano-border nano-border-dashed nano-p-3 nano-rounded nano-bg-white">border-dashed</div>
@@ -927,7 +1193,7 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
                 </div>
             </div>
             <p class="nano-text-sm nano-font-medium nano-mb-2">Color</p>
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-4 nano-flex-wrap">
                     <div class="nano-border nano-p-3 nano-rounded nano-bg-white">default</div>
                     <div class="nano-border nano-border-primary nano-p-3 nano-rounded nano-bg-white">border-primary</div>
@@ -967,9 +1233,9 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">16. Shadow</h2>
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">16. Shadow</h3>
             
-            <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-mb-4 nano-p-4 nano-border nano-border-gray-40">
                 <div class="nano-flex nano-gap-6 nano-flex-wrap">
                     <div class="nano-shadow-none nano-p-4 nano-bg-white nano-rounded">none</div>
                     <div class="nano-shadow-sm nano-p-4 nano-bg-white nano-rounded">sm</div>
@@ -1013,7 +1279,7 @@ nano-z-0 … nano-z-50 | nano-z-auto</code></pre>
         </section>
 
         <section class="nano-mb-6">
-            <h2 class="nano-text-xl nano-font-semibold nano-mb-4">17. Transition</h2>
+            <h3 class="nano-text-xl nano-font-semibold nano-mb-4">17. Transition</h3>
             <div class="nano-mb-6 nano-overflow-auto">
                 <table class="nano-table nano-table--bordered">
                     <thead>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alert – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,32 +19,156 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-p-6 nano-flex nano-flex-col nano-gap-4">
-        <h1>Alert</h1>
-        <p style="margin-bottom: 0.5rem; color: var(--color-secondary);">Class <code>.nano-alert</code> + <code>.nano-alert--success</code> | <code>--warning</code> | <code>--danger</code> | <code>--info</code>. Đóng: <code>.nano-alert__close</code>.</p>
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Alert</span></li>
+            </ol>
+        </nav>
 
-        <div class="nano-alert nano-alert--success">
-            <span class="nano-alert__content">Thao tác đã lưu thành công.</span>
-            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Alert</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-1">
+            Alert dùng để hiển thị thông báo ngắn gọn (thành công, cảnh báo, lỗi, thông tin) cho người dùng.
+            Dùng class <code class="nano-code">nano-alert</code> kết hợp modifier <code class="nano-code">nano-alert--success</code>, <code class="nano-code">--warning</code>, <code class="nano-code">--danger</code>, <code class="nano-code">--info</code>.
+        </p>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Nội dung đặt trong <code class="nano-code">nano-alert__content</code>. Nút đóng tùy chọn dùng <code class="nano-code">nano-alert__close</code>.
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Các loại alert</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-col nano-gap-4">
+                <div class="nano-alert nano-alert--success">
+                    <span class="nano-alert__content">Thao tác đã lưu thành công.</span>
+                    <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
+                </div>
+                <div class="nano-alert nano-alert--warning">
+                    <span class="nano-alert__content">Vui lòng kiểm tra lại thông tin trước khi gửi.</span>
+                    <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
+                </div>
+                <div class="nano-alert nano-alert--danger">
+                    <span class="nano-alert__content">Đã xảy ra lỗi. Vui lòng thử lại sau.</span>
+                    <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
+                </div>
+                <div class="nano-alert nano-alert--info">
+                    <span class="nano-alert__content">Hệ thống sẽ bảo trì vào 02:00 – 04:00 ngày mai.</span>
+                    <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
+                </div>
+            </div>
         </div>
-        <div class="nano-alert nano-alert--warning">
-            <span class="nano-alert__content">Vui lòng kiểm tra lại thông tin trước khi gửi.</span>
-            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
-        </div>
-        <div class="nano-alert nano-alert--danger">
-            <span class="nano-alert__content">Đã xảy ra lỗi. Vui lòng thử lại sau.</span>
-            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
-        </div>
-        <div class="nano-alert nano-alert--info">
-            <span class="nano-alert__content">Hệ thống sẽ bảo trì vào 02:00 – 04:00 ngày mai.</span>
-            <button type="button" class="nano-alert__close" aria-label="Đóng">×</button>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Alert success (có nút đóng)</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-alert nano-alert--success"&gt;
+    &lt;span class="nano-alert__content"&gt;Thao tác đã lưu thành công.&lt;/span&gt;
+    &lt;button type="button" class="nano-alert__close" aria-label="Đóng"&gt;×&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Alert warning</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-alert nano-alert--warning"&gt;
+    &lt;span class="nano-alert__content"&gt;Vui lòng kiểm tra lại thông tin.&lt;/span&gt;
+    &lt;button type="button" class="nano-alert__close" aria-label="Đóng"&gt;×&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Alert danger</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-alert nano-alert--danger"&gt;
+    &lt;span class="nano-alert__content"&gt;Đã xảy ra lỗi. Vui lòng thử lại sau.&lt;/span&gt;
+    &lt;button type="button" class="nano-alert__close" aria-label="Đóng"&gt;×&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Alert info</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-alert nano-alert--info"&gt;
+    &lt;span class="nano-alert__content"&gt;Hệ thống sẽ bảo trì vào 02:00 – 04:00.&lt;/span&gt;
+    &lt;button type="button" class="nano-alert__close" aria-label="Đóng"&gt;×&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <h2>Không nút đóng</h2>
-        <div class="nano-alert nano-alert--success">
-            <span class="nano-alert__content">Chỉ nội dung, không có nút đóng.</span>
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Alert không nút đóng</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <div class="nano-flex nano-flex-col nano-gap-4">
+                <div class="nano-alert nano-alert--success">
+                    <span class="nano-alert__content">Chỉ nội dung, không có nút đóng.</span>
+                </div>
+                <div class="nano-alert nano-alert--info">
+                    <span class="nano-alert__content">Thông báo dạng info chỉ với nano-alert__content.</span>
+                </div>
+            </div>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippet</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Alert không nút đóng</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code" aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;div class="nano-alert nano-alert--success"&gt;
+    &lt;span class="nano-alert__content"&gt;Chỉ nội dung, không có nút đóng.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-alert</code></td><td>Base: flex, padding, border-radius</td></tr>
+                    <tr><td><code class="nano-code">nano-alert--success</code></td><td>Màu success (xanh lá)</td></tr>
+                    <tr><td><code class="nano-code">nano-alert--warning</code></td><td>Màu warning (vàng/cam)</td></tr>
+                    <tr><td><code class="nano-code">nano-alert--danger</code></td><td>Màu danger (đỏ)</td></tr>
+                    <tr><td><code class="nano-code">nano-alert--info</code></td><td>Màu info (primary/xanh)</td></tr>
+                    <tr><td><code class="nano-code">nano-alert__content</code></td><td>Nội dung chữ (flex: 1)</td></tr>
+                    <tr><td><code class="nano-code">nano-alert__close</code></td><td>Nút đóng (tùy chọn)</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = { scrollbars: { autoHide: 'leave', autoHideDelay: 300 } };
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>
