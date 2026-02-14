@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en" data-overlayscrollbars-initialize>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagination – Nano UI</title>
     <link rel="stylesheet" href="../../dist/nano.min.css">
+    <link rel="stylesheet" href="../../plugin/highlight/styles/vs.min.css">
+    <link rel="stylesheet" href="../../plugin/scrollbar/scrollbar.min.css">
 </head>
-<body>
+
+<body data-overlayscrollbars-initialize>
     <nav class="nano-navbar">
         <a href="../../index.html" class="nano-navbar__brand">Nano UI</a>
         <button type="button" class="nano-navbar__toggler" aria-label="Menu" data-nano-trigger="navbar">☰</button>
@@ -17,39 +20,163 @@
             <a href="../template/dashboard/index.html" class="nano-navbar__link">Dashboard</a>
         </div>
     </nav>
-    <div class="nano-container nano-p-6">
-        <h1>Pagination</h1>
-        <p style="margin-bottom: 1.5rem; color: var(--color-secondary);">Class <code>.nano-pagination</code>. Các nút: <code>.nano-pagination__item</code>. Trang hiện tại: <code>.nano-pagination__item--active</code>. Dấu …: <code>.nano-pagination__ellipsis</code>.</p>
-
-        <h2>Cơ bản</h2>
-        <nav class="nano-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
-            <a href="#" class="nano-pagination__item" aria-label="Trang trước">‹</a>
-            <a href="#" class="nano-pagination__item">1</a>
-            <a href="#" class="nano-pagination__item nano-pagination__item--active">2</a>
-            <a href="#" class="nano-pagination__item">3</a>
-            <a href="#" class="nano-pagination__item" aria-label="Trang sau">›</a>
+    <div class="nano-container nano-mx-auto nano-p-6">
+        <nav aria-label="Breadcrumb" class="nano-breadcrumb nano-mb-6">
+            <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li><span aria-current="page">Pagination</span></li>
+            </ol>
         </nav>
 
-        <h2>Nhiều trang (có ellipsis)</h2>
-        <nav class="nano-pagination" aria-label="Phân trang" style="margin-bottom: 1.5rem;">
-            <a href="#" class="nano-pagination__item" aria-label="Trang trước">‹</a>
-            <a href="#" class="nano-pagination__item">1</a>
-            <span class="nano-pagination__ellipsis">…</span>
-            <a href="#" class="nano-pagination__item">4</a>
-            <a href="#" class="nano-pagination__item nano-pagination__item--active">5</a>
-            <a href="#" class="nano-pagination__item">6</a>
-            <span class="nano-pagination__ellipsis">…</span>
-            <a href="#" class="nano-pagination__item">10</a>
-            <a href="#" class="nano-pagination__item" aria-label="Trang sau">›</a>
-        </nav>
 
-        <h2>Disabled</h2>
-        <nav class="nano-pagination" aria-label="Phân trang">
-            <span class="nano-pagination__item" aria-disabled="true">‹</span>
-            <a href="#" class="nano-pagination__item nano-pagination__item--active">1</a>
-            <a href="#" class="nano-pagination__item">›</a>
-        </nav>
+        <h1 class="nano-text-2xl nano-font-semibold nano-mb-2">Pagination</h1>
+        <p class="nano-text-sm nano-text-secondary nano-mb-8">
+            Pagination splits content or data into serveral pages, with a control for navigating to the next or previous page.
+        </p>
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">1. Basic</h2>
+
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <nav class="nano-pagination" aria-label="Pagination">
+                <a href="#" class="nano-pagination__item" aria-label="Previous page">
+                    Previous
+                </a>
+                <a href="#" class="nano-pagination__item">1</a>
+                <a href="#" class="nano-pagination__item nano-pagination__item--active">2</a>
+                <a href="#" class="nano-pagination__item">3</a>
+                <a href="#" class="nano-pagination__item" aria-label="Next page">
+                    Next
+                </a>
+            </nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Basic pagination</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
+                            aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;nav class&#x3D;&quot;nano-pagination&quot; aria-label&#x3D;&quot;Pagination&quot;&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot; aria-label&#x3D;&quot;Previous page&quot;&gt;
+        Previous
+    &lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot;&gt;1&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item nano-pagination__item--active&quot;&gt;2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot;&gt;3&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot; aria-label&#x3D;&quot;Next page&quot;&gt;
+        Next
+    &lt;&#x2F;a&gt;
+&lt;&#x2F;nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">2. Huge number of pages</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+            <nav class="nano-pagination" aria-label="Pagination">
+                <a href="#" class="nano-pagination__item" aria-label="Previous page">Previous</a>
+                <a href="#" class="nano-pagination__item">1</a>
+                <span class="nano-pagination__ellipsis">…</span>
+                <a href="#" class="nano-pagination__item">4</a>
+                <a href="#" class="nano-pagination__item nano-pagination__item--active">5</a>
+                <a href="#" class="nano-pagination__item">6</a>
+                <span class="nano-pagination__ellipsis">…</span>
+                <a href="#" class="nano-pagination__item">10</a>
+                <a href="#" class="nano-pagination__item" aria-label="Next page">Next</a>
+            </nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">Huge number of pages pagination</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
+                            aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;nav class&#x3D;&quot;nano-pagination&quot; aria-label&#x3D;&quot;Pagination&quot;&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot; aria-label&#x3D;&quot;Previous page&quot;&gt;
+        Previous
+    &lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot;&gt;1&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item nano-pagination__item--active&quot;&gt;2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot;&gt;3&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot; aria-label&#x3D;&quot;Next page&quot;&gt;
+        Next
+    &lt;&#x2F;a&gt;
+&lt;&#x2F;nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+        <h2 class="nano-text-xl nano-font-semibold nano-mb-4">3. Disabled page button</h2>
+        <div class="nano-mb-4 nano-p-8 nano-bg-blue-10 nano-border nano-border-dashed nano-border-primary nano-rounded-lg">
+<nav class="nano-pagination" aria-label="Phân trang">
+    <span class="nano-pagination__item" aria-disabled="true">Next</span>
+    <a href="#" class="nano-pagination__item nano-pagination__item--active">1</a>
+    <a href="#" class="nano-pagination__item">2</a>
+    <a href="#" class="nano-pagination__item">3</a>
+    <a href="#" class="nano-pagination__item">Previous</a>
+</nav>
+        </div>
+        <h6 class="nano-font-semibold nano-text-gray nano-mb-4">Snippets</h6>
+        <div class="nano-mb-6 nano-flex nano-flex-col nano-gap-0" data-nano-accordion="group">
+            <div class="nano-accordion__item">
+                <button type="button" class="nano-accordion__header" data-nano-trigger="accordion" aria-expanded="false">First page disabled</button>
+                <div class="nano-accordion__body nano-p-0">
+                    <div class="nano-code-block">
+                        <h6 class="nano-code-block__title">HTML</h6>
+                        <button type="button" class="nano-code-block__copy" data-nano-trigger="copy-code"
+                            aria-label="Copy">Copy</button>
+                        <pre class="nano-pre nano-bg-white"><code>&lt;nav class&#x3D;&quot;nano-pagination&quot; aria-label&#x3D;&quot;Phân trang&quot;&gt;
+    &lt;span class&#x3D;&quot;nano-pagination__item&quot; aria-disabled&#x3D;&quot;true&quot;&gt;Next&lt;&#x2F;span&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item nano-pagination__item--active&quot;&gt;1&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot;&gt;2&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot;&gt;3&lt;&#x2F;a&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nano-pagination__item&quot;&gt;Previous&lt;&#x2F;a&gt;
+&lt;&#x2F;nav&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nano-mb-6 nano-overflow-auto">
+            <table class="nano-table nano-table--bordered">
+                <thead>
+                    <tr>
+                        <th>Class / Attribute</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code class="nano-code">nano-pagination</code></td><td>Pagination wrapper</td></tr>
+                    <tr><td><code class="nano-code">nano-pagination__item</code></td><td>Nút page</td></tr>
+                    <tr><td><code class="nano-code">nano-pagination__item--active</code></td><td>Modifier: page đang được chọn</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="../../dist/nano.min.js"></script>
+    <script src="../../plugin/highlight/highlight.min.js"></script>
+    <script src="../../plugin/scrollbar/scrollbar.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const { OverlayScrollbars, ScrollbarsHidingPlugin } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ScrollbarsHidingPlugin);
+        const optsScroll = {
+            scrollbars: {
+                autoHide: 'leave',
+                autoHideDelay: 300,
+            },
+        }
+        OverlayScrollbars(document.body, optsScroll);
+    </script>
 </body>
 </html>
